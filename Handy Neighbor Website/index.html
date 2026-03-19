@@ -1,0 +1,1030 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Handy Neighbor Co. | Reliable & Ready Home Maintenance</title>
+    <meta name="description" content="Your trusted neighborhood expert for home maintenance and small projects. Service days, hourly repairs, and annual home checkups in Omaha. Reliable & Ready.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --cream: #F5F0E8;
+            --dark: #1A1A1A;
+            --dark-mid: #2A2A2A;
+            --accent: #C8A96E;
+            --accent-dark: #A8894E;
+            --text-light: #E8E0D0;
+            --text-muted: #9A9080;
+            --rust: #8B4513;
+            --green: #4A6741;
+            --border: rgba(200,169,110,0.2);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--dark);
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        /* ============ NAVIGATION ============ */
+        nav {
+            position: fixed; top: 0; width: 100%; z-index: 1000;
+            background: rgba(26,26,26,0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border);
+            transition: all 0.3s ease;
+        }
+        nav.scrolled { background: rgba(26,26,26,0.98); box-shadow: 0 4px 20px rgba(0,0,0,0.3); }
+
+        .nav-container {
+            max-width: 1200px; margin: 0 auto;
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 1rem 2rem;
+        }
+        .nav-logo {
+            font-family: 'Bebas Neue', sans-serif; font-size: 1.5rem;
+            color: var(--cream); text-decoration: none; letter-spacing: 2px;
+        }
+        .nav-logo span { color: var(--accent); }
+
+        .nav-links { display: flex; list-style: none; gap: 2rem; align-items: center; }
+        .nav-links a {
+            color: var(--text-muted); text-decoration: none; font-size: 0.9rem;
+            font-weight: 500; letter-spacing: 0.5px; text-transform: uppercase; transition: color 0.3s;
+        }
+        .nav-links a:hover { color: var(--cream); }
+        .nav-cta {
+            background: var(--accent) !important; color: var(--dark) !important;
+            padding: 0.6rem 1.5rem; border-radius: 4px; font-weight: 700 !important;
+            transition: background 0.3s !important;
+        }
+        .nav-cta:hover { background: var(--accent-dark) !important; }
+
+        .mobile-toggle {
+            display: none; background: none; border: none;
+            color: var(--cream); font-size: 1.5rem; cursor: pointer;
+        }
+
+        /* ============ HERO ============ */
+        .hero {
+            min-height: 100vh; display: flex; align-items: center; justify-content: center;
+            text-align: center; padding: 6rem 2rem 4rem; position: relative; overflow: hidden;
+            background: radial-gradient(ellipse at 50% 0%, rgba(200,169,110,0.08) 0%, transparent 60%),
+                linear-gradient(180deg, var(--dark) 0%, var(--dark-mid) 100%);
+        }
+        .hero-content { position: relative; z-index: 1; max-width: 800px; }
+
+        .hero-badge {
+            display: inline-block; border: 1px solid var(--accent); color: var(--accent);
+            padding: 0.4rem 1.2rem; border-radius: 2px; font-size: 0.75rem;
+            font-weight: 600; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 2rem;
+        }
+        .hero h1 {
+            font-family: 'Playfair Display', serif; font-size: clamp(2.5rem, 6vw, 4.5rem);
+            font-weight: 900; color: var(--cream); line-height: 1.1; margin-bottom: 1.5rem;
+        }
+        .hero h1 em { font-style: normal; color: var(--accent); }
+        .hero p {
+            font-size: 1.15rem; color: var(--text-muted); max-width: 600px;
+            margin: 0 auto 2.5rem; line-height: 1.8;
+        }
+        .hero-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+
+        .btn-primary {
+            background: var(--accent); color: var(--dark); padding: 1rem 2.5rem;
+            border: none; border-radius: 4px; font-size: 1rem; font-weight: 700;
+            text-decoration: none; text-transform: uppercase; letter-spacing: 1px;
+            cursor: pointer; transition: all 0.3s;
+        }
+        .btn-primary:hover { background: var(--accent-dark); transform: translateY(-2px); box-shadow: 0 4px 15px rgba(200,169,110,0.3); }
+
+        .btn-secondary {
+            background: transparent; color: var(--cream); padding: 1rem 2.5rem;
+            border: 1px solid var(--border); border-radius: 4px; font-size: 1rem;
+            font-weight: 600; text-decoration: none; text-transform: uppercase;
+            letter-spacing: 1px; transition: all 0.3s;
+        }
+        .btn-secondary:hover { border-color: var(--accent); color: var(--accent); }
+
+        .hero-stats {
+            display: flex; justify-content: center; gap: 3rem; margin-top: 4rem;
+            padding-top: 3rem; border-top: 1px solid var(--border);
+        }
+        .hero-stat h3 { font-family: 'Bebas Neue', sans-serif; font-size: 2.5rem; color: var(--accent); letter-spacing: 1px; }
+        .hero-stat p { font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1px; margin: 0; }
+
+        /* ============ SECTIONS ============ */
+        .section-container { max-width: 1200px; margin: 0 auto; }
+        .section-header { text-align: center; margin-bottom: 4rem; }
+        .section-label {
+            display: inline-block; color: var(--accent); font-size: 0.75rem;
+            font-weight: 600; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 1rem;
+        }
+        .section-header h2 {
+            font-family: 'Playfair Display', serif; font-size: clamp(2rem, 4vw, 3rem);
+            color: var(--cream); font-weight: 900; margin-bottom: 1rem;
+        }
+        .section-header p { color: var(--text-muted); max-width: 600px; margin: 0 auto; font-size: 1.05rem; }
+
+        /* ============ HOW IT WORKS ============ */
+        .how-it-works { padding: 6rem 2rem; background: var(--dark-mid); }
+        .steps-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; }
+        .step-card {
+            text-align: center; padding: 2.5rem 2rem; border: 1px solid var(--border);
+            border-radius: 8px; background: rgba(26,26,26,0.5); transition: all 0.3s;
+        }
+        .step-card:hover { border-color: var(--accent); transform: translateY(-4px); }
+        .step-number { font-family: 'Bebas Neue', sans-serif; font-size: 3rem; color: var(--accent); line-height: 1; margin-bottom: 1rem; }
+        .step-card h3 { font-size: 1.15rem; color: var(--cream); margin-bottom: 0.75rem; }
+        .step-card p { color: var(--text-muted); font-size: 0.95rem; line-height: 1.7; }
+
+        /* ============ SERVICES ============ */
+        .services { padding: 6rem 2rem; background: var(--dark); }
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 1.5rem; }
+        .service-card {
+            background: var(--dark-mid); border: 1px solid var(--border); border-radius: 8px;
+            padding: 2.5rem; transition: all 0.3s; position: relative; overflow: hidden;
+        }
+        .service-card::before {
+            content: ''; position: absolute; top: 0; left: 0; width: 4px; height: 100%;
+            background: var(--accent); transform: scaleY(0); transition: transform 0.3s;
+        }
+        .service-card:hover::before { transform: scaleY(1); }
+        .service-card:hover { border-color: rgba(200,169,110,0.4); }
+        .service-icon { font-size: 2rem; margin-bottom: 1rem; }
+        .service-card h3 { font-size: 1.2rem; color: var(--cream); margin-bottom: 0.5rem; }
+        .service-meta { display: flex; gap: 1rem; margin-bottom: 1rem; flex-wrap: wrap; }
+        .service-meta span {
+            font-size: 0.8rem; color: var(--accent); background: rgba(200,169,110,0.1);
+            padding: 0.25rem 0.75rem; border-radius: 2px; font-weight: 600;
+        }
+        .service-card p { color: var(--text-muted); font-size: 0.95rem; line-height: 1.7; }
+
+        /* ============ PRICING ============ */
+        .pricing { padding: 6rem 2rem; background: var(--dark-mid); }
+        .pricing-card {
+            background: var(--dark); border: 1px solid var(--border); border-radius: 8px;
+            padding: 3rem 2.5rem; text-align: center; transition: all 0.3s; position: relative;
+        }
+        .pricing-card.featured { border-color: var(--accent); }
+        .pricing-card.featured::after {
+            content: 'MOST POPULAR'; position: absolute; top: -12px; left: 50%;
+            transform: translateX(-50%); background: var(--accent); color: var(--dark);
+            padding: 0.3rem 1rem; font-size: 0.7rem; font-weight: 700;
+            letter-spacing: 2px; border-radius: 2px;
+        }
+        .pricing-card:hover { border-color: var(--accent); }
+        .pricing-label { font-size: 0.8rem; color: var(--accent); text-transform: uppercase; letter-spacing: 2px; font-weight: 600; margin-bottom: 0.5rem; }
+        .pricing-card h3 { font-family: 'Playfair Display', serif; font-size: 1.5rem; color: var(--cream); margin-bottom: 1.5rem; }
+        .pricing-amount { font-family: 'Bebas Neue', sans-serif; font-size: 3.5rem; color: var(--cream); line-height: 1; margin-bottom: 0.25rem; }
+        .pricing-period { color: var(--text-muted); font-size: 0.9rem; margin-bottom: 2rem; }
+        .pricing-features { list-style: none; text-align: left; margin-bottom: 2rem; }
+        .pricing-features li {
+            padding: 0.6rem 0; color: var(--text-muted); font-size: 0.95rem;
+            border-bottom: 1px solid var(--border); display: flex; align-items: center; gap: 0.75rem;
+        }
+        .pricing-features li::before { content: '✓'; color: var(--accent); font-weight: 700; }
+        .pricing-card .btn-primary { width: 100%; display: block; text-align: center; }
+
+        /* ============ TESTIMONIALS ============ */
+        .trust { padding: 6rem 2rem; background: var(--dark); }
+        .testimonials-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
+        .testimonial-card { background: var(--dark-mid); border: 1px solid var(--border); border-radius: 8px; padding: 2.5rem; }
+        .testimonial-stars { color: var(--accent); font-size: 1.1rem; margin-bottom: 1rem; letter-spacing: 2px; }
+        .testimonial-card blockquote { color: var(--text-light); font-size: 1rem; line-height: 1.8; margin-bottom: 1.5rem; font-style: italic; }
+        .testimonial-author { display: flex; align-items: center; gap: 1rem; }
+        .testimonial-avatar {
+            width: 48px; height: 48px; border-radius: 50%; background: var(--accent);
+            display: flex; align-items: center; justify-content: center;
+            font-weight: 700; color: var(--dark); font-size: 1rem;
+        }
+        .testimonial-name { font-weight: 600; color: var(--cream); font-size: 0.95rem; }
+        .testimonial-location { color: var(--text-muted); font-size: 0.8rem; }
+
+        /* ============ ABOUT ============ */
+        .about { padding: 6rem 2rem; background: var(--dark-mid); }
+        .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+        .about-content h2 { font-family: 'Playfair Display', serif; font-size: clamp(2rem, 4vw, 2.5rem); color: var(--cream); margin-bottom: 1.5rem; }
+        .about-content p { color: var(--text-muted); line-height: 1.8; margin-bottom: 1.25rem; font-size: 1.05rem; }
+        .about-values { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+        .value-item { padding: 1.5rem; border: 1px solid var(--border); border-radius: 8px; text-align: center; }
+        .value-icon { font-size: 1.5rem; margin-bottom: 0.5rem; }
+        .value-item h4 { color: var(--cream); font-size: 0.95rem; margin-bottom: 0.25rem; }
+        .value-item p { color: var(--text-muted); font-size: 0.8rem; line-height: 1.5; }
+
+        /* ============ SERVICE AREA ============ */
+        .service-area { padding: 6rem 2rem; background: var(--dark-mid); }
+        .neighborhoods { display: flex; flex-wrap: wrap; gap: 0.75rem; justify-content: center; margin-top: 2rem; }
+        .neighborhood-tag {
+            background: rgba(200,169,110,0.1); border: 1px solid var(--border);
+            color: var(--text-light); padding: 0.5rem 1.25rem; border-radius: 4px;
+            font-size: 0.9rem; font-weight: 500;
+        }
+
+        /* ============ BOOKING FORM ============ */
+        .booking { padding: 6rem 2rem; background: var(--dark); position: relative; }
+        .booking::before {
+            content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+            background: radial-gradient(ellipse at 50% 50%, rgba(200,169,110,0.04) 0%, transparent 70%);
+        }
+        .booking-wrapper { max-width: 700px; margin: 0 auto; position: relative; z-index: 1; }
+        .booking-form { background: var(--dark-mid); border: 1px solid var(--border); border-radius: 8px; padding: 3rem; }
+        .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+        .form-group { margin-bottom: 1.5rem; }
+        .form-group label {
+            display: block; color: var(--cream); font-size: 0.85rem; font-weight: 600;
+            text-transform: uppercase; letter-spacing: 1px; margin-bottom: 0.5rem;
+        }
+        .form-group input, .form-group select, .form-group textarea {
+            width: 100%; padding: 0.85rem 1rem; background: var(--dark);
+            border: 1px solid var(--border); border-radius: 4px; color: var(--text-light);
+            font-family: 'Inter', sans-serif; font-size: 0.95rem; transition: border-color 0.3s;
+        }
+        .form-group input:focus, .form-group select:focus, .form-group textarea:focus { outline: none; border-color: var(--accent); }
+        .form-group input::placeholder, .form-group textarea::placeholder { color: var(--text-muted); }
+        .form-group select option { background: var(--dark); color: var(--text-light); }
+        .form-group textarea { resize: vertical; min-height: 100px; }
+
+        .form-submit {
+            width: 100%; padding: 1.1rem; background: var(--accent); color: var(--dark);
+            border: none; border-radius: 4px; font-size: 1rem; font-weight: 700;
+            text-transform: uppercase; letter-spacing: 2px; cursor: pointer;
+            transition: all 0.3s; font-family: 'Inter', sans-serif;
+        }
+        .form-submit:hover { background: var(--accent-dark); transform: translateY(-2px); box-shadow: 0 4px 15px rgba(200,169,110,0.3); }
+        .form-note { text-align: center; color: var(--text-muted); font-size: 0.8rem; margin-top: 1rem; }
+
+        /* ============ FOOTER ============ */
+        footer { background: var(--dark); border-top: 1px solid var(--border); padding: 4rem 2rem 2rem; }
+        .footer-container { max-width: 1200px; margin: 0 auto; }
+        .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 3rem; margin-bottom: 3rem; }
+        .footer-brand h3 { font-family: 'Bebas Neue', sans-serif; font-size: 1.5rem; color: var(--cream); letter-spacing: 2px; margin-bottom: 1rem; }
+        .footer-brand p { color: var(--text-muted); font-size: 0.9rem; line-height: 1.7; }
+        .footer-col h4 { color: var(--cream); font-size: 0.85rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1.25rem; }
+        .footer-col ul { list-style: none; }
+        .footer-col ul li { margin-bottom: 0.75rem; }
+        .footer-col ul a { color: var(--text-muted); text-decoration: none; font-size: 0.9rem; transition: color 0.3s; }
+        .footer-col ul a:hover { color: var(--accent); }
+        .footer-bottom {
+            border-top: 1px solid var(--border); padding-top: 2rem;
+            display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;
+        }
+        .footer-bottom p { color: var(--text-muted); font-size: 0.8rem; }
+        .footer-social { display: flex; gap: 1rem; }
+        .footer-social a { color: var(--text-muted); text-decoration: none; font-size: 0.85rem; transition: color 0.3s; }
+        .footer-social a:hover { color: var(--accent); }
+
+        /* ============ GUARANTEE BAR ============ */
+        .guarantee-bar {
+            background: rgba(200,169,110,0.08); border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border); padding: 2rem; text-align: center;
+        }
+        .guarantee-items { display: flex; justify-content: center; gap: 3rem; flex-wrap: wrap; max-width: 900px; margin: 0 auto; }
+        .guarantee-item { display: flex; align-items: center; gap: 0.75rem; color: var(--text-light); font-size: 0.95rem; font-weight: 500; }
+        .guarantee-icon { color: var(--accent); font-size: 1.25rem; }
+
+        /* ============ CATEGORY TABS ============ */
+        .cat-tab {
+            background: transparent; color: var(--text-muted); border: 1px solid var(--border);
+            padding: 0.5rem 1.5rem; border-radius: 4px; font-family: 'Inter', sans-serif;
+            font-size: 0.85rem; font-weight: 600; text-transform: uppercase;
+            letter-spacing: 1px; cursor: pointer; transition: all 0.3s;
+        }
+        .cat-tab:hover { border-color: var(--accent); color: var(--cream); }
+        .cat-tab.active { background: var(--accent); color: var(--dark); border-color: var(--accent); }
+
+        /* ============ TOAST ============ */
+        .toast {
+            position: fixed; bottom: 2rem; right: 2rem; background: var(--green); color: white;
+            padding: 1rem 2rem; border-radius: 8px; font-weight: 600;
+            transform: translateY(100px); opacity: 0; transition: all 0.4s ease; z-index: 9999;
+        }
+        .toast.show { transform: translateY(0); opacity: 1; }
+
+        /* ============ ANIMATIONS ============ */
+        .fade-in { opacity: 0; transform: translateY(20px); transition: all 0.6s ease; }
+        .fade-in.visible { opacity: 1; transform: translateY(0); }
+
+        /* ============ MOBILE ============ */
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .nav-links.active {
+                display: flex; flex-direction: column; position: absolute;
+                top: 100%; left: 0; right: 0; background: rgba(26,26,26,0.98);
+                padding: 1.5rem 2rem; border-bottom: 1px solid var(--border);
+            }
+            .mobile-toggle { display: block; }
+            .hero-stats { flex-direction: column; gap: 1.5rem; }
+            .services-grid { grid-template-columns: 1fr; }
+            .about-grid { grid-template-columns: 1fr; }
+            .form-row { grid-template-columns: 1fr; }
+            .footer-grid { grid-template-columns: 1fr 1fr; }
+            .testimonials-grid { grid-template-columns: 1fr; }
+            #checkup > div > div { grid-template-columns: 1fr !important; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVIGATION -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">THE HANDY <span>NEIGHBOR CO.</span></a>
+            <button class="mobile-toggle" onclick="toggleMenu()" aria-label="Toggle menu">&#9776;</button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#how-it-works">How It Works</a></li>
+                <li><a href="#services">Service Days</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#booking" class="nav-cta">Book Now</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <div class="hero-badge">Serving Omaha Neighborhoods</div>
+            <h1>Your Trusted Neighbor for <em>Small Home Projects</em></h1>
+            <p>We run scheduled service days through your neighborhood &mdash; same tools, same route, flat-rate pricing. Lightbulbs, filters, gutters, and more handled fast so you don't have to think about it.</p>
+            <div class="hero-buttons">
+                <a href="#booking" class="btn-primary">Book a Service Day</a>
+                <a href="#services" class="btn-secondary">See Our Services</a>
+            </div>
+            <div class="hero-stats">
+                <div class="hero-stat">
+                    <h3>$50&ndash;$300</h3>
+                    <p>Flat-Rate Pricing</p>
+                </div>
+                <div class="hero-stat">
+                    <h3>15&ndash;30 min</h3>
+                    <p>Most Jobs Done</p>
+                </div>
+                <div class="hero-stat">
+                    <h3>100%</h3>
+                    <p>Satisfaction Guaranteed</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GUARANTEE BAR -->
+    <div class="guarantee-bar">
+        <div class="guarantee-items">
+            <div class="guarantee-item">
+                <span class="guarantee-icon">&#9733;</span>
+                Licensed &amp; Insured
+            </div>
+            <div class="guarantee-item">
+                <span class="guarantee-icon">&#10003;</span>
+                Flat-Rate Pricing
+            </div>
+            <div class="guarantee-item">
+                <span class="guarantee-icon">&#9202;</span>
+                On-Time, Every Time
+            </div>
+            <div class="guarantee-item">
+                <span class="guarantee-icon">&#128178;</span>
+                No Hidden Fees
+            </div>
+        </div>
+    </div>
+
+    <!-- HOW IT WORKS -->
+    <section class="how-it-works" id="how-it-works">
+        <div class="section-container">
+            <div class="section-header">
+                <div class="section-label">Simple Process</div>
+                <h2>How It Works</h2>
+                <p>Getting things fixed around your home has never been easier. Three simple steps to a well-maintained home.</p>
+            </div>
+            <div class="steps-grid">
+                <div class="step-card fade-in">
+                    <div class="step-number">01</div>
+                    <h3>Pick a Service Day</h3>
+                    <p>Browse our upcoming themed service days &mdash; like Lightbulb Day, Filter Day, or Gutter Clean Day &mdash; and sign up for the one you need.</p>
+                </div>
+                <div class="step-card fade-in">
+                    <div class="step-number">02</div>
+                    <h3>We Come to You</h3>
+                    <p>We run efficient neighborhood routes so we're in and out quickly. You'll get a time window and a heads-up when we're on our way.</p>
+                </div>
+                <div class="step-card fade-in">
+                    <div class="step-number">03</div>
+                    <h3>Done &amp; Done</h3>
+                    <p>Task handled, flat rate charged, no surprises. We'll even remind you when it's time for the next service to keep your home on track.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICE DAYS (Route-Based) — THE STAR -->
+    <section class="services" id="services">
+        <div class="section-container">
+            <div class="section-header">
+                <div class="section-label">Route-Based Services</div>
+                <h2>Our Service Days</h2>
+                <p>We batch jobs by type and run efficient neighborhood routes. Same tools, same workflow, fast turnaround &mdash; and flat-rate pricing on every visit.</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card fade-in">
+                    <div class="service-icon">&#128161;</div>
+                    <h3>Lightbulb Day</h3>
+                    <div class="service-meta"><span>$50&ndash;$100</span><span>15&ndash;30 min</span></div>
+                    <p>High ceilings, chandeliers, recessed cans, outdoor fixtures &mdash; we handle every hard-to-reach bulb swap in your home.</p>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-icon">&#127744;</div>
+                    <h3>Filter Day</h3>
+                    <div class="service-meta"><span>$50&ndash;$100</span><span>15&ndash;30 min</span></div>
+                    <p>HVAC filters, fridge filters, humidifier pads &mdash; we replace them all so your home runs clean and efficient.</p>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-icon">&#127807;</div>
+                    <h3>Gutter Clean Day</h3>
+                    <div class="service-meta"><span>$100&ndash;$200</span><span>30&ndash;45 min</span></div>
+                    <p>Full gutter cleaning plus downspout flush and visual roof inspection. Keep water flowing where it should.</p>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-icon">&#128684;</div>
+                    <h3>Smoke Detector Day</h3>
+                    <div class="service-meta"><span>$50&ndash;$100</span><span>15&ndash;30 min</span></div>
+                    <p>Battery replacement, testing, and CO detector checks for every unit in your home. Peace of mind in 20 minutes.</p>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-icon">&#128167;</div>
+                    <h3>Caulking &amp; Seal Day</h3>
+                    <div class="service-meta"><span>$75&ndash;$150</span><span>30&ndash;45 min</span></div>
+                    <p>Bathroom caulk, window seals, door weatherstripping. Small fixes that prevent big water damage down the road.</p>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-icon">&#128166;</div>
+                    <h3>Pressure Wash Day</h3>
+                    <div class="service-meta"><span>$150&ndash;$300</span><span>45&ndash;60 min</span></div>
+                    <p>Driveways, sidewalks, patios, and siding. We blast away the grime and make your exterior look brand new.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRICING — Service Days front and center -->
+    <section class="pricing" id="pricing">
+        <div class="section-container">
+            <div class="section-header">
+                <div class="section-label">Simple Pricing</div>
+                <h2>Flat Rates, No Surprises</h2>
+                <p>Every service day has a clear price before we start. No estimates, no hourly guessing &mdash; just book and we show up.</p>
+            </div>
+
+            <!-- PRIMARY: Service Day Pricing -->
+            <div style="max-width: 800px; margin: 0 auto 4rem;">
+                <div class="pricing-card featured fade-in" style="transform: none; padding: 3.5rem;">
+                    <div class="pricing-label">Route-Based Service Days</div>
+                    <h3>Flat-Rate Home Maintenance</h3>
+                    <div class="pricing-amount">$50&ndash;$300</div>
+                    <div class="pricing-period">per service &bull; per visit &bull; no surprises</div>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0; text-align: left; margin-bottom: 2rem;">
+                        <ul class="pricing-features">
+                            <li>Lightbulbs &amp; fixtures</li>
+                            <li>HVAC &amp; fridge filters</li>
+                            <li>Gutter cleaning</li>
+                        </ul>
+                        <ul class="pricing-features">
+                            <li>Smoke detectors &amp; CO</li>
+                            <li>Caulking &amp; seals</li>
+                            <li>Pressure washing</li>
+                        </ul>
+                    </div>
+                    <a href="#booking" class="btn-primary" style="max-width: 400px; margin: 0 auto;">Book a Service Day</a>
+                </div>
+            </div>
+
+            <!-- SECONDARY: Other pricing options -->
+            <div style="text-align: center; margin-bottom: 2rem;">
+                <div class="section-label">Need Something Bigger?</div>
+                <p style="color: var(--text-muted); max-width: 500px; margin: 0.5rem auto 0;">We also take on small projects, full-day contractor work, and annual home inspections.</p>
+            </div>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; max-width: 1000px; margin: 0 auto;">
+                <div class="pricing-card fade-in" style="padding: 2rem 1.5rem;">
+                    <div class="pricing-label">Hourly</div>
+                    <h3 style="font-size: 1.2rem;">Small Projects</h3>
+                    <div class="pricing-amount" style="font-size: 2.5rem;">$150</div>
+                    <div class="pricing-period">first hour &bull; $89/hr after</div>
+                    <ul class="pricing-features" style="font-size: 0.85rem;">
+                        <li>Drywall, trim, carpentry</li>
+                        <li>Interior &amp; exterior</li>
+                        <li>Transparent time tracking</li>
+                    </ul>
+                    <a href="#projects" class="btn-primary" style="font-size: 0.85rem; padding: 0.75rem 1.5rem;">Learn More</a>
+                </div>
+                <div class="pricing-card fade-in" style="padding: 2rem 1.5rem;">
+                    <div class="pricing-label">Full Day</div>
+                    <h3 style="font-size: 1.2rem;">Contractor Day Rate</h3>
+                    <div class="pricing-amount" style="font-size: 2.5rem;">$750/DAY</div>
+                    <div class="pricing-period">contractor-level tasks</div>
+                    <ul class="pricing-features" style="font-size: 0.85rem;">
+                        <li>Decks, siding, structural</li>
+                        <li>Bathroom &amp; basement</li>
+                        <li>Materials quoted separately</li>
+                    </ul>
+                    <a href="#projects" class="btn-primary" style="font-size: 0.85rem; padding: 0.75rem 1.5rem;">Learn More</a>
+                </div>
+                <div class="pricing-card fade-in" style="padding: 2rem 1.5rem; border-color: var(--accent); background: linear-gradient(135deg, var(--dark) 0%, rgba(200,169,110,0.08) 100%);">
+                    <div class="pricing-label" style="color: var(--accent);">&#9733; Recommended</div>
+                    <h3 style="font-size: 1.2rem;">Annual Home Checkup</h3>
+                    <div class="pricing-amount" style="font-size: 2.5rem;">$199&ndash;$299</div>
+                    <div class="pricing-period">full home inspection</div>
+                    <ul class="pricing-features" style="font-size: 0.85rem;">
+                        <li>Deck, trim, caulking checks</li>
+                        <li>Gutters &amp; safety walkthrough</li>
+                        <li>Door adjustments included</li>
+                    </ul>
+                    <a href="#checkup" class="btn-primary" style="font-size: 0.85rem; padding: 0.75rem 1.5rem;">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="trust" id="testimonials">
+        <div class="section-container">
+            <div class="section-header">
+                <div class="section-label">Happy Neighbors</div>
+                <h2>What Homeowners Say</h2>
+                <p>Real feedback from real neighbors. We're building trust one small project at a time.</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card fade-in">
+                    <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    <blockquote>"I had 14 lightbulbs that needed changing &mdash; half of them in vaulted ceilings. Done in 20 minutes flat. I've been putting that off for months."</blockquote>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">SK</div>
+                        <div>
+                            <div class="testimonial-name">Sarah K.</div>
+                            <div class="testimonial-location">Shadow Ridge, Omaha</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card fade-in">
+                    <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    <blockquote>"The flat pricing is what sold me. No awkward estimates, no surprise bills. They showed up on time, got it done, and texted me the receipt."</blockquote>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">MR</div>
+                        <div>
+                            <div class="testimonial-name">Mike R.</div>
+                            <div class="testimonial-location">Elkhorn, Omaha</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card fade-in">
+                    <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    <blockquote>"Signed up for the quarterly plan and it's the best home decision I've made. I don't have to think about maintenance anymore &mdash; they just handle it."</blockquote>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">JT</div>
+                        <div>
+                            <div class="testimonial-name">Jennifer T.</div>
+                            <div class="testimonial-location">West Omaha</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="about" id="about">
+        <div class="section-container">
+            <div class="about-grid">
+                <div class="about-content fade-in">
+                    <div class="section-label">About Your Neighbor</div>
+                    <h2>Josh Davis &mdash; Owner &amp; Operator</h2>
+                    <p>The Handy Neighbor Co. started the way most good ideas do &mdash; a neighbor needed help with something small, and I was the guy who actually showed up.</p>
+                    <p>I'm a semi-retired contractor with over two decades of hands-on experience across residential construction and commercial facility management. I've done everything from framing and roofing to finish trim and shower door installs. Closets, mirrors, bath accessories, LVP flooring, windows, siding, light electrical, plumbing &mdash; if it's in a house, I've probably built it, fixed it, or replaced it.</p>
+                    <p>As a Facility Manager, I ran maintenance on full mechanical systems &mdash; HVAC units, commercial kitchen equipment, water heaters, garage doors &mdash; the kind of work that teaches you how buildings actually work, not just how they look.</p>
+                    <p>Now I'm channeling all of that into something simpler: helping my neighbors keep their homes in great shape without the hassle of hiring a big contractor for small jobs. I run the routes myself, I bring my own tools, and I treat every home like it's on my street &mdash; because it probably is.</p>
+                </div>
+                <div class="about-values fade-in">
+                    <div class="value-item">
+                        <div class="value-icon">&#128296;</div>
+                        <h4>20+ Years Experience</h4>
+                        <p>Residential construction &amp; commercial facility management</p>
+                    </div>
+                    <div class="value-item">
+                        <div class="value-icon">&#127968;</div>
+                        <h4>Full-Spectrum Skills</h4>
+                        <p>Framing to finish &mdash; electrical, plumbing, roofing &amp; more</p>
+                    </div>
+                    <div class="value-item">
+                        <div class="value-icon">&#128200;</div>
+                        <h4>Efficient Routes</h4>
+                        <p>Batched by neighborhood for speed &amp; savings</p>
+                    </div>
+                    <div class="value-item">
+                        <div class="value-icon">&#128588;</div>
+                        <h4>Owner-Operated</h4>
+                        <p>I do the work myself &mdash; no subcontractors</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICE AREA -->
+    <section class="service-area">
+        <div class="section-container">
+            <div class="area-content" style="text-align: center; max-width: 700px; margin: 0 auto;">
+                <div class="section-label">Where We Work</div>
+                <h2 style="font-family: 'Playfair Display', serif; font-size: clamp(2rem, 4vw, 2.5rem); color: var(--cream); margin-bottom: 1rem;">Serving Omaha Neighborhoods</h2>
+                <p style="color: var(--text-muted); font-size: 1.05rem;">We're currently serving select Omaha neighborhoods and expanding weekly. If your area isn't listed, sign up anyway &mdash; we'll prioritize neighborhoods with the most requests.</p>
+                <div class="neighborhoods">
+                    <span class="neighborhood-tag">Shadow Ridge</span>
+                    <span class="neighborhood-tag">Elkhorn</span>
+                    <span class="neighborhood-tag">West Omaha</span>
+                    <span class="neighborhood-tag">Millard</span>
+                    <span class="neighborhood-tag">Papillion</span>
+                    <span class="neighborhood-tag">Gretna</span>
+                    <span class="neighborhood-tag">La Vista</span>
+                    <span class="neighborhood-tag">Ralston</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════ MORE SERVICES (Below the fold) ═══════════ -->
+
+    <!-- CORE PROJECT SERVICES -->
+    <section class="services" id="projects" style="background: var(--dark-mid);">
+        <div class="section-container">
+            <div class="section-header">
+                <div class="section-label">Small Projects &amp; Repairs</div>
+                <h2>Contractor-Level Work, Neighbor-Level Trust</h2>
+                <p>Beyond service days, we take on small-to-mid-size projects at hourly or daily rates. Real construction knowledge, no corporate overhead.</p>
+            </div>
+
+            <!-- Hourly rate banner -->
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.5rem; margin-bottom: 3rem;">
+                <div style="background: var(--dark); border: 2px solid var(--accent); border-radius: 8px; padding: 2rem; text-align: center;">
+                    <div style="font-family: 'Bebas Neue', sans-serif; font-size: 2.5rem; color: var(--accent); line-height: 1;">$150</div>
+                    <div style="color: var(--cream); font-weight: 600; font-size: 0.9rem; margin-top: 0.25rem;">First Hour Minimum</div>
+                    <div style="color: var(--text-muted); font-size: 0.8rem; margin-top: 0.25rem;">All small projects</div>
+                </div>
+                <div style="background: var(--dark); border: 1px solid var(--border); border-radius: 8px; padding: 2rem; text-align: center;">
+                    <div style="font-family: 'Bebas Neue', sans-serif; font-size: 2.5rem; color: var(--cream); line-height: 1;">$89/HR</div>
+                    <div style="color: var(--cream); font-weight: 600; font-size: 0.9rem; margin-top: 0.25rem;">Each Hour After</div>
+                    <div style="color: var(--text-muted); font-size: 0.8rem; margin-top: 0.25rem;">Simple, transparent</div>
+                </div>
+                <div style="background: var(--dark); border: 1px solid var(--border); border-radius: 8px; padding: 2rem; text-align: center;">
+                    <div style="font-family: 'Bebas Neue', sans-serif; font-size: 2.5rem; color: var(--cream); line-height: 1;">$750/DAY</div>
+                    <div style="color: var(--cream); font-weight: 600; font-size: 0.9rem; margin-top: 0.25rem;">Full Day Rate</div>
+                    <div style="color: var(--text-muted); font-size: 0.8rem; margin-top: 0.25rem;">Contractor-level tasks</div>
+                </div>
+            </div>
+
+            <!-- Category tabs -->
+            <div style="display: flex; gap: 0.75rem; flex-wrap: wrap; justify-content: center; margin-bottom: 2.5rem;">
+                <button class="cat-tab active" onclick="showCategory('all', this)">All Services</button>
+                <button class="cat-tab" onclick="showCategory('exterior', this)">Exterior</button>
+                <button class="cat-tab" onclick="showCategory('interior', this)">Interior</button>
+                <button class="cat-tab" onclick="showCategory('repairs', this)">Repairs</button>
+                <button class="cat-tab" onclick="showCategory('roof', this)">Roof</button>
+            </div>
+
+            <div class="services-grid" id="projectGrid">
+                <!-- Exterior -->
+                <div class="service-card fade-in visible" data-cat="exterior">
+                    <div class="service-icon">&#127981;</div>
+                    <h3>Deck Repairs</h3>
+                    <div class="service-meta"><span>Exterior</span><span>Hourly / Daily</span></div>
+                    <p>Board replacement, railing fixes, re-staining, and structural repairs. We'll get your deck safe and looking great again.</p>
+                </div>
+                <div class="service-card fade-in visible" data-cat="exterior">
+                    <div class="service-icon">&#127966;</div>
+                    <h3>Patio Builds</h3>
+                    <div class="service-meta"><span>Exterior</span><span>Daily Rate</span></div>
+                    <p>Small patio construction, paver installation, and outdoor living improvements that add real value to your backyard.</p>
+                </div>
+                <div class="service-card fade-in visible" data-cat="exterior">
+                    <div class="service-icon">&#129717;</div>
+                    <h3>Fence Repairs</h3>
+                    <div class="service-meta"><span>Exterior</span><span>Hourly / Daily</span></div>
+                    <p>Leaning posts, broken pickets, gate adjustments, and hardware replacement. Keep your fence standing strong.</p>
+                </div>
+                <div class="service-card fade-in visible" data-cat="exterior">
+                    <div class="service-icon">&#128296;</div>
+                    <h3>Trim Rot Repair</h3>
+                    <div class="service-meta"><span>Exterior</span><span>Hourly</span></div>
+                    <p>Rotted fascia, trim boards, and window casings replaced before water damage spreads deeper into your home.</p>
+                </div>
+                <div class="service-card fade-in visible" data-cat="exterior">
+                    <div class="service-icon">&#127960;</div>
+                    <h3>Siding Repairs</h3>
+                    <div class="service-meta"><span>Exterior</span><span>Hourly / Daily</span></div>
+                    <p>Damaged panels, loose sections, and weathered siding repaired or replaced to protect your home's envelope.</p>
+                </div>
+                <!-- Interior -->
+                <div class="service-card fade-in visible" data-cat="interior">
+                    <div class="service-icon">&#128218;</div>
+                    <h3>Built-Ins</h3>
+                    <div class="service-meta"><span>Interior</span><span>Daily Rate</span></div>
+                    <p>Custom shelving, bookcases, and storage solutions built right into your walls. Functional and beautiful.</p>
+                </div>
+                <div class="service-card fade-in visible" data-cat="interior">
+                    <div class="service-icon">&#128703;</div>
+                    <h3>Bathroom Refreshes</h3>
+                    <div class="service-meta"><span>Interior</span><span>Daily Rate</span></div>
+                    <p>Vanity swaps, fixture upgrades, tile touch-ups, and fresh caulking. A refreshed bathroom without a full remodel.</p>
+                </div>
+                <div class="service-card fade-in visible" data-cat="interior">
+                    <div class="service-icon">&#127968;</div>
+                    <h3>Basement Rooms</h3>
+                    <div class="service-meta"><span>Interior</span><span>Daily Rate</span></div>
+                    <p>Framing, drywall, trim, and finishing for basement spaces. Turn unused square footage into livable rooms.</p>
+                </div>
+                <div class="service-card fade-in visible" data-cat="interior">
+                    <div class="service-icon">&#128208;</div>
+                    <h3>Trim Carpentry</h3>
+                    <div class="service-meta"><span>Interior</span><span>Hourly / Daily</span></div>
+                    <p>Crown molding, baseboards, window casings, and door trim. The details that make a house feel finished.</p>
+                </div>
+                <!-- Repairs -->
+                <div class="service-card fade-in visible" data-cat="repairs">
+                    <div class="service-icon">&#128295;</div>
+                    <h3>Drywall Repair</h3>
+                    <div class="service-meta"><span>Repairs</span><span>Hourly</span></div>
+                    <p>Holes, cracks, water stains, and tape joints. We patch, mud, sand, and finish so it looks like it never happened.</p>
+                </div>
+                <div class="service-card fade-in visible" data-cat="repairs">
+                    <div class="service-icon">&#128167;</div>
+                    <h3>Water Damage Repair</h3>
+                    <div class="service-meta"><span>Repairs</span><span>Hourly / Daily</span></div>
+                    <p>Damaged drywall, subfloor issues, and moisture-affected trim. We fix the damage and help prevent it from coming back.</p>
+                </div>
+                <div class="service-card fade-in visible" data-cat="repairs">
+                    <div class="service-icon">&#127959;</div>
+                    <h3>Structural Fixes</h3>
+                    <div class="service-meta"><span>Repairs</span><span>Daily Rate</span></div>
+                    <p>Sagging beams, joist sistering, load-bearing repairs, and framing corrections. The serious stuff done right.</p>
+                </div>
+                <!-- Roof -->
+                <div class="service-card fade-in visible" data-cat="roof">
+                    <div class="service-icon">&#127969;</div>
+                    <h3>Roof Addons &amp; Repairs</h3>
+                    <div class="service-meta"><span>Roof</span><span>Hourly / Daily</span></div>
+                    <p>Shingle replacement, flashing repairs, vent installations, and small roof repairs that prevent costly leaks down the road.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ANNUAL HOME CHECKUP -->
+    <section id="checkup" style="padding: 6rem 2rem; background: var(--dark); position: relative; overflow: hidden;">
+        <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: radial-gradient(ellipse at 30% 50%, rgba(200,169,110,0.06) 0%, transparent 60%);"></div>
+        <div class="section-container" style="position: relative; z-index: 1;">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;">
+                <div class="fade-in">
+                    <div class="section-label">Our Best Value</div>
+                    <h2 style="font-family: 'Playfair Display', serif; font-size: clamp(2rem, 4vw, 2.8rem); color: var(--cream); margin-bottom: 1rem;">Annual Home Checkup</h2>
+                    <p style="color: var(--text-muted); font-size: 1.1rem; line-height: 1.8; margin-bottom: 1.5rem;">A comprehensive walk-through of your home's most vulnerable areas. We catch small problems before they become expensive ones &mdash; and most homeowners end up booking repair work on the spot.</p>
+                    <div style="display: flex; align-items: baseline; gap: 1rem; margin-bottom: 2rem;">
+                        <span style="font-family: 'Bebas Neue', sans-serif; font-size: 3.5rem; color: var(--accent);">$199&ndash;$299</span>
+                        <span style="color: var(--text-muted); font-size: 0.9rem;">one-time visit</span>
+                    </div>
+                    <a href="#booking" class="btn-primary">Schedule Your Checkup</a>
+                </div>
+                <div class="fade-in">
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                        <div style="background: var(--dark-mid); border: 1px solid var(--border); border-radius: 8px; padding: 1.5rem;">
+                            <div style="font-size: 1.5rem; margin-bottom: 0.5rem;">&#127981;</div>
+                            <div style="color: var(--cream); font-weight: 600; font-size: 0.95rem;">Deck Inspection</div>
+                            <div style="color: var(--text-muted); font-size: 0.8rem; margin-top: 0.25rem;">Boards, railings, fasteners &amp; structural</div>
+                        </div>
+                        <div style="background: var(--dark-mid); border: 1px solid var(--border); border-radius: 8px; padding: 1.5rem;">
+                            <div style="font-size: 1.5rem; margin-bottom: 0.5rem;">&#128270;</div>
+                            <div style="color: var(--cream); font-weight: 600; font-size: 0.95rem;">Trim Rot Check</div>
+                            <div style="color: var(--text-muted); font-size: 0.8rem; margin-top: 0.25rem;">Fascia, casings, sills &amp; window frames</div>
+                        </div>
+                        <div style="background: var(--dark-mid); border: 1px solid var(--border); border-radius: 8px; padding: 1.5rem;">
+                            <div style="font-size: 1.5rem; margin-bottom: 0.5rem;">&#128167;</div>
+                            <div style="color: var(--cream); font-weight: 600; font-size: 0.95rem;">Caulking Check</div>
+                            <div style="color: var(--text-muted); font-size: 0.8rem; margin-top: 0.25rem;">Bathrooms, windows, exterior seals</div>
+                        </div>
+                        <div style="background: var(--dark-mid); border: 1px solid var(--border); border-radius: 8px; padding: 1.5rem;">
+                            <div style="font-size: 1.5rem; margin-bottom: 0.5rem;">&#128682;</div>
+                            <div style="color: var(--cream); font-weight: 600; font-size: 0.95rem;">Door Adjustments</div>
+                            <div style="color: var(--text-muted); font-size: 0.8rem; margin-top: 0.25rem;">Alignment, hardware, weatherstripping</div>
+                        </div>
+                        <div style="background: var(--dark-mid); border: 1px solid var(--border); border-radius: 8px; padding: 1.5rem;">
+                            <div style="font-size: 1.5rem; margin-bottom: 0.5rem;">&#127807;</div>
+                            <div style="color: var(--cream); font-weight: 600; font-size: 0.95rem;">Gutter Problem Areas</div>
+                            <div style="color: var(--text-muted); font-size: 0.8rem; margin-top: 0.25rem;">Drainage, sagging, leaks &amp; overflows</div>
+                        </div>
+                        <div style="background: var(--dark-mid); border: 1px solid var(--border); border-radius: 8px; padding: 1.5rem;">
+                            <div style="font-size: 1.5rem; margin-bottom: 0.5rem;">&#128684;</div>
+                            <div style="color: var(--cream); font-weight: 600; font-size: 0.95rem;">Safety Checks</div>
+                            <div style="color: var(--text-muted); font-size: 0.8rem; margin-top: 0.25rem;">Smoke detectors, CO, handrails &amp; stairs</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BOOKING FORM -->
+    <section class="booking" id="booking">
+        <div class="booking-wrapper">
+            <div class="section-header">
+                <div class="section-label">Get Started</div>
+                <h2>Book a Service</h2>
+                <p>Pick your service, tell us your address, and we'll get you on the schedule. It's that simple.</p>
+            </div>
+            <form class="booking-form" id="bookingForm" onsubmit="handleSubmit(event)">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="firstName">First Name</label>
+                        <input type="text" id="firstName" placeholder="Josh" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="lastName">Last Name</label>
+                        <input type="text" id="lastName" placeholder="Davis" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" placeholder="you@email.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone</label>
+                        <input type="tel" id="phone" placeholder="(402) 555-0123" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="address">Street Address</label>
+                    <input type="text" id="address" placeholder="1234 Maple St, Omaha, NE" required>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="service">What Do You Need?</label>
+                        <select id="service" required>
+                            <option value="">Select a service...</option>
+                            <optgroup label="&#9776; Service Days (Flat Rate)">
+                                <option value="lightbulb">Lightbulb Day &mdash; $50-$100</option>
+                                <option value="filter">Filter Day &mdash; $50-$100</option>
+                                <option value="gutter">Gutter Clean Day &mdash; $100-$200</option>
+                                <option value="smoke">Smoke Detector Day &mdash; $50-$100</option>
+                                <option value="caulking">Caulking & Seal Day &mdash; $75-$150</option>
+                                <option value="pressure">Pressure Wash Day &mdash; $150-$300</option>
+                            </optgroup>
+                            <optgroup label="&#128295; Small Projects (Hourly)">
+                                <option value="ext-deck">Deck Repairs</option>
+                                <option value="ext-patio">Patio Build</option>
+                                <option value="ext-fence">Fence Repairs</option>
+                                <option value="ext-trim">Trim Rot Repair</option>
+                                <option value="ext-siding">Siding Repairs</option>
+                                <option value="int-builtins">Built-Ins</option>
+                                <option value="int-bath">Bathroom Refresh</option>
+                                <option value="int-basement">Basement Room</option>
+                                <option value="int-trim">Trim Carpentry</option>
+                                <option value="rep-drywall">Drywall Repair</option>
+                                <option value="rep-water">Water Damage Repair</option>
+                                <option value="rep-struct">Structural Fixes</option>
+                                <option value="roof">Roof Addons & Repairs</option>
+                            </optgroup>
+                            <optgroup label="&#9733; Inspections">
+                                <option value="checkup">Annual Home Checkup &mdash; $199-$299</option>
+                            </optgroup>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="plan">Pricing Preference</label>
+                        <select id="plan">
+                            <option value="serviceday">Service Day (Flat Rate)</option>
+                            <option value="hourly">Hourly ($150 first hr, $89/hr after)</option>
+                            <option value="daily">Full Day Rate ($750/day)</option>
+                            <option value="checkup">Annual Home Checkup ($199-$299)</option>
+                            <option value="notsure">Not Sure &mdash; Help Me Decide</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="notes">Notes (optional)</label>
+                    <textarea id="notes" placeholder="Tell us about the job &mdash; how many bulbs, which filters, any special access needed..."></textarea>
+                </div>
+                <button type="submit" class="form-submit">Request Service</button>
+                <p class="form-note">We'll confirm your service day and time window within 24 hours.</p>
+            </form>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h3>THE HANDY NEIGHBOR CO.</h3>
+                    <p>Your trusted neighborhood expert for the small things that keep your home running. Reliable &amp; Ready &mdash; that's our promise.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#services">Service Days</a></li>
+                        <li><a href="#pricing">Pricing</a></li>
+                        <li><a href="#projects">Small Projects</a></li>
+                        <li><a href="#checkup">Annual Checkup</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#testimonials">Reviews</a></li>
+                        <li><a href="#booking">Book Now</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="mailto:hello@thehandyneighbor.co">hello@thehandyneighbor.co</a></li>
+                        <li><a href="tel:+14025550123">(402) 555-0123</a></li>
+                        <li><a href="#">Omaha, NE</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 The Handy Neighbor Co. All rights reserved.</p>
+                <div class="footer-social">
+                    <a href="#">Facebook</a>
+                    <a href="#">Instagram</a>
+                    <a href="#">Nextdoor</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- TOAST -->
+    <div class="toast" id="toast">Service request submitted! We'll be in touch within 24 hours.</div>
+
+    <script>
+        // Mobile menu toggle
+        function toggleMenu() {
+            document.getElementById('navLinks').classList.toggle('active');
+        }
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('navbar');
+            if (window.scrollY > 50) { nav.classList.add('scrolled'); }
+            else { nav.classList.remove('scrolled'); }
+        });
+
+        // Close mobile menu on link click
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('navLinks').classList.remove('active');
+            });
+        });
+
+        // Fade-in on scroll
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) { entry.target.classList.add('visible'); }
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+        // Form submission
+        function handleSubmit(e) {
+            e.preventDefault();
+            const toast = document.getElementById('toast');
+            toast.classList.add('show');
+            setTimeout(() => toast.classList.remove('show'), 4000);
+            e.target.reset();
+        }
+
+        // Category filter for projects
+        function showCategory(cat, btn) {
+            const cards = document.querySelectorAll('#projectGrid .service-card');
+            cards.forEach(card => {
+                card.style.display = (cat === 'all' || card.dataset.cat === cat) ? '' : 'none';
+            });
+            document.querySelectorAll('.cat-tab').forEach(t => t.classList.remove('active'));
+            btn.classList.add('active');
+        }
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) { target.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+            });
+        });
+    </script>
+</body>
+</html>
