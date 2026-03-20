@@ -10,16 +10,16 @@
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
     <style>
         :root {
-            --cream: #F5F0E8;
-            --dark: #1A1A1A;
-            --dark-mid: #2A2A2A;
+            --cream: #FFFFFF;
+            --dark: #3B5068;
+            --dark-mid: #344859;
             --accent: #C8A96E;
             --accent-dark: #A8894E;
-            --text-light: #E8E0D0;
-            --text-muted: #9A9080;
+            --text-light: #FFFFFF;
+            --text-muted: rgba(255,255,255,0.55);
             --rust: #8B4513;
             --green: #4A6741;
-            --border: rgba(200,169,110,0.2);
+            --border: rgba(255,255,255,0.12);
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -35,12 +35,12 @@
         /* ============ NAVIGATION ============ */
         nav {
             position: fixed; top: 0; width: 100%; z-index: 1000;
-            background: rgba(26,26,26,0.95);
+            background: rgba(44,62,80,0.95);
             backdrop-filter: blur(10px);
             border-bottom: 1px solid var(--border);
             transition: all 0.3s ease;
         }
-        nav.scrolled { background: rgba(26,26,26,0.98); box-shadow: 0 4px 20px rgba(0,0,0,0.3); }
+        nav.scrolled { background: rgba(44,62,80,0.98); box-shadow: 0 4px 20px rgba(0,0,0,0.3); }
 
         .nav-container {
             max-width: 1200px; margin: 0 auto;
@@ -75,8 +75,8 @@
         .hero {
             min-height: 100vh; display: flex; align-items: center; justify-content: center;
             text-align: center; padding: 6rem 2rem 4rem; position: relative; overflow: hidden;
-            background: radial-gradient(ellipse at 50% 0%, rgba(200,169,110,0.08) 0%, transparent 60%),
-                linear-gradient(180deg, var(--dark) 0%, var(--dark-mid) 100%);
+            background: radial-gradient(ellipse at 50% 0%, rgba(200,169,110,0.06) 0%, transparent 60%),
+                linear-gradient(180deg, #2C3E50 0%, var(--dark) 100%);
         }
         .hero-content { position: relative; z-index: 1; max-width: 800px; }
 
@@ -137,7 +137,7 @@
         .steps-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; }
         .step-card {
             text-align: center; padding: 2.5rem 2rem; border: 1px solid var(--border);
-            border-radius: 8px; background: rgba(26,26,26,0.5); transition: all 0.3s;
+            border-radius: 8px; background: rgba(44,72,89,0.5); transition: all 0.3s;
         }
         .step-card:hover { border-color: var(--accent); transform: translateY(-4px); }
         .step-number { font-family: 'Bebas Neue', sans-serif; font-size: 3rem; color: var(--accent); line-height: 1; margin-bottom: 1rem; }
@@ -282,7 +282,7 @@
 
         /* ============ GUARANTEE BAR ============ */
         .guarantee-bar {
-            background: rgba(200,169,110,0.08); border-top: 1px solid var(--border);
+            background: #2C3E50; border-top: 1px solid var(--border);
             border-bottom: 1px solid var(--border); padding: 2rem; text-align: center;
         }
         .guarantee-items { display: flex; justify-content: center; gap: 3rem; flex-wrap: wrap; max-width: 900px; margin: 0 auto; }
@@ -316,7 +316,7 @@
             .nav-links { display: none; }
             .nav-links.active {
                 display: flex; flex-direction: column; position: absolute;
-                top: 100%; left: 0; right: 0; background: rgba(26,26,26,0.98);
+                top: 100%; left: 0; right: 0; background: rgba(44,62,80,0.98);
                 padding: 1.5rem 2rem; border-bottom: 1px solid var(--border);
             }
             .mobile-toggle { display: block; }
@@ -350,7 +350,7 @@
     <!-- HERO -->
     <section class="hero" id="home">
         <div class="hero-content">
-            <div class="hero-badge">Serving Omaha Neighborhoods</div>
+            <div class="hero-badge">Serving Shadow Ridge Neighborhood</div>
             <h1>Your Trusted Neighbor for <em>Small Home Projects</em></h1>
             <p>We run scheduled service days through your neighborhood &mdash; same tools, same route, flat-rate pricing. Lightbulbs, filters, gutters, and more handled fast so you don't have to think about it.</p>
             <div class="hero-buttons">
@@ -640,7 +640,7 @@
         <div class="section-container">
             <div class="area-content" style="text-align: center; max-width: 700px; margin: 0 auto;">
                 <div class="section-label">Where We Work</div>
-                <h2 style="font-family: 'Playfair Display', serif; font-size: clamp(2rem, 4vw, 2.5rem); color: var(--cream); margin-bottom: 1rem;">Serving Omaha Neighborhoods</h2>
+                <h2 style="font-family: 'Playfair Display', serif; font-size: clamp(2rem, 4vw, 2.5rem); color: var(--cream); margin-bottom: 1rem;">Serving Shadow Ridge Neighborhood</h2>
                 <p style="color: var(--text-muted); font-size: 1.05rem;">We're currently serving select Omaha neighborhoods and expanding weekly. If your area isn't listed, sign up anyway &mdash; we'll prioritize neighborhoods with the most requests.</p>
                 <div class="neighborhoods">
                     <span class="neighborhood-tag">Shadow Ridge</span>
