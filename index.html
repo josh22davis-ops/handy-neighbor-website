@@ -320,6 +320,71 @@
         .guarantee-item { display: flex; align-items: center; gap: 0.75rem; color: var(--text-light); font-size: 0.95rem; font-weight: 500; }
         .guarantee-icon { color: var(--accent); font-size: 1.25rem; }
 
+        /* ============ SERVICE TICKER ============ */
+        .ticker-wrap {
+            overflow: hidden;
+            padding: 1.25rem 0;
+            background: linear-gradient(90deg, #2C3E50 0%, var(--dark-mid) 50%, #2C3E50 100%);
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+            position: relative;
+        }
+        .ticker-wrap::before, .ticker-wrap::after {
+            content: '';
+            position: absolute; top: 0; bottom: 0; width: 80px; z-index: 2; pointer-events: none;
+        }
+        .ticker-wrap::before { left: 0; background: linear-gradient(90deg, #2C3E50, transparent); }
+        .ticker-wrap::after { right: 0; background: linear-gradient(90deg, transparent, #2C3E50); }
+        .ticker-track {
+            display: flex; width: max-content;
+            animation: tickerScroll 35s linear infinite;
+        }
+        .ticker-track:hover { animation-play-state: paused; }
+        .ticker-track.reverse { animation: tickerScrollReverse 40s linear infinite; }
+        .ticker-track.reverse:hover { animation-play-state: paused; }
+        .ticker-item {
+            display: flex; align-items: center; gap: 0.6rem;
+            padding: 0.5rem 1.75rem;
+            color: var(--text-muted); font-size: 0.9rem; font-weight: 500;
+            white-space: nowrap; transition: color 0.3s;
+        }
+        .ticker-item:hover { color: var(--cream); }
+        .ticker-item .ticker-icon { font-size: 1.1rem; }
+        .ticker-item .ticker-dot { color: var(--accent); font-size: 0.5rem; margin-left: 0.5rem; }
+        @keyframes tickerScroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        @keyframes tickerScrollReverse {
+            0% { transform: translateX(-50%); }
+            100% { transform: translateX(0); }
+        }
+
+        /* ============ NEW SERVICE CARDS (Add-On Services) ============ */
+        .addon-card {
+            background: rgba(44,72,89,0.4);
+            border: 1px solid var(--border);
+            border-radius: 12px; padding: 2rem;
+            transition: all 0.3s ease; position: relative; overflow: hidden;
+        }
+        .addon-card:hover {
+            transform: translateY(-4px);
+            border-color: var(--accent);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.2);
+        }
+        .addon-card .addon-badge {
+            display: inline-block; background: rgba(200,169,110,0.15);
+            color: var(--accent); font-size: 0.7rem; font-weight: 700;
+            text-transform: uppercase; letter-spacing: 1px;
+            padding: 0.25rem 0.75rem; border-radius: 4px; margin-bottom: 1rem;
+        }
+        .addon-grid {
+            display: grid; grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem; margin-top: 3rem;
+        }
+        @media (max-width: 900px) { .addon-grid { grid-template-columns: repeat(2, 1fr); } }
+        @media (max-width: 600px) { .addon-grid { grid-template-columns: 1fr; } }
+
         /* ============ CATEGORY TABS ============ */
         .cat-tab {
             background: transparent; color: var(--text-muted); border: 1px solid var(--border);
@@ -428,6 +493,43 @@
         </div>
     </div>
 
+    <!-- SERVICE TICKER #1 — "Are you keeping up with these?" -->
+    <div class="ticker-wrap" aria-label="Services we offer">
+        <div class="ticker-track">
+            <div class="ticker-item"><span class="ticker-icon">&#128161;</span> Lightbulb Replacement <span class="ticker-dot">&#9679;</span></div>
+            <div class="ticker-item"><span class="ticker-icon">&#127744;</span> HVAC Filter Changes <span class="ticker-dot">&#9679;</span></div>
+            <div class="ticker-item"><span class="ticker-icon">&#127807;</span> Gutter Cleaning <span class="ticker-dot">&#9679;</span></div>
+            <div class="ticker-item"><span class="ticker-icon">&#128684;</span> Smoke Detector Service <span class="ticker-dot">&#9679;</span></div>
+            <div class="ticker-item"><span class="ticker-icon">&#128167;</span> Caulking &amp; Seals <span class="ticker-dot">&#9679;</span></div>
+            <div class="ticker-item"><span class="ticker-icon">&#128166;</span> Pressure Washing <span class="ticker-dot">&#9679;</span></div>
+            <div class="ticker-item"><span class="ticker-icon">&#127794;</span> Tree Trimming &amp; Hedging <span class="ticker-dot">&#9679;</span></div>
+            <div class="ticker-item"><span class="ticker-icon">&#127968;</span> Out-of-Town Home Checks <span class="ticker-dot">&#9679;</span></div>
+            <div class="ticker-item"><span class="ticker-icon">&#128375;</span> Pest Treatment &amp; Spider Cleanup <span class="ticker-dot">&#9679;</span></div>
+            <div class="ticker-item"><span class="ticker-icon">&#128295;</span> Appliance Maintenance Package <span class="ticker-dot">&#9679;</span></div>
+            <div class="ticker-item"><span class="ticker-icon">&#128241;</span> Home Scan &amp; Web Portal <span class="ticker-dot">&#9679;</span></div>
+            <div class="ticker-item"><span class="ticker-icon">&#128203;</span> Recommended Repairs Plan <span class="ticker-dot">&#9679;</span></div>
+            <div class="ticker-item"><span class="ticker-icon">&#128736;</span> Deck &amp; Fence Repairs <span class="ticker-dot">&#9679;</span></div>
+            <div class="ticker-item"><span class="ticker-icon">&#128712;</span> Drywall &amp; Trim <span class="ticker-dot">&#9679;</span></div>
+            <div class="ticker-item"><span class="ticker-icon">&#128706;</span> Bathroom Refresh <span class="ticker-dot">&#9679;</span></div>
+            <!-- Duplicate set for seamless loop -->
+            <div class="ticker-item"><span class="ticker-icon">&#128161;</span> Lightbulb Replacement <span class="ticker-dot">&#9679;</span></div>
+            <div class="ticker-item"><span class="ticker-icon">&#127744;</span> HVAC Filter Changes <span class="ticker-dot">&#9679;</span></div>
+            <div class="ticker-item"><span class="ticker-icon">&#127807;</span> Gutter Cleaning <span class="ticker-dot">&#9679;</span></div>
+            <div class="ticker-item"><span class="ticker-icon">&#128684;</span> Smoke Detector Service <span class="ticker-dot">&#9679;</span></div>
+            <div class="ticker-item"><span class="ticker-icon">&#128167;</span> Caulking &amp; Seals <span class="ticker-dot">&#9679;</span></div>
+            <div class="ticker-item"><span class="ticker-icon">&#128166;</span> Pressure Washing <span class="ticker-dot">&#9679;</span></div>
+            <div class="ticker-item"><span class="ticker-icon">&#127794;</span> Tree Trimming &amp; Hedging <span class="ticker-dot">&#9679;</span></div>
+            <div class="ticker-item"><span class="ticker-icon">&#127968;</span> Out-of-Town Home Checks <span class="ticker-dot">&#9679;</span></div>
+            <div class="ticker-item"><span class="ticker-icon">&#128375;</span> Pest Treatment &amp; Spider Cleanup <span class="ticker-dot">&#9679;</span></div>
+            <div class="ticker-item"><span class="ticker-icon">&#128295;</span> Appliance Maintenance Package <span class="ticker-dot">&#9679;</span></div>
+            <div class="ticker-item"><span class="ticker-icon">&#128241;</span> Home Scan &amp; Web Portal <span class="ticker-dot">&#9679;</span></div>
+            <div class="ticker-item"><span class="ticker-icon">&#128203;</span> Recommended Repairs Plan <span class="ticker-dot">&#9679;</span></div>
+            <div class="ticker-item"><span class="ticker-icon">&#128736;</span> Deck &amp; Fence Repairs <span class="ticker-dot">&#9679;</span></div>
+            <div class="ticker-item"><span class="ticker-icon">&#128712;</span> Drywall &amp; Trim <span class="ticker-dot">&#9679;</span></div>
+            <div class="ticker-item"><span class="ticker-icon">&#128706;</span> Bathroom Refresh <span class="ticker-dot">&#9679;</span></div>
+        </div>
+    </div>
+
     <!-- HOW IT WORKS -->
     <section class="how-it-works" id="how-it-works">
         <div class="section-container">
@@ -504,6 +606,108 @@
             </div>
         </div>
     </section>
+
+    <!-- ADD-ON SERVICES — New service cards -->
+    <section id="addon-services" style="padding: 6rem 2rem; background: var(--dark);">
+        <div class="section-container">
+            <div class="section-header">
+                <div class="section-label">Keep Your Home Covered</div>
+                <h2>Add-On Services</h2>
+                <p>The stuff most homeowners forget about &mdash; until it becomes a problem. We handle it so you don't have to think about it.</p>
+            </div>
+            <div class="addon-grid">
+
+                <div class="addon-card fade-in">
+                    <div class="addon-badge">Seasonal</div>
+                    <div style="font-size: 2rem; margin-bottom: 0.75rem;">&#127794;</div>
+                    <h3 style="color: var(--cream); font-size: 1.15rem; margin-bottom: 0.5rem;">Tree Trimming &amp; Hedging</h3>
+                    <div style="color: var(--accent); font-weight: 600; font-size: 0.9rem; margin-bottom: 0.75rem;">Starting at $150</div>
+                    <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.6;">Overgrown branches, unruly hedges, and limbs too close to your roof or siding. We trim, shape, and haul away the debris so your yard stays clean and your home stays protected.</p>
+                </div>
+
+                <div class="addon-card fade-in">
+                    <div class="addon-badge">Peace of Mind</div>
+                    <div style="font-size: 2rem; margin-bottom: 0.75rem;">&#127968;</div>
+                    <h3 style="color: var(--cream); font-size: 1.15rem; margin-bottom: 0.5rem;">Out-of-Town Home Check</h3>
+                    <div style="color: var(--accent); font-weight: 600; font-size: 0.9rem; margin-bottom: 0.75rem;">$75 per visit</div>
+                    <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.6;">Traveling and need someone you trust to check on the house? We do a walk-around, check for leaks, run water, grab mail, adjust thermostats &mdash; whatever gives you peace of mind while you're away.</p>
+                </div>
+
+                <div class="addon-card fade-in">
+                    <div class="addon-badge">Preventive</div>
+                    <div style="font-size: 2rem; margin-bottom: 0.75rem;">&#128375;</div>
+                    <h3 style="color: var(--cream); font-size: 1.15rem; margin-bottom: 0.5rem;">Pest Treatment &amp; Spider Cleanup</h3>
+                    <div style="color: var(--accent); font-weight: 600; font-size: 0.9rem; margin-bottom: 0.75rem;">Starting at $100</div>
+                    <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.6;">Perimeter pest spray, cobweb removal from eaves and porches, wasp nest knockdown, and entry point sealing. Keep the critters outside where they belong.</p>
+                </div>
+
+                <div class="addon-card fade-in">
+                    <div class="addon-badge">Popular</div>
+                    <div style="font-size: 2rem; margin-bottom: 0.75rem;">&#128295;</div>
+                    <h3 style="color: var(--cream); font-size: 1.15rem; margin-bottom: 0.5rem;">Appliance Maintenance Package</h3>
+                    <div style="color: var(--accent); font-weight: 600; font-size: 0.9rem; margin-bottom: 0.75rem;">$199&ndash;$349</div>
+                    <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.6;">All your appliance maintenance in one visit &mdash; HVAC filter swap, fridge coil cleaning, dishwasher filter &amp; drain flush, hot water heater flush, dryer vent check, and garbage disposal maintenance. Everything your manuals say you should be doing but aren't.</p>
+                </div>
+
+                <div class="addon-card fade-in">
+                    <div class="addon-badge">Smart Home</div>
+                    <div style="font-size: 2rem; margin-bottom: 0.75rem;">&#128241;</div>
+                    <h3 style="color: var(--cream); font-size: 1.15rem; margin-bottom: 0.5rem;">Home Scan &amp; Web Portal</h3>
+                    <div style="color: var(--accent); font-weight: 600; font-size: 0.9rem; margin-bottom: 0.75rem;">$149</div>
+                    <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.6;">We scan every major appliance in your home and build you a personalized web portal with model numbers, product info, warranty dates, filter sizes, and manual links. Never dig through a junk drawer again &mdash; it's all one click away.</p>
+                </div>
+
+                <div class="addon-card fade-in">
+                    <div class="addon-badge">Proactive</div>
+                    <div style="font-size: 2rem; margin-bottom: 0.75rem;">&#128203;</div>
+                    <h3 style="color: var(--cream); font-size: 1.15rem; margin-bottom: 0.5rem;">Recommended Repairs &amp; Maintenance Plan</h3>
+                    <div style="color: var(--accent); font-weight: 600; font-size: 0.9rem; margin-bottom: 0.75rem;">Included with Annual Checkup</div>
+                    <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.6;">After your annual checkup or home scan, we give you a prioritized list of recommended repairs and maintenance tasks &mdash; ranked by urgency, estimated cost, and what happens if you wait. A clear game plan to protect your biggest investment.</p>
+                </div>
+
+            </div>
+            <div style="text-align: center; margin-top: 3rem;">
+                <a href="#booking" class="btn-primary">Book an Add-On Service</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICE TICKER #2 — mid-page reinforcement, scrolls opposite direction -->
+    <div class="ticker-wrap" aria-label="More services we offer">
+        <div class="ticker-track reverse">
+            <div class="ticker-item"><span class="ticker-icon">&#127794;</span> Tree Trimming &amp; Hedging <span class="ticker-dot">&#9679;</span></div>
+            <div class="ticker-item"><span class="ticker-icon">&#128375;</span> Pest Treatment &amp; Spider Cleanup <span class="ticker-dot">&#9679;</span></div>
+            <div class="ticker-item"><span class="ticker-icon">&#127968;</span> Out-of-Town Home Checks <span class="ticker-dot">&#9679;</span></div>
+            <div class="ticker-item"><span class="ticker-icon">&#128295;</span> Appliance Maintenance Package <span class="ticker-dot">&#9679;</span></div>
+            <div class="ticker-item"><span class="ticker-icon">&#128241;</span> Home Scan &amp; Web Portal <span class="ticker-dot">&#9679;</span></div>
+            <div class="ticker-item"><span class="ticker-icon">&#128203;</span> Recommended Repairs Plan <span class="ticker-dot">&#9679;</span></div>
+            <div class="ticker-item"><span class="ticker-icon">&#128161;</span> Lightbulb Replacement <span class="ticker-dot">&#9679;</span></div>
+            <div class="ticker-item"><span class="ticker-icon">&#127807;</span> Gutter Cleaning <span class="ticker-dot">&#9679;</span></div>
+            <div class="ticker-item"><span class="ticker-icon">&#128684;</span> Smoke Detectors <span class="ticker-dot">&#9679;</span></div>
+            <div class="ticker-item"><span class="ticker-icon">&#128166;</span> Pressure Washing <span class="ticker-dot">&#9679;</span></div>
+            <div class="ticker-item"><span class="ticker-icon">&#128167;</span> Caulking &amp; Seals <span class="ticker-dot">&#9679;</span></div>
+            <div class="ticker-item"><span class="ticker-icon">&#127744;</span> HVAC Filter Changes <span class="ticker-dot">&#9679;</span></div>
+            <div class="ticker-item"><span class="ticker-icon">&#128706;</span> Bathroom Refresh <span class="ticker-dot">&#9679;</span></div>
+            <div class="ticker-item"><span class="ticker-icon">&#128736;</span> Deck &amp; Fence Repairs <span class="ticker-dot">&#9679;</span></div>
+            <div class="ticker-item"><span class="ticker-icon">&#9889;</span> Annual Home Checkup <span class="ticker-dot">&#9679;</span></div>
+            <!-- Duplicate for seamless loop -->
+            <div class="ticker-item"><span class="ticker-icon">&#127794;</span> Tree Trimming &amp; Hedging <span class="ticker-dot">&#9679;</span></div>
+            <div class="ticker-item"><span class="ticker-icon">&#128375;</span> Pest Treatment &amp; Spider Cleanup <span class="ticker-dot">&#9679;</span></div>
+            <div class="ticker-item"><span class="ticker-icon">&#127968;</span> Out-of-Town Home Checks <span class="ticker-dot">&#9679;</span></div>
+            <div class="ticker-item"><span class="ticker-icon">&#128295;</span> Appliance Maintenance Package <span class="ticker-dot">&#9679;</span></div>
+            <div class="ticker-item"><span class="ticker-icon">&#128241;</span> Home Scan &amp; Web Portal <span class="ticker-dot">&#9679;</span></div>
+            <div class="ticker-item"><span class="ticker-icon">&#128203;</span> Recommended Repairs Plan <span class="ticker-dot">&#9679;</span></div>
+            <div class="ticker-item"><span class="ticker-icon">&#128161;</span> Lightbulb Replacement <span class="ticker-dot">&#9679;</span></div>
+            <div class="ticker-item"><span class="ticker-icon">&#127807;</span> Gutter Cleaning <span class="ticker-dot">&#9679;</span></div>
+            <div class="ticker-item"><span class="ticker-icon">&#128684;</span> Smoke Detectors <span class="ticker-dot">&#9679;</span></div>
+            <div class="ticker-item"><span class="ticker-icon">&#128166;</span> Pressure Washing <span class="ticker-dot">&#9679;</span></div>
+            <div class="ticker-item"><span class="ticker-icon">&#128167;</span> Caulking &amp; Seals <span class="ticker-dot">&#9679;</span></div>
+            <div class="ticker-item"><span class="ticker-icon">&#127744;</span> HVAC Filter Changes <span class="ticker-dot">&#9679;</span></div>
+            <div class="ticker-item"><span class="ticker-icon">&#128706;</span> Bathroom Refresh <span class="ticker-dot">&#9679;</span></div>
+            <div class="ticker-item"><span class="ticker-icon">&#128736;</span> Deck &amp; Fence Repairs <span class="ticker-dot">&#9679;</span></div>
+            <div class="ticker-item"><span class="ticker-icon">&#9889;</span> Annual Home Checkup <span class="ticker-dot">&#9679;</span></div>
+        </div>
+    </div>
 
     <!-- PRICING — Service Days front and center -->
     <section class="pricing" id="pricing">
@@ -928,8 +1132,16 @@
                                 <option value="rep-struct">Structural Fixes</option>
                                 <option value="roof">Roof Addons & Repairs</option>
                             </optgroup>
-                            <optgroup label="&#9733; Inspections">
+                            <optgroup label="&#10024; Add-On Services">
+                                <option value="tree-trimming">Tree Trimming &amp; Hedging &mdash; from $150</option>
+                                <option value="out-of-town">Out-of-Town Home Check &mdash; $75/visit</option>
+                                <option value="pest-treatment">Pest Treatment &amp; Spider Cleanup &mdash; from $100</option>
+                                <option value="appliance-pkg">Appliance Maintenance Package &mdash; $199-$349</option>
+                                <option value="home-scan">Home Scan &amp; Web Portal &mdash; $149</option>
+                            </optgroup>
+                            <optgroup label="&#9733; Inspections &amp; Plans">
                                 <option value="checkup">Annual Home Checkup &mdash; $199-$299</option>
+                                <option value="repairs-plan">Recommended Repairs &amp; Maintenance Plan</option>
                             </optgroup>
                         </select>
                     </div>
@@ -1242,6 +1454,41 @@
                 "@type": "Offer",
                 "itemOffered": { "@type": "Service", "name": "Annual Home Checkup", "description": "Comprehensive walk-through of your home's most vulnerable areas — deck, trim, caulking, gutters, doors, and safety systems.", "provider": {"@id": "https://thehandyneighbor.co/#business"} },
                 "priceSpecification": { "@type": "PriceSpecification", "price": "199.00", "maxPrice": "299.00", "priceCurrency": "USD" }
+              }
+            ]
+          },
+          {
+            "@type": "OfferCatalog",
+            "name": "Add-On Services",
+            "itemListElement": [
+              {
+                "@type": "Offer",
+                "itemOffered": { "@type": "Service", "name": "Tree Trimming & Hedging", "description": "Branch trimming, hedge shaping, and debris hauling to keep your yard clean and home protected from overgrowth.", "provider": {"@id": "https://thehandyneighbor.co/#business"} },
+                "priceSpecification": { "@type": "PriceSpecification", "price": "150.00", "priceCurrency": "USD" }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": { "@type": "Service", "name": "Out-of-Town Home Check", "description": "Walk-around inspection, leak checks, mail collection, thermostat adjustments, and peace of mind while you travel.", "provider": {"@id": "https://thehandyneighbor.co/#business"} },
+                "priceSpecification": { "@type": "PriceSpecification", "price": "75.00", "priceCurrency": "USD", "unitText": "per visit" }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": { "@type": "Service", "name": "Pest Treatment & Spider Cleanup", "description": "Perimeter pest spray, cobweb removal from eaves and porches, wasp nest knockdown, and entry point sealing.", "provider": {"@id": "https://thehandyneighbor.co/#business"} },
+                "priceSpecification": { "@type": "PriceSpecification", "price": "100.00", "priceCurrency": "USD" }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": { "@type": "Service", "name": "Appliance Maintenance Package", "description": "Complete appliance maintenance — HVAC filter swap, fridge coil cleaning, dishwasher flush, hot water heater flush, dryer vent check, and garbage disposal maintenance.", "provider": {"@id": "https://thehandyneighbor.co/#business"} },
+                "priceSpecification": { "@type": "PriceSpecification", "price": "199.00", "maxPrice": "349.00", "priceCurrency": "USD" }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": { "@type": "Service", "name": "Home Scan & Web Portal", "description": "Full home appliance scan with a personalized web portal containing model numbers, product info, warranty dates, filter sizes, and manual links.", "provider": {"@id": "https://thehandyneighbor.co/#business"} },
+                "priceSpecification": { "@type": "PriceSpecification", "price": "149.00", "priceCurrency": "USD" }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": { "@type": "Service", "name": "Recommended Repairs & Maintenance Plan", "description": "Prioritized list of recommended repairs and maintenance tasks ranked by urgency, estimated cost, and consequences of waiting.", "provider": {"@id": "https://thehandyneighbor.co/#business"} }
               }
             ]
           }
