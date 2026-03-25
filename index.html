@@ -216,7 +216,7 @@
         }
         .service-card:hover::before { transform: scaleY(1); }
         .service-card:hover { border-color: rgba(200,169,110,0.4); }
-        .service-icon { font-size: 2rem; margin-bottom: 1rem; }
+        .service-icon { width: 48px; height: 48px; margin-bottom: 1rem; }
         .service-card h3 { font-size: 1.2rem; color: var(--cream); margin-bottom: 0.5rem; }
         .service-meta { display: flex; gap: 1rem; margin-bottom: 1rem; flex-wrap: wrap; }
         .service-meta span {
@@ -273,7 +273,7 @@
         .about-content p { color: var(--text-muted); line-height: 1.8; margin-bottom: 1.25rem; font-size: 1.05rem; }
         .about-values { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
         .value-item { padding: 1.5rem; border: 1px solid var(--border); border-radius: 8px; text-align: center; }
-        .value-icon { font-size: 1.5rem; margin-bottom: 0.5rem; }
+        .value-icon { width: 36px; height: 36px; margin-bottom: 0.5rem; }
         .value-item h4 { color: var(--cream); font-size: 0.95rem; margin-bottom: 0.25rem; }
         .value-item p { color: var(--text-muted); font-size: 0.8rem; line-height: 1.5; }
 
@@ -465,10 +465,11 @@
                 <li><a href="#how-it-works">How It Works</a></li>
                 <li><a href="#services">Service Days</a></li>
                 <li><a href="#pricing">Pricing</a></li>
-                <li><a href="services.html">More Services</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#faq">FAQ</a></li>
-                <li><a href="#booking" class="nav-cta">Book Now</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="#booking" class="nav-cta">Get on the Schedule</a></li>
             </ul>
         </div>
     </nav>
@@ -478,10 +479,10 @@
         <div class="hero-content">
             <div class="hero-badge">Serving The Ridges and Surrounding Neighborhoods</div>
             <h1>Your Trusted Neighbor for <em>Home Maintenance and Small Jobs</em></h1>
-            <p>We run scheduled service days through your neighborhood &mdash; same tools, same route, flat-rate pricing. Lightbulbs, filters, gutters, and more handled fast so you don't have to think about it.</p>
+            <p>Scheduled service days run through the neighborhood &mdash; same tools, same route, flat-rate pricing. Lightbulbs, filters, gutters, and more &mdash; handled fast so you don&rsquo;t have to think about it.</p>
             <div class="hero-buttons">
-                <a href="#booking" class="btn-primary">Book a Service Day</a>
-                <a href="#services" class="btn-secondary">See Our Services</a>
+                <a href="#services" class="btn-primary">See This Week&rsquo;s Services</a>
+                <a href="#booking" class="btn-secondary">Get on the Schedule</a>
             </div>
             <div class="hero-stats">
                 <div class="hero-stat">
@@ -522,43 +523,10 @@
         </div>
     </div>
 
-    <!-- SERVICE TICKER #1 — "Are you keeping up with these?" -->
-    <div class="ticker-wrap" aria-label="Services we offer">
-        <div class="ticker-track">
-            <div class="ticker-item"><span class="ticker-icon">&#128161;</span> Lightbulb Replacement <span class="ticker-dot">&#9679;</span></div>
-            <div class="ticker-item"><span class="ticker-icon">&#127744;</span> HVAC Filter Changes <span class="ticker-dot">&#9679;</span></div>
-            <div class="ticker-item"><span class="ticker-icon">&#127807;</span> Gutter Cleaning <span class="ticker-dot">&#9679;</span></div>
-            <div class="ticker-item"><span class="ticker-icon">&#128684;</span> Smoke Detector Service <span class="ticker-dot">&#9679;</span></div>
-            <div class="ticker-item"><span class="ticker-icon">&#128167;</span> Caulking &amp; Seals <span class="ticker-dot">&#9679;</span></div>
-            <div class="ticker-item"><span class="ticker-icon">&#128166;</span> Pressure Washing <span class="ticker-dot">&#9679;</span></div>
-            <div class="ticker-item"><span class="ticker-icon">&#127794;</span> Tree Trimming &amp; Hedging <span class="ticker-dot">&#9679;</span></div>
-            <div class="ticker-item"><span class="ticker-icon">&#127968;</span> Out-of-Town Home Checks <span class="ticker-dot">&#9679;</span></div>
-            <div class="ticker-item"><span class="ticker-icon">&#128375;</span> Pest Treatment &amp; Spider Cleanup <span class="ticker-dot">&#9679;</span></div>
-            <div class="ticker-item"><span class="ticker-icon">&#128295;</span> Appliance Maintenance Package <span class="ticker-dot">&#9679;</span></div>
-            <div class="ticker-item"><span class="ticker-icon">&#128241;</span> Home Scan &amp; Web Portal <span class="ticker-dot">&#9679;</span></div>
-            <div class="ticker-item"><span class="ticker-icon">&#128203;</span> Recommended Repairs Plan <span class="ticker-dot">&#9679;</span></div>
-            <div class="ticker-item"><span class="ticker-icon">&#128736;</span> Deck &amp; Fence Repairs <span class="ticker-dot">&#9679;</span></div>
-            <div class="ticker-item"><span class="ticker-icon">&#128712;</span> Drywall &amp; Trim <span class="ticker-dot">&#9679;</span></div>
-            <div class="ticker-item"><span class="ticker-icon">&#128706;</span> Bathroom Refresh <span class="ticker-dot">&#9679;</span></div>
-            <!-- Duplicate set for seamless loop -->
-            <div class="ticker-item"><span class="ticker-icon">&#128161;</span> Lightbulb Replacement <span class="ticker-dot">&#9679;</span></div>
-            <div class="ticker-item"><span class="ticker-icon">&#127744;</span> HVAC Filter Changes <span class="ticker-dot">&#9679;</span></div>
-            <div class="ticker-item"><span class="ticker-icon">&#127807;</span> Gutter Cleaning <span class="ticker-dot">&#9679;</span></div>
-            <div class="ticker-item"><span class="ticker-icon">&#128684;</span> Smoke Detector Service <span class="ticker-dot">&#9679;</span></div>
-            <div class="ticker-item"><span class="ticker-icon">&#128167;</span> Caulking &amp; Seals <span class="ticker-dot">&#9679;</span></div>
-            <div class="ticker-item"><span class="ticker-icon">&#128166;</span> Pressure Washing <span class="ticker-dot">&#9679;</span></div>
-            <div class="ticker-item"><span class="ticker-icon">&#127794;</span> Tree Trimming &amp; Hedging <span class="ticker-dot">&#9679;</span></div>
-            <div class="ticker-item"><span class="ticker-icon">&#127968;</span> Out-of-Town Home Checks <span class="ticker-dot">&#9679;</span></div>
-            <div class="ticker-item"><span class="ticker-icon">&#128375;</span> Pest Treatment &amp; Spider Cleanup <span class="ticker-dot">&#9679;</span></div>
-            <div class="ticker-item"><span class="ticker-icon">&#128295;</span> Appliance Maintenance Package <span class="ticker-dot">&#9679;</span></div>
-            <div class="ticker-item"><span class="ticker-icon">&#128241;</span> Home Scan &amp; Web Portal <span class="ticker-dot">&#9679;</span></div>
-            <div class="ticker-item"><span class="ticker-icon">&#128203;</span> Recommended Repairs Plan <span class="ticker-dot">&#9679;</span></div>
-            <div class="ticker-item"><span class="ticker-icon">&#128736;</span> Deck &amp; Fence Repairs <span class="ticker-dot">&#9679;</span></div>
-            <div class="ticker-item"><span class="ticker-icon">&#128712;</span> Drywall &amp; Trim <span class="ticker-dot">&#9679;</span></div>
-            <div class="ticker-item"><span class="ticker-icon">&#128706;</span> Bathroom Refresh <span class="ticker-dot">&#9679;</span></div>
-        </div>
+    <!-- VALUE PROP LINE -->
+    <div style="text-align: center; padding: 3rem 2rem; background: var(--dark-mid); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
+        <p style="font-family: 'Playfair Display', serif; font-size: clamp(1.1rem, 2.5vw, 1.4rem); color: var(--cream); max-width: 750px; margin: 0 auto; line-height: 1.8; font-weight: 400;">Scheduled neighborhood service days designed to keep up with the <em style="color: var(--accent); font-style: normal;">small, important jobs</em> homeowners often don&rsquo;t have time to think about.</p>
     </div>
-
     <!-- HOW IT WORKS -->
     <section class="how-it-works" id="how-it-works">
         <div class="content">
@@ -583,7 +551,7 @@
                         </svg>
                     </div>
                     <h3>Pick a Service Day</h3>
-                    <p>Browse our upcoming themed service days &mdash; Lightbulb Day, Filter Day, Gutter Clean Day &mdash; and sign up for what you need.</p>
+                    <p>Browse upcoming themed service days &mdash; Lightbulb Day, Filter Day, Gutter Clean Day &mdash; and sign up for what you need.</p>
                 </div>
 
                 <div class="step-arrow">
@@ -606,8 +574,8 @@
                             <circle cx="28" cy="8" r="1.5" fill="rgba(200,169,110,0.3)" stroke="none"/>
                         </svg>
                     </div>
-                    <h3>We Come to You</h3>
-                    <p>We run efficient neighborhood routes so we're in and out fast. You get a time window and a heads-up when we're on the way.</p>
+                    <h3>The Truck Comes to You</h3>
+                    <p>Efficient neighborhood routes &mdash; in and out fast. You get a time window and a heads-up when the truck is on the way.</p>
                 </div>
 
                 <div class="step-arrow">
@@ -625,7 +593,7 @@
                         </svg>
                     </div>
                     <h3>Done &amp; Done</h3>
-                    <p>Task handled, flat rate charged, no surprises. We even remind you when it's time for the next service.</p>
+                    <p>Task handled, flat rate charged, no surprises. Plus a reminder when it&rsquo;s time for the next service.</p>
                 </div>
             </div>
 
@@ -655,45 +623,45 @@
         <div class="section-container">
             <div class="section-header">
                 <div class="section-label">Route-Based Services</div>
-                <h2>Our Service Days</h2>
-                <p>We batch jobs by type and run efficient neighborhood routes. Same tools, same workflow, fast turnaround &mdash; and flat-rate pricing on every visit.</p>
+                <h2>Service Days</h2>
+                <p>Jobs batched by type. Efficient neighborhood routes. Same tools, same workflow, fast turnaround &mdash; and flat-rate pricing on every visit.</p>
             </div>
             <div class="services-grid">
                 <div class="service-card fade-in">
-                    <div class="service-icon">&#128161;</div>
+                    <div class="service-icon"><svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20 4C17 4 15 7 15 10V14H14C13 14 12 15 12 16V18H28V16C28 15 27 14 26 14H25V10C25 7 23 4 20 4Z" fill="white" opacity="0.9"/><path d="M20 14V10" stroke="rgba(200,169,110,0.6)" stroke-width="1.5"/><rect x="14" y="18" width="12" height="3" rx="1" fill="white" opacity="0.7"/><path d="M17 36H23" stroke="white" stroke-width="2" stroke-linecap="round"/><path d="M16 21V33C16 34.5 17.5 36 20 36C22.5 36 24 34.5 24 33V21" stroke="white" stroke-width="2" opacity="0.5"/></svg></div>
                     <h3>Lightbulb Day</h3>
                     <div class="service-meta"><span>$50&ndash;$100</span><span>15&ndash;30 min</span></div>
-                    <p>High ceilings, chandeliers, recessed cans, outdoor fixtures &mdash; we handle every hard-to-reach bulb swap in your home.</p>
+                    <p>High ceilings, chandeliers, recessed cans, outdoor fixtures &mdash; every hard-to-reach bulb swap handled.</p>
                 </div>
                 <div class="service-card fade-in">
-                    <div class="service-icon">&#127744;</div>
+                    <div class="service-icon"><svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="8" y="6" width="24" height="28" rx="3" stroke="white" stroke-width="2" fill="none"/><line x1="12" y1="12" x2="28" y2="12" stroke="white" stroke-width="1.5" opacity="0.4"/><line x1="12" y1="17" x2="28" y2="17" stroke="white" stroke-width="1.5" opacity="0.4"/><line x1="12" y1="22" x2="28" y2="22" stroke="white" stroke-width="1.5" opacity="0.4"/><line x1="12" y1="27" x2="28" y2="27" stroke="white" stroke-width="1.5" opacity="0.4"/><path d="M14 8L14 4M20 8L20 4M26 8L26 4" stroke="white" stroke-width="2" stroke-linecap="round" opacity="0.7"/></svg></div>
                     <h3>Filter Day</h3>
                     <div class="service-meta"><span>$50&ndash;$100</span><span>15&ndash;30 min</span></div>
-                    <p>HVAC filters, fridge filters, humidifier pads &mdash; we replace them all so your home runs clean and efficient.</p>
+                    <p>HVAC filters, fridge filters, humidifier pads &mdash; all replaced so the home runs clean and efficient.</p>
                 </div>
                 <div class="service-card fade-in">
-                    <div class="service-icon">&#127807;</div>
+                    <div class="service-icon"><svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 12H34V16C34 16 32 18 32 22V30C32 32 30 34 28 34H12C10 34 8 32 8 30V22C8 18 6 16 6 16V12Z" stroke="white" stroke-width="2" fill="none"/><path d="M12 34V36" stroke="white" stroke-width="2" stroke-linecap="round" opacity="0.5"/><path d="M28 34V36" stroke="white" stroke-width="2" stroke-linecap="round" opacity="0.5"/><path d="M16 22C16 22 18 26 20 26C22 26 24 22 24 22" stroke="white" stroke-width="1.5" opacity="0.5"/></svg></div>
                     <h3>Gutter Clean Day</h3>
                     <div class="service-meta"><span>$100&ndash;$200</span><span>30&ndash;45 min</span></div>
-                    <p>Full gutter cleaning plus downspout flush and visual roof inspection. Keep water flowing where it should.</p>
+                    <p>Full gutter cleaning plus downspout flush and visual roof inspection. Water flowing where it should.</p>
                 </div>
                 <div class="service-card fade-in">
-                    <div class="service-icon">&#128684;</div>
+                    <div class="service-icon"><svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="20" cy="20" r="14" stroke="white" stroke-width="2" fill="none"/><circle cx="20" cy="20" r="4" fill="white" opacity="0.9"/><path d="M20 10V14" stroke="white" stroke-width="2" stroke-linecap="round" opacity="0.5"/><path d="M20 26V30" stroke="white" stroke-width="2" stroke-linecap="round" opacity="0.5"/><path d="M10 20H14" stroke="white" stroke-width="2" stroke-linecap="round" opacity="0.5"/><path d="M26 20H30" stroke="white" stroke-width="2" stroke-linecap="round" opacity="0.5"/></svg></div>
                     <h3>Smoke Detector Day</h3>
                     <div class="service-meta"><span>$50&ndash;$100</span><span>15&ndash;30 min</span></div>
-                    <p>Battery replacement, testing, and CO detector checks for every unit in your home. Peace of mind in 20 minutes.</p>
+                    <p>Battery replacement, testing, and CO detector checks for every unit in the home. Peace of mind in 20 minutes.</p>
                 </div>
                 <div class="service-card fade-in">
-                    <div class="service-icon">&#128167;</div>
+                    <div class="service-icon"><svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10 30C10 30 10 14 10 12C10 10 12 8 14 8H26C28 8 30 10 30 12V30" stroke="white" stroke-width="2" fill="none"/><path d="M6 30H34" stroke="white" stroke-width="2" stroke-linecap="round"/><path d="M14 18H26" stroke="white" stroke-width="1.5" opacity="0.4"/><path d="M14 23H26" stroke="white" stroke-width="1.5" opacity="0.4"/><circle cx="20" cy="14" r="2" fill="white" opacity="0.6"/></svg></div>
                     <h3>Caulking &amp; Seal Day</h3>
                     <div class="service-meta"><span>$75&ndash;$150</span><span>30&ndash;45 min</span></div>
                     <p>Bathroom caulk, window seals, door weatherstripping. Small fixes that prevent big water damage down the road.</p>
                 </div>
                 <div class="service-card fade-in">
-                    <div class="service-icon">&#128166;</div>
+                    <div class="service-icon"><svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 32L14 14L20 8L26 14L32 32" stroke="white" stroke-width="2" fill="none" stroke-linejoin="round"/><path d="M11 32H29" stroke="white" stroke-width="2" stroke-linecap="round"/><circle cx="20" cy="22" r="3" stroke="white" stroke-width="1.5" fill="none" opacity="0.5"/><path d="M18 28L22 28" stroke="white" stroke-width="1.5" stroke-linecap="round" opacity="0.4"/><path d="M16 16L20 12L24 16" stroke="white" stroke-width="1.5" opacity="0.5" fill="none"/></svg></div>
                     <h3>Pressure Wash Day</h3>
                     <div class="service-meta"><span>$150&ndash;$300</span><span>45&ndash;60 min</span></div>
-                    <p>Driveways, sidewalks, patios, and siding. We blast away the grime and make your exterior look brand new.</p>
+                    <p>Driveways, sidewalks, patios, and siding. Blast away the grime and make the exterior look brand new.</p>
                 </div>
             </div>
         </div>
@@ -707,7 +675,7 @@
             <div class="section-header">
                 <div class="section-label">Simple Pricing</div>
                 <h2>Flat Rates, No Surprises</h2>
-                <p>Every service day has a clear price before we start. No estimates, no hourly guessing &mdash; just book and we show up.</p>
+                <p>Every service day has a clear price before the work starts. No estimates, no hourly guessing &mdash; just book and the truck shows up.</p>
             </div>
 
             <!-- PRIMARY: Service Day Pricing -->
@@ -729,16 +697,10 @@
                             <li>Pressure washing</li>
                         </ul>
                     </div>
-                    <a href="#booking" class="btn-primary" style="max-width: 400px; margin: 0 auto;">Book a Service Day</a>
+                    <a href="#booking" class="btn-primary" style="max-width: 400px; margin: 0 auto;">Get on the Schedule</a>
                 </div>
             </div>
 
-            <!-- SECONDARY: Link to additional services -->
-            <div style="text-align: center; margin-top: 1rem; padding: 2.5rem; background: var(--dark-mid); border: 1px solid var(--border); border-radius: 12px; max-width: 700px; margin: 0 auto;">
-                <div class="section-label">Need Something Bigger?</div>
-                <p style="color: var(--text-muted); max-width: 500px; margin: 0.75rem auto 1.5rem;">We also handle small projects, contractor-level repairs, appliance maintenance, and annual home inspections.</p>
-                <a href="services.html" class="btn-secondary" style="display: inline-block;">View Additional Services &amp; Pricing &rarr;</a>
-            </div>
         </div>
     </section>
 
@@ -748,7 +710,7 @@
             <div class="section-header">
                 <div class="section-label">Happy Neighbors</div>
                 <h2>What Homeowners Say</h2>
-                <p>Real feedback from real neighbors. We're building trust one small project at a time.</p>
+                <p>Real feedback from real neighbors. Trust built one small project at a time.</p>
             </div>
             <div class="testimonials-grid">
                 <div class="testimonial-card fade-in">
@@ -795,31 +757,36 @@
                 <div class="about-content fade-in">
                     <div class="section-label">About Your Neighbor</div>
                     <h2>Josh Davis &mdash; Owner &amp; Operator</h2>
-                    <p>The Handy Neighbor Co. started the way most good ideas do &mdash; a neighbor needed help with something small, and I was the guy who actually showed up.</p>
-                    <p>I'm a semi-retired contractor with over two decades of hands-on experience across residential construction and commercial facility management. I've done everything from framing and roofing to finish trim and shower door installs. Closets, mirrors, bath accessories, LVP flooring, windows, siding, light electrical, plumbing &mdash; if it's in a house, I've probably built it, fixed it, or replaced it.</p>
-                    <p>As a Facility Manager, I ran maintenance on full mechanical systems &mdash; HVAC units, commercial kitchen equipment, water heaters, garage doors &mdash; the kind of work that teaches you how buildings actually work, not just how they look.</p>
-                    <p>Now I'm channeling all of that into something simpler: helping my neighbors keep their homes in great shape without the hassle of hiring a big contractor for small jobs. I run the routes myself, I bring my own tools, and I treat every home like it's on my street &mdash; because it probably is.</p>
+                    <p>The Handy Neighbor Co. started the way most good ideas do &mdash; a neighbor needed help with something small, and Josh was the guy who actually showed up.</p>
+                    <p>Licensed and insured with over 20 years of hands-on experience &mdash; building, fixing, and taking care of homes. From flooring and trim to plumbing, electrical, windows, and installs &mdash; the kind of work that teaches you what lasts, what doesn&rsquo;t, and how to do it right the first time.</p>
+                    <p>These days, the big crews and long timelines are behind. Because in every house, there&rsquo;s always a list. Things to fix. Things to finish. Things that got pushed to &ldquo;next weekend&rdquo; three weekends ago. Not just the big projects &mdash; but the ones that get overlooked. The dryer vent that needs cleared. The gutters filling up. The air filter that should&rsquo;ve been changed weeks ago.</p>
+                    <p>The small, seasonal jobs that keep a home safe, clean, and running the way it should. Turns out, the neighbors needed the same thing.</p>
+                    <p style="color: var(--accent); font-weight: 600; font-size: 1.05rem; margin-top: 1rem;">The neighbor down the street &mdash; the one who shows up, takes care of it, and does it right. No crews. No runaround. No overcomplicating it. Just solid, reliable work &mdash; done right, with care.</p>
+                    <!-- PHOTO PLACEHOLDER: Replace src with actual headshot/jobsite photo -->
+                    <div style="margin-top: 2rem; padding: 3rem; border: 2px dashed var(--border); border-radius: 12px; text-align: center;">
+                        <p style="color: var(--text-muted); font-size: 0.85rem;">Photo of Josh &mdash; add headshot or jobsite photo here</p>
+                    </div>
                 </div>
                 <div class="about-values fade-in">
                     <div class="value-item">
-                        <div class="value-icon">&#128296;</div>
+                        <div class="value-icon"><svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16 4L6 14H10V26H22V14H26L16 4Z" fill="white" opacity="0.9"/><rect x="13" y="18" width="6" height="8" rx="1" fill="var(--dark)" opacity="0.8"/></svg></div>
                         <h4>20+ Years Experience</h4>
                         <p>Residential construction &amp; commercial facility management</p>
                     </div>
                     <div class="value-item">
-                        <div class="value-icon">&#127968;</div>
+                        <div class="value-icon"><svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 22L16 6L26 22H6Z" fill="none" stroke="white" stroke-width="2"/><circle cx="16" cy="16" r="3" fill="white" opacity="0.7"/><line x1="16" y1="10" x2="16" y2="13" stroke="white" stroke-width="1.5"/></svg></div>
                         <h4>Full-Spectrum Skills</h4>
-                        <p>Framing to finish &mdash; electrical, plumbing, roofing &amp; more</p>
+                        <p>Flooring, trim, plumbing, electrical, windows &amp; more</p>
                     </div>
                     <div class="value-item">
-                        <div class="value-icon">&#128200;</div>
+                        <div class="value-icon"><svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="16" cy="16" r="10" stroke="white" stroke-width="2" fill="none"/><path d="M16 8V16L22 20" stroke="white" stroke-width="2" stroke-linecap="round"/></svg></div>
                         <h4>Efficient Routes</h4>
                         <p>Batched by neighborhood for speed &amp; savings</p>
                     </div>
                     <div class="value-item">
-                        <div class="value-icon">&#128588;</div>
+                        <div class="value-icon"><svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16 4C10 4 6 8 6 14C6 22 16 28 16 28C16 28 26 22 26 14C26 8 22 4 16 4Z" fill="none" stroke="white" stroke-width="2"/><polyline points="11,15 14,18 21,11" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
                         <h4>Owner-Operated</h4>
-                        <p>I do the work myself &mdash; no subcontractors</p>
+                        <p>Josh does the work &mdash; no subcontractors</p>
                     </div>
                 </div>
             </div>
@@ -830,9 +797,9 @@
     <section class="service-area">
         <div class="section-container">
             <div class="area-content" style="text-align: center; max-width: 700px; margin: 0 auto;">
-                <div class="section-label">Where We Work</div>
+                <div class="section-label">Service Area</div>
                 <h2 style="font-family: 'Playfair Display', serif; font-size: clamp(2rem, 4vw, 2.5rem); color: var(--cream); margin-bottom: 1rem;">Serving The Ridges and Surrounding Neighborhoods</h2>
-                <p style="color: var(--text-muted); font-size: 1.05rem;">We're currently serving select Omaha neighborhoods and expanding weekly. If your area isn't listed, sign up anyway &mdash; we'll prioritize neighborhoods with the most requests.</p>
+                <p style="color: var(--text-muted); font-size: 1.05rem;">Currently serving select Omaha neighborhoods and expanding weekly. If your area isn&rsquo;t listed, sign up anyway &mdash; neighborhoods with the most requests get added first.</p>
                 <div class="neighborhoods">
                     <span class="neighborhood-tag">Shadow Ridge</span>
                     <span class="neighborhood-tag">Elkhorn</span>
@@ -852,19 +819,19 @@
     <section class="booking" id="booking">
         <div class="booking-wrapper">
             <div class="section-header">
-                <div class="section-label">Get Started</div>
-                <h2>Book a Service</h2>
-                <p>Pick your service, tell us your address, and we'll get you on the schedule. It's that simple.</p>
+                <div class="section-label">Get on the Schedule</div>
+                <h2>See What&rsquo;s Coming Up</h2>
+                <p>Pick a service day, drop in your info, and get a time window. Quick and easy.</p>
             </div>
             <form class="booking-form" id="bookingForm" onsubmit="handleSubmit(event)">
                 <div class="form-row">
                     <div class="form-group">
                         <label for="firstName">First Name</label>
-                        <input type="text" id="firstName" placeholder="Josh" required>
+                        <input type="text" id="firstName" placeholder="First name" required>
                     </div>
                     <div class="form-group">
                         <label for="lastName">Last Name</label>
-                        <input type="text" id="lastName" placeholder="Davis" required>
+                        <input type="text" id="lastName" placeholder="Last name" required>
                     </div>
                 </div>
                 <div class="form-row">
@@ -874,71 +841,32 @@
                     </div>
                     <div class="form-group">
                         <label for="phone">Phone</label>
-                        <input type="tel" id="phone" placeholder="(402) 350-2583" required>
+                        <input type="tel" id="phone" placeholder="(402) 555-1234" required>
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="address">Street Address</label>
                     <input type="text" id="address" placeholder="1234 Maple St, Omaha, NE" required>
                 </div>
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="service">What Do You Need?</label>
-                        <select id="service" required>
-                            <option value="">Select a service...</option>
-                            <optgroup label="&#9776; Service Days (Flat Rate)">
-                                <option value="lightbulb">Lightbulb Day &mdash; $50-$100</option>
-                                <option value="filter">Filter Day &mdash; $50-$100</option>
-                                <option value="gutter">Gutter Clean Day &mdash; $100-$200</option>
-                                <option value="smoke">Smoke Detector Day &mdash; $50-$100</option>
-                                <option value="caulking">Caulking & Seal Day &mdash; $75-$150</option>
-                                <option value="pressure">Pressure Wash Day &mdash; $150-$300</option>
-                            </optgroup>
-                            <optgroup label="&#128295; Small Projects (Hourly)">
-                                <option value="ext-deck">Deck Repairs</option>
-                                <option value="ext-patio">Patio Build</option>
-                                <option value="ext-fence">Fence Repairs</option>
-                                <option value="ext-trim">Trim Rot Repair</option>
-                                <option value="ext-siding">Siding Repairs</option>
-                                <option value="int-builtins">Built-Ins</option>
-                                <option value="int-bath">Bathroom Refresh</option>
-                                <option value="int-basement">Basement Room</option>
-                                <option value="int-trim">Trim Carpentry</option>
-                                <option value="rep-drywall">Drywall Repair</option>
-                                <option value="rep-water">Water Damage Repair</option>
-                                <option value="rep-struct">Structural Fixes</option>
-                                <option value="roof">Roof Addons & Repairs</option>
-                            </optgroup>
-                            <optgroup label="&#10024; Add-On Services">
-                                <option value="tree-trimming">Tree Trimming &amp; Hedging &mdash; from $150</option>
-                                <option value="out-of-town">Out-of-Town Home Check &mdash; $75/visit</option>
-                                <option value="pest-treatment">Pest Treatment &amp; Spider Cleanup &mdash; from $100</option>
-                                <option value="appliance-pkg">Appliance Maintenance Package &mdash; $199-$349</option>
-                                <option value="home-scan">Home Scan &amp; Web Portal &mdash; $149</option>
-                            </optgroup>
-                            <optgroup label="&#9733; Inspections &amp; Plans">
-                                <option value="checkup">Annual Home Checkup &mdash; $199-$299</option>
-                                <option value="repairs-plan">Recommended Repairs &amp; Maintenance Plan</option>
-                            </optgroup>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="plan">Pricing Preference</label>
-                        <select id="plan">
-                            <option value="serviceday">Service Day (Flat Rate)</option>
-                            <option value="hourly">Hourly ($150 first hr, $89/hr after)</option>
-                            <option value="daily">Full Day Rate ($750/day)</option>
-                            <option value="checkup">Annual Home Checkup ($199-$299)</option>
-                            <option value="notsure">Not Sure &mdash; Help Me Decide</option>
-                        </select>
-                    </div>
+                <div class="form-group">
+                    <label for="service">What Do You Need?</label>
+                    <select id="service" required>
+                        <option value="">Select a service day...</option>
+                        <option value="lightbulb">Lightbulb Day &mdash; $50&ndash;$100</option>
+                        <option value="filter">Filter Day &mdash; $50&ndash;$100</option>
+                        <option value="gutter">Gutter Clean Day &mdash; $100&ndash;$200</option>
+                        <option value="smoke">Smoke Detector Day &mdash; $50&ndash;$100</option>
+                        <option value="caulking">Caulking &amp; Seal Day &mdash; $75&ndash;$150</option>
+                        <option value="pressure">Pressure Wash Day &mdash; $150&ndash;$300</option>
+                        <option value="other">Something Else &mdash; Describe Below</option>
+                    </select>
                 </div>
                 <div class="form-group">
-                    <label for="notes">Notes (optional)</label>
-                    <textarea id="notes" placeholder="Tell us about the job &mdash; how many bulbs, which filters, any special access needed..."></textarea>
+                    <label for="notes">Anything else? (optional)</label>
+                    <textarea id="notes" placeholder="How many bulbs, which filters, special access needed, or just say hi..."></textarea>
                 </div>
-                <button type="submit" class="form-submit">Request Service</button>
-                <p class="form-note">We'll confirm your service day and time window within 24 hours.</p>
+                <button type="submit" class="form-submit">Get on the Schedule</button>
+                <p class="form-note">Service day and time window confirmed within 24 hours.</p>
             </form>
         </div>
     </section>
@@ -953,43 +881,43 @@
             <div class="fade-in" style="display: flex; flex-direction: column; gap: 1rem;">
 
                 <details style="background: rgba(44,72,89,0.5); border: 1px solid var(--border); border-radius: 8px; padding: 1.25rem 1.5rem; cursor: pointer;">
-                    <summary style="font-weight: 600; color: var(--cream); font-size: 1.05rem; list-style: none; display: flex; justify-content: space-between; align-items: center;">How much does a handyman cost in Shadow Ridge, Omaha? <span style="color: var(--accent); font-size: 1.3rem; transition: transform 0.2s;">+</span></summary>
-                    <p style="color: var(--text-muted); margin-top: 1rem; line-height: 1.7;">Flat rates between $50 and $300 for service day visits. Lightbulb replacement is $50–$100, filter changes $50–$100, gutter cleaning $100–$200, smoke detectors $50–$100, caulking $75–$150, and pressure washing $150–$300. Small projects start at $150 for the first hour ($89/hr after), and full-day contractor work is $750/day. No hidden fees.</p>
+                    <summary style="font-weight: 600; color: var(--cream); font-size: 1.05rem; list-style: none; display: flex; justify-content: space-between; align-items: center;">What exactly is a &ldquo;service day&rdquo;? <span style="color: var(--accent); font-size: 1.3rem; transition: transform 0.2s;">+</span></summary>
+                    <p style="color: var(--text-muted); margin-top: 1rem; line-height: 1.7;">A service day is a scheduled route through the neighborhood focused on one type of job &mdash; like Lightbulb Day, Filter Day, or Gutter Clean Day. You book the service you need, get a time window, and the truck rolls through your area. Most jobs are done in 15&ndash;30 minutes at a flat rate. No estimates, no surprises.</p>
                 </details>
 
                 <details style="background: rgba(44,72,89,0.5); border: 1px solid var(--border); border-radius: 8px; padding: 1.25rem 1.5rem; cursor: pointer;">
-                    <summary style="font-weight: 600; color: var(--cream); font-size: 1.05rem; list-style: none; display: flex; justify-content: space-between; align-items: center;">Is there a handyman near Shadow Ridge or The Ridges? <span style="color: var(--accent); font-size: 1.3rem;">+</span></summary>
-                    <p style="color: var(--text-muted); margin-top: 1rem; line-height: 1.7;">Yes. The Handy Neighbor Co. is owned and operated by Josh Davis, a resident of Shadow Ridge with 20+ years of construction experience. Route-based service days run through Shadow Ridge, The Ridges, Elkhorn, and surrounding West Omaha neighborhoods. Because Josh lives in the neighborhood, travel time is minimal and scheduling is flexible.</p>
+                    <summary style="font-weight: 600; color: var(--cream); font-size: 1.05rem; list-style: none; display: flex; justify-content: space-between; align-items: center;">How much does it cost? <span style="color: var(--accent); font-size: 1.3rem;">+</span></summary>
+                    <p style="color: var(--text-muted); margin-top: 1rem; line-height: 1.7;">Service day visits run $50&ndash;$300 depending on the job. Lightbulbs and filters are $50&ndash;$100, gutters $100&ndash;$200, caulking $75&ndash;$150, and pressure washing $150&ndash;$300. Every price is flat-rate &mdash; you know exactly what it costs before the work starts. No hourly guessing, no hidden fees.</p>
                 </details>
 
                 <details style="background: rgba(44,72,89,0.5); border: 1px solid var(--border); border-radius: 8px; padding: 1.25rem 1.5rem; cursor: pointer;">
-                    <summary style="font-weight: 600; color: var(--cream); font-size: 1.05rem; list-style: none; display: flex; justify-content: space-between; align-items: center;">What services does The Handy Neighbor Co. offer? <span style="color: var(--accent); font-size: 1.3rem;">+</span></summary>
-                    <p style="color: var(--text-muted); margin-top: 1rem; line-height: 1.7;">Route-based service days include lightbulb replacement, HVAC and fridge filter changes, gutter cleaning, smoke detector and CO detector maintenance, caulking and weatherstripping, and pressure washing. Beyond service days, we handle deck repairs, fence repairs, trim carpentry, drywall, bathroom refreshes, siding, and more. We also offer an Annual Home Checkup for $199–$299.</p>
+                    <summary style="font-weight: 600; color: var(--cream); font-size: 1.05rem; list-style: none; display: flex; justify-content: space-between; align-items: center;">Who does the work? <span style="color: var(--accent); font-size: 1.3rem;">+</span></summary>
+                    <p style="color: var(--text-muted); margin-top: 1rem; line-height: 1.7;">Josh Davis &mdash; owner, operator, and the only person who shows up. Licensed and insured with 20+ years of hands-on experience in residential construction and commercial facility management. No subcontractors. No strangers. Just a neighbor with the right tools and the know-how to use them.</p>
                 </details>
 
                 <details style="background: rgba(44,72,89,0.5); border: 1px solid var(--border); border-radius: 8px; padding: 1.25rem 1.5rem; cursor: pointer;">
-                    <summary style="font-weight: 600; color: var(--cream); font-size: 1.05rem; list-style: none; display: flex; justify-content: space-between; align-items: center;">What areas do you serve? <span style="color: var(--accent); font-size: 1.3rem;">+</span></summary>
-                    <p style="color: var(--text-muted); margin-top: 1rem; line-height: 1.7;">We currently serve Shadow Ridge, The Ridges, Elkhorn, West Omaha, Millard, Papillion, La Vista, Gretna, and Ralston. We're expanding to new neighborhoods based on demand — if your area isn't listed, book anyway and we'll prioritize neighborhoods with the most requests.</p>
+                    <summary style="font-weight: 600; color: var(--cream); font-size: 1.05rem; list-style: none; display: flex; justify-content: space-between; align-items: center;">What neighborhoods are currently served? <span style="color: var(--accent); font-size: 1.3rem;">+</span></summary>
+                    <p style="color: var(--text-muted); margin-top: 1rem; line-height: 1.7;">Routes currently run through Shadow Ridge, The Ridges, Elkhorn, West Omaha, Millard, Papillion, La Vista, Gretna, and Ralston. New neighborhoods are added based on demand &mdash; if your area isn&rsquo;t listed, book anyway. Areas with the most requests get added first.</p>
                 </details>
 
                 <details style="background: rgba(44,72,89,0.5); border: 1px solid var(--border); border-radius: 8px; padding: 1.25rem 1.5rem; cursor: pointer;">
-                    <summary style="font-weight: 600; color: var(--cream); font-size: 1.05rem; list-style: none; display: flex; justify-content: space-between; align-items: center;">How do route-based service days work? <span style="color: var(--accent); font-size: 1.3rem;">+</span></summary>
-                    <p style="color: var(--text-muted); margin-top: 1rem; line-height: 1.7;">Service days are themed around one type of job — like Lightbulb Day, Gutter Clean Day, or Filter Day. You pick the service you need and book online. We schedule you into an efficient neighborhood route, give you a time window, and send a heads-up when we're on the way. Most jobs are done in 15–30 minutes at a flat rate with no surprises.</p>
+                    <summary style="font-weight: 600; color: var(--cream); font-size: 1.05rem; list-style: none; display: flex; justify-content: space-between; align-items: center;">Do I need to be home? <span style="color: var(--accent); font-size: 1.3rem;">+</span></summary>
+                    <p style="color: var(--text-muted); margin-top: 1rem; line-height: 1.7;">Depends on the job. Exterior work like gutter cleaning and pressure washing can usually be done without anyone home. Interior jobs need someone there to let the truck in. Either way, you&rsquo;ll get a time window and a heads-up notification when the route is nearby.</p>
                 </details>
 
                 <details style="background: rgba(44,72,89,0.5); border: 1px solid var(--border); border-radius: 8px; padding: 1.25rem 1.5rem; cursor: pointer;">
-                    <summary style="font-weight: 600; color: var(--cream); font-size: 1.05rem; list-style: none; display: flex; justify-content: space-between; align-items: center;">Are you licensed and insured? <span style="color: var(--accent); font-size: 1.3rem;">+</span></summary>
-                    <p style="color: var(--text-muted); margin-top: 1rem; line-height: 1.7;">Yes. The Handy Neighbor Co. is licensed and insured. Owner Josh Davis has over 20 years of experience in residential construction and commercial facility management, including framing, roofing, electrical, plumbing, HVAC, and finish carpentry.</p>
+                    <summary style="font-weight: 600; color: var(--cream); font-size: 1.05rem; list-style: none; display: flex; justify-content: space-between; align-items: center;">What if the job takes longer than expected? <span style="color: var(--accent); font-size: 1.3rem;">+</span></summary>
+                    <p style="color: var(--text-muted); margin-top: 1rem; line-height: 1.7;">The price you see is the price you pay. Flat-rate means flat-rate &mdash; whether the job takes 15 minutes or 45. If something unexpected comes up during a visit, you&rsquo;ll be told before any extra work happens. No surprises, ever.</p>
                 </details>
 
                 <details style="background: rgba(44,72,89,0.5); border: 1px solid var(--border); border-radius: 8px; padding: 1.25rem 1.5rem; cursor: pointer;">
-                    <summary style="font-weight: 600; color: var(--cream); font-size: 1.05rem; list-style: none; display: flex; justify-content: space-between; align-items: center;">How often should I clean my gutters in Omaha? <span style="color: var(--accent); font-size: 1.3rem;">+</span></summary>
-                    <p style="color: var(--text-muted); margin-top: 1rem; line-height: 1.7;">At least twice a year — once in late spring after cottonwood season, and once in late fall after leaves drop. Homes in The Ridges and Elkhorn with mature trees may need more frequent cleaning. Our Gutter Clean Day runs $100–$200 and includes downspout flush and visual roof inspection.</p>
+                    <summary style="font-weight: 600; color: var(--cream); font-size: 1.05rem; list-style: none; display: flex; justify-content: space-between; align-items: center;">What about bigger projects? <span style="color: var(--accent); font-size: 1.3rem;">+</span></summary>
+                    <p style="color: var(--text-muted); margin-top: 1rem; line-height: 1.7;">The Handy Neighbor Co. also handles small projects, repairs, and contractor-level work beyond the regular service days. Deck repairs, fence work, drywall, trim carpentry, bathroom refreshes &mdash; if it&rsquo;s in a house, it&rsquo;s probably been built, fixed, or replaced before. <a href="contact.html" style="color: var(--accent);">Reach out</a> to talk through what you need.</p>
                 </details>
 
                 <details style="background: rgba(44,72,89,0.5); border: 1px solid var(--border); border-radius: 8px; padding: 1.25rem 1.5rem; cursor: pointer;">
-                    <summary style="font-weight: 600; color: var(--cream); font-size: 1.05rem; list-style: none; display: flex; justify-content: space-between; align-items: center;">How much does pressure washing cost in Omaha? <span style="color: var(--accent); font-size: 1.3rem;">+</span></summary>
-                    <p style="color: var(--text-muted); margin-top: 1rem; line-height: 1.7;">We offer pressure washing for a flat rate of $150–$300, covering driveways, sidewalks, patios, and siding. This is typically lower than standalone pressure washing companies because of our route-based model — multiple homes in the same neighborhood are serviced the same day, reducing overhead.</p>
+                    <summary style="font-weight: 600; color: var(--cream); font-size: 1.05rem; list-style: none; display: flex; justify-content: space-between; align-items: center;">How do I book? <span style="color: var(--accent); font-size: 1.3rem;">+</span></summary>
+                    <p style="color: var(--text-muted); margin-top: 1rem; line-height: 1.7;">Pick a service, fill in the short form below, and submit. A confirmation with your service day and time window comes back within 24 hours. You can also call or text <a href="tel:+14023502583" style="color: var(--accent);">(402) 350-2583</a> or email <a href="mailto:hello@thehandyneighbor.co" style="color: var(--accent);">hello@thehandyneighbor.co</a>.</p>
                 </details>
 
             </div>
@@ -1003,23 +931,23 @@
                 <div class="footer-brand">
                     <img src="logo.svg" alt="The Handy Neighbor Co. Logo" style="height: 160px; width: auto; margin-bottom: 1rem;">
                     <h3>THE HANDY NEIGHBOR CO.</h3>
-                    <p>Your trusted neighborhood expert for the small things that keep your home running. Reliable &amp; Ready &mdash; that's our promise.</p>
+                    <p>The trusted neighborhood expert for the small things that keep your home running. Reliable &amp; Ready.</p>
                 </div>
                 <div class="footer-col">
                     <h4>Services</h4>
                     <ul>
                         <li><a href="#services">Service Days</a></li>
                         <li><a href="#pricing">Pricing</a></li>
-                        <li><a href="services.html">Additional Services</a></li>
-                        <li><a href="services.html#checkup">Annual Checkup</a></li>
+                        <li><a href="#how-it-works">How It Works</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
                     <h4>Company</h4>
                     <ul>
-                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#about">About</a></li>
                         <li><a href="#testimonials">Reviews</a></li>
-                        <li><a href="#booking">Book Now</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
@@ -1043,7 +971,7 @@
     </footer>
 
     <!-- TOAST -->
-    <div class="toast" id="toast">Service request submitted! We'll be in touch within 24 hours.</div>
+    <div class="toast" id="toast">Service request submitted! Confirmation coming within 24 hours.</div>
 
     <script>
         // Mobile menu toggle
@@ -1275,7 +1203,7 @@
     }
     </script>
 
-    <!-- Schema 2: FAQPage (targets Featured Snippets, People Also Ask, AI Overviews, voice assistants) -->
+    <!-- Schema 2: FAQPage (matches visible FAQ content) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -1283,66 +1211,66 @@
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "How much does a handyman cost in Shadow Ridge, Omaha?",
+          "name": "What exactly is a service day?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "The Handy Neighbor Co. charges flat rates between $50 and $300 for service day visits in Shadow Ridge and The Ridges. Lightbulb replacement is $50–$100, filter changes $50–$100, gutter cleaning $100–$200, smoke detectors $50–$100, caulking $75–$150, and pressure washing $150–$300. Small projects start at $150 for the first hour ($89/hr after), and full-day contractor work is $750/day. No hidden fees."
+            "text": "A service day is a scheduled route through the neighborhood focused on one type of job — like Lightbulb Day, Filter Day, or Gutter Clean Day. You book the service you need, get a time window, and the truck rolls through your area. Most jobs are done in 15–30 minutes at a flat rate. No estimates, no surprises."
           }
         },
         {
           "@type": "Question",
-          "name": "Is there a handyman near Shadow Ridge or The Ridges in Omaha?",
+          "name": "How much does The Handy Neighbor Co. cost?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes. The Handy Neighbor Co. is owned and operated by Josh Davis, a resident of Shadow Ridge with 20+ years of construction experience. The business runs route-based service days through Shadow Ridge, The Ridges, Elkhorn, and surrounding West Omaha neighborhoods. Because Josh lives in the neighborhood, travel time is minimal and scheduling is flexible."
+            "text": "Service day visits run $50–$300 depending on the job. Lightbulbs and filters are $50–$100, gutters $100–$200, caulking $75–$150, and pressure washing $150–$300. Every price is flat-rate — you know exactly what it costs before the work starts. No hourly guessing, no hidden fees."
           }
         },
         {
           "@type": "Question",
-          "name": "What services does The Handy Neighbor Co. offer?",
+          "name": "Who does the work at The Handy Neighbor Co.?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Route-based service days include lightbulb replacement, HVAC and fridge filter changes, gutter cleaning, smoke detector and CO detector maintenance, caulking and weatherstripping, and pressure washing. Beyond service days, they handle deck repairs, fence repairs, trim carpentry, drywall, bathroom refreshes, siding, and more. They also offer an Annual Home Checkup for $199–$299."
+            "text": "Josh Davis — owner, operator, and the only person who shows up. Licensed and insured with 20+ years of hands-on experience in residential construction and commercial facility management. No subcontractors. No strangers."
           }
         },
         {
           "@type": "Question",
-          "name": "What areas does The Handy Neighbor Co. serve?",
+          "name": "What neighborhoods does The Handy Neighbor Co. serve?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "The Handy Neighbor Co. currently serves Shadow Ridge, The Ridges, Elkhorn, West Omaha, Millard, Papillion, La Vista, Gretna, and Ralston. The business is expanding to new neighborhoods based on demand — if your area isn't listed, book anyway and they'll prioritize neighborhoods with the most requests."
+            "text": "Routes currently run through Shadow Ridge, The Ridges, Elkhorn, West Omaha, Millard, Papillion, La Vista, Gretna, and Ralston. New neighborhoods are added based on demand — if your area isn't listed, book anyway. Areas with the most requests get added first."
           }
         },
         {
           "@type": "Question",
-          "name": "How do route-based service days work?",
+          "name": "Do I need to be home for service day visits?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Service days are themed around one type of job — like Lightbulb Day, Gutter Clean Day, or Filter Day. You pick the service you need and book online. The Handy Neighbor Co. schedules you into an efficient neighborhood route, gives you a time window, and sends a heads-up when they're on the way. Most jobs are done in 15–30 minutes at a flat rate with no surprises."
+            "text": "Depends on the job. Exterior work like gutter cleaning and pressure washing can usually be done without anyone home. Interior jobs need someone there to let the truck in. Either way, you'll get a time window and a heads-up notification when the route is nearby."
           }
         },
         {
           "@type": "Question",
-          "name": "Is The Handy Neighbor Co. licensed and insured?",
+          "name": "What if the job takes longer than expected?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes. The Handy Neighbor Co. is licensed and insured. Owner Josh Davis has over 20 years of experience in residential construction and commercial facility management, including framing, roofing, electrical, plumbing, HVAC, and finish carpentry."
+            "text": "The price you see is the price you pay. Flat-rate means flat-rate — whether the job takes 15 minutes or 45. If something unexpected comes up during a visit, you'll be told before any extra work happens. No surprises, ever."
           }
         },
         {
           "@type": "Question",
-          "name": "How often should I clean my gutters in Omaha, Nebraska?",
+          "name": "Does The Handy Neighbor Co. handle bigger projects?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "In the Omaha area, gutters should be cleaned at least twice a year — once in late spring after cottonwood season, and once in late fall after leaves drop. Homes in The Ridges and Elkhorn with mature trees may need more frequent cleaning. The Handy Neighbor Co. offers Gutter Clean Day for $100–$200 including downspout flush and visual roof inspection."
+            "text": "Yes. The Handy Neighbor Co. also handles small projects, repairs, and contractor-level work beyond the regular service days. Deck repairs, fence work, drywall, trim carpentry, bathroom refreshes — reach out through the contact page to talk through what you need."
           }
         },
         {
           "@type": "Question",
-          "name": "How much does pressure washing cost in Omaha?",
+          "name": "How do I book a service day?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "The Handy Neighbor Co. offers pressure washing for a flat rate of $150–$300, covering driveways, sidewalks, patios, and siding. This is typically lower than standalone pressure washing companies because of the route-based model — multiple homes in the same neighborhood are serviced the same day, reducing overhead."
+            "text": "Pick a service, fill in the short form on the website, and submit. A confirmation with your service day and time window comes back within 24 hours. You can also call or text (402) 350-2583 or email hello@thehandyneighbor.co."
           }
         }
       ]
