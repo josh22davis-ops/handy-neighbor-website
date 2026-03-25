@@ -88,7 +88,7 @@
         .nav-logo .nav-icon { height: 34px; width: auto; }
         .nav-logo span { color: var(--accent); }
 
-        .nav-links { display: flex; list-style: none; gap: 2rem; align-items: center; }
+        .nav-links { display: flex; list-style: none; gap: 1.4rem; align-items: center; }
         .nav-links a {
             color: var(--text-muted); text-decoration: none; font-size: 0.9rem;
             font-weight: 500; letter-spacing: 0.5px; text-transform: uppercase; transition: color 0.3s;
@@ -117,8 +117,9 @@
 
         .hero-badge {
             display: inline-block; border: 1px solid var(--accent); color: var(--accent);
-            padding: 0.4rem 1.2rem; border-radius: 2px; font-size: 0.75rem;
-            font-weight: 600; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 2rem;
+            padding: 0.4rem 1.2rem; border-radius: 2px; font-size: 0.72rem;
+            font-weight: 600; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 2rem;
+            max-width: 100%; word-wrap: break-word;
         }
         .hero h1 {
             font-family: 'Playfair Display', serif; font-size: clamp(2.5rem, 6vw, 4.5rem);
@@ -340,13 +341,9 @@
         .footer-social a:hover { color: var(--accent); }
 
         /* ============ GUARANTEE BAR ============ */
-        .guarantee-bar {
-            background: #2C3E50; border-top: 1px solid var(--border);
-            border-bottom: 1px solid var(--border); padding: 2rem; text-align: center;
-        }
-        .guarantee-items { display: flex; justify-content: center; gap: 3rem; flex-wrap: wrap; max-width: 900px; margin: 0 auto; }
-        .guarantee-item { display: flex; align-items: center; gap: 0.75rem; color: var(--text-light); font-size: 0.95rem; font-weight: 500; }
-        .guarantee-icon { color: var(--accent); font-size: 1.25rem; }
+        .guarantee-items { display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; max-width: 900px; margin: 0 auto; }
+        .guarantee-item { display: flex; align-items: center; gap: 0.5rem; color: var(--text-muted); font-size: 0.82rem; font-weight: 500; letter-spacing: 0.5px; text-transform: uppercase; }
+        .guarantee-icon { color: var(--accent); font-size: 1rem; }
 
         /* ============ SERVICE TICKER ============ */
         .ticker-wrap {
@@ -435,6 +432,11 @@
         .fade-in { opacity: 0; transform: translateY(20px); transition: all 0.6s ease; }
         .fade-in.visible { opacity: 1; transform: translateY(0); }
 
+        /* ============ TABLET ============ */
+        @media (max-width: 1080px) {
+            .nav-links { gap: 1rem; }
+            .nav-links a { font-size: 0.8rem; }
+        }
         /* ============ MOBILE ============ */
         @media (max-width: 768px) {
             .nav-links { display: none; }
@@ -442,9 +444,16 @@
                 display: flex; flex-direction: column; position: absolute;
                 top: 100%; left: 0; right: 0; background: rgba(44,62,80,0.98);
                 padding: 1.5rem 2rem; border-bottom: 1px solid var(--border);
+                gap: 0.25rem;
             }
+            .nav-links.active a { font-size: 0.95rem; padding: 0.5rem 0; }
             .mobile-toggle { display: block; }
+            .hero { padding: 7rem 1.5rem 3rem; }
+            .hero-badge { font-size: 0.65rem; letter-spacing: 1.5px; padding: 0.35rem 1rem; }
+            .hero h1 { font-size: clamp(1.8rem, 7vw, 2.8rem); }
             .hero-stats { flex-direction: column; gap: 1.5rem; }
+            .guarantee-items { gap: 1rem; }
+            .guarantee-item { font-size: 0.75rem; }
             .services-grid { grid-template-columns: 1fr; }
             .about-grid { grid-template-columns: 1fr; }
             .form-row { grid-template-columns: 1fr; }
@@ -469,7 +478,7 @@
                 <li><a href="#faq">FAQ</a></li>
                 <li><a href="blog.html">Blog</a></li>
                 <li><a href="contact.html">Contact</a></li>
-                <li><a href="#booking" class="nav-cta">Get on the Schedule</a></li>
+                <li><a href="#booking" class="nav-cta">Book Now</a></li>
             </ul>
         </div>
     </nav>
@@ -501,8 +510,9 @@
         </div>
     </section>
 
-    <!-- GUARANTEE BAR -->
-    <div class="guarantee-bar">
+    <!-- VALUE PROP + TRUST BAR -->
+    <div style="text-align: center; padding: 2.5rem 2rem 2rem; background: var(--dark-mid); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
+        <p style="font-family: 'Playfair Display', serif; font-size: clamp(1.05rem, 2.5vw, 1.35rem); color: var(--cream); max-width: 720px; margin: 0 auto 1.5rem; line-height: 1.8; font-weight: 400;">Scheduled neighborhood service days designed to keep up with the <em style="color: var(--accent); font-style: normal;">small, important jobs</em> homeowners often don&rsquo;t have time to think about.</p>
         <div class="guarantee-items">
             <div class="guarantee-item">
                 <span class="guarantee-icon">&#9733;</span>
@@ -521,11 +531,6 @@
                 No Hidden Fees
             </div>
         </div>
-    </div>
-
-    <!-- VALUE PROP LINE -->
-    <div style="text-align: center; padding: 3rem 2rem; background: var(--dark-mid); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
-        <p style="font-family: 'Playfair Display', serif; font-size: clamp(1.1rem, 2.5vw, 1.4rem); color: var(--cream); max-width: 750px; margin: 0 auto; line-height: 1.8; font-weight: 400;">Scheduled neighborhood service days designed to keep up with the <em style="color: var(--accent); font-style: normal;">small, important jobs</em> homeowners often don&rsquo;t have time to think about.</p>
     </div>
     <!-- HOW IT WORKS -->
     <section class="how-it-works" id="how-it-works">
