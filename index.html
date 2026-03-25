@@ -122,10 +122,14 @@
             max-width: 100%; word-wrap: break-word;
         }
         .hero h1 {
-            font-family: 'Playfair Display', serif; font-size: clamp(2rem, 4.5vw, 3.2rem);
-            font-weight: 900; color: var(--cream); line-height: 1.1; margin-bottom: 1.5rem;
+            font-family: 'Playfair Display', serif; font-size: clamp(2.2rem, 5vw, 3.5rem);
+            font-weight: 900; color: var(--cream); line-height: 1.1; margin-bottom: 0.75rem;
         }
-        .hero h1 em { font-style: normal; color: var(--accent); }
+        .hero-subtitle {
+            font-family: 'Inter', sans-serif; font-size: clamp(0.95rem, 2vw, 1.2rem);
+            color: var(--accent); font-weight: 600; letter-spacing: 2px; text-transform: uppercase;
+            margin-bottom: 2rem;
+        }
         .hero p {
             font-size: 1.15rem; color: var(--text-muted); max-width: 600px;
             margin: 0 auto 2.5rem; line-height: 1.8;
@@ -487,7 +491,8 @@
     <section class="hero" id="home">
         <div class="hero-content">
             <div class="hero-badge">Serving The Ridges and Surrounding Neighborhoods</div>
-            <h1>Home Maintenance Routes &mdash; <em>Make Everyday Maintenance Affordable.</em></h1>
+            <h1>Home Maintenance Routes</h1>
+            <div class="hero-subtitle">Multiple Homes, One Route &mdash; Savings Built Into Every Stop.</div>
             <p>Scheduled service days run through the neighborhood &mdash; same tools, same route, flat-rate pricing. Lightbulbs, filters, gutters, and more &mdash; handled fast so you don&rsquo;t have to think about it.</p>
             <div class="hero-buttons">
                 <a href="#services" class="btn-primary">See This Week&rsquo;s Services</a>
