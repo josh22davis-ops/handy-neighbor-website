@@ -87,6 +87,7 @@
         }
         .nav-logo .nav-icon { height: 34px; width: auto; }
         .nav-logo span { color: var(--accent); }
+        .nav-logo { word-spacing: 4px; }
 
         .nav-links { display: flex; list-style: none; gap: 1.4rem; align-items: center; }
         .nav-links a {
@@ -460,6 +461,7 @@
             .guarantee-item { font-size: 0.75rem; }
             .services-grid { grid-template-columns: 1fr; }
             .pricing section > div > div[style*="grid-template-columns"] { grid-template-columns: 1fr !important; }
+            .pricing .section-container > div[style*="grid-template-columns"] { grid-template-columns: 1fr !important; }
             .about-grid { grid-template-columns: 1fr; }
             .form-row { grid-template-columns: 1fr; }
             .footer-grid { grid-template-columns: 1fr 1fr; }
@@ -473,17 +475,16 @@
     <!-- NAVIGATION -->
     <nav id="navbar">
         <div class="nav-container">
-            <a href="#" class="nav-logo"><img src="icon-white.png" alt="The Handy Neighbor Co." class="nav-icon">THE HANDY <span>NEIGHBOR CO.</span></a>
+            <a href="#" class="nav-logo"><img src="icon-white.png" alt="The Handy Neighbor Co." class="nav-icon"><span>THE</span> HANDY NEIGHBOR CO.</a>
             <button class="mobile-toggle" onclick="toggleMenu()" aria-label="Toggle menu">&#9776;</button>
             <ul class="nav-links" id="navLinks">
-                <li><a href="#how-it-works">How It Works</a></li>
+                <li><a href="#pricing">Plans</a></li>
                 <li><a href="#services">Services</a></li>
-                <li><a href="#pricing">Pricing</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#faq">FAQ</a></li>
                 <li><a href="blog.html">Blog</a></li>
                 <li><a href="contact.html">Contact</a></li>
-                <li><a href="#booking" class="nav-cta">Book Now</a></li>
+                <li><a href="#booking" class="nav-cta">Sign Up</a></li>
             </ul>
         </div>
     </nav>
@@ -494,24 +495,8 @@
             <div class="hero-badge">Serving The Ridges and Surrounding Neighborhoods</div>
             <h1>Easy and Trusted Home Maintenance</h1>
             <div class="hero-subtitle">Home Maintenance, Handled on a Schedule &mdash; So You Never Have to Think About It.</div>
-            <p>Quarterly visits cover the essentials. Add-ons handle the rest. Flat-rate pricing, efficient neighborhood routes, and a plan built specifically for your home.</p>
             <div class="hero-buttons">
-                <a href="#booking" class="btn-primary">Get Your Custom Maintenance Plan</a>
-                <a href="#how-it-works" class="btn-secondary">See How It Works</a>
-            </div>
-            <div class="hero-stats">
-                <div class="hero-stat">
-                    <h3>$45/mo</h3>
-                    <p>Membership Starts At</p>
-                </div>
-                <div class="hero-stat">
-                    <h3>Quarterly</h3>
-                    <p>Scheduled Visits</p>
-                </div>
-                <div class="hero-stat">
-                    <h3>Custom</h3>
-                    <p>Maintenance Plan</p>
-                </div>
+                <a href="#booking" class="btn-primary">Sign Up</a>
             </div>
         </div>
     </section>
@@ -538,93 +523,79 @@
             </div>
         </div>
     </div>
-    <!-- HOW IT WORKS -->
-    <section class="how-it-works" id="how-it-works">
-        <div class="content">
+    <!-- MEMBERSHIP PLANS (moved above services) -->
+    <section class="pricing" id="pricing">
+        <div class="section-container">
             <div class="section-header">
-                <div class="section-label">Simple Process</div>
-                <h2>How It Works</h2>
-                <p>Getting things fixed around your home has never been easier. Three simple steps to a well-maintained home.</p>
+                <div class="section-label">Membership Plans</div>
+                <h2>Pick Your Plan</h2>
+                <p>Quarterly visits. Flat-rate pricing. A plan that grows with your home.</p>
             </div>
 
-            <div class="timeline">
-                <div class="timeline-step fade-in">
-                    <div class="step-icon">
-                        <div class="step-badge">1</div>
-                        <svg viewBox="0 0 48 48" fill="none" stroke="#C8A96E" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                            <rect x="6" y="10" width="36" height="32" rx="4"/>
-                            <line x1="6" y1="20" x2="42" y2="20"/>
-                            <line x1="16" y1="6" x2="16" y2="14"/>
-                            <line x1="32" y1="6" x2="32" y2="14"/>
-                            <circle cx="18" cy="30" r="2.5" fill="#C8A96E" stroke="none"/>
-                            <circle cx="30" cy="30" r="2.5" fill="rgba(200,169,110,0.4)" stroke="none"/>
-                            <circle cx="18" cy="36" r="2.5" fill="rgba(200,169,110,0.4)" stroke="none"/>
-                        </svg>
-                    </div>
-                    <h3>Get Your Custom Plan</h3>
-                    <p>A quick walkthrough of your home to identify what needs attention now and what&rsquo;s coming up seasonally.</p>
+            <div style="max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; align-items: start;">
+
+                <!-- ESSENTIALS $45 -->
+                <div class="pricing-card fade-in" style="padding: 2.5rem;">
+                    <div class="pricing-label">Essentials</div>
+                    <h3>Core Safety &amp; Filters</h3>
+                    <div class="pricing-amount">$45<span style="font-size: 1rem; color: var(--text-muted);">/mo</span></div>
+                    <div class="pricing-period">billed quarterly &bull; cancel anytime</div>
+                    <ul class="pricing-features" style="text-align: left; margin-bottom: 1.5rem;">
+                        <li>HVAC filter replacement</li>
+                        <li>Smoke &amp; CO detector check</li>
+                        <li>Thermostat battery replacement</li>
+                        <li>Leak checks &amp; plumbing inspection</li>
+                        <li>Sump pump test</li>
+                        <li>Weather stripping &amp; door sweep inspection</li>
+                        <li>Electrical safety check</li>
+                        <li>Visual home inspection</li>
+                    </ul>
+                    <a href="#booking" class="btn-primary" style="width: 100%; display: block; text-align: center;">Sign Up</a>
                 </div>
 
-                <div class="step-arrow">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="#C8A96E" stroke-width="2" stroke-linecap="round">
-                        <line x1="2" y1="12" x2="20" y2="12"/><polyline points="14,6 20,12 14,18"/>
-                    </svg>
+                <!-- PLUS $75 -->
+                <div class="pricing-card featured fade-in" style="padding: 2.5rem;">
+                    <div class="pricing-label">Plus</div>
+                    <h3>Everything in Essentials, Plus</h3>
+                    <div class="pricing-amount">$75<span style="font-size: 1rem; color: var(--text-muted);">/mo</span></div>
+                    <div class="pricing-period">billed quarterly &bull; cancel anytime</div>
+                    <ul class="pricing-features" style="text-align: left; margin-bottom: 1.5rem;">
+                        <li>Refrigerator water &amp; air filters</li>
+                        <li>Showerhead filter replacement</li>
+                        <li>Condensate drain maintenance</li>
+                        <li>Hose bib winterization</li>
+                        <li>Humidifier pad replacement</li>
+                        <li>Ceiling fan cleaning &amp; balancing</li>
+                        <li>Downspout &amp; window well clearing</li>
+                        <li>Water &amp; air quality testing</li>
+                    </ul>
+                    <a href="#booking" class="btn-primary" style="width: 100%; display: block; text-align: center;">Sign Up</a>
                 </div>
 
-                <div class="timeline-step fade-in">
-                    <div class="step-icon">
-                        <div class="step-badge">2</div>
-                        <svg viewBox="0 0 48 48" fill="none" stroke="#C8A96E" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                            <rect x="4" y="14" width="26" height="18" rx="3"/>
-                            <path d="M30 20 L38 20 L42 26 L42 32 L30 32 L30 20Z"/>
-                            <circle cx="14" cy="35" r="4" fill="none"/>
-                            <circle cx="36" cy="35" r="4" fill="none"/>
-                            <line x1="18" y1="35" x2="32" y2="35"/>
-                            <circle cx="10" cy="8" r="2" fill="#C8A96E" stroke="none"/>
-                            <circle cx="20" cy="8" r="1.5" fill="rgba(200,169,110,0.5)" stroke="none"/>
-                            <circle cx="28" cy="8" r="1.5" fill="rgba(200,169,110,0.3)" stroke="none"/>
-                        </svg>
-                    </div>
-                    <h3>Get a Custom Plan</h3>
-                    <p>A clear list of what needs done, when, and what it costs. Membership starts at $45/month. No pressure, no obligation.</p>
+                <!-- PREMIUM $125 -->
+                <div class="pricing-card fade-in" style="padding: 2.5rem;">
+                    <div class="pricing-label">Premium</div>
+                    <h3>Everything in Plus, Plus</h3>
+                    <div class="pricing-amount">$125<span style="font-size: 1rem; color: var(--text-muted);">/mo</span></div>
+                    <div class="pricing-period">billed quarterly &bull; cancel anytime</div>
+                    <ul class="pricing-features" style="text-align: left; margin-bottom: 1.5rem;">
+                        <li>Dryer vent cleaning</li>
+                        <li>Dishwasher deep clean &amp; filter service</li>
+                        <li>Refrigerator coil cleaning</li>
+                        <li>Washer drain pump filter service</li>
+                        <li>Door hinge lubrication</li>
+                        <li>Cabinet hardware alignment</li>
+                        <li>Fireplace glass cleaning &amp; inspection</li>
+                        <li>Rodent &amp; pest entry inspection</li>
+                    </ul>
+                    <a href="#booking" class="btn-primary" style="width: 100%; display: block; text-align: center;">Sign Up</a>
                 </div>
 
-                <div class="step-arrow">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="#C8A96E" stroke-width="2" stroke-linecap="round">
-                        <line x1="2" y1="12" x2="20" y2="12"/><polyline points="14,6 20,12 14,18"/>
-                    </svg>
-                </div>
-
-                <div class="timeline-step fade-in">
-                    <div class="step-icon">
-                        <div class="step-badge">3</div>
-                        <svg viewBox="0 0 48 48" fill="none" stroke="#C8A96E" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M24 4 L40 12 L40 24 C40 34 32 42 24 46 C16 42 8 34 8 24 L8 12 Z"/>
-                            <polyline points="16,24 22,30 34,18" stroke-width="3"/>
-                        </svg>
-                    </div>
-                    <h3>The Truck Shows Up</h3>
-                    <p>Quarterly visits handle the essentials. Add-ons and upgrades recommended for your specific home. Efficient, flat-rate, done.</p>
-                </div>
             </div>
 
-            <div class="stat-bar">
-                <div class="stat">
-                    <div class="stat-value">$45/mo</div>
-                    <div class="stat-label">Membership starts at</div>
-                </div>
-                <div class="stat">
-                    <div class="stat-value">Quarterly</div>
-                    <div class="stat-label">Scheduled visits</div>
-                </div>
-                <div class="stat">
-                    <div class="stat-value">Custom</div>
-                    <div class="stat-label">Maintenance Plan</div>
-                </div>
-                <div class="stat">
-                    <div class="stat-value">100%</div>
-                    <div class="stat-label">Satisfaction guaranteed</div>
-                </div>
+            <!-- ADD-ON CALLOUT under pricing -->
+            <div class="fade-in" style="max-width: 750px; margin: 3rem auto 0; text-align: center; padding: 2rem; background: rgba(200,169,110,0.06); border: 1px solid rgba(200,169,110,0.2); border-radius: 12px;">
+                <p style="color: var(--text-muted); line-height: 1.8; max-width: 600px; margin: 0 auto;">All plans include quarterly visits and 9 visual inspections. Add-on services like gutter cleaning, pressure washing, caulking, and lightbulbs available at flat-rate member pricing of $45&ndash;$75 each.</p>
             </div>
         </div>
     </section>
@@ -676,72 +647,11 @@
                 </div>
             </div>
 
-            <!-- ADD-ON CALLOUT -->
-            <div class="fade-in" style="max-width: 750px; margin: 3.5rem auto 0; text-align: center; padding: 2.5rem; background: rgba(200,169,110,0.06); border: 1px solid rgba(200,169,110,0.2); border-radius: 12px;">
-                <h3 style="font-family: 'Playfair Display', serif; font-size: 1.4rem; color: var(--cream); margin-bottom: 0.75rem;">Every Home Is Different</h3>
-                <p style="color: var(--text-muted); line-height: 1.8; max-width: 600px; margin: 0 auto 1.25rem;">After a walkthrough of your home, a custom plan is built around what it actually needs. Lightbulbs, gutter cleaning, caulking, pressure washing, and more &mdash; added as $45&ndash;$75 flat-rate upgrades that make sense for your house, your season, and your budget.</p>
-                <a href="#booking" class="btn-primary" style="display: inline-block;">Get Your Custom Maintenance Plan</a>
-            </div>
         </div>
     </section>
 
 
 
-    <!-- PRICING — Membership + Add-Ons -->
-    <section class="pricing" id="pricing">
-        <div class="section-container">
-            <div class="section-header">
-                <div class="section-label">Simple Pricing</div>
-                <h2>Membership Plans &amp; Add-Ons</h2>
-                <p>Home maintenance on a schedule. One flat monthly price covers the essentials &mdash; add what you need from there.</p>
-            </div>
-
-            <!-- PRIMARY: Membership -->
-            <div style="max-width: 900px; margin: 0 auto 3rem; display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; align-items: start;">
-
-                <!-- Membership Card -->
-                <div class="pricing-card featured fade-in" style="transform: none; padding: 2.5rem;">
-                    <div class="pricing-label">Membership</div>
-                    <h3>Quarterly Maintenance Plan</h3>
-                    <div class="pricing-amount">$45<span style="font-size: 1rem; color: var(--text-muted);">/month</span></div>
-                    <div class="pricing-period">starting at &bull; billed quarterly &bull; cancel anytime</div>
-                    <ul class="pricing-features" style="text-align: left; margin-bottom: 1.5rem;">
-                        <li>HVAC &amp; fridge filter replacement</li>
-                        <li>Leak checks &amp; plumbing inspection</li>
-                        <li>Thermostat battery replacement</li>
-                        <li>Door hinge lubrication</li>
-                        <li>Hose bib winterization</li>
-                        <li>Weather stripping &amp; door sweep inspection</li>
-                        <li>Dishwasher maintenance</li>
-                        <li>Sump pump test</li>
-                        <li>Smoke &amp; CO detector check (annual)</li>
-                        <li>Downspout &amp; window well clearing</li>
-                    </ul>
-                    <p style="color: var(--text-muted); font-size: 0.85rem; line-height: 1.7; margin-bottom: 1.5rem;">Each quarterly visit takes less than an hour. From there, the plan grows with your home &mdash; upgrades and add-ons recommended specifically for what your house needs.</p>
-                    <a href="#booking" class="btn-primary" style="max-width: 100%; margin: 0 auto;">Get Your Custom Maintenance Plan</a>
-                </div>
-
-                <!-- Add-On Card -->
-                <div class="pricing-card fade-in" style="padding: 2.5rem; border: 1px solid var(--border); background: rgba(44,72,89,0.4);">
-                    <div class="pricing-label">Add-On Services</div>
-                    <h3>Route Day Extras</h3>
-                    <div class="pricing-amount">$45&ndash;$75<span style="font-size: 1rem; color: var(--text-muted);">/each</span></div>
-                    <div class="pricing-period">per add-on &bull; flat rate &bull; no surprises</div>
-                    <ul class="pricing-features" style="text-align: left; margin-bottom: 1.5rem;">
-                        <li>Lightbulb &amp; fixture swaps</li>
-                        <li>Gutter cleaning &amp; downspout flush</li>
-                        <li>Caulking &amp; weatherstripping</li>
-                        <li>Pressure washing</li>
-                        <li>Smoke detector deep service</li>
-                        <li>And more from the service menu</li>
-                    </ul>
-                    <p style="color: var(--text-muted); font-size: 0.85rem; line-height: 1.7; margin-bottom: 1.5rem;">Add any service to a quarterly visit or book standalone route day stops. The truck is already in the neighborhood &mdash; that&rsquo;s why the price stays low.</p>
-                    <a href="#services" class="btn-secondary" style="max-width: 100%; margin: 0 auto; display: block; text-align: center;">See All Services</a>
-                </div>
-            </div>
-
-        </div>
-    </section>
 
     <!-- TESTIMONIALS -->
     <section class="trust" id="testimonials">
@@ -801,9 +711,8 @@
                     <p>These days, the big crews and long timelines are behind. Because in every house, there&rsquo;s always a list. Things to fix. Things to finish. Things that got pushed to &ldquo;next weekend&rdquo; three weekends ago. Not just the big projects &mdash; but the ones that get overlooked. The dryer vent that needs cleared. The gutters filling up. The air filter that should&rsquo;ve been changed weeks ago.</p>
                     <p>The small, seasonal jobs that keep a home safe, clean, and running the way it should. Turns out, the neighbors needed the same thing.</p>
                     <p style="color: var(--accent); font-weight: 600; font-size: 1.05rem; margin-top: 1rem;">The neighbor down the street &mdash; the one who shows up, takes care of it, and does it right. No crews. No runaround. No overcomplicating it. Just solid, reliable work &mdash; done right, with care.</p>
-                    <!-- PHOTO PLACEHOLDER: Replace src with actual headshot/jobsite photo -->
-                    <div style="margin-top: 2rem; padding: 3rem; border: 2px dashed var(--border); border-radius: 12px; text-align: center;">
-                        <p style="color: var(--text-muted); font-size: 0.85rem;">Photo of Josh &mdash; add headshot or jobsite photo here</p>
+                    <div style="margin-top: 2rem;">
+                        <img src="josh-headshot.jpg" alt="Josh Davis, Owner of The Handy Neighbor Co." style="width: 100%; max-width: 360px; border-radius: 12px; border: 2px solid var(--border);">
                     </div>
                 </div>
                 <div class="about-values fade-in">
@@ -859,8 +768,8 @@
         <div class="booking-wrapper">
             <div class="section-header">
                 <div class="section-label">Start Here</div>
-                <h2>Get Your Custom Maintenance Plan</h2>
-                <p>A quick walkthrough to see what your home needs. No cost, no obligation &mdash; just a clear picture of what&rsquo;s on the list.</p>
+                <h2>Sign Up</h2>
+                <p>Tell us about your home and we&rsquo;ll build a plan around what it actually needs. No cost, no obligation.</p>
             </div>
             <form class="booking-form" id="bookingForm" onsubmit="handleSubmit(event)">
                 <div class="form-row">
@@ -891,8 +800,8 @@
                     <label for="notes">Anything specific on your mind? (optional)</label>
                     <textarea id="notes" placeholder="Leaky faucet, gutters overdue, bulbs out, or just want a general checkup..."></textarea>
                 </div>
-                <button type="submit" class="form-submit">Get My Custom Plan</button>
-                <p class="form-note">Plan delivered within 24 hours. No cost, no obligation.</p>
+                <button type="submit" class="form-submit">Sign Up</button>
+                <p class="form-note">Confirmation within 24 hours. No cost, no obligation.</p>
             </form>
         </div>
     </section>
@@ -962,9 +871,9 @@
                 <div class="footer-col">
                     <h4>Services</h4>
                     <ul>
+                        <li><a href="#pricing">Membership Plans</a></li>
                         <li><a href="#services">Services</a></li>
-                        <li><a href="#pricing">Pricing</a></li>
-                        <li><a href="#how-it-works">How It Works</a></li>
+                        <li><a href="#booking">Sign Up</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
