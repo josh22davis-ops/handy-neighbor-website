@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up | The Handy Neighbor Co.</title>
+    <meta name="description" content="Get your home on a maintenance plan. Pick your plan, schedule your first inspection, and we'll take it from there.">
+    <link rel="icon" type="image/png" href="icon-white.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --cream: #FFFFFF;
+            --dark: #3B5068;
+            --dark-mid: #344859;
+            --accent: #C8A96E;
+            --accent-dark: #A8894E;
+            --text-light: #FFFFFF;
+            --text-muted: rgba(255,255,255,0.55);
+            --border: rgba(255,255,255,0.12);
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Inter', sans-serif; background: var(--dark); color: var(--text-light); line-height: 1.6; }
+
+        nav {
+            position: fixed; top: 0; width: 100%; z-index: 1000;
+            background: rgba(44,62,80,0.95); backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border);
+        }
+        .nav-container {
+            max-width: 1200px; margin: 0 auto;
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 1rem 2rem;
+        }
+        .nav-logo {
+            display: flex; align-items: center; gap: 0.75rem;
+            font-family: 'Bebas Neue', sans-serif; font-size: 1.5rem;
+            color: var(--cream); text-decoration: none; letter-spacing: 2px;
+            word-spacing: 4px;
+        }
+        .nav-logo .nav-icon { height: 34px; width: auto; }
+        .nav-logo span { color: var(--accent); }
+        .nav-back {
+            color: var(--text-muted); text-decoration: none; font-size: 0.9rem;
+            font-weight: 500; transition: color 0.3s;
+        }
+        .nav-back:hover { color: var(--cream); }
+
+        .signup-page {
+            min-height: 100vh; padding: 8rem 2rem 4rem;
+            background: radial-gradient(ellipse at 50% 0%, rgba(200,169,110,0.06) 0%, transparent 60%),
+                linear-gradient(180deg, #2C3E50 0%, var(--dark) 100%);
+        }
+        .signup-container {
+            max-width: 600px; margin: 0 auto;
+        }
+        .signup-header {
+            text-align: center; margin-bottom: 2.5rem;
+        }
+        .signup-header h1 {
+            font-family: 'Playfair Display', serif; font-size: clamp(1.8rem, 4vw, 2.5rem);
+            font-weight: 900; color: var(--cream); margin-bottom: 0.75rem;
+        }
+        .signup-header p {
+            color: var(--text-muted); font-size: 1.05rem; line-height: 1.7;
+        }
+
+        .signup-form {
+            background: var(--dark-mid); border: 1px solid var(--border);
+            border-radius: 8px; padding: 2.5rem;
+        }
+        .form-row {
+            display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;
+        }
+        .form-group { margin-bottom: 1.5rem; }
+        .form-group label {
+            display: block; color: var(--cream); font-size: 0.85rem; font-weight: 600;
+            text-transform: uppercase; letter-spacing: 1px; margin-bottom: 0.5rem;
+        }
+        .form-group input, .form-group select {
+            width: 100%; padding: 0.85rem 1rem; background: var(--dark);
+            border: 1px solid var(--border); border-radius: 4px; color: var(--text-light);
+            font-family: 'Inter', sans-serif; font-size: 0.95rem; transition: border-color 0.3s;
+        }
+        .form-group input:focus, .form-group select:focus { outline: none; border-color: var(--accent); }
+        .form-group input::placeholder { color: var(--text-muted); }
+        .form-group select option { background: var(--dark); color: var(--text-light); }
+
+        .plan-cards {
+            display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.75rem;
+            margin-bottom: 1.5rem;
+        }
+        .plan-option {
+            background: var(--dark); border: 2px solid var(--border); border-radius: 8px;
+            padding: 1.25rem 1rem; text-align: center; cursor: pointer; transition: all 0.3s;
+        }
+        .plan-option:hover { border-color: rgba(200,169,110,0.5); }
+        .plan-option.selected { border-color: var(--accent); background: rgba(200,169,110,0.08); }
+        .plan-option input[type="radio"] { display: none; }
+        .plan-name {
+            font-size: 0.75rem; font-weight: 700; text-transform: uppercase;
+            letter-spacing: 2px; color: var(--accent); margin-bottom: 0.5rem;
+        }
+        .plan-price {
+            font-family: 'Bebas Neue', sans-serif; font-size: 2rem; color: var(--cream);
+            line-height: 1;
+        }
+        .plan-price span { font-size: 0.8rem; color: var(--text-muted); }
+        .plan-desc {
+            font-size: 0.75rem; color: var(--text-muted); margin-top: 0.5rem; line-height: 1.4;
+        }
+
+        .billing-toggle {
+            display: flex; gap: 0.75rem; margin-bottom: 1.5rem;
+        }
+        .billing-option {
+            flex: 1; background: var(--dark); border: 2px solid var(--border); border-radius: 8px;
+            padding: 1rem; text-align: center; cursor: pointer; transition: all 0.3s;
+        }
+        .billing-option:hover { border-color: rgba(200,169,110,0.5); }
+        .billing-option.selected { border-color: var(--accent); background: rgba(200,169,110,0.08); }
+        .billing-option input[type="radio"] { display: none; }
+        .billing-option .billing-label {
+            font-size: 0.85rem; font-weight: 600; color: var(--cream);
+        }
+        .billing-option .billing-note {
+            font-size: 0.75rem; color: var(--text-muted); margin-top: 0.25rem;
+        }
+
+        .form-submit {
+            width: 100%; padding: 1.1rem; background: var(--accent); color: var(--dark);
+            border: none; border-radius: 4px; font-size: 1rem; font-weight: 700;
+            text-transform: uppercase; letter-spacing: 2px; cursor: pointer;
+            transition: all 0.3s; font-family: 'Inter', sans-serif;
+        }
+        .form-submit:hover { background: var(--accent-dark); transform: translateY(-2px); box-shadow: 0 4px 15px rgba(200,169,110,0.3); }
+
+        .form-note {
+            text-align: center; color: var(--text-muted); font-size: 0.8rem; margin-top: 1rem; line-height: 1.6;
+        }
+        .form-note a { color: var(--accent); text-decoration: none; }
+        .form-note a:hover { text-decoration: underline; }
+
+        .form-divider {
+            border: none; border-top: 1px solid var(--border); margin: 1.5rem 0;
+        }
+
+        .section-label-sm {
+            font-size: 0.7rem; font-weight: 700; text-transform: uppercase;
+            letter-spacing: 2px; color: var(--accent); margin-bottom: 1rem; display: block;
+        }
+
+        @media (max-width: 768px) {
+            .form-row { grid-template-columns: 1fr; }
+            .plan-cards { grid-template-columns: 1fr; }
+            .signup-form { padding: 1.5rem; }
+        }
+
+        footer {
+            background: var(--dark); border-top: 1px solid var(--border); padding: 2rem;
+            text-align: center;
+        }
+        footer p { color: var(--text-muted); font-size: 0.8rem; }
+        footer a { color: var(--accent); text-decoration: none; }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo"><img src="icon-white.png" alt="The Handy Neighbor Co." class="nav-icon"><span>THE</span> HANDY <span>NEIGHBOR CO.</span></a>
+            <a href="index.html" class="nav-back">&larr; Back to Home</a>
+        </div>
+    </nav>
+
+    <div class="signup-page">
+        <div class="signup-container">
+            <div class="signup-header">
+                <h1>Let&rsquo;s Get Your Home on a Plan</h1>
+                <p>This is where we build your home portfolio. Pick your plan, choose your first inspection date, and we&rsquo;ll take it from there.</p>
+            </div>
+
+            <form class="signup-form" id="signupForm" onsubmit="handleSignup(event)">
+
+                <!-- YOUR INFO -->
+                <span class="section-label-sm">Your Info</span>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="firstName">First Name</label>
+                        <input type="text" id="firstName" placeholder="First name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="lastName">Last Name</label>
+                        <input type="text" id="lastName" placeholder="Last name" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="phone">Phone</label>
+                        <input type="tel" id="phone" placeholder="(402) 555-1234" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" placeholder="you@email.com" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="address">Street Address</label>
+                    <input type="text" id="address" placeholder="1234 Maple St, Omaha, NE" required>
+                </div>
+
+                <hr class="form-divider">
+
+                <!-- SELECT PLAN -->
+                <span class="section-label-sm">Select Your Plan</span>
+                <div class="plan-cards" id="planCards">
+                    <label class="plan-option" data-plan="essentials">
+                        <input type="radio" name="plan" value="essentials" required>
+                        <div class="plan-name">Essentials</div>
+                        <div class="plan-price">$45<span>/mo</span></div>
+                        <div class="plan-desc">Safety &amp; filters</div>
+                    </label>
+                    <label class="plan-option" data-plan="plus">
+                        <input type="radio" name="plan" value="plus">
+                        <div class="plan-name">Plus</div>
+                        <div class="plan-price">$75<span>/mo</span></div>
+                        <div class="plan-desc">Seasonal upkeep</div>
+                    </label>
+                    <label class="plan-option" data-plan="premium">
+                        <input type="radio" name="plan" value="premium">
+                        <div class="plan-name">Premium</div>
+                        <div class="plan-price">$125<span>/mo</span></div>
+                        <div class="plan-desc">Deep maintenance</div>
+                    </label>
+                </div>
+
+                <hr class="form-divider">
+
+                <!-- INSPECTION DATE -->
+                <span class="section-label-sm">Schedule Your First Inspection</span>
+                <div class="form-group">
+                    <label for="inspectionDate">Preferred Date</label>
+                    <input type="date" id="inspectionDate" required>
+                </div>
+
+                <hr class="form-divider">
+
+                <!-- BILLING -->
+                <span class="section-label-sm">Payment Schedule</span>
+                <div class="billing-toggle" id="billingToggle">
+                    <label class="billing-option selected">
+                        <input type="radio" name="billing" value="monthly" checked>
+                        <div class="billing-label">Monthly</div>
+                        <div class="billing-note">Billed each month</div>
+                    </label>
+                    <label class="billing-option">
+                        <input type="radio" name="billing" value="quarterly">
+                        <div class="billing-label">Quarterly</div>
+                        <div class="billing-note">Billed every 3 months</div>
+                    </label>
+                </div>
+                <p style="color: var(--text-muted); font-size: 0.8rem; margin-bottom: 1.5rem;">First day of your selected plan is billed today.</p>
+
+                <button type="submit" class="form-submit">Get Started</button>
+                <p class="form-note">By signing up you agree to our <a href="#">Privacy Policy</a> and <a href="#">Terms of Service</a>.</p>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 The Handy Neighbor Co. &bull; <a href="index.html">Home</a> &bull; <a href="contact.html">Contact</a> &bull; <a href="tel:+14023502583">(402) 350-2583</a></p>
+    </footer>
+
+    <script>
+        // Plan card selection
+        document.querySelectorAll('.plan-option').forEach(card => {
+            card.addEventListener('click', () => {
+                document.querySelectorAll('.plan-option').forEach(c => c.classList.remove('selected'));
+                card.classList.add('selected');
+                card.querySelector('input[type="radio"]').checked = true;
+            });
+        });
+
+        // Billing toggle
+        document.querySelectorAll('.billing-option').forEach(opt => {
+            opt.addEventListener('click', () => {
+                document.querySelectorAll('.billing-option').forEach(o => o.classList.remove('selected'));
+                opt.classList.add('selected');
+                opt.querySelector('input[type="radio"]').checked = true;
+            });
+        });
+
+        // Pre-select plan from URL parameter
+        const params = new URLSearchParams(window.location.search);
+        const preselect = params.get('plan');
+        if (preselect) {
+            const card = document.querySelector(`.plan-option[data-plan="${preselect}"]`);
+            if (card) {
+                document.querySelectorAll('.plan-option').forEach(c => c.classList.remove('selected'));
+                card.classList.add('selected');
+                card.querySelector('input[type="radio"]').checked = true;
+            }
+        }
+
+        // Set min date to today
+        const today = new Date().toISOString().split('T')[0];
+        document.getElementById('inspectionDate').setAttribute('min', today);
+
+        // Form submission
+        function handleSignup(e) {
+            e.preventDefault();
+            const data = {
+                firstName: document.getElementById('firstName').value,
+                lastName: document.getElementById('lastName').value,
+                phone: document.getElementById('phone').value,
+                email: document.getElementById('email').value,
+                address: document.getElementById('address').value,
+                plan: document.querySelector('input[name="plan"]:checked')?.value,
+                billing: document.querySelector('input[name="billing"]:checked')?.value,
+                inspectionDate: document.getElementById('inspectionDate').value
+            };
+            // For now, show confirmation. Replace with Stripe/backend integration later.
+            document.querySelector('.signup-form').innerHTML = `
+                <div style="text-align: center; padding: 3rem 1rem;">
+                    <div style="font-size: 3rem; margin-bottom: 1rem;">&#10003;</div>
+                    <h2 style="font-family: 'Playfair Display', serif; color: var(--cream); margin-bottom: 1rem;">You&rsquo;re All Set</h2>
+                    <p style="color: var(--text-muted); line-height: 1.8; max-width: 400px; margin: 0 auto 1.5rem;">Thanks, ${data.firstName}! We&rsquo;ll confirm your <strong style="color: var(--cream);">${data.plan.charAt(0).toUpperCase() + data.plan.slice(1)}</strong> plan and inspection date within 24 hours.</p>
+                    <p style="color: var(--text-muted); font-size: 0.9rem;">Questions? Call or text <a href="tel:+14023502583" style="color: var(--accent);">(402) 350-2583</a></p>
+                </div>
+            `;
+        }
+    </script>
+
+</body>
+</html>
