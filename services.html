@@ -3,8 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Explore seasonal home maintenance services from The Handy Neighbor Co. in West Omaha. Flexible membership tiers with included and add-on services.">
-  <title>Home Maintenance Services | The Handy Neighbor Co.</title>
+  <meta name="description" content="Explore The Handy Neighbor Co.'s home maintenance services in West Omaha. From gutter cleaning to permanent holiday lights, we handle seasonal maintenance to keep your home in top condition.">
+  <title>Home Maintenance Services in West Omaha | The Handy Neighbor Co.</title>
+  <link rel="canonical" href="https://thehandyneighbor.co/services.html">
 
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 
@@ -16,13 +17,14 @@
     }
 
     :root {
-      --slate: #2D4A5A;
-      --gold: #C4A265;
-      --body-text: #4A5568;
-      --light-bg: #F9F7F4;
-      --border: #E2D9CE;
-      --white: #FFFFFF;
-      --accent-light: #F5F1E8;
+      --cream: #FFFFFF;
+      --dark: #3B5068;
+      --dark-mid: #344859;
+      --accent: #C8A96E;
+      --accent-dark: #A8894E;
+      --text-light: #FFFFFF;
+      --text-muted: rgba(255,255,255,0.55);
+      --border: rgba(255,255,255,0.12);
     }
 
     html {
@@ -31,1404 +33,1082 @@
 
     body {
       font-family: 'Inter', sans-serif;
-      color: var(--body-text);
-      background-color: var(--white);
+      background-color: var(--dark);
+      color: var(--text-light);
       line-height: 1.6;
     }
 
-    /* ===== UTILITY BAR ===== */
-    .utility-bar {
-      background-color: var(--slate);
-      color: var(--white);
-      padding: 12px 0;
-      font-size: 14px;
-      text-align: center;
-    }
-
-    .utility-bar-content {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 20px;
-    }
-
-    .utility-bar a {
-      color: var(--white);
-      text-decoration: none;
-    }
-
     /* ===== NAVIGATION ===== */
-    .navbar {
-      background-color: var(--white);
-      border-bottom: 1px solid var(--border);
-      position: sticky;
+    nav {
+      position: fixed;
       top: 0;
-      z-index: 100;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-    }
-
-    .nav-container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 20px;
+      width: 100%;
+      background-color: var(--dark-mid);
+      padding: 1rem 2rem;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      height: 70px;
+      z-index: 1000;
+      border-bottom: 1px solid var(--border);
     }
 
-    .logo {
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: 24px;
-      color: var(--slate);
-      text-decoration: none;
+    .nav-logo {
       display: flex;
       align-items: center;
-      gap: 10px;
+      gap: 0.75rem;
+      text-decoration: none;
+      color: var(--text-light);
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.1rem;
+      letter-spacing: 0.05em;
+      word-spacing: 4px;
+      font-weight: 700;
     }
 
-    .logo img {
-      height: 40px;
+    .nav-logo span {
+      color: var(--accent);
+    }
+
+    .nav-icon {
+      height: 32px;
       width: auto;
     }
 
-    .nav-links {
+    .nav-menu {
       display: flex;
-      gap: 30px;
+      gap: 2rem;
       align-items: center;
       list-style: none;
     }
 
-    .nav-links a {
+    .nav-menu a {
+      color: var(--text-light);
       text-decoration: none;
-      color: var(--slate);
-      font-size: 14px;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
+      font-size: 0.95rem;
       transition: color 0.3s;
     }
 
-    .nav-links a:hover,
-    .nav-links a.active {
-      color: var(--gold);
+    .nav-menu a:hover,
+    .nav-menu a.active {
+      color: var(--accent);
     }
 
-    .cta-button {
-      background-color: var(--gold);
-      color: var(--white);
-      padding: 10px 24px;
+    .nav-cta {
+      background-color: var(--accent) !important;
+      color: var(--dark) !important;
+      padding: 0.65rem 1.5rem;
       border-radius: 4px;
       font-weight: 600;
-      text-decoration: none;
-      font-size: 13px;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-      transition: background-color 0.3s;
     }
 
-    .cta-button:hover {
-      background-color: #B8964F;
+    .nav-cta:hover {
+      background-color: var(--accent-dark);
     }
 
     .hamburger {
       display: none;
       flex-direction: column;
       cursor: pointer;
-      gap: 6px;
     }
 
     .hamburger span {
       width: 25px;
       height: 3px;
-      background-color: var(--slate);
+      background-color: var(--accent);
+      margin: 5px 0;
       border-radius: 2px;
-      transition: 0.3s;
     }
 
     @media (max-width: 768px) {
-      .nav-links {
-        display: none;
-        position: absolute;
-        top: 70px;
-        left: 0;
-        right: 0;
-        flex-direction: column;
-        background-color: var(--white);
-        border-bottom: 1px solid var(--border);
-        padding: 20px;
-        gap: 15px;
-        list-style: none;
-      }
-
-      .nav-links.active {
-        display: flex;
-      }
-
       .hamburger {
         display: flex;
       }
+
+      .nav-menu {
+        position: absolute;
+        top: 70px;
+        right: 0;
+        flex-direction: column;
+        background-color: var(--dark-mid);
+        width: 100%;
+        text-align: right;
+        gap: 0;
+        padding: 2rem;
+        border-bottom: 1px solid var(--border);
+        display: none;
+      }
+
+      .nav-menu.active {
+        display: flex;
+      }
+
+      .nav-menu li {
+        padding: 1rem 0;
+      }
+
+      nav {
+        padding: 1rem;
+      }
     }
 
-    /* ===== BREADCRUMBS ===== */
-    .breadcrumbs {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 20px;
-      font-size: 14px;
-      color: var(--body-text);
-    }
-
-    .breadcrumbs a {
-      color: var(--gold);
-      text-decoration: none;
-    }
-
-    .breadcrumbs a:hover {
-      text-decoration: underline;
+    /* ===== MAIN CONTENT ===== */
+    main {
+      margin-top: 70px;
     }
 
     /* ===== HERO SECTION ===== */
     .hero {
-      background: linear-gradient(135deg, var(--accent-light) 0%, var(--white) 100%);
-      padding: 60px 20px;
+      padding: 80px 2rem 60px;
       text-align: center;
-    }
-
-    .hero-content {
       max-width: 800px;
       margin: 0 auto;
     }
 
+    .hero-badge {
+      display: inline-block;
+      background-color: var(--accent);
+      color: var(--dark);
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      margin-bottom: 1.5rem;
+    }
+
     .hero h1 {
       font-family: 'Playfair Display', serif;
-      font-size: 48px;
-      color: var(--slate);
-      margin-bottom: 15px;
-      line-height: 1.2;
+      font-size: 3.5rem;
+      font-weight: 700;
+      line-height: 1.1;
+      margin-bottom: 1rem;
+      color: var(--text-light);
     }
 
     .hero p {
-      font-size: 18px;
-      color: var(--body-text);
-      margin-bottom: 30px;
+      font-size: 1.1rem;
+      color: var(--text-muted);
+      line-height: 1.8;
     }
 
     @media (max-width: 768px) {
-      .hero h1 {
-        font-size: 36px;
+      .hero {
+        padding: 60px 1.5rem 40px;
       }
 
-      .hero p {
-        font-size: 16px;
+      .hero h1 {
+        font-size: 2.5rem;
       }
     }
 
     /* ===== SEASON NAVIGATION ===== */
+    .season-nav-container {
+      position: sticky;
+      top: 70px;
+      background-color: var(--dark-mid);
+      border-bottom: 1px solid var(--border);
+      z-index: 999;
+      padding: 1rem 0;
+    }
+
     .season-nav {
       max-width: 1200px;
-      margin: 40px auto 0;
-      padding: 0 20px 40px;
+      margin: 0 auto;
+      padding: 0 2rem;
       display: flex;
-      justify-content: center;
-      gap: 12px;
-      flex-wrap: wrap;
+      gap: 1rem;
+      overflow-x: auto;
+      scroll-behavior: smooth;
     }
 
     .season-pill {
-      padding: 10px 24px;
-      border: 2px solid var(--gold);
-      background-color: var(--white);
-      color: var(--gold);
-      border-radius: 30px;
+      padding: 0.6rem 1.5rem;
+      border: 1px solid var(--border);
+      border-radius: 25px;
+      background-color: transparent;
+      color: var(--text-light);
       cursor: pointer;
-      font-weight: 600;
-      font-size: 14px;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
+      font-size: 0.95rem;
+      font-weight: 500;
+      white-space: nowrap;
       transition: all 0.3s;
-      text-decoration: none;
-      display: inline-block;
     }
 
     .season-pill:hover {
-      background-color: var(--accent-light);
+      border-color: var(--accent);
+      color: var(--accent);
     }
 
     .season-pill.active {
-      background-color: var(--gold);
-      color: var(--white);
+      background-color: var(--accent);
+      color: var(--dark);
+      border-color: var(--accent);
     }
 
     /* ===== FEATURED SERVICES GRID ===== */
     .featured-section {
       max-width: 1200px;
-      margin: 60px auto;
-      padding: 0 20px;
+      margin: 0 auto;
+      padding: 60px 2rem;
     }
 
-    .section-heading {
+    .featured-section h2 {
       font-family: 'Playfair Display', serif;
-      font-size: 36px;
-      color: var(--slate);
-      margin-bottom: 10px;
-    }
-
-    .section-subtext {
-      color: var(--body-text);
-      margin-bottom: 40px;
-      font-size: 16px;
+      font-size: 2rem;
+      margin-bottom: 2rem;
+      text-align: center;
     }
 
     .featured-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 24px;
-      margin-bottom: 60px;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5rem;
     }
 
     .service-card {
-      background-color: var(--white);
+      background-color: var(--dark-mid);
       border: 1px solid var(--border);
       border-radius: 8px;
-      padding: 30px;
-      text-align: center;
-      cursor: pointer;
-      transition: all 0.3s;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      padding: 1.5rem;
       text-decoration: none;
-      color: inherit;
+      color: var(--text-light);
+      transition: all 0.3s;
       display: flex;
       flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      min-height: 150px;
     }
 
     .service-card:hover {
-      border-color: var(--gold);
-      box-shadow: 0 6px 16px rgba(196, 162, 101, 0.15);
+      border-color: var(--accent);
       transform: translateY(-4px);
+      box-shadow: 0 8px 16px rgba(200, 169, 110, 0.2);
     }
 
     .service-card h3 {
-      font-family: 'Playfair Display', serif;
-      font-size: 22px;
-      color: var(--slate);
-      margin-bottom: 15px;
-      flex-grow: 1;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .service-card-icon {
-      font-size: 32px;
-      margin-bottom: 15px;
-    }
-
-    .service-card-link {
-      display: inline-block;
-      color: var(--gold);
+      font-size: 1.05rem;
       font-weight: 600;
-      text-decoration: none;
-      margin-top: 15px;
-      font-size: 14px;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-    }
-
-    .service-card-link:hover {
-      text-decoration: underline;
     }
 
     /* ===== SEASONAL SECTIONS ===== */
     .seasonal-sections {
       max-width: 1200px;
-      margin: 60px auto;
-      padding: 0 20px;
+      margin: 0 auto;
+      padding: 0 2rem 60px;
     }
 
-    .seasonal-section {
-      margin-bottom: 80px;
-      scroll-margin-top: 90px;
+    .season-section {
+      margin-bottom: 4rem;
+      display: none;
     }
 
-    .seasonal-section h2 {
+    .season-section.active {
+      display: block;
+    }
+
+    .season-section h2 {
       font-family: 'Playfair Display', serif;
-      font-size: 36px;
-      color: var(--slate);
-      margin-bottom: 10px;
+      font-size: 2.2rem;
+      margin-bottom: 2rem;
+      color: var(--text-light);
+    }
+
+    .services-list {
       display: flex;
-      align-items: center;
-      gap: 15px;
-    }
-
-    .season-icon {
-      font-size: 32px;
-    }
-
-    .seasonal-section p {
-      color: var(--body-text);
-      margin-bottom: 30px;
-      font-size: 16px;
-    }
-
-    .service-list {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 20px;
+      flex-direction: column;
+      gap: 0;
     }
 
     .service-item {
-      background-color: var(--white);
-      border: 1px solid var(--border);
-      border-radius: 6px;
-      padding: 20px;
+      padding: 1.25rem;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      transition: all 0.3s;
+      border-bottom: 1px solid var(--border);
+      transition: background-color 0.3s;
     }
 
     .service-item:hover {
-      border-color: var(--gold);
-      box-shadow: 0 4px 12px rgba(196, 162, 101, 0.12);
+      background-color: rgba(200, 169, 110, 0.08);
     }
 
-    .service-info h4 {
-      font-size: 16px;
-      color: var(--slate);
-      margin-bottom: 8px;
-      font-weight: 600;
-    }
-
-    .service-info {
-      flex: 1;
+    .service-name {
+      font-weight: 500;
+      font-size: 1rem;
     }
 
     .service-badges {
       display: flex;
-      gap: 10px;
-      flex-wrap: wrap;
+      gap: 0.75rem;
       align-items: center;
+      flex-wrap: wrap;
       justify-content: flex-end;
     }
 
     .badge {
-      padding: 6px 12px;
-      border-radius: 20px;
-      font-size: 11px;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.4px;
+      padding: 0.35rem 0.75rem;
+      border-radius: 4px;
+      font-size: 0.8rem;
+      font-weight: 600;
       white-space: nowrap;
     }
 
     .badge-included {
-      background-color: #D4E5D8;
-      color: #2D5A3D;
+      background-color: rgba(76, 175, 80, 0.2);
+      color: rgba(76, 175, 80, 0.9);
+      border: 1px solid rgba(76, 175, 80, 0.3);
     }
 
     .badge-addon {
-      border: 2px solid var(--gold);
-      background-color: var(--white);
-      color: var(--gold);
+      border: 1px solid var(--accent);
+      color: var(--accent);
+      background-color: transparent;
     }
 
     .badge-tier {
-      background-color: var(--accent-light);
-      color: var(--slate);
-      border: 1px solid var(--border);
-      padding: 6px 10px;
-    }
-
-    @media (max-width: 768px) {
-      .service-item {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-      .service-badges {
-        justify-content: flex-start;
-        margin-top: 12px;
-        width: 100%;
-      }
-
-      .seasonal-section h2 {
-        font-size: 28px;
-      }
-
-      .section-heading {
-        font-size: 28px;
-      }
+      background-color: rgba(200, 169, 110, 0.15);
+      color: rgba(200, 169, 110, 0.8);
+      border: 1px solid rgba(200, 169, 110, 0.3);
+      font-size: 0.75rem;
     }
 
     /* ===== CTA SECTION ===== */
     .cta-section {
-      background: linear-gradient(135deg, var(--slate) 0%, #1F2E38 100%);
-      color: var(--white);
-      padding: 60px 20px;
+      background-color: var(--dark-mid);
+      padding: 60px 2rem;
       text-align: center;
-      margin: 60px 0;
+      margin-top: 40px;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
     }
 
     .cta-section h2 {
       font-family: 'Playfair Display', serif;
-      font-size: 36px;
-      margin-bottom: 20px;
+      font-size: 2.2rem;
+      margin-bottom: 2rem;
     }
 
-    .cta-section p {
-      font-size: 16px;
-      margin-bottom: 30px;
-      opacity: 0.95;
-    }
-
-    .cta-button-white {
+    .cta-button {
       display: inline-block;
-      background-color: var(--gold);
-      color: var(--white);
-      padding: 14px 32px;
+      background-color: var(--accent);
+      color: var(--dark);
+      padding: 1rem 2rem;
       border-radius: 4px;
       text-decoration: none;
       font-weight: 600;
-      font-size: 14px;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
+      font-size: 1rem;
       transition: background-color 0.3s;
     }
 
-    .cta-button-white:hover {
-      background-color: #B8964F;
+    .cta-button:hover {
+      background-color: var(--accent-dark);
     }
 
     /* ===== FOOTER ===== */
     footer {
-      background-color: var(--slate);
-      color: var(--white);
-      padding: 50px 20px 30px;
-      margin-top: 60px;
-    }
-
-    .footer-content {
-      max-width: 1200px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 40px;
-      margin-bottom: 40px;
-    }
-
-    .footer-section h3 {
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: 18px;
-      margin-bottom: 15px;
-      color: var(--gold);
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-    }
-
-    .footer-section ul {
-      list-style: none;
-    }
-
-    .footer-section ul li {
-      margin-bottom: 10px;
-    }
-
-    .footer-section a {
-      color: var(--white);
-      text-decoration: none;
-      font-size: 14px;
-      opacity: 0.9;
-      transition: opacity 0.3s;
-    }
-
-    .footer-section a:hover {
-      opacity: 1;
-    }
-
-    .footer-section p {
-      font-size: 14px;
-      opacity: 0.9;
-      line-height: 1.8;
-    }
-
-    .footer-bottom {
-      border-top: 1px solid rgba(255,255,255,0.1);
-      padding-top: 20px;
+      background-color: var(--dark-mid);
+      color: var(--text-muted);
+      padding: 2rem;
       text-align: center;
-      font-size: 13px;
-      opacity: 0.8;
+      font-size: 0.95rem;
+      border-top: 1px solid var(--border);
+    }
+
+    footer a {
+      color: var(--accent);
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    footer a:hover {
+      color: var(--accent-dark);
     }
 
     @media (max-width: 768px) {
-      .footer-content {
-        grid-template-columns: 1fr;
-        gap: 30px;
+      .featured-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 1rem;
+      }
+
+      .service-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.75rem;
+      }
+
+      .service-badges {
+        justify-content: flex-start;
+        width: 100%;
+      }
+
+      .season-section h2 {
+        font-size: 1.8rem;
+      }
+
+      .hero h1 {
+        font-size: 2rem;
+      }
+
+      .cta-section h2 {
+        font-size: 1.8rem;
       }
     }
   </style>
 </head>
 <body>
-  <!-- Schema: Breadcrumb -->
+
+  <!-- ===== NAVIGATION ===== -->
+  <nav>
+    <a href="index.html" class="nav-logo">
+      <img src="icon-white.png" alt="The Handy Neighbor Co." class="nav-icon">
+      <span>THE</span> HANDY <span>NEIGHBOR CO.</span>
+    </a>
+    <div class="hamburger" id="hamburger">
+      <span></span><span></span><span></span>
+    </div>
+    <ul class="nav-menu" id="navMenu">
+      <li><a href="index.html#pricing">Plans</a></li>
+      <li><a href="services.html" class="active">Services</a></li>
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="index.html#faq">FAQ</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="signup.html" class="nav-cta">Sign Up</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <!-- ===== HERO ===== -->
+    <section class="hero">
+      <div class="hero-badge">OUR SERVICES</div>
+      <h1>Home Maintenance Services</h1>
+      <p>We offer seasonal maintenance across spring, summer, fall, and winter to keep your home running smoothly. Choose services included with your membership tier or add-on specialties.</p>
+    </section>
+
+    <!-- ===== SEASON NAVIGATION ===== -->
+    <div class="season-nav-container">
+      <div class="season-nav" id="seasonNav">
+        <button class="season-pill active" data-season="spring">Spring</button>
+        <button class="season-pill" data-season="summer">Summer</button>
+        <button class="season-pill" data-season="fall">Fall</button>
+        <button class="season-pill" data-season="winter">Winter</button>
+        <button class="season-pill" data-season="yearround">Year-Round</button>
+      </div>
+    </div>
+
+    <!-- ===== FEATURED SERVICES ===== -->
+    <section class="featured-section">
+      <h2>Featured Services</h2>
+      <div class="featured-grid">
+        <a href="gutter-cleaning-omaha.html" class="service-card">
+          <h3>Gutter Cleaning</h3>
+        </a>
+        <a href="pressure-washing.html" class="service-card">
+          <h3>Pressure Washing</h3>
+        </a>
+        <a href="dryer-vent-cleaning.html" class="service-card">
+          <h3>Dryer Vent Cleaning</h3>
+        </a>
+        <a href="sprinkler-blowout.html" class="service-card">
+          <h3>Sprinkler Blowout</h3>
+        </a>
+        <a href="sprinkler-startup.html" class="service-card">
+          <h3>Sprinkler Startup</h3>
+        </a>
+        <a href="water-heater-flush.html" class="service-card">
+          <h3>Water Heater Flush</h3>
+        </a>
+        <a href="gas-fireplace-maintenance.html" class="service-card">
+          <h3>Gas Fireplace Maintenance</h3>
+        </a>
+        <a href="deck-fence-staining.html" class="service-card">
+          <h3>Deck & Fence Staining</h3>
+        </a>
+        <a href="smoke-detector-service.html" class="service-card">
+          <h3>Smoke Detector Service</h3>
+        </a>
+        <a href="permanent-holiday-lights.html" class="service-card">
+          <h3>Permanent Holiday Lights</h3>
+        </a>
+      </div>
+    </section>
+
+    <!-- ===== SEASONAL SECTIONS ===== -->
+    <section class="seasonal-sections">
+
+      <!-- SPRING -->
+      <div class="season-section active" data-season="spring">
+        <h2>Spring Services</h2>
+        <div class="services-list">
+          <div class="service-item">
+            <span class="service-name">HVAC Filter Replacement</span>
+            <div class="service-badges">
+              <span class="badge badge-included">Included</span>
+              <span class="badge badge-tier">Essentials+</span>
+            </div>
+          </div>
+          <div class="service-item">
+            <span class="service-name">Thermostat Check & Calibration</span>
+            <div class="service-badges">
+              <span class="badge badge-included">Included</span>
+              <span class="badge badge-tier">Essentials+</span>
+            </div>
+          </div>
+          <div class="service-item">
+            <span class="service-name">Smoke & CO Detector Testing</span>
+            <div class="service-badges">
+              <span class="badge badge-included">Included</span>
+              <span class="badge badge-tier">Essentials+</span>
+            </div>
+          </div>
+          <div class="service-item">
+            <span class="service-name">Electrical Safety Check</span>
+            <div class="service-badges">
+              <span class="badge badge-included">Included</span>
+              <span class="badge badge-tier">Essentials+</span>
+            </div>
+          </div>
+          <div class="service-item">
+            <span class="service-name">Sump Pump Test</span>
+            <div class="service-badges">
+              <span class="badge badge-included">Included</span>
+              <span class="badge badge-tier">Essentials+</span>
+            </div>
+          </div>
+          <div class="service-item">
+            <span class="service-name">Weatherstripping & Door Sweep Inspection</span>
+            <div class="service-badges">
+              <span class="badge badge-included">Included</span>
+              <span class="badge badge-tier">Essentials+</span>
+            </div>
+          </div>
+          <div class="service-item">
+            <span class="service-name">Ceiling Fan Direction Change</span>
+            <div class="service-badges">
+              <span class="badge badge-included">Included</span>
+              <span class="badge badge-tier">Plus+</span>
+            </div>
+          </div>
+          <div class="service-item">
+            <span class="service-name">Showerhead Water Filter Change</span>
+            <div class="service-badges">
+              <span class="badge badge-included">Included</span>
+              <span class="badge badge-tier">Plus+</span>
+            </div>
+          </div>
+          <div class="service-item">
+            <span class="service-name">Condensate Drain Maintenance</span>
+            <div class="service-badges">
+              <span class="badge badge-included">Included</span>
+              <span class="badge badge-tier">Plus+</span>
+            </div>
+          </div>
+          <div class="service-item">
+            <span class="service-name">Water & Air Quality Testing</span>
+            <div class="service-badges">
+              <span class="badge badge-included">Included</span>
+              <span class="badge badge-tier">Plus+</span>
+            </div>
+          </div>
+          <div class="service-item">
+            <span class="service-name">Sprinkler Startup & Inspection</span>
+            <div class="service-badges">
+              <span class="badge badge-addon">Add-On</span>
+            </div>
+          </div>
+          <div class="service-item">
+            <span class="service-name">Pressure Washing</span>
+            <div class="service-badges">
+              <span class="badge badge-addon">Add-On</span>
+            </div>
+          </div>
+          <div class="service-item">
+            <span class="service-name">Gutter Cleaning</span>
+            <div class="service-badges">
+              <span class="badge badge-addon">Add-On</span>
+            </div>
+          </div>
+          <div class="service-item">
+            <span class="service-name">Deck & Fence Staining</span>
+            <div class="service-badges">
+              <span class="badge badge-addon">Add-On</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SUMMER -->
+      <div class="season-section" data-season="summer">
+        <h2>Summer Services</h2>
+        <div class="services-list">
+          <div class="service-item">
+            <span class="service-name">HVAC Filter Replacement</span>
+            <div class="service-badges">
+              <span class="badge badge-included">Included</span>
+              <span class="badge badge-tier">Essentials+</span>
+            </div>
+          </div>
+          <div class="service-item">
+            <span class="service-name">Smoke & CO Detector Testing</span>
+            <div class="service-badges">
+              <span class="badge badge-included">Included</span>
+              <span class="badge badge-tier">Essentials+</span>
+            </div>
+          </div>
+          <div class="service-item">
+            <span class="service-name">Leak Check - Visible Plumbing</span>
+            <div class="service-badges">
+              <span class="badge badge-included">Included</span>
+              <span class="badge badge-tier">Essentials+</span>
+            </div>
+          </div>
+          <div class="service-item">
+            <span class="service-name">Ceiling Fan Direction Check</span>
+            <div class="service-badges">
+              <span class="badge badge-included">Included</span>
+              <span class="badge badge-tier">Plus+</span>
+            </div>
+          </div>
+          <div class="service-item">
+            <span class="service-name">Fridge Water & Air Filter Change</span>
+            <div class="service-badges">
+              <span class="badge badge-included">Included</span>
+              <span class="badge badge-tier">Plus+</span>
+            </div>
+          </div>
+          <div class="service-item">
+            <span class="service-name">Dishwasher Maintenance</span>
+            <div class="service-badges">
+              <span class="badge badge-included">Included</span>
+              <span class="badge badge-tier">Premium</span>
+            </div>
+          </div>
+          <div class="service-item">
+            <span class="service-name">Washer Drain Pump Filter</span>
+            <div class="service-badges">
+              <span class="badge badge-included">Included</span>
+              <span class="badge badge-tier">Premium</span>
+            </div>
+          </div>
+          <div class="service-item">
+            <span class="service-name">Door Hinge Lubrication</span>
+            <div class="service-badges">
+              <span class="badge badge-included">Included</span>
+              <span class="badge badge-tier">Premium</span>
+            </div>
+          </div>
+          <div class="service-item">
+            <span class="service-name">Cabinet Hardware Tightening</span>
+            <div class="service-badges">
+              <span class="badge badge-included">Included</span>
+              <span class="badge badge-tier">Premium</span>
+            </div>
+          </div>
+          <div class="service-item">
+            <span class="service-name">Pressure Washing</span>
+            <div class="service-badges">
+              <span class="badge badge-addon">Add-On</span>
+            </div>
+          </div>
+          <div class="service-item">
+            <span class="service-name">Gutter Cleaning</span>
+            <div class="service-badges">
+              <span class="badge badge-addon">Add-On</span>
+            </div>
+          </div>
+          <div class="service-item">
+            <span class="service-name">Permanent Holiday Light Installation</span>
+            <div class="service-badges">
+              <span class="badge badge-addon">Add-On</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- FALL -->
+      <div class="season-section" data-season="fall">
+        <h2>Fall Services</h2>
+        <div class="services-list">
+          <div class="service-item">
+            <span class="service-name">HVAC Filter Replacement</span>
+            <div class="service-badges">
+              <span class="badge badge-included">Included</span>
+              <span class="badge badge-tier">Essentials+</span>
+            </div>
+          </div>
+          <div class="service-item">
+            <span class="service-name">Thermostat Check</span>
+            <div class="service-badges">
+              <span class="badge badge-included">Included</span>
+              <span class="badge badge-tier">Essentials+</span>
+            </div>
+          </div>
+          <div class="service-item">
+            <span class="service-name">Smoke & CO Detector Testing</span>
+            <div class="service-badges">
+              <span class="badge badge-included">Included</span>
+              <span class="badge badge-tier">Essentials+</span>
+            </div>
+          </div>
+          <div class="service-item">
+            <span class="service-name">Sump Pump Test</span>
+            <div class="service-badges">
+              <span class="badge badge-included">Included</span>
+              <span class="badge badge-tier">Essentials+</span>
+            </div>
+          </div>
+          <div class="service-item">
+            <span class="service-name">Weatherstripping & Door Sweep Inspection</span>
+            <div class="service-badges">
+              <span class="badge badge-included">Included</span>
+              <span class="badge badge-tier">Essentials+</span>
+            </div>
+          </div>
+          <div class="service-item">
+            <span class="service-name">Showerhead Water Filter Change</span>
+            <div class="service-badges">
+              <span class="badge badge-included">Included</span>
+              <span class="badge badge-tier">Plus+</span>
+            </div>
+          </div>
+          <div class="service-item">
+            <span class="service-name">Hose Bib Winterization</span>
+            <div class="service-badges">
+              <span class="badge badge-included">Included</span>
+              <span class="badge badge-tier">Plus+</span>
+            </div>
+          </div>
+          <div class="service-item">
+            <span class="service-name">Humidifier Pad Change</span>
+            <div class="service-badges">
+              <span class="badge badge-included">Included</span>
+              <span class="badge badge-tier">Plus+</span>
+            </div>
+          </div>
+          <div class="service-item">
+            <span class="service-name">Downspout Entry Clearing</span>
+            <div class="service-badges">
+              <span class="badge badge-included">Included</span>
+              <span class="badge badge-tier">Plus+</span>
+            </div>
+          </div>
+          <div class="service-item">
+            <span class="service-name">Sprinkler Blowout</span>
+            <div class="service-badges">
+              <span class="badge badge-addon">Add-On</span>
+            </div>
+          </div>
+          <div class="service-item">
+            <span class="service-name">Gutter Cleaning</span>
+            <div class="service-badges">
+              <span class="badge badge-addon">Add-On</span>
+            </div>
+          </div>
+          <div class="service-item">
+            <span class="service-name">Water Heater Flush</span>
+            <div class="service-badges">
+              <span class="badge badge-addon">Add-On</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- WINTER -->
+      <div class="season-section" data-season="winter">
+        <h2>Winter Services</h2>
+        <div class="services-list">
+          <div class="service-item">
+            <span class="service-name">HVAC Filter Replacement</span>
+            <div class="service-badges">
+              <span class="badge badge-included">Included</span>
+              <span class="badge badge-tier">Essentials+</span>
+            </div>
+          </div>
+          <div class="service-item">
+            <span class="service-name">Smoke & CO Detector Testing</span>
+            <div class="service-badges">
+              <span class="badge badge-included">Included</span>
+              <span class="badge badge-tier">Essentials+</span>
+            </div>
+          </div>
+          <div class="service-item">
+            <span class="service-name">Leak Check - Visible Plumbing</span>
+            <div class="service-badges">
+              <span class="badge badge-included">Included</span>
+              <span class="badge badge-tier">Essentials+</span>
+            </div>
+          </div>
+          <div class="service-item">
+            <span class="service-name">Electrical Safety Check</span>
+            <div class="service-badges">
+              <span class="badge badge-included">Included</span>
+              <span class="badge badge-tier">Essentials+</span>
+            </div>
+          </div>
+          <div class="service-item">
+            <span class="service-name">Condensate Drain Maintenance</span>
+            <div class="service-badges">
+              <span class="badge badge-included">Included</span>
+              <span class="badge badge-tier">Plus+</span>
+            </div>
+          </div>
+          <div class="service-item">
+            <span class="service-name">Fridge Water & Air Filter Change</span>
+            <div class="service-badges">
+              <span class="badge badge-included">Included</span>
+              <span class="badge badge-tier">Plus+</span>
+            </div>
+          </div>
+          <div class="service-item">
+            <span class="service-name">Dryer Vent Cleaning</span>
+            <div class="service-badges">
+              <span class="badge badge-included">Included</span>
+              <span class="badge badge-tier">Premium</span>
+            </div>
+          </div>
+          <div class="service-item">
+            <span class="service-name">Fridge Coil Cleaning</span>
+            <div class="service-badges">
+              <span class="badge badge-included">Included</span>
+              <span class="badge badge-tier">Premium</span>
+            </div>
+          </div>
+          <div class="service-item">
+            <span class="service-name">Fireplace Glass Cleaning</span>
+            <div class="service-badges">
+              <span class="badge badge-included">Included</span>
+              <span class="badge badge-tier">Premium</span>
+            </div>
+          </div>
+          <div class="service-item">
+            <span class="service-name">Rodent Entry Point Inspection</span>
+            <div class="service-badges">
+              <span class="badge badge-included">Included</span>
+              <span class="badge badge-tier">Premium</span>
+            </div>
+          </div>
+          <div class="service-item">
+            <span class="service-name">Gas Fireplace Inspection</span>
+            <div class="service-badges">
+              <span class="badge badge-addon">Add-On</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- YEAR-ROUND -->
+      <div class="season-section" data-season="yearround">
+        <h2>Year-Round Services</h2>
+        <div class="services-list">
+          <div class="service-item">
+            <span class="service-name">Home Inspection Walkthrough</span>
+            <div class="service-badges">
+              <span class="badge badge-included">Included</span>
+              <span class="badge badge-tier">Always</span>
+            </div>
+          </div>
+          <div class="service-item">
+            <span class="service-name">Emergency Light Testing</span>
+            <div class="service-badges">
+              <span class="badge badge-included">Included</span>
+              <span class="badge badge-tier">Always</span>
+            </div>
+          </div>
+          <div class="service-item">
+            <span class="service-name">GFI Outlet Testing</span>
+            <div class="service-badges">
+              <span class="badge badge-included">Included</span>
+              <span class="badge badge-tier">Always</span>
+            </div>
+          </div>
+          <div class="service-item">
+            <span class="service-name">Water Softener Check</span>
+            <div class="service-badges">
+              <span class="badge badge-included">Included</span>
+              <span class="badge badge-tier">Always</span>
+            </div>
+          </div>
+          <div class="service-item">
+            <span class="service-name">Garage Door Safety Test</span>
+            <div class="service-badges">
+              <span class="badge badge-included">Included</span>
+              <span class="badge badge-tier">Always</span>
+            </div>
+          </div>
+          <div class="service-item">
+            <span class="service-name">Exterior Drainage Check</span>
+            <div class="service-badges">
+              <span class="badge badge-included">Included</span>
+              <span class="badge badge-tier">Always</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ===== CTA SECTION ===== -->
+    <section class="cta-section">
+      <h2>Let's Get Your Home on a Plan</h2>
+      <p style="color: var(--text-muted); margin-bottom: 2rem; font-size: 1.05rem;">Choose a membership tier and start with seasonal maintenance today.</p>
+      <a href="signup.html" class="cta-button">Sign Up Now</a>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <p>&copy; 2026 The Handy Neighbor Co. &bull; <a href="index.html">Home</a> &bull; <a href="contact.html">Contact</a> &bull; <a href="tel:+14023502583">(402) 350-2583</a></p>
+  </footer>
+
+  <!-- ===== JSON-LD SCHEMAS ===== -->
   <script type="application/ld+json">
   {
-    "@context": "https://schema.org/",
+    "@context": "https://schema.org",
     "@type": "BreadcrumbList",
-    "itemListElement": [{
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Home",
-      "item": "https://thehandyneighbor.co"
-    },{
-      "@type": "ListItem",
-      "position": 2,
-      "name": "Services",
-      "item": "https://thehandyneighbor.co/services.html"
-    }]
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://thehandyneighbor.co/index.html"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Services",
+        "item": "https://thehandyneighbor.co/services.html"
+      }
+    ]
   }
   </script>
 
-  <!-- Schema: LocalBusiness -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
-    "name": "The Handy Neighbor Co",
-    "image": "https://thehandyneighbor.co/images/logo.png",
-    "description": "Home maintenance membership services in West Omaha, Nebraska",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "West Omaha",
-      "addressLocality": "Omaha",
-      "addressRegion": "NE",
-      "postalCode": "68144",
-      "addressCountry": "US"
-    },
+    "name": "The Handy Neighbor Co.",
     "telephone": "(402) 350-2583",
     "email": "hello@thehandyneighbor.co",
-    "url": "https://thehandyneighbor.co",
-    "priceRange": "$45-$125",
-    "areaServed": {
-      "@type": "City",
-      "name": "Omaha"
-    }
+    "address": {
+      "@type": "PostalAddress",
+      "addressRegion": "NE",
+      "addressLocality": "West Omaha",
+      "postalCode": "68144"
+    },
+    "url": "https://thehandyneighbor.co"
   }
   </script>
 
-  <!-- Utility Bar -->
-  <div class="utility-bar">
-    <div class="utility-bar-content">
-      <a href="tel:(402) 350-2583">(402) 350-2583</a> | Serving West Omaha, NE
-    </div>
-  </div>
-
-  <!-- Navigation -->
-  <nav class="navbar">
-    <div class="nav-container">
-      <a href="index.html" class="logo">
-        <img src="icon-white.png" alt="The Handy Neighbor Co." style="height:32px;width:auto;margin-right:0.75rem;">
-        <span style="font-family:'Bebas Neue',sans-serif;font-size:1.3rem;letter-spacing:1px;word-spacing:4px;color:var(--slate);"><span style="color:var(--gold);">THE</span> HANDY <span style="color:var(--gold);">NEIGHBOR CO.</span></span>
-      </a>
-      <ul class="nav-links" id="navLinks">
-        <li><a href="index.html#pricing">Plans</a></li>
-        <li><a href="services.html" class="active">Services</a></li>
-        <li><a href="index.html#about">About</a></li>
-        <li><a href="index.html#faq">FAQ</a></li>
-        <li><a href="blog.html">Blog</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="signup.html" class="cta-button">Sign Up</a></li>
-      </ul>
-      <div class="hamburger" id="hamburger">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-    </div>
-  </nav>
-
-  <!-- Breadcrumbs -->
-  <div class="breadcrumbs">
-    <a href="index.html">Home</a> / <span>Services</span>
-  </div>
-
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="hero-content">
-      <h1>Home Maintenance Services</h1>
-      <p>Comprehensive seasonal care for your West Omaha home. Choose services included in your membership or add-ons when needed.</p>
-    </div>
-  </section>
-
-  <!-- Season Navigation -->
-  <div class="season-nav">
-    <a href="#spring" class="season-pill active" data-season="spring">Spring</a>
-    <a href="#summer" class="season-pill" data-season="summer">Summer</a>
-    <a href="#fall" class="season-pill" data-season="fall">Fall</a>
-    <a href="#winter" class="season-pill" data-season="winter">Winter</a>
-    <a href="#year-round" class="season-pill" data-season="year-round">Year-Round</a>
-  </div>
-
-  <!-- Featured Services -->
-  <section class="featured-section">
-    <h2 class="section-heading">Our Featured Services</h2>
-    <p class="section-subtext">Direct links to detailed information about our most popular services</p>
-
-    <div class="featured-grid">
-      <a href="gutter-cleaning-omaha.html" class="service-card">
-        <div class="service-card-icon">🌧️</div>
-        <h3>Gutter Cleaning</h3>
-        <p>Clear debris and inspect for proper drainage</p>
-        <span class="service-card-link">Learn More →</span>
-      </a>
-
-      <a href="pressure-washing.html" class="service-card">
-        <div class="service-card-icon">💨</div>
-        <h3>Pressure Washing</h3>
-        <p>Refresh driveways, patios, and exterior surfaces</p>
-        <span class="service-card-link">Learn More →</span>
-      </a>
-
-      <a href="dryer-vent-cleaning.html" class="service-card">
-        <div class="service-card-icon">🔥</div>
-        <h3>Dryer Vent Cleaning</h3>
-        <p>Improve efficiency and reduce fire risk</p>
-        <span class="service-card-link">Learn More →</span>
-      </a>
-
-      <a href="sprinkler-blowout.html" class="service-card">
-        <div class="service-card-icon">💧</div>
-        <h3>Sprinkler Blowout</h3>
-        <p>Winterize your irrigation system</p>
-        <span class="service-card-link">Learn More →</span>
-      </a>
-
-      <a href="sprinkler-startup.html" class="service-card">
-        <div class="service-card-icon">🌿</div>
-        <h3>Sprinkler Startup</h3>
-        <p>Spring activation and system inspection</p>
-        <span class="service-card-link">Learn More →</span>
-      </a>
-
-      <a href="water-heater-flush.html" class="service-card">
-        <div class="service-card-icon">🚰</div>
-        <h3>Water Heater Flush</h3>
-        <p>Extend lifespan and maintain efficiency</p>
-        <span class="service-card-link">Learn More →</span>
-      </a>
-
-      <a href="gas-fireplace-maintenance.html" class="service-card">
-        <div class="service-card-icon">🔥</div>
-        <h3>Gas Fireplace Maintenance</h3>
-        <p>Inspection and cleaning for safe operation</p>
-        <span class="service-card-link">Learn More →</span>
-      </a>
-
-      <a href="deck-fence-staining.html" class="service-card">
-        <div class="service-card-icon">🪵</div>
-        <h3>Deck & Fence Staining</h3>
-        <p>Protect and refresh outdoor structures</p>
-        <span class="service-card-link">Learn More →</span>
-      </a>
-
-      <a href="smoke-detector-service.html" class="service-card">
-        <div class="service-card-icon">🚨</div>
-        <h3>Smoke Detector Service</h3>
-        <p>Testing and battery replacement</p>
-        <span class="service-card-link">Learn More →</span>
-      </a>
-
-      <a href="permanent-holiday-lights.html" class="service-card">
-        <div class="service-card-icon">✨</div>
-        <h3>Permanent Holiday Lights</h3>
-        <p>Professional installation and maintenance</p>
-        <span class="service-card-link">Learn More →</span>
-      </a>
-    </div>
-  </section>
-
-  <!-- Seasonal Services -->
-  <section class="seasonal-sections">
-    <!-- SPRING -->
-    <div class="seasonal-section" id="spring">
-      <h2><span class="season-icon">Spring</span></h2>
-      <p>Prepare your home for warmer weather with seasonal maintenance and inspections.</p>
-
-      <div class="service-list">
-        <div class="service-item">
-          <div class="service-info">
-            <h4>HVAC Filter Replacement</h4>
-          </div>
-          <div class="service-badges">
-            <span class="badge badge-included">Included</span>
-            <span class="badge badge-tier">Essentials+</span>
-          </div>
-        </div>
-
-        <div class="service-item">
-          <div class="service-info">
-            <h4>Thermostat Check & Calibration</h4>
-          </div>
-          <div class="service-badges">
-            <span class="badge badge-included">Included</span>
-            <span class="badge badge-tier">Essentials+</span>
-          </div>
-        </div>
-
-        <div class="service-item">
-          <div class="service-info">
-            <h4>Smoke & CO Detector Testing</h4>
-          </div>
-          <div class="service-badges">
-            <span class="badge badge-included">Included</span>
-            <span class="badge badge-tier">Essentials+</span>
-          </div>
-        </div>
-
-        <div class="service-item">
-          <div class="service-info">
-            <h4>Electrical Safety Check</h4>
-          </div>
-          <div class="service-badges">
-            <span class="badge badge-included">Included</span>
-            <span class="badge badge-tier">Essentials+</span>
-          </div>
-        </div>
-
-        <div class="service-item">
-          <div class="service-info">
-            <h4>Sump Pump Test</h4>
-          </div>
-          <div class="service-badges">
-            <span class="badge badge-included">Included</span>
-            <span class="badge badge-tier">Essentials+</span>
-          </div>
-        </div>
-
-        <div class="service-item">
-          <div class="service-info">
-            <h4>Weatherstripping & Door Sweep Inspection</h4>
-          </div>
-          <div class="service-badges">
-            <span class="badge badge-included">Included</span>
-            <span class="badge badge-tier">Essentials+</span>
-          </div>
-        </div>
-
-        <div class="service-item">
-          <div class="service-info">
-            <h4>Ceiling Fan Direction Change</h4>
-          </div>
-          <div class="service-badges">
-            <span class="badge badge-included">Included</span>
-            <span class="badge badge-tier">Plus+</span>
-          </div>
-        </div>
-
-        <div class="service-item">
-          <div class="service-info">
-            <h4>Showerhead Water Filter Change</h4>
-          </div>
-          <div class="service-badges">
-            <span class="badge badge-included">Included</span>
-            <span class="badge badge-tier">Plus+</span>
-          </div>
-        </div>
-
-        <div class="service-item">
-          <div class="service-info">
-            <h4>Condensate Drain Maintenance</h4>
-          </div>
-          <div class="service-badges">
-            <span class="badge badge-included">Included</span>
-            <span class="badge badge-tier">Plus+</span>
-          </div>
-        </div>
-
-        <div class="service-item">
-          <div class="service-info">
-            <h4>Water & Air Quality Testing</h4>
-          </div>
-          <div class="service-badges">
-            <span class="badge badge-included">Included</span>
-            <span class="badge badge-tier">Plus+</span>
-          </div>
-        </div>
-
-        <div class="service-item">
-          <div class="service-info">
-            <h4>Sprinkler Startup & Inspection</h4>
-          </div>
-          <div class="service-badges">
-            <span class="badge badge-addon">Add-On</span>
-          </div>
-        </div>
-
-        <div class="service-item">
-          <div class="service-info">
-            <h4>Pressure Washing</h4>
-          </div>
-          <div class="service-badges">
-            <span class="badge badge-addon">Add-On</span>
-          </div>
-        </div>
-
-        <div class="service-item">
-          <div class="service-info">
-            <h4>Gutter Cleaning</h4>
-          </div>
-          <div class="service-badges">
-            <span class="badge badge-addon">Add-On</span>
-          </div>
-        </div>
-
-        <div class="service-item">
-          <div class="service-info">
-            <h4>Deck & Fence Staining</h4>
-          </div>
-          <div class="service-badges">
-            <span class="badge badge-addon">Add-On</span>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- SUMMER -->
-    <div class="seasonal-section" id="summer">
-      <h2><span class="season-icon">Summer</span></h2>
-      <p>Keep your home running smoothly during warm months with essential maintenance checks.</p>
-
-      <div class="service-list">
-        <div class="service-item">
-          <div class="service-info">
-            <h4>HVAC Filter Replacement</h4>
-          </div>
-          <div class="service-badges">
-            <span class="badge badge-included">Included</span>
-            <span class="badge badge-tier">Essentials+</span>
-          </div>
-        </div>
-
-        <div class="service-item">
-          <div class="service-info">
-            <h4>Smoke & CO Detector Testing</h4>
-          </div>
-          <div class="service-badges">
-            <span class="badge badge-included">Included</span>
-            <span class="badge badge-tier">Essentials+</span>
-          </div>
-        </div>
-
-        <div class="service-item">
-          <div class="service-info">
-            <h4>Leak Check - Visible Plumbing</h4>
-          </div>
-          <div class="service-badges">
-            <span class="badge badge-included">Included</span>
-            <span class="badge badge-tier">Essentials+</span>
-          </div>
-        </div>
-
-        <div class="service-item">
-          <div class="service-info">
-            <h4>Ceiling Fan Direction Check</h4>
-          </div>
-          <div class="service-badges">
-            <span class="badge badge-included">Included</span>
-            <span class="badge badge-tier">Plus+</span>
-          </div>
-        </div>
-
-        <div class="service-item">
-          <div class="service-info">
-            <h4>Fridge Water & Air Filter Change</h4>
-          </div>
-          <div class="service-badges">
-            <span class="badge badge-included">Included</span>
-            <span class="badge badge-tier">Plus+</span>
-          </div>
-        </div>
-
-        <div class="service-item">
-          <div class="service-info">
-            <h4>Dishwasher Maintenance</h4>
-          </div>
-          <div class="service-badges">
-            <span class="badge badge-included">Included</span>
-            <span class="badge badge-tier">Premium</span>
-          </div>
-        </div>
-
-        <div class="service-item">
-          <div class="service-info">
-            <h4>Washer Drain Pump Filter</h4>
-          </div>
-          <div class="service-badges">
-            <span class="badge badge-included">Included</span>
-            <span class="badge badge-tier">Premium</span>
-          </div>
-        </div>
-
-        <div class="service-item">
-          <div class="service-info">
-            <h4>Door Hinge Lubrication</h4>
-          </div>
-          <div class="service-badges">
-            <span class="badge badge-included">Included</span>
-            <span class="badge badge-tier">Premium</span>
-          </div>
-        </div>
-
-        <div class="service-item">
-          <div class="service-info">
-            <h4>Cabinet Hardware Tightening</h4>
-          </div>
-          <div class="service-badges">
-            <span class="badge badge-included">Included</span>
-            <span class="badge badge-tier">Premium</span>
-          </div>
-        </div>
-
-        <div class="service-item">
-          <div class="service-info">
-            <h4>Pressure Washing</h4>
-          </div>
-          <div class="service-badges">
-            <span class="badge badge-addon">Add-On</span>
-          </div>
-        </div>
-
-        <div class="service-item">
-          <div class="service-info">
-            <h4>Gutter Cleaning</h4>
-          </div>
-          <div class="service-badges">
-            <span class="badge badge-addon">Add-On</span>
-          </div>
-        </div>
-
-        <div class="service-item">
-          <div class="service-info">
-            <h4>Permanent Holiday Light Installation</h4>
-          </div>
-          <div class="service-badges">
-            <span class="badge badge-addon">Add-On</span>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- FALL -->
-    <div class="seasonal-section" id="fall">
-      <h2><span class="season-icon">Fall</span></h2>
-      <p>Prepare your home for colder months with weatherization and system maintenance.</p>
-
-      <div class="service-list">
-        <div class="service-item">
-          <div class="service-info">
-            <h4>HVAC Filter Replacement</h4>
-          </div>
-          <div class="service-badges">
-            <span class="badge badge-included">Included</span>
-            <span class="badge badge-tier">Essentials+</span>
-          </div>
-        </div>
-
-        <div class="service-item">
-          <div class="service-info">
-            <h4>Thermostat Check</h4>
-          </div>
-          <div class="service-badges">
-            <span class="badge badge-included">Included</span>
-            <span class="badge badge-tier">Essentials+</span>
-          </div>
-        </div>
-
-        <div class="service-item">
-          <div class="service-info">
-            <h4>Smoke & CO Detector Testing</h4>
-          </div>
-          <div class="service-badges">
-            <span class="badge badge-included">Included</span>
-            <span class="badge badge-tier">Essentials+</span>
-          </div>
-        </div>
-
-        <div class="service-item">
-          <div class="service-info">
-            <h4>Sump Pump Test</h4>
-          </div>
-          <div class="service-badges">
-            <span class="badge badge-included">Included</span>
-            <span class="badge badge-tier">Essentials+</span>
-          </div>
-        </div>
-
-        <div class="service-item">
-          <div class="service-info">
-            <h4>Weatherstripping & Door Sweep Inspection</h4>
-          </div>
-          <div class="service-badges">
-            <span class="badge badge-included">Included</span>
-            <span class="badge badge-tier">Essentials+</span>
-          </div>
-        </div>
-
-        <div class="service-item">
-          <div class="service-info">
-            <h4>Showerhead Water Filter Change</h4>
-          </div>
-          <div class="service-badges">
-            <span class="badge badge-included">Included</span>
-            <span class="badge badge-tier">Plus+</span>
-          </div>
-        </div>
-
-        <div class="service-item">
-          <div class="service-info">
-            <h4>Hose Bib Winterization</h4>
-          </div>
-          <div class="service-badges">
-            <span class="badge badge-included">Included</span>
-            <span class="badge badge-tier">Plus+</span>
-          </div>
-        </div>
-
-        <div class="service-item">
-          <div class="service-info">
-            <h4>Humidifier Pad Change</h4>
-          </div>
-          <div class="service-badges">
-            <span class="badge badge-included">Included</span>
-            <span class="badge badge-tier">Plus+</span>
-          </div>
-        </div>
-
-        <div class="service-item">
-          <div class="service-info">
-            <h4>Downspout Entry Clearing</h4>
-          </div>
-          <div class="service-badges">
-            <span class="badge badge-included">Included</span>
-            <span class="badge badge-tier">Plus+</span>
-          </div>
-        </div>
-
-        <div class="service-item">
-          <div class="service-info">
-            <h4>Sprinkler Blowout</h4>
-          </div>
-          <div class="service-badges">
-            <span class="badge badge-addon">Add-On</span>
-          </div>
-        </div>
-
-        <div class="service-item">
-          <div class="service-info">
-            <h4>Gutter Cleaning</h4>
-          </div>
-          <div class="service-badges">
-            <span class="badge badge-addon">Add-On</span>
-          </div>
-        </div>
-
-        <div class="service-item">
-          <div class="service-info">
-            <h4>Water Heater Flush</h4>
-          </div>
-          <div class="service-badges">
-            <span class="badge badge-addon">Add-On</span>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- WINTER -->
-    <div class="seasonal-section" id="winter">
-      <h2><span class="season-icon">Winter</span></h2>
-      <p>Maintain home comfort and safety throughout the cold season.</p>
-
-      <div class="service-list">
-        <div class="service-item">
-          <div class="service-info">
-            <h4>HVAC Filter Replacement</h4>
-          </div>
-          <div class="service-badges">
-            <span class="badge badge-included">Included</span>
-            <span class="badge badge-tier">Essentials+</span>
-          </div>
-        </div>
-
-        <div class="service-item">
-          <div class="service-info">
-            <h4>Smoke & CO Detector Testing</h4>
-          </div>
-          <div class="service-badges">
-            <span class="badge badge-included">Included</span>
-            <span class="badge badge-tier">Essentials+</span>
-          </div>
-        </div>
-
-        <div class="service-item">
-          <div class="service-info">
-            <h4>Leak Check - Visible Plumbing</h4>
-          </div>
-          <div class="service-badges">
-            <span class="badge badge-included">Included</span>
-            <span class="badge badge-tier">Essentials+</span>
-          </div>
-        </div>
-
-        <div class="service-item">
-          <div class="service-info">
-            <h4>Electrical Safety Check</h4>
-          </div>
-          <div class="service-badges">
-            <span class="badge badge-included">Included</span>
-            <span class="badge badge-tier">Essentials+</span>
-          </div>
-        </div>
-
-        <div class="service-item">
-          <div class="service-info">
-            <h4>Condensate Drain Maintenance</h4>
-          </div>
-          <div class="service-badges">
-            <span class="badge badge-included">Included</span>
-            <span class="badge badge-tier">Plus+</span>
-          </div>
-        </div>
-
-        <div class="service-item">
-          <div class="service-info">
-            <h4>Fridge Water & Air Filter Change</h4>
-          </div>
-          <div class="service-badges">
-            <span class="badge badge-included">Included</span>
-            <span class="badge badge-tier">Plus+</span>
-          </div>
-        </div>
-
-        <div class="service-item">
-          <div class="service-info">
-            <h4>Dryer Vent Cleaning</h4>
-          </div>
-          <div class="service-badges">
-            <span class="badge badge-included">Included</span>
-            <span class="badge badge-tier">Premium</span>
-          </div>
-        </div>
-
-        <div class="service-item">
-          <div class="service-info">
-            <h4>Fridge Coil Cleaning</h4>
-          </div>
-          <div class="service-badges">
-            <span class="badge badge-included">Included</span>
-            <span class="badge badge-tier">Premium</span>
-          </div>
-        </div>
-
-        <div class="service-item">
-          <div class="service-info">
-            <h4>Fireplace Glass Cleaning</h4>
-          </div>
-          <div class="service-badges">
-            <span class="badge badge-included">Included</span>
-            <span class="badge badge-tier">Premium</span>
-          </div>
-        </div>
-
-        <div class="service-item">
-          <div class="service-info">
-            <h4>Rodent Entry Point Inspection</h4>
-          </div>
-          <div class="service-badges">
-            <span class="badge badge-included">Included</span>
-            <span class="badge badge-tier">Premium</span>
-          </div>
-        </div>
-
-        <div class="service-item">
-          <div class="service-info">
-            <h4>Gas Fireplace Inspection</h4>
-          </div>
-          <div class="service-badges">
-            <span class="badge badge-addon">Add-On</span>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- YEAR-ROUND -->
-    <div class="seasonal-section" id="year-round">
-      <h2><span class="season-icon">Year-Round</span></h2>
-      <p>Essential services available every month of the year for all membership tiers.</p>
-
-      <div class="service-list">
-        <div class="service-item">
-          <div class="service-info">
-            <h4>Home Inspection Walkthrough</h4>
-          </div>
-          <div class="service-badges">
-            <span class="badge badge-included">Included</span>
-            <span class="badge badge-tier">Always</span>
-          </div>
-        </div>
-
-        <div class="service-item">
-          <div class="service-info">
-            <h4>Emergency Light Testing</h4>
-          </div>
-          <div class="service-badges">
-            <span class="badge badge-included">Included</span>
-            <span class="badge badge-tier">Always</span>
-          </div>
-        </div>
-
-        <div class="service-item">
-          <div class="service-info">
-            <h4>GFI Outlet Testing</h4>
-          </div>
-          <div class="service-badges">
-            <span class="badge badge-included">Included</span>
-            <span class="badge badge-tier">Always</span>
-          </div>
-        </div>
-
-        <div class="service-item">
-          <div class="service-info">
-            <h4>Water Softener Check</h4>
-          </div>
-          <div class="service-badges">
-            <span class="badge badge-included">Included</span>
-            <span class="badge badge-tier">Always</span>
-          </div>
-        </div>
-
-        <div class="service-item">
-          <div class="service-info">
-            <h4>Garage Door Safety Test</h4>
-          </div>
-          <div class="service-badges">
-            <span class="badge badge-included">Included</span>
-            <span class="badge badge-tier">Always</span>
-          </div>
-        </div>
-
-        <div class="service-item">
-          <div class="service-info">
-            <h4>Exterior Drainage Check</h4>
-          </div>
-          <div class="service-badges">
-            <span class="badge badge-included">Included</span>
-            <span class="badge badge-tier">Always</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CTA Section -->
-  <section class="cta-section">
-    <h2>Let's Get Your Home on a Plan</h2>
-    <p>Choose the membership that fits your needs and start getting regular maintenance today.</p>
-    <a href="signup.html" class="cta-button-white">View Plans & Sign Up</a>
-  </section>
-
-  <!-- Footer -->
-  <footer>
-    <div class="footer-content">
-      <div class="footer-section">
-        <h3>The Handy Neighbor Co</h3>
-        <p>Premium home maintenance memberships for West Omaha homeowners.</p>
-        <p><strong>Service Area:</strong><br>
-        The Ridges, Shadow Ridge, Armbrust Acres, Bay Shores, Leawood, Pacific Park</p>
-      </div>
-
-      <div class="footer-section">
-        <h3>Quick Links</h3>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="index.html#pricing">Membership Plans</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="index.html#about">About</a></li>
-          <li><a href="index.html#faq">FAQ</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-section">
-        <h3>Resources</h3>
-        <ul>
-          <li><a href="blog.html">Blog</a></li>
-          <li><a href="contact.html">Contact</a></li>
-          <li><a href="signup.html">Sign Up</a></li>
-          <li><a href="privacy.html">Privacy Policy</a></li>
-          <li><a href="terms.html">Terms of Service</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-section">
-        <h3>Contact Us</h3>
-        <p><strong>Phone:</strong><br>
-        <a href="tel:(402) 350-2583">(402) 350-2583</a></p>
-        <p><strong>Email:</strong><br>
-        <a href="mailto:hello@thehandyneighbor.co">hello@thehandyneighbor.co</a></p>
-        <p><strong>Location:</strong><br>
-        West Omaha, NE 68144</p>
-      </div>
-    </div>
-
-    <div class="footer-bottom">
-      <p>&copy; 2026 The Handy Neighbor Co. All rights reserved.</p>
-    </div>
-  </footer>
-
-  <!-- JavaScript for Hamburger Menu & Season Navigation -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Gutter Cleaning",
+        "url": "https://thehandyneighbor.co/gutter-cleaning-omaha.html"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Pressure Washing",
+        "url": "https://thehandyneighbor.co/pressure-washing.html"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Dryer Vent Cleaning",
+        "url": "https://thehandyneighbor.co/dryer-vent-cleaning.html"
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "name": "Sprinkler Blowout",
+        "url": "https://thehandyneighbor.co/sprinkler-blowout.html"
+      },
+      {
+        "@type": "ListItem",
+        "position": 5,
+        "name": "Sprinkler Startup",
+        "url": "https://thehandyneighbor.co/sprinkler-startup.html"
+      },
+      {
+        "@type": "ListItem",
+        "position": 6,
+        "name": "Water Heater Flush",
+        "url": "https://thehandyneighbor.co/water-heater-flush.html"
+      },
+      {
+        "@type": "ListItem",
+        "position": 7,
+        "name": "Gas Fireplace Maintenance",
+        "url": "https://thehandyneighbor.co/gas-fireplace-maintenance.html"
+      },
+      {
+        "@type": "ListItem",
+        "position": 8,
+        "name": "Deck & Fence Staining",
+        "url": "https://thehandyneighbor.co/deck-fence-staining.html"
+      },
+      {
+        "@type": "ListItem",
+        "position": 9,
+        "name": "Smoke Detector Service",
+        "url": "https://thehandyneighbor.co/smoke-detector-service.html"
+      },
+      {
+        "@type": "ListItem",
+        "position": 10,
+        "name": "Permanent Holiday Lights",
+        "url": "https://thehandyneighbor.co/permanent-holiday-lights.html"
+      }
+    ]
+  }
+  </script>
+
+  <!-- ===== JAVASCRIPT ===== -->
   <script>
-    // Hamburger Menu
+    // Hamburger menu functionality
     const hamburger = document.getElementById('hamburger');
-    const navLinks = document.getElementById('navLinks');
+    const navMenu = document.getElementById('navMenu');
 
     hamburger.addEventListener('click', () => {
-      navLinks.classList.toggle('active');
+      navMenu.classList.toggle('active');
     });
 
-    // Close menu when a link is clicked
-    document.querySelectorAll('.nav-links a').forEach(link => {
+    document.querySelectorAll('.nav-menu a').forEach(link => {
       link.addEventListener('click', () => {
-        navLinks.classList.remove('active');
+        navMenu.classList.remove('active');
       });
     });
 
-    // Season Navigation Active State
+    // Season pill active state tracking
     const seasonPills = document.querySelectorAll('.season-pill');
+    const seasonSections = document.querySelectorAll('.season-section');
 
     seasonPills.forEach(pill => {
-      pill.addEventListener('click', (e) => {
+      pill.addEventListener('click', () => {
+        const season = pill.getAttribute('data-season');
+
+        // Update active pill
         seasonPills.forEach(p => p.classList.remove('active'));
         pill.classList.add('active');
-      });
-    });
 
-    // Update active pill on scroll
-    window.addEventListener('scroll', () => {
-      let current = '';
-      const sections = document.querySelectorAll('.seasonal-section');
-
-      sections.forEach(section => {
-        const sectionTop = section.offsetTop;
-        const sectionHeight = section.clientHeight;
-        if (pageYOffset >= sectionTop - 150) {
-          current = section.getAttribute('id');
-        }
-      });
-
-      seasonPills.forEach(pill => {
-        pill.classList.remove('active');
-        if (pill.getAttribute('data-season') === current) {
-          pill.classList.add('active');
-        }
+        // Update active section
+        seasonSections.forEach(section => {
+          section.classList.remove('active');
+          if (section.getAttribute('data-season') === season) {
+            section.classList.add('active');
+          }
+        });
       });
     });
   </script>
+
 </body>
 </html>

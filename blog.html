@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog | The Handy Neighbor Co.</title>
     <meta name="description" content="Home maintenance tips, seasonal checklists, and neighborhood updates from The Handy Neighbor Co. in Omaha, NE.">
+    <link rel="canonical" href="https://thehandyneighbor.co/blog.html">
     <link rel="icon" type="image/svg+xml" href="icon-white.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -50,6 +51,13 @@
         .nav-cta {
             background: var(--accent) !important; color: var(--dark) !important;
             padding: 0.6rem 1.5rem; border-radius: 4px; font-weight: 700 !important;
+        }
+        .hamburger { display: none; flex-direction: column; cursor: pointer; gap: 5px; }
+        .hamburger span { width: 24px; height: 3px; background: var(--accent); border-radius: 2px; transition: 0.3s; }
+        @media (max-width: 768px) {
+            .nav-links { display: none; position: absolute; top: 70px; left: 0; right: 0; flex-direction: column; background: var(--dark-mid); padding: 1.5rem 2rem; gap: 1rem; border-bottom: 1px solid var(--border); }
+            .nav-links.active { display: flex; }
+            .hamburger { display: flex; }
         }
 
         .page-hero {
@@ -135,6 +143,7 @@
                 <li><a href="contact.html">Contact</a></li>
                 <li><a href="signup.html" class="nav-cta">Sign Up</a></li>
             </ul>
+            <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
         </div>
     </nav>
 
@@ -169,5 +178,13 @@
         <p>&copy; 2026 The Handy Neighbor Co. &bull; <a href="index.html">Back to Home</a> &bull; <a href="tel:+14023502583">(402) 350-2583</a></p>
     </footer>
 
+<script>
+    document.getElementById('hamburger').addEventListener('click', function() {
+        document.querySelector('.nav-links').classList.toggle('active');
+    });
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => document.querySelector('.nav-links').classList.remove('active'));
+    });
+</script>
 </body>
 </html>
