@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gutter Cleaning in West Omaha | The Handy Neighbor Co.</title>
+    <meta name="description" content="Professional gutter cleaning & downspout clearing in West Omaha. Protect your foundation from water damage. Seasonal service available for all membership tiers.">
+    <meta name="keywords" content="gutter cleaning West Omaha, downspout cleaning, gutter maintenance, foundation protection">
+    <link rel="canonical" href="https://thehandyneighbor.co/gutter-cleaning-omaha.html">
+    <meta name="robots" content="index, follow">
+
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --cream: #FFFFFF;
+            --dark: #3B5068;
+            --dark-mid: #344859;
+            --accent: #C8A96E;
+            --accent-dark: #A8894E;
+            --text-light: #FFFFFF;
+            --text-muted: rgba(255,255,255,0.55);
+            --border: rgba(255,255,255,0.12);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--dark);
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: var(--dark-mid);
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            text-decoration: none;
+            color: var(--text-light);
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1.1rem;
+            letter-spacing: 0.05em;
+            word-spacing: 4px;
+            font-weight: 700;
+        }
+
+        .nav-logo span {
+            color: var(--accent);
+        }
+
+        .nav-icon {
+            height: 32px;
+            width: auto;
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+            list-style: none;
+        }
+
+        .nav-menu a {
+            color: var(--text-light);
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+        }
+
+        .nav-menu a:hover {
+            color: var(--accent);
+        }
+
+        .nav-cta {
+            background-color: var(--accent);
+            color: var(--dark) !important;
+            padding: 0.65rem 1.5rem;
+            border-radius: 4px;
+            font-weight: 600;
+            transition: background-color 0.3s;
+        }
+
+        .nav-cta:hover {
+            background-color: var(--accent-dark);
+            color: var(--dark) !important;
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .hamburger span {
+            width: 25px;
+            height: 3px;
+            background-color: var(--accent);
+            margin: 5px 0;
+            border-radius: 2px;
+            transition: 0.3s;
+        }
+
+        @media (max-width: 768px) {
+            .hamburger {
+                display: flex;
+            }
+
+            .nav-menu {
+                position: absolute;
+                top: 70px;
+                right: 0;
+                flex-direction: column;
+                background-color: var(--dark-mid);
+                width: 100%;
+                text-align: right;
+                gap: 0;
+                padding: 2rem;
+                border-bottom: 1px solid var(--border);
+                display: none;
+            }
+
+            .nav-menu.active {
+                display: flex;
+            }
+
+            .nav-menu li {
+                padding: 1rem 0;
+            }
+
+            nav {
+                padding: 1rem;
+            }
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--dark-mid) 0%, var(--dark) 100%);
+            padding: 140px 2rem 80px;
+            text-align: center;
+            margin-top: 70px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .hero-label {
+            display: inline-block;
+            background-color: rgba(200, 169, 110, 0.15);
+            color: var(--accent);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            margin-bottom: 1rem;
+            border: 1px solid var(--accent);
+        }
+
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--text-muted);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                padding: 120px 1.5rem 60px;
+            }
+
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+        }
+
+        /* Main Content */
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        section {
+            margin-bottom: 4rem;
+        }
+
+        h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.2rem;
+            margin-bottom: 1.5rem;
+            color: var(--text-light);
+        }
+
+        h3 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1.3rem;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            color: var(--accent);
+            letter-spacing: 0.05em;
+        }
+
+        p {
+            margin-bottom: 1.2rem;
+            color: var(--text-muted);
+            line-height: 1.8;
+        }
+
+        .highlight {
+            color: var(--accent);
+            font-weight: 600;
+        }
+
+        /* What's Included */
+        .included-list {
+            background-color: rgba(200, 169, 110, 0.08);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 2rem;
+            margin: 2rem 0;
+        }
+
+        .included-list ul {
+            list-style: none;
+        }
+
+        .included-list li {
+            padding: 0.75rem 0;
+            padding-left: 1.8rem;
+            position: relative;
+            color: var(--text-light);
+        }
+
+        .included-list li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        /* Plan Callout */
+        .plan-callout {
+            background: linear-gradient(135deg, rgba(200, 169, 110, 0.15) 0%, rgba(200, 169, 110, 0.05) 100%);
+            border: 2px solid var(--accent);
+            border-radius: 8px;
+            padding: 2rem;
+            margin: 3rem 0;
+            text-align: center;
+        }
+
+        .plan-callout h3 {
+            margin-top: 0;
+        }
+
+        .plan-badge {
+            display: inline-block;
+            background-color: var(--accent);
+            color: var(--dark);
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            font-weight: 700;
+            margin: 0.5rem;
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1rem;
+        }
+
+        /* CTA Button */
+        .cta-button {
+            display: inline-block;
+            background-color: var(--accent);
+            color: var(--dark);
+            padding: 1rem 2.5rem;
+            border: none;
+            border-radius: 4px;
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1.1rem;
+            letter-spacing: 0.05em;
+            text-decoration: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin: 2rem 0;
+        }
+
+        .cta-button:hover {
+            background-color: var(--accent-dark);
+        }
+
+        .cta-section {
+            text-align: center;
+            background-color: rgba(200, 169, 110, 0.08);
+            padding: 3rem 2rem;
+            border-radius: 8px;
+            margin: 3rem 0;
+        }
+
+        .cta-section h3 {
+            margin-top: 0;
+        }
+
+        /* Related Services */
+        .related-services {
+            background-color: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 2rem;
+            margin: 3rem 0;
+        }
+
+        .related-services h3 {
+            margin-top: 0;
+        }
+
+        .related-link {
+            display: inline-block;
+            color: var(--accent);
+            text-decoration: none;
+            margin-right: 1.5rem;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .related-link:hover {
+            color: var(--accent-dark);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--dark-mid);
+            padding: 2rem;
+            text-align: center;
+            color: var(--text-muted);
+            border-top: 1px solid var(--border);
+            margin-top: 4rem;
+        }
+
+        footer a {
+            color: var(--accent);
+            text-decoration: none;
+            margin: 0 1rem;
+        }
+
+        footer a:hover {
+            color: var(--accent-dark);
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 2rem 1.5rem;
+            }
+
+            h2 {
+                font-size: 1.8rem;
+            }
+
+            h3 {
+                font-size: 1.1rem;
+            }
+
+            .plan-callout {
+                padding: 1.5rem;
+            }
+
+            .included-list {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <a href="index.html" class="nav-logo">
+            <img src="icon-white.png" alt="The Handy Neighbor Co." class="nav-icon">
+            <span>THE</span> HANDY <span>NEIGHBOR CO.</span>
+        </a>
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul class="nav-menu" id="navMenu">
+            <li><a href="index.html#pricing">Plans</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#faq">FAQ</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="signup.html" class="nav-cta">Sign Up</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-label">ADD-ON SERVICE</div>
+        <h1>Gutter Cleaning in West Omaha</h1>
+        <p>Professional gutter and downspout clearing to protect your foundation and home.</p>
+    </section>
+
+    <!-- Main Content -->
+    <div class="container">
+        <section>
+            <h2>Seasonal Gutter Maintenance You Can Trust</h2>
+            <p>Your gutters are your home's first line of defense against water damage. Over time, leaves, debris, and sediment accumulate in gutters and downspouts, preventing proper drainage and directing water toward your foundation. In West Omaha, where we experience heavy spring rains and autumn leaf fall, regular gutter maintenance isn't optional—it's essential.</p>
+            <p>The Handy Neighbor Co. offers professional gutter cleaning services designed to keep your drainage system flowing smoothly. We clear gutters of debris, inspect for damage, and ensure downspouts are directing water safely away from your foundation. Whether you need spring cleanup after winter, or fall preparation before heavy rains, we're here to keep your gutters in top shape.</p>
+            <p>With over 20 years of experience serving homeowners across The Ridges, Shadow Ridge, Armbrust Acres, Bay Shores, Leawood, and Pacific Park, we understand the specific challenges West Omaha homes face. Our owner-operated service means you're working directly with a licensed, insured professional who treats your home like his own.</p>
+        </section>
+
+        <section>
+            <h2>What's Included in Our Gutter Cleaning</h2>
+            <div class="included-list">
+                <ul>
+                    <li>Complete gutter cleaning—removing leaves, debris, and sediment</li>
+                    <li>Downspout clearing and flush testing</li>
+                    <li>Visual inspection for damage, gaps, or separation</li>
+                    <li>Downspout extension verification—ensuring water flows away from foundation</li>
+                    <li>Detailed notes on any repairs recommended</li>
+                    <li>Professional cleanup of debris from your property</li>
+                </ul>
+            </div>
+            <p>We focus on clearing the gutters and checking for clogs—not full replacements. If we spot damage or issues that need professional attention, we'll let you know so you can plan ahead.</p>
+        </section>
+
+        <section class="plan-callout">
+            <h3>Which Plan Includes This Service?</h3>
+            <p>Gutter cleaning is available as an <span class="highlight">add-on service</span> at member pricing for all three membership tiers:</p>
+            <div>
+                <span class="plan-badge">Starter Plan</span>
+                <span class="plan-badge">Standard Plan</span>
+                <span class="plan-badge">Premium Plan</span>
+            </div>
+            <p style="margin-top: 1.5rem; font-size: 0.95rem;">As an add-on, gutter cleaning is available at discounted member rates. Sign up for a membership tier to access these savings.</p>
+        </section>
+
+        <section>
+            <h3>Why West Omaha Homeowners Choose Us for Gutter Cleaning</h3>
+            <p><span class="highlight">Seasonal expertise:</span> We schedule gutter cleaning at the optimal times—spring for post-winter debris, and fall for pre-rain preparation—though we're available year-round as needed.</p>
+            <p><span class="highlight">Foundation protection:</span> A clogged gutter doesn't just stain your siding—it can direct water toward your foundation, leading to costly damage. We ensure proper drainage away from your home.</p>
+            <p><span class="highlight">Local knowledge:</span> We know the challenges of West Omaha's weather patterns and the specific neighborhoods we serve. Our service is tailored to what your home needs.</p>
+            <p><span class="highlight">Transparent pricing:</span> No surprise charges. You know the flat rate upfront, and we stick to it.</p>
+        </section>
+
+        <section class="cta-section">
+            <h3>Ready to Protect Your Home?</h3>
+            <p>Let's get your gutters cleaned and your foundation protected. Join thousands of West Omaha homeowners who trust The Handy Neighbor Co. to keep their homes in great shape.</p>
+            <a href="signup.html" class="cta-button">Let's Get Your Home on a Plan</a>
+        </section>
+
+        <section class="related-services">
+            <h3>Related Services You Might Need</h3>
+            <p>Explore these complementary services that help keep your home maintained year-round:</p>
+            <div>
+                <a href="pressure-washing.html" class="related-link">→ Pressure Washing</a>
+                <a href="sprinkler-blowout.html" class="related-link">→ Sprinkler Blowout</a>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 The Handy Neighbor Co. &bull; <a href="index.html">Home</a> &bull; <a href="contact.html">Contact</a> &bull; (402) 350-2583</p>
+    </footer>
+
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://thehandyneighbor.co/index.html"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Services",
+                "item": "https://thehandyneighbor.co/services.html"
+            },
+            {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Gutter Cleaning",
+                "item": "https://thehandyneighbor.co/gutter-cleaning-omaha.html"
+            }
+        ]
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": "Gutter Cleaning",
+        "description": "Professional gutter cleaning and downspout clearing in West Omaha, Nebraska",
+        "provider": {
+            "@type": "LocalBusiness",
+            "name": "The Handy Neighbor Co.",
+            "address": {
+                "@type": "PostalAddress",
+                "addressRegion": "NE",
+                "addressCountry": "US",
+                "addressLocality": "Omaha"
+            },
+            "telephone": "(402) 350-2583"
+        },
+        "areaServed": [
+            {
+                "@type": "City",
+                "name": "Omaha",
+                "containedInPlace": {
+                    "@type": "State",
+                    "name": "Nebraska"
+                }
+            }
+        ],
+        "url": "https://thehandyneighbor.co/gutter-cleaning-omaha.html"
+    }
+    </script>
+
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('navMenu');
+
+        hamburger.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html>

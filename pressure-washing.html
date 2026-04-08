@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pressure Washing in West Omaha | The Handy Neighbor Co.</title>
+    <meta name="description" content="Professional pressure washing for driveways, sidewalks, patios, and siding in West Omaha. Clean surfaces, safer walkways, boost curb appeal. Available to all members.">
+    <meta name="keywords" content="pressure washing West Omaha, driveway cleaning, patio cleaning, house washing">
+    <link rel="canonical" href="https://thehandyneighbor.co/pressure-washing.html">
+    <meta name="robots" content="index, follow">
+
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --cream: #FFFFFF;
+            --dark: #3B5068;
+            --dark-mid: #344859;
+            --accent: #C8A96E;
+            --accent-dark: #A8894E;
+            --text-light: #FFFFFF;
+            --text-muted: rgba(255,255,255,0.55);
+            --border: rgba(255,255,255,0.12);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--dark);
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: var(--dark-mid);
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            text-decoration: none;
+            color: var(--text-light);
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1.1rem;
+            letter-spacing: 0.05em;
+            word-spacing: 4px;
+            font-weight: 700;
+        }
+
+        .nav-logo span {
+            color: var(--accent);
+        }
+
+        .nav-icon {
+            height: 32px;
+            width: auto;
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+            list-style: none;
+        }
+
+        .nav-menu a {
+            color: var(--text-light);
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+        }
+
+        .nav-menu a:hover {
+            color: var(--accent);
+        }
+
+        .nav-cta {
+            background-color: var(--accent);
+            color: var(--dark) !important;
+            padding: 0.65rem 1.5rem;
+            border-radius: 4px;
+            font-weight: 600;
+            transition: background-color 0.3s;
+        }
+
+        .nav-cta:hover {
+            background-color: var(--accent-dark);
+            color: var(--dark) !important;
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .hamburger span {
+            width: 25px;
+            height: 3px;
+            background-color: var(--accent);
+            margin: 5px 0;
+            border-radius: 2px;
+            transition: 0.3s;
+        }
+
+        @media (max-width: 768px) {
+            .hamburger {
+                display: flex;
+            }
+
+            .nav-menu {
+                position: absolute;
+                top: 70px;
+                right: 0;
+                flex-direction: column;
+                background-color: var(--dark-mid);
+                width: 100%;
+                text-align: right;
+                gap: 0;
+                padding: 2rem;
+                border-bottom: 1px solid var(--border);
+                display: none;
+            }
+
+            .nav-menu.active {
+                display: flex;
+            }
+
+            .nav-menu li {
+                padding: 1rem 0;
+            }
+
+            nav {
+                padding: 1rem;
+            }
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--dark-mid) 0%, var(--dark) 100%);
+            padding: 140px 2rem 80px;
+            text-align: center;
+            margin-top: 70px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .hero-label {
+            display: inline-block;
+            background-color: rgba(200, 169, 110, 0.15);
+            color: var(--accent);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            margin-bottom: 1rem;
+            border: 1px solid var(--accent);
+        }
+
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--text-muted);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                padding: 120px 1.5rem 60px;
+            }
+
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+        }
+
+        /* Main Content */
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        section {
+            margin-bottom: 4rem;
+        }
+
+        h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.2rem;
+            margin-bottom: 1.5rem;
+            color: var(--text-light);
+        }
+
+        h3 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1.3rem;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            color: var(--accent);
+            letter-spacing: 0.05em;
+        }
+
+        p {
+            margin-bottom: 1.2rem;
+            color: var(--text-muted);
+            line-height: 1.8;
+        }
+
+        .highlight {
+            color: var(--accent);
+            font-weight: 600;
+        }
+
+        /* What's Included */
+        .included-list {
+            background-color: rgba(200, 169, 110, 0.08);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 2rem;
+            margin: 2rem 0;
+        }
+
+        .included-list ul {
+            list-style: none;
+        }
+
+        .included-list li {
+            padding: 0.75rem 0;
+            padding-left: 1.8rem;
+            position: relative;
+            color: var(--text-light);
+        }
+
+        .included-list li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        /* Plan Callout */
+        .plan-callout {
+            background: linear-gradient(135deg, rgba(200, 169, 110, 0.15) 0%, rgba(200, 169, 110, 0.05) 100%);
+            border: 2px solid var(--accent);
+            border-radius: 8px;
+            padding: 2rem;
+            margin: 3rem 0;
+            text-align: center;
+        }
+
+        .plan-callout h3 {
+            margin-top: 0;
+        }
+
+        .plan-badge {
+            display: inline-block;
+            background-color: var(--accent);
+            color: var(--dark);
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            font-weight: 700;
+            margin: 0.5rem;
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1rem;
+        }
+
+        /* CTA Button */
+        .cta-button {
+            display: inline-block;
+            background-color: var(--accent);
+            color: var(--dark);
+            padding: 1rem 2.5rem;
+            border: none;
+            border-radius: 4px;
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1.1rem;
+            letter-spacing: 0.05em;
+            text-decoration: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin: 2rem 0;
+        }
+
+        .cta-button:hover {
+            background-color: var(--accent-dark);
+        }
+
+        .cta-section {
+            text-align: center;
+            background-color: rgba(200, 169, 110, 0.08);
+            padding: 3rem 2rem;
+            border-radius: 8px;
+            margin: 3rem 0;
+        }
+
+        .cta-section h3 {
+            margin-top: 0;
+        }
+
+        /* Related Services */
+        .related-services {
+            background-color: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 2rem;
+            margin: 3rem 0;
+        }
+
+        .related-services h3 {
+            margin-top: 0;
+        }
+
+        .related-link {
+            display: inline-block;
+            color: var(--accent);
+            text-decoration: none;
+            margin-right: 1.5rem;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .related-link:hover {
+            color: var(--accent-dark);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--dark-mid);
+            padding: 2rem;
+            text-align: center;
+            color: var(--text-muted);
+            border-top: 1px solid var(--border);
+            margin-top: 4rem;
+        }
+
+        footer a {
+            color: var(--accent);
+            text-decoration: none;
+            margin: 0 1rem;
+        }
+
+        footer a:hover {
+            color: var(--accent-dark);
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 2rem 1.5rem;
+            }
+
+            h2 {
+                font-size: 1.8rem;
+            }
+
+            h3 {
+                font-size: 1.1rem;
+            }
+
+            .plan-callout {
+                padding: 1.5rem;
+            }
+
+            .included-list {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <a href="index.html" class="nav-logo">
+            <img src="icon-white.png" alt="The Handy Neighbor Co." class="nav-icon">
+            <span>THE</span> HANDY <span>NEIGHBOR CO.</span>
+        </a>
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul class="nav-menu" id="navMenu">
+            <li><a href="index.html#pricing">Plans</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#faq">FAQ</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="signup.html" class="nav-cta">Sign Up</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-label">ADD-ON SERVICE</div>
+        <h1>Pressure Washing in West Omaha</h1>
+        <p>Professional surface cleaning for driveways, sidewalks, patios, and siding to enhance your home's curb appeal.</p>
+    </section>
+
+    <!-- Main Content -->
+    <div class="container">
+        <section>
+            <h2>Restore Your Home's Surfaces With Professional Pressure Washing</h2>
+            <p>Over time, your home's exterior surfaces accumulate dirt, mold, algae, and weathering that dulls your curb appeal and creates safety hazards. A grimy driveway isn't just unattractive—slippery algae and moss can make walkways dangerous for family and guests. Pressure washing removes years of buildup in a single service, restoring your surfaces to like-new condition.</p>
+            <p>The Handy Neighbor Co. uses professional-grade equipment and techniques to clean driveways, sidewalks, patios, and siding safely and effectively. We're careful to apply the right pressure and approach for each surface—too much power can damage delicate finishes, so our experience matters. Whether you're preparing for a gathering, increasing your home's market appeal, or simply want surfaces that look great, we deliver the results West Omaha homeowners expect.</p>
+            <p>Serving The Ridges, Shadow Ridge, Armbrust Acres, Bay Shores, Leawood, and Pacific Park for over 20 years, we know what West Omaha homes need. Josh Davis, our owner-operator, is licensed and insured—and brings the personal touch that makes the difference when working around your property.</p>
+        </section>
+
+        <section>
+            <h2>What's Included in Our Pressure Washing Service</h2>
+            <div class="included-list">
+                <ul>
+                    <li>Complete driveway cleaning—removing dirt, stains, and mold</li>
+                    <li>Sidewalk and walkway power cleaning</li>
+                    <li>Patio and deck surface cleaning</li>
+                    <li>House siding wash (with appropriate pressure settings)</li>
+                    <li>Removal of algae, moss, and weathered discoloration</li>
+                    <li>Debris cleanup and final walkthrough</li>
+                </ul>
+            </div>
+            <p>We focus on delivering clean, safe surfaces without damage. Our approach respects your landscaping and property features—we're careful around delicate plants and fixtures.</p>
+        </section>
+
+        <section class="plan-callout">
+            <h3>Which Plan Includes This Service?</h3>
+            <p>Pressure washing is available as an <span class="highlight">add-on service</span> at member pricing for all three membership tiers:</p>
+            <div>
+                <span class="plan-badge">Starter Plan</span>
+                <span class="plan-badge">Standard Plan</span>
+                <span class="plan-badge">Premium Plan</span>
+            </div>
+            <p style="margin-top: 1.5rem; font-size: 0.95rem;">Add pressure washing to your membership at discounted rates. No surprises—transparent pricing from the start.</p>
+        </section>
+
+        <section>
+            <h3>Why West Omaha Homeowners Trust Us for Pressure Washing</h3>
+            <p><span class="highlight">Safe, effective cleaning:</span> We use professional-grade equipment and know exactly how much pressure each surface needs. Your siding, deck, and landscaping stay safe.</p>
+            <p><span class="highlight">Curb appeal boost:</span> Whether you're preparing for a sale, party, or just want your home to shine, pressure washing transforms how your home looks from the street.</p>
+            <p><span class="highlight">Mold and algae prevention:</span> Regular cleaning removes the buildup that leads to returning mold and slippery surfaces. A clean exterior lasts longer.</p>
+            <p><span class="highlight">Local West Omaha experience:</span> We understand the specific weather, soil, and conditions that affect homes in Omaha neighborhoods. Our service is tailored to what works here.</p>
+            <p><span class="highlight">Flat-rate simplicity:</span> No surprises. You know the price upfront, and we deliver quality work on schedule.</p>
+        </section>
+
+        <section class="cta-section">
+            <h3>Ready to Refresh Your Home's Appearance?</h3>
+            <p>A clean exterior makes all the difference. Let The Handy Neighbor Co. restore your surfaces and bring back the pride of a well-maintained West Omaha home.</p>
+            <a href="signup.html" class="cta-button">Let's Get Your Home on a Plan</a>
+        </section>
+
+        <section class="related-services">
+            <h3>Related Services You Might Need</h3>
+            <p>Explore these complementary services that keep your West Omaha home looking and functioning its best:</p>
+            <div>
+                <a href="gutter-cleaning-omaha.html" class="related-link">→ Gutter Cleaning</a>
+                <a href="deck-fence-staining.html" class="related-link">→ Deck & Fence Staining</a>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 The Handy Neighbor Co. &bull; <a href="index.html">Home</a> &bull; <a href="contact.html">Contact</a> &bull; (402) 350-2583</p>
+    </footer>
+
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://thehandyneighbor.co/index.html"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Services",
+                "item": "https://thehandyneighbor.co/services.html"
+            },
+            {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Pressure Washing",
+                "item": "https://thehandyneighbor.co/pressure-washing.html"
+            }
+        ]
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": "Pressure Washing",
+        "description": "Professional pressure washing for driveways, sidewalks, patios, and siding in West Omaha, Nebraska",
+        "provider": {
+            "@type": "LocalBusiness",
+            "name": "The Handy Neighbor Co.",
+            "address": {
+                "@type": "PostalAddress",
+                "addressRegion": "NE",
+                "addressCountry": "US",
+                "addressLocality": "Omaha"
+            },
+            "telephone": "(402) 350-2583"
+        },
+        "areaServed": [
+            {
+                "@type": "City",
+                "name": "Omaha",
+                "containedInPlace": {
+                    "@type": "State",
+                    "name": "Nebraska"
+                }
+            }
+        ],
+        "url": "https://thehandyneighbor.co/pressure-washing.html"
+    }
+    </script>
+
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('navMenu');
+
+        hamburger.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html>
