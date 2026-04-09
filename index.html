@@ -256,6 +256,21 @@
         }
         .pricing-features li::before { content: '✓'; color: var(--accent); font-weight: 700; }
         .pricing-card .btn-primary { width: 100%; display: block; text-align: center; }
+        .plan-checklist li {
+            color: var(--text-muted); font-size: 0.85rem; padding: 0.35rem 0; padding-left: 1.4rem; position: relative;
+        }
+        .plan-checklist li::before {
+            content: '✓'; color: var(--accent); font-weight: 700; position: absolute; left: 0;
+        }
+        .plan-addons li {
+            color: var(--text-muted); font-size: 0.85rem; padding: 0.35rem 0; padding-left: 1.4rem; position: relative;
+        }
+        .plan-addons li::before {
+            content: '+'; color: var(--accent); font-weight: 700; position: absolute; left: 0.15rem;
+        }
+        @media (max-width: 600px) {
+            .plan-checklist, .plan-addons { grid-template-columns: 1fr !important; }
+        }
 
         /* ============ TESTIMONIALS ============ */
         .trust { padding: 6rem 2rem; background: var(--dark); }
@@ -498,13 +513,68 @@
 
         <!-- MEMBERSHIP PLANS inside hero -->
         <div id="pricing" style="position: relative; top: -80px;"></div>
-        <div style="max-width: 600px; margin: 3rem auto 0; position: relative; z-index: 1;">
+        <div style="max-width: 780px; margin: 3rem auto 0; position: relative; z-index: 1;">
             <div class="pricing-card featured fade-in" style="padding: 3rem; text-align: center;">
                 <div class="pricing-label">The Handy Neighbor Plan</div>
                 <div class="pricing-amount">$88<span style="font-size: 1rem; color: var(--text-muted);">/mo</span></div>
                 <div class="pricing-period">cancel anytime &bull; no contracts</div>
-                <p style="color: var(--text-muted); font-size: 1.05rem; line-height: 1.7; margin: 1.5rem 0;">Everything your home needs. Four seasonal visits per year. All labor included. Materials billed separately at cost.</p>
-                <p style="color: var(--accent); font-size: 0.95rem; margin-bottom: 2rem;">$88/mo &times; 3 months = $264 per quarterly visit</p>
+                <p style="color: var(--text-muted); font-size: 1.05rem; line-height: 1.7; margin: 1.5rem 0;">Four seasonal visits per year. All labor included. Materials billed separately at cost.</p>
+
+                <!-- Included Services Checklist -->
+                <div style="text-align: left; margin: 2rem 0; border-top: 1px solid var(--border); padding-top: 1.5rem;">
+                    <p style="color: var(--accent); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; font-weight: 600; margin-bottom: 1rem; text-align: center;">What's Included</p>
+                    <ul class="plan-checklist" style="list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem 1.5rem; padding: 0; margin: 0;">
+                        <!-- Appliance Maintenance -->
+                        <li>Dryer Vent Cleaning</li>
+                        <li>HVAC Filter Replacement</li>
+                        <li>Fridge Coil Cleaning</li>
+                        <li>Fridge Water &amp; Air Filter Change</li>
+                        <li>Dishwasher Maintenance</li>
+                        <li>Washer Drain Pump Filter</li>
+                        <li>Thermostat Check &amp; Calibration</li>
+                        <li>Condensate Drain Maintenance</li>
+                        <li>Humidifier Pad Change</li>
+                        <li>Water Softener Check</li>
+                        <!-- Safety & Inspections -->
+                        <li>Smoke &amp; CO Detector Testing</li>
+                        <li>Electrical Safety Check</li>
+                        <li>Sump Pump Test</li>
+                        <li>GFI Outlet Testing</li>
+                        <li>Garage Door Safety Test</li>
+                        <li>Rodent Entry Point Inspection</li>
+                        <!-- Home Systems & Seasonal -->
+                        <li>Hose Bib Winterization</li>
+                        <li>Leak Check &ndash; Visible Plumbing</li>
+                        <li>Weatherstripping &amp; Door Sweeps</li>
+                        <li>Exterior Drainage Check</li>
+                        <li>Downspout Entry Clearing</li>
+                        <li>Water &amp; Air Quality Testing</li>
+                        <li>Fireplace Glass Cleaning</li>
+                        <li>Home Inspection Walkthrough</li>
+                        <li>Emergency Light Testing</li>
+                        <li>Showerhead Water Filter Change</li>
+                        <li>Ceiling Fan Direction Change</li>
+                        <li>Door Hinge Lubrication</li>
+                        <li>Cabinet Hardware Tightening</li>
+                    </ul>
+                </div>
+
+                <!-- Add-On Services -->
+                <div style="text-align: left; margin: 1.5rem 0; border-top: 1px solid var(--border); padding-top: 1.5rem;">
+                    <p style="color: var(--text-muted); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; font-weight: 600; margin-bottom: 1rem; text-align: center;">Available Add-Ons</p>
+                    <ul class="plan-addons" style="list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem 1.5rem; padding: 0; margin: 0;">
+                        <li>Gutter Cleaning</li>
+                        <li>Pressure Washing</li>
+                        <li>Sprinkler Startup &amp; Inspection</li>
+                        <li>Sprinkler Blowout</li>
+                        <li>Water Heater Flush</li>
+                        <li>Gas Fireplace Inspection</li>
+                        <li>Deck &amp; Fence Staining</li>
+                        <li>Permanent Holiday Lights</li>
+                    </ul>
+                </div>
+
+                <p style="color: var(--accent); font-size: 0.95rem; margin: 1.5rem 0 2rem;">$88/mo &times; 12 months = $1,056/year</p>
                 <a href="signup.html" class="btn-primary" style="width: 100%; max-width: 300px; display: inline-block; text-align: center; font-size: 1.1rem; padding: 1.1rem 2rem;">Get Started</a>
             </div>
         </div>
