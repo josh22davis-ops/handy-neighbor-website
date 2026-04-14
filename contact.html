@@ -212,22 +212,27 @@
 
             <div class="contact-form-wrap">
                 <h3>Describe the Project</h3>
-                <form id="contactForm" onsubmit="handleContact(event)">
+                <!-- IMPORTANT: Replace YOUR_FORM_ID below with your real Formspree endpoint.
+                     Use the SAME Formspree account, but create a SECOND form for contact inquiries. -->
+                <form id="contactForm" action="https://formspree.io/f/xlgaevze" method="POST">
+                    <input type="hidden" name="_subject" value="New Project Inquiry — Handy Neighbor">
+                    <input type="hidden" name="_next" value="https://thehandyneighbor.co/contact-thanks.html">
+                    <input type="hidden" name="_template" value="table">
                     <div class="form-group">
                         <label for="name">Name</label>
-                        <input type="text" id="name" placeholder="Your name" required>
+                        <input type="text" id="name" name="Name" placeholder="Your name" required>
                     </div>
                     <div class="form-group">
                         <label for="email">Email</label>
-                        <input type="email" id="email" placeholder="you@email.com" required>
+                        <input type="email" id="email" name="Email" placeholder="you@email.com" required>
                     </div>
                     <div class="form-group">
                         <label for="phone">Phone</label>
-                        <input type="tel" id="phone" placeholder="(402) 555-1234">
+                        <input type="tel" id="phone" name="Phone" placeholder="(402) 555-1234">
                     </div>
                     <div class="form-group">
                         <label for="message">What do you need done?</label>
-                        <textarea id="message" placeholder="Deck repair, fence work, bathroom refresh, drywall &mdash; or anything else on the list..." required></textarea>
+                        <textarea id="message" name="Message" placeholder="Deck repair, fence work, bathroom refresh, drywall &mdash; or anything else on the list..." required></textarea>
                     </div>
                     <button type="submit" class="form-submit">Send Message</button>
                 </form>
@@ -246,13 +251,6 @@
         document.querySelectorAll('.nav-links a').forEach(link => {
             link.addEventListener('click', () => document.querySelector('.nav-links').classList.remove('active'));
         });
-        function handleContact(e) {
-            e.preventDefault();
-            const form = e.target;
-            const data = new FormData(form);
-            // For now, just show confirmation — connect to backend later
-            form.innerHTML = '<div style="text-align:center;padding:3rem;"><h3 style="color:var(--accent);font-family:Playfair Display,serif;margin-bottom:1rem;">Message Sent</h3><p style="color:var(--text-muted);">Expect a response within 24 hours. For anything urgent, call or text <a href="tel:+14023502583" style="color:var(--accent);">(402) 350-2583</a>.</p></div>';
-        }
     </script>
 </body>
 </html>

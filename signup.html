@@ -167,33 +167,42 @@
                 <p>Schedule your first seasonal visit and we'll take it from there.</p>
             </div>
 
-            <form class="signup-form" id="signupForm" onsubmit="handleSignup(event)">
+            <!-- IMPORTANT: Replace YOUR_FORM_ID below with your real Formspree endpoint.
+                 Steps: 1) Go to formspree.io and create a free account
+                        2) Create a new form, set notification email to josh@thehandyneighbor.co
+                        3) Copy the form ID (e.g. "xyzabcde") and replace YOUR_FORM_ID below -->
+            <form class="signup-form" id="signupForm" action="https://formspree.io/f/mnjlqrlr" method="POST">
+
+                <!-- Formspree settings -->
+                <input type="hidden" name="_subject" value="New Handy Neighbor Signup!">
+                <input type="hidden" name="_next" value="https://thehandyneighbor.co/signup-thanks.html">
+                <input type="hidden" name="_template" value="table">
 
                 <!-- YOUR INFO -->
                 <span class="section-label-sm">Your Info</span>
                 <div class="form-row">
                     <div class="form-group">
                         <label for="firstName">First Name</label>
-                        <input type="text" id="firstName" placeholder="First name" required>
+                        <input type="text" id="firstName" name="First Name" placeholder="First name" required>
                     </div>
                     <div class="form-group">
                         <label for="lastName">Last Name</label>
-                        <input type="text" id="lastName" placeholder="Last name" required>
+                        <input type="text" id="lastName" name="Last Name" placeholder="Last name" required>
                     </div>
                 </div>
                 <div class="form-row">
                     <div class="form-group">
                         <label for="phone">Phone</label>
-                        <input type="tel" id="phone" placeholder="(402) 555-1234" required>
+                        <input type="tel" id="phone" name="Phone" placeholder="(402) 555-1234" required>
                     </div>
                     <div class="form-group">
                         <label for="email">Email</label>
-                        <input type="email" id="email" placeholder="you@email.com" required>
+                        <input type="email" id="email" name="Email" placeholder="you@email.com" required>
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="address">Street Address</label>
-                    <input type="text" id="address" placeholder="1234 Maple St, Omaha, NE" required>
+                    <input type="text" id="address" name="Address" placeholder="1234 Maple St, Omaha, NE" required>
                 </div>
 
                 <hr class="form-divider">
@@ -213,7 +222,7 @@
                 <span class="section-label-sm">Schedule Your First Visit</span>
                 <div class="form-group">
                     <label for="firstVisitDate">Preferred Date</label>
-                    <input type="date" id="firstVisitDate" required>
+                    <input type="date" id="firstVisitDate" name="Preferred First Visit" required>
                 </div>
 
                 <button type="submit" class="form-submit">Get Started</button>
@@ -227,31 +236,9 @@
     </footer>
 
     <script>
-        // Set min date to today
+        // Set min date to today for the date picker
         const today = new Date().toISOString().split('T')[0];
         document.getElementById('firstVisitDate').setAttribute('min', today);
-
-        // Form submission
-        function handleSignup(e) {
-            e.preventDefault();
-            const data = {
-                firstName: document.getElementById('firstName').value,
-                lastName: document.getElementById('lastName').value,
-                phone: document.getElementById('phone').value,
-                email: document.getElementById('email').value,
-                address: document.getElementById('address').value,
-                firstVisitDate: document.getElementById('firstVisitDate').value
-            };
-            // For now, show confirmation. Replace with Stripe/backend integration later.
-            document.querySelector('.signup-form').innerHTML = `
-                <div style="text-align: center; padding: 3rem 1rem;">
-                    <div style="font-size: 3rem; margin-bottom: 1rem;">&#10003;</div>
-                    <h2 style="font-family: 'Playfair Display', serif; color: var(--cream); margin-bottom: 1rem;">Welcome to The Handy Neighbor Co.</h2>
-                    <p style="color: var(--text-muted); line-height: 1.8; max-width: 400px; margin: 0 auto 1.5rem;">Thanks, ${data.firstName}! We&rsquo;ll confirm your first visit date and get you started on your $88/month plan within 24 hours.</p>
-                    <p style="color: var(--text-muted); font-size: 0.9rem;">Questions? Call or text <a href="tel:+14023502583" style="color: var(--accent);">(402) 350-2583</a></p>
-                </div>
-            `;
-        }
     </script>
 
 </body>
