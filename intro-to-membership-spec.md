@@ -13,7 +13,7 @@
 ### Page 1: Welcome
 - Personal welcome message from Josh
 - "You're in. Here's everything you need to know."
-- Quick summary: $88/month, 4 seasonal visits, all labor included, materials billed separately, cancel anytime
+- Quick summary: $99/month, 4 seasonal visits, all labor included, materials billed separately, cancel anytime
 
 ### Page 2: What's Included — Full Service List
 - All 29 included services with brief one-line descriptions grouped by category:
@@ -33,7 +33,7 @@
 - **Quarterly Visits:** Each season has a tailored checklist based on your home. You'll get a text when your visit is coming up with a time window. Most visits are 2–3 hours depending on your home's needs.
 - **Between Visits:** Text or call anytime with questions. If something comes up, we'll get it on the next visit or schedule a separate trip.
 - **Materials:** When a filter, battery, or part needs replacing, we use quality materials and bill them separately. You'll see an itemized list with every invoice.
-- **Billing:** $88/month, charged on the same date each month. Cancel anytime — no fees, no contracts, no awkward conversations.
+- **Billing:** $99/month, charged on the same date each month. Cancel anytime — no fees, no contracts, no awkward conversations.
 
 ### Page 5: What to Expect on Your First Visit
 - What to have ready (nothing complicated — just be home, point us to the furnace/water heater/etc.)
