@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Primary Meta Tags -->
-    <title>Home Maintenance in West Omaha | The Handy Neighbor Co.</title>
-    <meta name="description" content="Home maintenance membership at $99/mo in The Ridges &amp; West Omaha. Quarterly visits, flat-rate pricing, and a custom plan built for your home. Licensed, insured, owner-operated by Josh Davis.">
-    <meta name="keywords" content="handyman West Omaha, home maintenance West Omaha, handyman The Ridges, gutter cleaning West Omaha, flat rate handyman Omaha, pressure washing West Omaha, handyman near me Omaha NE, licensed handyman Omaha NE, Shadow Ridge handyman">
+    <title>Preventative Home Maintenance in West Omaha | The Handy Neighbor Co.</title>
+    <meta name="description" content="Preventative home maintenance for $99/mo in West Omaha. Four seasonal visits a year, a custom plan built for your home, flat-rate pricing. Owner-operated by Josh Davis.">
+    <meta name="keywords" content="preventative home maintenance Omaha, home maintenance subscription, handyman West Omaha, home maintenance The Ridges, seasonal home maintenance Omaha, flat rate handyman Omaha, handyman near me Omaha NE, Shadow Ridge handyman">
     <meta name="author" content="Josh Davis, The Handy Neighbor Co.">
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
     <link rel="canonical" href="https://thehandyneighbor.co/">
@@ -17,16 +17,16 @@
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://thehandyneighbor.co/">
-    <meta property="og:title" content="Routine Home Maintenance in West Omaha | The Handy Neighbor Co.">
-    <meta property="og:description" content="Home maintenance membership at $99/mo. Quarterly visits, flat-rate pricing, and a custom plan built for your home. Serving The Ridges &amp; surrounding neighborhoods.">
+    <meta property="og:title" content="Preventative home maintenance. Finally a thing. | The Handy Neighbor Co.">
+    <meta property="og:description" content="The first company that just takes care of your house. Four seasonal visits a year, a custom plan built for your home, $99/mo. Serving West Omaha.">
     <meta property="og:image" content="https://thehandyneighbor.co/logo-white.png">
     <meta property="og:locale" content="en_US">
     <meta property="og:site_name" content="The Handy Neighbor Co.">
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Routine Home Maintenance in West Omaha | The Handy Neighbor Co.">
-    <meta name="twitter:description" content="Home maintenance membership at $99/mo. Quarterly visits, flat-rate pricing, and a custom plan built for your home. Serving The Ridges &amp; surrounding neighborhoods.">
+    <meta name="twitter:title" content="Preventative home maintenance. Finally a thing.">
+    <meta name="twitter:description" content="The first company that just takes care of your house. Four seasonal visits a year, $99/mo. Serving West Omaha.">
     <meta name="twitter:image" content="https://thehandyneighbor.co/logo-white.png">
 
     <!-- Geo Tags (local search) -->
@@ -481,6 +481,11 @@
             .footer-grid { grid-template-columns: 1fr 1fr; }
             .testimonials-grid { grid-template-columns: 1fr; }
             #checkup > div > div { grid-template-columns: 1fr !important; }
+            .solution-grid { grid-template-columns: 1fr !important; gap: 1.5rem !important; }
+            .seasonal-grid { grid-template-columns: 1fr !important; gap: 1.5rem !important; }
+        }
+        @media (max-width: 1080px) and (min-width: 769px) {
+            .seasonal-grid { grid-template-columns: 1fr 1fr !important; }
         }
     </style>
 </head>
@@ -507,97 +512,41 @@
     <section class="hero" id="home">
         <div class="hero-content">
             <div class="hero-badge">Serving The Ridges &amp; Surrounding Neighborhoods</div>
-            <h1>Routine Home Maintenance You Can Count On</h1>
-            <div class="hero-subtitle">From dryer vents to gutters and all the small jobs you&rsquo;ve been putting off, our simple schedule ensures your home stays taken care of.</div>
+            <h1>Preventative home maintenance. Finally a thing.</h1>
+            <p style="font-size: clamp(1.05rem, 2vw, 1.25rem); color: var(--text-muted); max-width: 640px; margin: 1.75rem auto 2.5rem; line-height: 1.8;">You&rsquo;ve asked it: <em style="color: var(--cream); font-style: italic;">why isn&rsquo;t there a company that just takes care of my house?</em> There wasn&rsquo;t. There is now.</p>
+            <div class="hero-buttons">
+                <a href="signup.html" class="btn-primary">Get Your Free Home Assessment</a>
+            </div>
+            <p style="color: var(--text-muted); font-size: 0.78rem; margin-top: 2rem; letter-spacing: 2px; text-transform: uppercase;">Owner-Operated &middot; Insured &middot; West Omaha</p>
         </div>
+    </section>
 
-        <!-- MEMBERSHIP PLANS inside hero -->
-        <div id="pricing" style="position: relative; top: -80px;"></div>
-        <div style="max-width: 780px; margin: 3rem auto 0; position: relative; z-index: 1;">
-            <div class="pricing-card featured fade-in" style="padding: 3rem; text-align: center;">
-                <div class="pricing-label">The Handy Neighbor Plan</div>
-                <div class="pricing-amount">$99<span style="font-size: 1rem; color: var(--text-muted);">/mo</span></div>
-                <div class="pricing-period">cancel anytime &bull; no contracts</div>
-                <p style="color: var(--text-muted); font-size: 1.05rem; line-height: 1.7; margin: 1.5rem 0;">Four seasonal visits per year. All labor included. Materials billed separately.</p>
-
-                <!-- Included Services Checklist -->
-                <div style="text-align: left; margin: 2rem 0; border-top: 1px solid var(--border); padding-top: 1.5rem;">
-                    <p style="color: var(--accent); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; font-weight: 600; margin-bottom: 1rem; text-align: center;">What's Included</p>
-                    <ul class="plan-checklist" style="list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem 1.5rem; padding: 0; margin: 0;">
-                        <!-- Appliance Maintenance -->
-                        <li>Dryer Vent Cleaning</li>
-                        <li>HVAC Filter Replacement</li>
-                        <li>Fridge Coil Cleaning</li>
-                        <li>Fridge Water &amp; Air Filter Change</li>
-                        <li>Dishwasher Maintenance</li>
-                        <li>Washer Drain Pump Filter</li>
-                        <li>Thermostat Check &amp; Calibration</li>
-                        <li>Condensate Drain Maintenance</li>
-                        <li>Humidifier Pad Change</li>
-                        <li>Water Softener Check</li>
-                        <!-- Safety & Inspections -->
-                        <li>Smoke &amp; CO Detector Testing</li>
-                        <li>Electrical Safety Check</li>
-                        <li>Sump Pump Test</li>
-                        <li>GFI Outlet Testing</li>
-                        <li>Garage Door Safety Test</li>
-                        <li>Rodent Entry Point Inspection</li>
-                        <!-- Home Systems & Seasonal -->
-                        <li>Hose Bib Winterization</li>
-                        <li>Leak Check &ndash; Visible Plumbing</li>
-                        <li>Weatherstripping &amp; Door Sweeps</li>
-                        <li>Exterior Drainage Check</li>
-                        <li>Downspout Entry Clearing</li>
-                        <li>Water &amp; Air Quality Testing</li>
-                        <li>Fireplace Glass Cleaning</li>
-                        <li>Home Inspection Walkthrough</li>
-                        <li>Emergency Light Testing</li>
-                        <li>Showerhead Water Filter Change</li>
-                        <li>Ceiling Fan Direction Change</li>
-                        <li>Door Hinge Lubrication</li>
-                        <li>Cabinet Hardware Tightening</li>
-                    </ul>
+    <!-- WHAT CHANGES WHEN YOU HAVE US -->
+    <section class="solution" style="padding: 6rem 2rem; background: var(--dark-mid); position: relative; overflow: hidden;">
+        <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: radial-gradient(ellipse at 50% 0%, rgba(200,169,110,0.06) 0%, transparent 60%);"></div>
+        <div class="section-container" style="position: relative; z-index: 1;">
+            <div class="section-header">
+                <div class="section-label">The Solution</div>
+                <h2>What changes when you have us</h2>
+            </div>
+            <div class="solution-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; max-width: 1100px; margin: 0 auto;">
+                <div class="fade-in solution-card" style="background: rgba(44,72,89,0.4); border: 1px solid var(--border); border-radius: 12px; padding: 2.5rem 2rem;">
+                    <div style="color: var(--accent); font-family: 'Bebas Neue', sans-serif; font-size: 1.5rem; letter-spacing: 2px; margin-bottom: 0.75rem;">01</div>
+                    <h3 style="font-size: 1.25rem; color: var(--cream); margin-bottom: 1rem; font-weight: 700;">Your home gets its own plan.</h3>
+                    <p style="color: var(--text-muted); font-size: 0.98rem; line-height: 1.8;">We catalog every system in your house &mdash; appliances, HVAC, plumbing, water heater, sump pump, smoke detectors, the works &mdash; and build a maintenance schedule around what you actually have. Not a generic checklist. Yours.</p>
                 </div>
-
-                <!-- Add-On Services -->
-                <div style="text-align: left; margin: 1.5rem 0; border-top: 1px solid var(--border); padding-top: 1.5rem;">
-                    <p style="color: var(--text-muted); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; font-weight: 600; margin-bottom: 1rem; text-align: center;">Available Add-Ons</p>
-                    <ul class="plan-addons" style="list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem 1.5rem; padding: 0; margin: 0;">
-                        <li>Gutter Cleaning</li>
-                        <li>Pressure Washing</li>
-                        <li>Sprinkler Startup &amp; Inspection</li>
-                        <li>Sprinkler Blowout</li>
-                        <li>Water Heater Flush</li>
-                        <li>Gas Fireplace Inspection</li>
-                        <li>Deck &amp; Fence Staining</li>
-                        <li>Permanent Holiday Lights</li>
-                    </ul>
+                <div class="fade-in solution-card" style="background: rgba(44,72,89,0.4); border: 1px solid var(--border); border-radius: 12px; padding: 2.5rem 2rem;">
+                    <div style="color: var(--accent); font-family: 'Bebas Neue', sans-serif; font-size: 1.5rem; letter-spacing: 2px; margin-bottom: 0.75rem;">02</div>
+                    <h3 style="font-size: 1.25rem; color: var(--cream); margin-bottom: 1rem; font-weight: 700;">Four seasonal visits handle the work.</h3>
+                    <p style="color: var(--text-muted); font-size: 0.98rem; line-height: 1.8;">Spring, summer, fall, winter. Each visit we work through what&rsquo;s due &mdash; filters, flushes, tests, inspections, the small fixes that prevent the big ones. More gets done in a single visit than most homeowners do all year.</p>
                 </div>
-
-                <p style="color: var(--accent); font-size: 0.95rem; margin: 1.5rem 0 2rem;">$99/mo &times; 12 months = $1,188/year</p>
-                <a href="signup.html" class="btn-primary" style="width: 100%; max-width: 300px; display: inline-block; text-align: center; font-size: 1.1rem; padding: 1.1rem 2rem;">Get Started</a>
+                <div class="fade-in solution-card" style="background: rgba(44,72,89,0.4); border: 1px solid var(--border); border-radius: 12px; padding: 2.5rem 2rem;">
+                    <div style="color: var(--accent); font-family: 'Bebas Neue', sans-serif; font-size: 1.5rem; letter-spacing: 2px; margin-bottom: 0.75rem;">03</div>
+                    <h3 style="font-size: 1.25rem; color: var(--cream); margin-bottom: 1rem; font-weight: 700;">Nothing falls through the cracks.</h3>
+                    <p style="color: var(--text-muted); font-size: 0.98rem; line-height: 1.8;">Keeping a maintenance schedule current for every system in hundreds of homes was a tracking problem no person could solve &mdash; until AI made it possible. Software runs the schedule. A neighbor does the work.</p>
+                </div>
             </div>
         </div>
-
-        <!-- VALUE COMPARISON -->
-        <div style="text-align: center; max-width: 800px; margin: 2.5rem auto 0; position: relative; z-index: 1; display: grid; grid-template-columns: 1fr auto 1fr; gap: 1.5rem; align-items: center;">
-            <div style="background: rgba(44,72,89,0.5); border: 1px solid var(--border); border-radius: 8px; padding: 1.5rem;">
-                <p style="color: var(--text-muted); font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 0.5rem;">Without Us</p>
-                <p style="color: var(--cream); font-family: 'Playfair Display', serif; font-size: 1.5rem;">$3,000&ndash;$4,000+</p>
-                <p style="color: var(--text-muted); font-size: 0.85rem;">per year hiring individual pros</p>
-            </div>
-            <div style="color: var(--accent); font-size: 1.5rem; font-weight: 700;">vs</div>
-            <div style="background: rgba(200,169,110,0.1); border: 2px solid var(--accent); border-radius: 8px; padding: 1.5rem;">
-                <p style="color: var(--accent); font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 0.5rem;">With The Handy Neighbor</p>
-                <p style="color: var(--cream); font-family: 'Playfair Display', serif; font-size: 1.5rem;">$1,188</p>
-                <p style="color: var(--text-muted); font-size: 0.85rem;">per year &mdash; all labor included</p>
-            </div>
-        </div>
-
-        <style media="screen and (max-width: 768px)">
-            .pricing-value-grid { grid-template-columns: 1fr !important; }
-            .pricing-vs-divider { display: none; }
-        </style>
     </section>
 
     <!-- VALUE PROP + TRUST BAR -->
@@ -623,53 +572,93 @@
         </div>
     </div>
 
-    <!-- ESSENTIAL SERVICES -->
+    <!-- SEASONAL VISITS -->
     <section class="services" id="services">
         <div class="section-container">
             <div class="section-header">
-                <div class="section-label">What Gets Handled</div>
-                <h2>Highlighted Home Services</h2>
-                <p>These are the jobs that protect your home, save you money long-term, and quietly fall off the list every season. Your membership starts here.</p>
+                <div class="section-label">What's Included</div>
+                <h2>Four visits a year. Built around your home.</h2>
+                <p>Each visit is a curated package of maintenance that&rsquo;s due that season. Here&rsquo;s a sample of what gets handled &mdash; the actual list is built specifically for your home.</p>
             </div>
-            <div class="services-grid">
+            <div class="seasonal-grid" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem;">
+
                 <div class="service-card fade-in">
-                    <div class="service-icon"><svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20 6C20 6 14 16 14 22C14 25.3 16.7 28 20 28C23.3 28 26 25.3 26 22C26 16 20 6 20 6Z" stroke="white" stroke-width="2" fill="none"/><path d="M17 23C17 24.7 18.3 26 20 26" stroke="white" stroke-width="1.5" stroke-linecap="round" opacity="0.6"/><path d="M8 34H32" stroke="white" stroke-width="2" stroke-linecap="round" opacity="0.4"/><path d="M11 31H29" stroke="white" stroke-width="1.5" stroke-linecap="round" opacity="0.3"/></svg></div>
-                    <h3>Clean Air &amp; Clean Water</h3>
-                    <div class="service-meta"><span>Included</span></div>
-                    <p>HVAC filters, refrigerator water filters, refrigerator air filters, and showerhead filters &mdash; your home is full of filters working to keep your air clean and your water safe. When they fall behind, air quality drops and water picks up what it shouldn&rsquo;t. Regular replacement keeps your family breathing and drinking clean.</p>
+                    <div class="service-meta" style="margin-bottom: 1rem;"><span>Spring</span></div>
+                    <h3>Spring Home Startup</h3>
+                    <p style="color: var(--text-muted); font-size: 0.92rem; line-height: 1.7; margin-top: 1rem;">After a long winter, your home needs a wake-up. We test the sump pump, swap your water and air filters, prep the AC, and clear drainage before the storms roll in.</p>
+                    <ul style="list-style: none; margin-top: 1.25rem; padding: 0;">
+                        <li style="color: var(--text-light); font-size: 0.88rem; padding: 0.3rem 0; padding-left: 1.4rem; position: relative;"><span style="color: var(--accent); position: absolute; left: 0;">&#9733;</span> Sump pump check &amp; test</li>
+                        <li style="color: var(--text-light); font-size: 0.88rem; padding: 0.3rem 0; padding-left: 1.4rem; position: relative;"><span style="color: var(--accent); position: absolute; left: 0;">&#9733;</span> Water &amp; air filter swaps</li>
+                        <li style="color: var(--text-light); font-size: 0.88rem; padding: 0.3rem 0; padding-left: 1.4rem; position: relative;"><span style="color: var(--accent); position: absolute; left: 0;">&#9733;</span> Downspout &amp; window well clearing</li>
+                        <li style="color: var(--text-light); font-size: 0.88rem; padding: 0.3rem 0; padding-left: 1.4rem; position: relative;"><span style="color: var(--accent); position: absolute; left: 0;">&#9733;</span> Water &amp; indoor air quality testing</li>
+                    </ul>
                 </div>
+
                 <div class="service-card fade-in">
-                    <div class="service-icon"><svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="6" y="12" width="28" height="20" rx="3" stroke="white" stroke-width="2" fill="none"/><circle cx="20" cy="22" r="5" stroke="white" stroke-width="1.5" fill="none"/><path d="M18 22L20 24L22.5 20" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.7"/><path d="M10 12V9H30V12" stroke="white" stroke-width="2" fill="none" opacity="0.5"/><path d="M13 32V35M27 32V35" stroke="white" stroke-width="2" stroke-linecap="round" opacity="0.4"/></svg></div>
-                    <h3>Appliance Maintenance</h3>
-                    <div class="service-meta"><span>Included</span></div>
-                    <p>Ever wonder why your dishwasher smells? It&rsquo;s the lift pump filter &mdash; and almost nobody knows to clean it. Sprayer flush, filter cleaning, and a full maintenance cycle get your dishes actually clean again. Front-load washers have the same problem &mdash; that musty smell is usually the drain pump filter sitting full of gunk. Same visit covers dryer vent cleaning and hose checks.</p>
+                    <div class="service-meta" style="margin-bottom: 1rem;"><span>Summer</span></div>
+                    <h3>Summer Efficiency Check</h3>
+                    <p style="color: var(--text-muted); font-size: 0.92rem; line-height: 1.7; margin-top: 1rem;">The maintenance most homeowners never get to. Dishwasher actually clean. Fridge coils degreased. Faucets descaled. The lightbulbs you can&rsquo;t reach? Handled.</p>
+                    <ul style="list-style: none; margin-top: 1.25rem; padding: 0;">
+                        <li style="color: var(--text-light); font-size: 0.88rem; padding: 0.3rem 0; padding-left: 1.4rem; position: relative;"><span style="color: var(--accent); position: absolute; left: 0;">&#9733;</span> Dishwasher full maintenance</li>
+                        <li style="color: var(--text-light); font-size: 0.88rem; padding: 0.3rem 0; padding-left: 1.4rem; position: relative;"><span style="color: var(--accent); position: absolute; left: 0;">&#9733;</span> Refrigerator coil cleaning</li>
+                        <li style="color: var(--text-light); font-size: 0.88rem; padding: 0.3rem 0; padding-left: 1.4rem; position: relative;"><span style="color: var(--accent); position: absolute; left: 0;">&#9733;</span> Faucet &amp; showerhead descaling</li>
+                        <li style="color: var(--text-light); font-size: 0.88rem; padding: 0.3rem 0; padding-left: 1.4rem; position: relative;"><span style="color: var(--accent); position: absolute; left: 0;">&#9733;</span> High-ladder bulb replacement</li>
+                    </ul>
                 </div>
+
                 <div class="service-card fade-in">
-                    <div class="service-icon"><svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10 34V14L20 8L30 14V34" stroke="white" stroke-width="2" fill="none" stroke-linejoin="round"/><path d="M15 34V26H25V34" stroke="white" stroke-width="1.5" fill="none" opacity="0.5"/><path d="M18 20L20 14L22 20" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.7"/><path d="M17 20H23" stroke="white" stroke-width="1" opacity="0.4"/><circle cx="20" cy="17" r="1" fill="white" opacity="0.5"/></svg></div>
-                    <h3>Fireplace Maintenance</h3>
-                    <div class="service-meta"><span>Included</span></div>
-                    <p>When&rsquo;s the last time you could actually see the flames? Most homeowners don&rsquo;t realize how much better their fireplace looks until the glass is pulled and cleaned. That hazy film builds up slowly &mdash; then one cleaning and it&rsquo;s like a brand new unit. Full service includes glass cleaning, inspection, and seasonal startup.</p>
+                    <div class="service-meta" style="margin-bottom: 1rem;"><span>Fall</span></div>
+                    <h3>Fall Winterization</h3>
+                    <p style="color: var(--text-muted); font-size: 0.92rem; line-height: 1.7; margin-top: 1rem;">We get your home buttoned up before the cold. Dryer vent cleaning is the anchor &mdash; the single most-overlooked fire hazard in a house. Then we winterize the rest.</p>
+                    <ul style="list-style: none; margin-top: 1.25rem; padding: 0;">
+                        <li style="color: var(--text-light); font-size: 0.88rem; padding: 0.3rem 0; padding-left: 1.4rem; position: relative;"><span style="color: var(--accent); position: absolute; left: 0;">&#9733;</span> Dryer vent cleaning</li>
+                        <li style="color: var(--text-light); font-size: 0.88rem; padding: 0.3rem 0; padding-left: 1.4rem; position: relative;"><span style="color: var(--accent); position: absolute; left: 0;">&#9733;</span> Hose bib winterization</li>
+                        <li style="color: var(--text-light); font-size: 0.88rem; padding: 0.3rem 0; padding-left: 1.4rem; position: relative;"><span style="color: var(--accent); position: absolute; left: 0;">&#9733;</span> Weatherstripping &amp; door sweeps</li>
+                        <li style="color: var(--text-light); font-size: 0.88rem; padding: 0.3rem 0; padding-left: 1.4rem; position: relative;"><span style="color: var(--accent); position: absolute; left: 0;">&#9733;</span> Smoke &amp; CO detector testing</li>
+                    </ul>
                 </div>
+
                 <div class="service-card fade-in">
-                    <div class="service-icon"><svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="20" cy="20" r="14" stroke="white" stroke-width="2" fill="none"/><path d="M14 16H26" stroke="white" stroke-width="1.5" opacity="0.5"/><path d="M14 20H26" stroke="white" stroke-width="1.5" opacity="0.5"/><path d="M14 24H26" stroke="white" stroke-width="1.5" opacity="0.5"/><path d="M20 12V28" stroke="white" stroke-width="1.5" opacity="0.3"/><circle cx="20" cy="20" r="3" fill="white" opacity="0.7"/><path d="M20 17V13" stroke="white" stroke-width="2" stroke-linecap="round"/></svg></div>
-                    <h3>Water &amp; Air Testing</h3>
-                    <div class="service-meta"><span>Included</span></div>
-                    <p>When&rsquo;s the last time you tested your water for chlorine, pH, lead, hardness, or nitrates? Or checked your indoor air for humidity, CO2, particulates, or VOCs? Most families have no idea what they&rsquo;re breathing or drinking. Routine testing gives you real numbers &mdash; and a clear picture of what your home actually needs.</p>
+                    <div class="service-meta" style="margin-bottom: 1rem;"><span>Winter</span></div>
+                    <h3>Winter Deep Care</h3>
+                    <p style="color: var(--text-muted); font-size: 0.92rem; line-height: 1.7; margin-top: 1rem;">Indoor focus on the systems running hardest. Water heater flushed and anode rod checked &mdash; the maintenance that adds years to its life. Laundry and interior plumbing follow.</p>
+                    <ul style="list-style: none; margin-top: 1.25rem; padding: 0;">
+                        <li style="color: var(--text-light); font-size: 0.88rem; padding: 0.3rem 0; padding-left: 1.4rem; position: relative;"><span style="color: var(--accent); position: absolute; left: 0;">&#9733;</span> Water heater flush + anode check</li>
+                        <li style="color: var(--text-light); font-size: 0.88rem; padding: 0.3rem 0; padding-left: 1.4rem; position: relative;"><span style="color: var(--accent); position: absolute; left: 0;">&#9733;</span> Washer drain pump filter</li>
+                        <li style="color: var(--text-light); font-size: 0.88rem; padding: 0.3rem 0; padding-left: 1.4rem; position: relative;"><span style="color: var(--accent); position: absolute; left: 0;">&#9733;</span> Interior plumbing inspection</li>
+                        <li style="color: var(--text-light); font-size: 0.88rem; padding: 0.3rem 0; padding-left: 1.4rem; position: relative;"><span style="color: var(--accent); position: absolute; left: 0;">&#9733;</span> Fireplace glass cleaning</li>
+                    </ul>
                 </div>
-                <div class="service-card fade-in">
-                    <div class="service-icon"><svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="20" cy="18" r="4" stroke="white" stroke-width="2" fill="none"/><path d="M20 22V30" stroke="white" stroke-width="2" stroke-linecap="round"/><path d="M16 28H24" stroke="white" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/><path d="M10 34H30" stroke="white" stroke-width="2" stroke-linecap="round" opacity="0.4"/><path d="M12 10L14 12M28 10L26 12" stroke="white" stroke-width="1.5" stroke-linecap="round" opacity="0.4"/><path d="M20 6V8" stroke="white" stroke-width="2" stroke-linecap="round" opacity="0.5"/></svg></div>
-                    <h3>Sprinkler Blowout &amp; Spring Setup</h3>
-                    <div class="service-meta"><span>Add-On</span></div>
-                    <p>Fall blowout. Spring startup. The two appointments every Omaha homeowner scrambles to book. Handled automatically as part of your plan &mdash; no phone calls, no forgetting, no frozen lines.</p>
-                </div>
-                <div class="service-card fade-in">
-                    <div class="service-icon"><svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 12H34V16C34 16 32 18 32 22V30C32 32 30 34 28 34H12C10 34 8 32 8 30V22C8 18 6 16 6 16V12Z" stroke="white" stroke-width="2" fill="none"/><path d="M12 34V36" stroke="white" stroke-width="2" stroke-linecap="round" opacity="0.5"/><path d="M28 34V36" stroke="white" stroke-width="2" stroke-linecap="round" opacity="0.5"/><path d="M16 22C16 22 18 26 20 26C22 26 24 22 24 22" stroke="white" stroke-width="1.5" opacity="0.5"/></svg></div>
-                    <h3>Downspouts &amp; Drainage</h3>
-                    <div class="service-meta"><span>Included</span></div>
-                    <p>Clogged downspouts and window wells push water toward your foundation &mdash; the most expensive part of any home to repair. Seasonal clearing reduces the likelihood of water damage and costly foundation issues.</p>
-                </div>
+
             </div>
 
+            <p style="text-align: center; color: var(--text-muted); font-size: 0.95rem; margin-top: 3rem; max-width: 720px; margin-left: auto; margin-right: auto; line-height: 1.7;">Add-ons available at member rates: gutter cleaning, pressure washing, sprinkler startup &amp; blowout, gas fireplace inspection, deck &amp; fence staining, permanent holiday lights, and more.</p>
+        </div>
+    </section>
+
+    <!-- PRICING -->
+    <section class="pricing" id="pricing">
+        <div class="section-container" style="max-width: 600px;">
+            <div class="section-header">
+                <div class="section-label">Membership</div>
+                <h2>One simple plan</h2>
+                <p>One price. All four seasonal visits. Cancel anytime.</p>
+            </div>
+            <div class="pricing-card featured fade-in" style="text-align: center;">
+                <div class="pricing-label">The Handy Neighbor Plan</div>
+                <div class="pricing-amount">$99<span style="font-size: 1rem; color: var(--text-muted);">/mo</span></div>
+                <div class="pricing-period">cancel anytime &bull; no contracts</div>
+                <p style="color: var(--text-muted); font-size: 1.05rem; line-height: 1.7; margin: 1.5rem 0;">Four seasonal visits per year. All labor included. Materials billed separately.</p>
+                <ul class="pricing-features" style="list-style: none; text-align: left; margin: 1.5rem 0 2rem;">
+                    <li>Spring &middot; Summer &middot; Fall &middot; Winter visits</li>
+                    <li>Custom plan built for your home</li>
+                    <li>Member rates on add-on services</li>
+                    <li>Owner-operated &mdash; same person every visit</li>
+                    <li>Cancel anytime, no contracts</li>
+                </ul>
+                <a href="signup.html" class="btn-primary" style="width: 100%; max-width: 320px; display: inline-block; text-align: center; font-size: 1.05rem; padding: 1.1rem 2rem;">Get Started</a>
+                <p style="color: var(--text-muted); font-size: 0.85rem; margin-top: 1.25rem;">Or <a href="signup.html" style="color: var(--accent); text-decoration: none;">book your Free Home Assessment</a> first.</p>
+            </div>
         </div>
     </section>
 
