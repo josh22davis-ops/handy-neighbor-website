@@ -90,28 +90,57 @@
             max-width: 800px; margin: 0 auto; padding: 5rem 2rem;
         }
 
-        .coming-soon {
-            text-align: center; padding: 4rem 2rem;
-            border: 2px dashed var(--border); border-radius: 16px;
-            background: rgba(44,72,89,0.3);
+        .post-list { display: grid; gap: 1.5rem; }
+        .post-card {
+            display: block; text-decoration: none;
+            background: rgba(44,72,89,0.5); border: 1px solid var(--border);
+            border-radius: 12px; padding: 2rem 2.25rem;
+            transition: all 0.3s ease;
         }
-        .coming-soon h3 {
-            font-family: 'Playfair Display', serif; font-size: 1.8rem;
-            color: var(--cream); margin-bottom: 1rem;
+        .post-card:hover {
+            border-color: var(--accent);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.2);
         }
-        .coming-soon p {
-            color: var(--text-muted); max-width: 450px; margin: 0 auto 2rem; line-height: 1.8;
+        .post-card .post-meta {
+            display: flex; gap: 0.75rem; align-items: center; flex-wrap: wrap;
+            font-size: 0.75rem; color: var(--text-muted);
+            letter-spacing: 1.5px; text-transform: uppercase;
+            margin-bottom: 1rem;
+        }
+        .post-card .post-meta .tag {
+            color: var(--accent); font-weight: 600;
+        }
+        .post-card .post-meta .dot { color: var(--accent); opacity: 0.6; }
+        .post-card h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(1.35rem, 2.5vw, 1.7rem); font-weight: 900;
+            color: var(--cream); margin-bottom: 0.75rem; line-height: 1.25;
+        }
+        .post-card p {
+            color: var(--text-muted); font-size: 1rem; line-height: 1.7;
+            margin-bottom: 1.25rem;
+        }
+        .post-card .read-more {
+            color: var(--accent); font-size: 0.85rem; font-weight: 600;
+            text-transform: uppercase; letter-spacing: 1.5px;
+        }
+        .post-card .read-more::after { content: ' \2192'; }
+
+        .notify-section {
+            margin-top: 4rem; padding: 3rem 2rem;
+            border: 1px solid var(--border); border-radius: 12px;
+            background: rgba(44,72,89,0.3); text-align: center;
+        }
+        .notify-section h3 {
+            font-family: 'Playfair Display', serif; font-size: 1.5rem;
+            color: var(--cream); margin-bottom: 0.5rem;
+        }
+        .notify-section p {
+            color: var(--text-muted); max-width: 450px; margin: 0 auto 1.5rem; font-size: 0.95rem; line-height: 1.7;
         }
 
-        .topic-tags { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.75rem; margin-top: 2rem; }
-        .topic-tag {
-            display: inline-block; padding: 0.5rem 1.25rem; border: 1px solid var(--border);
-            border-radius: 100px; color: var(--text-muted); font-size: 0.85rem; font-weight: 500;
-            transition: all 0.3s;
-        }
-        .topic-tag:hover { border-color: var(--accent); color: var(--accent); }
-
-        .notify-form { margin-top: 2.5rem; display: flex; gap: 0.75rem; max-width: 400px; margin-left: auto; margin-right: auto; }
+        .notify-form { display: flex; gap: 0.75rem; max-width: 400px; margin-left: auto; margin-right: auto; }
         .notify-form input {
             flex: 1; padding: 0.8rem 1rem; background: rgba(44,72,89,0.5);
             border: 1px solid var(--border); border-radius: 6px; color: var(--cream);
@@ -160,23 +189,30 @@
     <section class="page-hero">
         <div class="label">From the Toolbox</div>
         <h1>The Handy Neighbor Blog</h1>
-        <p>Home maintenance tips, seasonal checklists, and updates from the neighborhood routes.</p>
+        <p>Home maintenance explained &mdash; what to do, why it matters, and how to keep your home running the way it should.</p>
     </section>
 
     <section class="blog-content">
-        <div class="coming-soon">
-            <h2 style="font-size:1.5rem;">Posts Coming Soon</h2>
-            <p>Helpful content is on the way &mdash; seasonal maintenance guides, common homeowner questions answered, and behind-the-scenes from the service days.</p>
+        <div class="post-list">
 
-            <div class="topic-tags">
-                <span class="topic-tag">Seasonal Checklists</span>
-                <span class="topic-tag">Gutter Maintenance</span>
-                <span class="topic-tag">HVAC Tips</span>
-                <span class="topic-tag">Home Safety</span>
-                <span class="topic-tag">Pressure Washing</span>
-                <span class="topic-tag">Omaha Weather Prep</span>
-            </div>
+            <a href="merv-rating-air-filter-guide.html" class="post-card">
+                <div class="post-meta">
+                    <span class="tag">HVAC &amp; Air Quality</span>
+                    <span class="dot">&bull;</span>
+                    <span>May 11, 2026</span>
+                    <span class="dot">&bull;</span>
+                    <span>6 min read</span>
+                </div>
+                <h2>Why Your Air Filter&rsquo;s MERV Rating Matters More Than You Think</h2>
+                <p>That cheap filter you grabbed at the hardware store is essentially a dust collector. It protects your HVAC equipment but does almost nothing for the air your family breathes. Here&rsquo;s what the MERV scale actually means, why higher-rated filters catch viruses and bacteria, and the simple seasonal habit that keeps the whole system working the way it should.</p>
+                <span class="read-more">Read the guide</span>
+            </a>
 
+        </div>
+
+        <div class="notify-section">
+            <h3>More posts on the way</h3>
+            <p>Seasonal maintenance guides, common homeowner questions, and quick reads from the field. Drop your email to get notified when the next one goes up.</p>
             <div class="notify-form">
                 <input type="email" placeholder="Enter your email" aria-label="Email for blog notifications">
                 <button onclick="this.parentElement.innerHTML='<p style=\'color:var(--accent);font-weight:600;padding:0.8rem;\'>You\'re on the list!</p>'">Notify Me</button>
