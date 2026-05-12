@@ -190,6 +190,21 @@
         }
         .callout p::first-letter { all: revert; }
 
+        /* MERV Image Figure */
+        figure.merv-figure {
+            margin: 2.5rem 0 1rem; padding: 0; text-align: center;
+        }
+        figure.merv-figure img {
+            max-width: 100%; height: auto; display: block;
+            margin: 0 auto; border-radius: 12px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+        }
+        figure.merv-figure figcaption {
+            color: var(--text-muted); font-size: 0.88rem;
+            margin-top: 1rem; font-style: italic;
+            font-family: 'Inter', sans-serif;
+        }
+
         /* ============ CTA CARD ============ */
         .article-cta {
             max-width: 720px; margin: 4rem auto 0; padding: 0 2rem;
@@ -328,6 +343,11 @@
         <p>MERV stands for Minimum Efficiency Reporting Value. It&rsquo;s a scale from 1 to 20 that tells you how effective your air filter is at catching particles of different sizes. The higher the MERV number, the smaller the particles it can trap.</p>
 
         <p>Think of it like a net. A low-MERV filter is like a fishing net with wide holes &mdash; it catches the big stuff but lets the small stuff swim right through. A high-MERV filter is like a fine mesh that catches nearly everything.</p>
+
+        <figure class="merv-figure">
+            <img src="merv-rating-guide.png" alt="MERV Rating Air Filter Guide — a color-coded scale from MERV 1 to 16 showing what each rating level catches. Lower ratings (1-4) catch pollen, large dust, and lint. Mid-range (8-12) catches molds and fine dust. Higher ratings (13-16) catch bacteria, virus carriers, and smoke.">
+            <figcaption>The MERV scale at a glance &mdash; pollen and lint at the low end, bacteria and viruses at the high end.</figcaption>
+        </figure>
 
         <p>Here&rsquo;s a quick breakdown of what different MERV ranges actually catch:</p>
 

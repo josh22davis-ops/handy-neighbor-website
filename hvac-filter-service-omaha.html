@@ -134,6 +134,20 @@
         a.inline-link { color: var(--accent); text-decoration: underline; text-underline-offset: 3px; }
         a.inline-link:hover { color: var(--accent-dark); }
 
+        /* MERV Image Figure */
+        figure.merv-figure {
+            margin: 2.5rem auto 0; padding: 0; text-align: center;
+        }
+        figure.merv-figure img {
+            max-width: 100%; height: auto; display: block;
+            margin: 0 auto; border-radius: 12px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+        }
+        figure.merv-figure figcaption {
+            color: var(--text-muted); font-size: 0.88rem;
+            margin-top: 1rem; font-style: italic;
+        }
+
         /* What's Included */
         .included-list {
             background-color: rgba(200, 169, 110, 0.08);
@@ -259,6 +273,11 @@
             <p>If you&rsquo;re like most homeowners, you grabbed whatever was cheapest at the hardware store, slid it in, and forgot about it. And that&rsquo;s a problem &mdash; because the basic filters most people buy are essentially dust collectors. They keep your HVAC blower from getting gunked up. That&rsquo;s about it. They&rsquo;re doing almost nothing for the air your family actually breathes.</p>
             <p>A properly rated MERV 13 filter, on the other hand, captures particles down to 0.3 microns &mdash; the size range where viruses, bacteria, and other airborne pathogens live. The EPA estimates indoor air can be two to five times more polluted than outdoor air, and your HVAC filter is the single biggest tool you have to do something about that. But only if the filter is up to the job &mdash; and only if it gets replaced before it chokes your system.</p>
             <p>The catch: higher-rated filters fill up faster, custom HVAC systems take custom sizes, and most homeowners forget which size they bought last time. That&rsquo;s why we built filter service into every membership.</p>
+
+            <figure class="merv-figure">
+                <img src="merv-rating-guide.png" alt="MERV Rating Air Filter Guide — a color-coded scale from MERV 1 to 16 showing what each rating level catches. Lower ratings (1-4) catch pollen, large dust, and lint. Mid-range (8-12) catches molds and fine dust. Higher ratings (13-16) catch bacteria, virus carriers, and smoke.">
+                <figcaption>What each MERV rating level catches &mdash; from basic dust at the bottom to viruses and smoke at the top.</figcaption>
+            </figure>
         </section>
 
         <section>
