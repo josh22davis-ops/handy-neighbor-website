@@ -87,14 +87,34 @@
         .page-hero p { color: var(--text-muted); max-width: 550px; margin: 0 auto; font-size: 1.1rem; line-height: 1.8; }
 
         .blog-content {
-            max-width: 800px; margin: 0 auto; padding: 5rem 2rem;
+            max-width: 1100px; margin: 0 auto; padding: 5rem 2rem;
         }
 
-        .post-list { display: grid; gap: 1.5rem; }
+        .category-section { margin-bottom: 4rem; }
+        .category-section:last-of-type { margin-bottom: 2rem; }
+        .category-header {
+            display: flex; align-items: baseline; gap: 1rem;
+            margin-bottom: 1.5rem; padding-bottom: 0.75rem;
+            border-bottom: 1px solid var(--border);
+        }
+        .category-header h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(1.5rem, 3vw, 2rem); font-weight: 900;
+            color: var(--cream); line-height: 1.2;
+        }
+        .category-header .count {
+            font-family: 'Bebas Neue', sans-serif; letter-spacing: 2px;
+            color: var(--accent); font-size: 0.9rem;
+        }
+
+        .post-list {
+            display: grid; gap: 1.25rem;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+        }
         .post-card {
-            display: block; text-decoration: none;
+            display: flex; flex-direction: column; text-decoration: none;
             background: rgba(44,72,89,0.5); border: 1px solid var(--border);
-            border-radius: 12px; padding: 2rem 2.25rem;
+            border-radius: 12px; padding: 1.75rem 1.85rem;
             transition: all 0.3s ease;
         }
         .post-card:hover {
@@ -103,29 +123,31 @@
             box-shadow: 0 8px 30px rgba(0,0,0,0.2);
         }
         .post-card .post-meta {
-            display: flex; gap: 0.75rem; align-items: center; flex-wrap: wrap;
-            font-size: 0.75rem; color: var(--text-muted);
+            display: flex; gap: 0.5rem; align-items: center; flex-wrap: wrap;
+            font-size: 0.7rem; color: var(--text-muted);
             letter-spacing: 1.5px; text-transform: uppercase;
-            margin-bottom: 1rem;
+            margin-bottom: 0.85rem;
         }
-        .post-card .post-meta .tag {
-            color: var(--accent); font-weight: 600;
-        }
+        .post-card .post-meta .tag { color: var(--accent); font-weight: 600; }
         .post-card .post-meta .dot { color: var(--accent); opacity: 0.6; }
-        .post-card h2 {
+        .post-card h3 {
             font-family: 'Playfair Display', serif;
-            font-size: clamp(1.35rem, 2.5vw, 1.7rem); font-weight: 900;
-            color: var(--cream); margin-bottom: 0.75rem; line-height: 1.25;
+            font-size: 1.2rem; font-weight: 900;
+            color: var(--cream); margin-bottom: 0.7rem; line-height: 1.3;
         }
         .post-card p {
-            color: var(--text-muted); font-size: 1rem; line-height: 1.7;
-            margin-bottom: 1.25rem;
+            color: var(--text-muted); font-size: 0.93rem; line-height: 1.6;
+            margin-bottom: 1.1rem; flex: 1;
         }
         .post-card .read-more {
-            color: var(--accent); font-size: 0.85rem; font-weight: 600;
+            color: var(--accent); font-size: 0.78rem; font-weight: 600;
             text-transform: uppercase; letter-spacing: 1.5px;
         }
         .post-card .read-more::after { content: ' \2192'; }
+        .post-card.featured {
+            background: linear-gradient(135deg, rgba(44,72,89,0.7) 0%, rgba(200,169,110,0.06) 100%);
+            border: 1px solid rgba(200,169,110,0.35);
+        }
 
         .notify-section {
             margin-top: 4rem; padding: 3rem 2rem;
@@ -193,21 +215,225 @@
     </section>
 
     <section class="blog-content">
-        <div class="post-list">
 
-            <a href="merv-rating-air-filter-guide.html" class="post-card">
-                <div class="post-meta">
-                    <span class="tag">HVAC &amp; Air Quality</span>
-                    <span class="dot">&bull;</span>
-                    <span>May 11, 2026</span>
-                    <span class="dot">&bull;</span>
-                    <span>6 min read</span>
-                </div>
-                <h2>Why Your Air Filter&rsquo;s MERV Rating Matters More Than You Think</h2>
-                <p>That cheap filter you grabbed at the hardware store is essentially a dust collector. It protects your HVAC equipment but does almost nothing for the air your family breathes. Here&rsquo;s what the MERV scale actually means, why higher-rated filters catch viruses and bacteria, and the simple seasonal habit that keeps the whole system working the way it should.</p>
-                <span class="read-more">Read the guide</span>
-            </a>
+        <!-- HVAC & Air Quality -->
+        <div class="category-section">
+            <div class="category-header">
+                <h2>HVAC &amp; Air Quality</h2>
+                <span class="count">2 GUIDES</span>
+            </div>
+            <div class="post-list">
+                <a href="merv-rating-air-filter-guide.html" class="post-card featured">
+                    <div class="post-meta">
+                        <span class="tag">HVAC &amp; Air Quality</span>
+                        <span class="dot">&bull;</span>
+                        <span>6 min read</span>
+                    </div>
+                    <h3>Why Your Air Filter&rsquo;s MERV Rating Matters More Than You Think</h3>
+                    <p>The difference between a $3 dust collector and a MERV 13 filter is the difference between wiping a counter and disinfecting it. What the scale actually means, why dense filters need seasonal swaps, and why your HVAC system might already be the right partner for upgrading.</p>
+                    <span class="read-more">Read the guide</span>
+                </a>
+                <a href="ceiling-fan-direction-seasonal.html" class="post-card">
+                    <div class="post-meta">
+                        <span class="tag">HVAC &amp; Air Quality</span>
+                        <span class="dot">&bull;</span>
+                        <span>3 min read</span>
+                    </div>
+                    <h3>Why Your Ceiling Fan Has a Switch You&rsquo;ve Never Used</h3>
+                    <p>Counter-clockwise in summer, clockwise in winter. The tiny switch on every ceiling fan reverses the blade direction, and most homeowners have never touched it. A 10-second adjustment that meaningfully changes your energy bill.</p>
+                    <span class="read-more">Read the guide</span>
+                </a>
+            </div>
+        </div>
 
+        <!-- Plumbing & Water -->
+        <div class="category-section">
+            <div class="category-header">
+                <h2>Plumbing &amp; Water</h2>
+                <span class="count">5 GUIDES</span>
+            </div>
+            <div class="post-list">
+                <a href="refrigerator-water-filter-replacement.html" class="post-card">
+                    <div class="post-meta">
+                        <span class="tag">Plumbing &amp; Water</span>
+                        <span class="dot">&bull;</span>
+                        <span>5 min read</span>
+                    </div>
+                    <h3>What&rsquo;s Actually in Your Fridge Water?</h3>
+                    <p>Most fridge filters have a 6-month or 200-gallon lifespan. After that, they&rsquo;re not just ineffective &mdash; they can harbor bacteria. What Omaha tap water contains, why filters expire, and what an old one does to the water you&rsquo;re drinking.</p>
+                    <span class="read-more">Read the guide</span>
+                </a>
+                <a href="showerhead-filter-chlorine-omaha.html" class="post-card">
+                    <div class="post-meta">
+                        <span class="tag">Plumbing &amp; Water</span>
+                        <span class="dot">&bull;</span>
+                        <span>5 min read</span>
+                    </div>
+                    <h3>The Showerhead Filter Nobody Talks About</h3>
+                    <p>Omaha&rsquo;s water is treated with chlorine and chloramine. A $20 showerhead filter removes 90%+ of it &mdash; and most homeowners have never heard of them. Simple install, surprising quality-of-life upgrade for skin, hair, and indoor air.</p>
+                    <span class="read-more">Read the guide</span>
+                </a>
+                <a href="sump-pump-maintenance-omaha.html" class="post-card">
+                    <div class="post-meta">
+                        <span class="tag">Plumbing &amp; Water</span>
+                        <span class="dot">&bull;</span>
+                        <span>5 min read</span>
+                    </div>
+                    <h3>Why Your Sump Pump Will Fail When You Need It Most</h3>
+                    <p>Sump pumps sit idle for months, then have to work perfectly during the first heavy rain of spring. Float switches stick, check valves fail, backup batteries die. A simple spring test catches problems before your basement floods.</p>
+                    <span class="read-more">Read the guide</span>
+                </a>
+                <a href="shut-off-valve-maintenance.html" class="post-card">
+                    <div class="post-meta">
+                        <span class="tag">Plumbing &amp; Water</span>
+                        <span class="dot">&bull;</span>
+                        <span>4 min read</span>
+                    </div>
+                    <h3>That Valve Under Your Sink Could Flood Your Kitchen</h3>
+                    <p>Supply line shut-off valves corrode in the open position. When a hose under your sink fails &mdash; and rubber ones eventually do &mdash; you need that valve to turn. If it&rsquo;s seized, you&rsquo;re running for the main while water pours.</p>
+                    <span class="read-more">Read the guide</span>
+                </a>
+                <a href="water-heater-anode-rod-guide.html" class="post-card">
+                    <div class="post-meta">
+                        <span class="tag">Plumbing &amp; Water</span>
+                        <span class="dot">&bull;</span>
+                        <span>5 min read</span>
+                    </div>
+                    <h3>The $2,000 Part Inside Your Water Heater You&rsquo;ve Never Heard Of</h3>
+                    <p>The sacrificial anode rod corrodes so your tank doesn&rsquo;t. Once it&rsquo;s gone, the steel rusts from the inside. A $30 rod replacement at year 5 can buy you another 5 years out of an appliance you&rsquo;d otherwise replace.</p>
+                    <span class="read-more">Read the guide</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- Appliances -->
+        <div class="category-section">
+            <div class="category-header">
+                <h2>Appliances</h2>
+                <span class="count">4 GUIDES</span>
+            </div>
+            <div class="post-list">
+                <a href="dishwasher-maintenance-guide.html" class="post-card">
+                    <div class="post-meta">
+                        <span class="tag">Appliances</span>
+                        <span class="dot">&bull;</span>
+                        <span>5 min read</span>
+                    </div>
+                    <h3>Your Dishwasher Is Dirtier Than You Think</h3>
+                    <p>The filter most people don&rsquo;t know exists. Spray arm holes clogged with calcium. Door gaskets growing mold. Annual maintenance that adds years to a $600+ appliance &mdash; and most homeowners do none of it.</p>
+                    <span class="read-more">Read the guide</span>
+                </a>
+                <a href="refrigerator-coil-cleaning.html" class="post-card">
+                    <div class="post-meta">
+                        <span class="tag">Appliances</span>
+                        <span class="dot">&bull;</span>
+                        <span>4 min read</span>
+                    </div>
+                    <h3>Your Refrigerator Is Working Twice as Hard as It Should</h3>
+                    <p>Condenser coils on your fridge collect dust, pet hair, and kitchen grease. Dirty coils make the compressor run longer and hotter &mdash; which is the #1 cause of premature fridge failure. A quick annual task that nobody does.</p>
+                    <span class="read-more">Read the guide</span>
+                </a>
+                <a href="range-hood-filter-cleaning.html" class="post-card">
+                    <div class="post-meta">
+                        <span class="tag">Appliances</span>
+                        <span class="dot">&bull;</span>
+                        <span>4 min read</span>
+                    </div>
+                    <h3>What Happens When You Never Clean Your Range Hood Filter</h3>
+                    <p>A saturated mesh filter stops filtering. Your kitchen fills with airborne grease that coats cabinets, walls, and lungs. A degreasing soak twice a year restores it and keeps the kitchen actually clean.</p>
+                    <span class="read-more">Read the guide</span>
+                </a>
+                <a href="coffee-machine-descaling-omaha.html" class="post-card">
+                    <div class="post-meta">
+                        <span class="tag">Appliances</span>
+                        <span class="dot">&bull;</span>
+                        <span>4 min read</span>
+                    </div>
+                    <h3>The Coffee Machine Descaling Your Barista Would Judge You For Skipping</h3>
+                    <p>Mineral buildup in Omaha&rsquo;s moderately hard water restricts flow, drops brew temperature, and changes the taste of your coffee. That descale indicator you&rsquo;ve been ignoring is the machine telling you why mornings taste off.</p>
+                    <span class="read-more">Read the guide</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- Safety -->
+        <div class="category-section">
+            <div class="category-header">
+                <h2>Safety</h2>
+                <span class="count">2 GUIDES</span>
+            </div>
+            <div class="post-list">
+                <a href="dryer-vent-cleaning-fire-safety.html" class="post-card">
+                    <div class="post-meta">
+                        <span class="tag">Safety</span>
+                        <span class="dot">&bull;</span>
+                        <span>6 min read</span>
+                    </div>
+                    <h3>2,900 Dryer Fires a Year: The Service That Could Save Your Home</h3>
+                    <p>The U.S. Fire Administration tracks roughly 2,900 dryer-related home fires a year. The culprit isn&rsquo;t the lint trap &mdash; it&rsquo;s the ductwork. How a clog becomes a fire, the warning signs most homeowners miss, and the anchor service of every Fall visit.</p>
+                    <span class="read-more">Read the guide</span>
+                </a>
+                <a href="smoke-detector-replacement-guide.html" class="post-card">
+                    <div class="post-meta">
+                        <span class="tag">Safety</span>
+                        <span class="dot">&bull;</span>
+                        <span>5 min read</span>
+                    </div>
+                    <h3>The Smoke Detector Problem Nobody Talks About</h3>
+                    <p>Most smoke detectors have a 10-year lifespan that has nothing to do with the battery. Many homes mix old ionization detectors with photoelectric ones &mdash; and the homeowner has no idea which is which. Bi-annual checks are about the sensor, not the battery.</p>
+                    <span class="read-more">Read the guide</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- Doors & Energy -->
+        <div class="category-section">
+            <div class="category-header">
+                <h2>Doors &amp; Energy</h2>
+                <span class="count">2 GUIDES</span>
+            </div>
+            <div class="post-list">
+                <a href="garage-door-maintenance.html" class="post-card">
+                    <div class="post-meta">
+                        <span class="tag">Doors &amp; Energy</span>
+                        <span class="dot">&bull;</span>
+                        <span>5 min read</span>
+                    </div>
+                    <h3>Your Garage Door Is the Biggest Moving Object in Your House</h3>
+                    <p>Springs, cables, rollers, sensors &mdash; all need attention. A bi-annual tune-up prevents the emergency call when the door won&rsquo;t open Monday morning, and catches the safety issues that don&rsquo;t announce themselves.</p>
+                    <span class="read-more">Read the guide</span>
+                </a>
+                <a href="weatherstripping-energy-savings.html" class="post-card">
+                    <div class="post-meta">
+                        <span class="tag">Doors &amp; Energy</span>
+                        <span class="dot">&bull;</span>
+                        <span>4 min read</span>
+                    </div>
+                    <h3>Weatherstripping: The Invisible Money Leak Around Every Door</h3>
+                    <p>Hold a candle near your door frame on a windy day. If the flame moves, you&rsquo;re heating the outdoors. A $10 roll of weatherstripping and an efficient session per door &mdash; payback measured in weeks, not years.</p>
+                    <span class="read-more">Read the guide</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- Exterior & Seasonal -->
+        <div class="category-section">
+            <div class="category-header">
+                <h2>Exterior &amp; Seasonal</h2>
+                <span class="count">1 GUIDE</span>
+            </div>
+            <div class="post-list">
+                <a href="hose-bib-winterization-omaha.html" class="post-card">
+                    <div class="post-meta">
+                        <span class="tag">Exterior &amp; Seasonal</span>
+                        <span class="dot">&bull;</span>
+                        <span>4 min read</span>
+                    </div>
+                    <h3>Omaha Winters and Your Hose Bibs: A $15 Fix That Prevents a $5,000 Problem</h3>
+                    <p>One forgotten garden hose left connected through winter can crack the pipe inside your wall. You won&rsquo;t know until spring when water pours into your basement. The pre-winter checklist that saves the bill.</p>
+                    <span class="read-more">Read the guide</span>
+                </a>
+            </div>
         </div>
 
         <div class="notify-section">
