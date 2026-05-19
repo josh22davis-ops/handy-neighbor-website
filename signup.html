@@ -3,18 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Join The Handy Neighbor Co. | $99/month Home Maintenance</title>
-    <meta property="og:title" content="Sign Up for Home Maintenance in West Omaha | The Handy Neighbor Co.">
-    <meta property="og:description" content="$99/month — Four seasonal visits per year. All labor included. Schedule your first visit today. The Handy Neighbor Co. in West Omaha.">
+    <title>Request a Free Estimate | The Handy Neighbor Co.</title>
+    <meta property="og:title" content="Request a Free On-Site Estimate | The Handy Neighbor Co.">
+    <meta property="og:description" content="Free on-site estimate for home remodeling, repair, and maintenance projects in The Ridges and West Omaha. Written quote before any work starts. 20+ years experience.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://thehandyneighbor.co/signup.html">
     <meta property="og:image" content="https://thehandyneighbor.co/logo-white.png">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Sign Up for Home Maintenance in West Omaha | The Handy Neighbor Co.">
-    <meta name="twitter:description" content="$99/month — Four seasonal visits per year. All labor included. Schedule your first visit today. The Handy Neighbor Co. in West Omaha.">
+    <meta name="twitter:title" content="Request a Free On-Site Estimate | The Handy Neighbor Co.">
+    <meta name="twitter:description" content="Free on-site estimate for home remodeling, repair, and maintenance projects in The Ridges and West Omaha. Written quote before any work starts. 20+ years experience.">
     <meta name="twitter:image" content="https://thehandyneighbor.co/logo-white.png">
     <meta name="robots" content="index, follow">
-    <meta name="description" content="Join The Handy Neighbor Co. for $99/month home maintenance. Four seasonal visits per year. All labor included. Schedule your first visit today.">
+    <meta name="description" content="Request a free on-site estimate from The Handy Neighbor Co. Home remodeling, repair, and maintenance in The Ridges and West Omaha. 20+ years experience, written quote before any work starts.">
     <link rel="canonical" href="https://thehandyneighbor.co/signup.html">
     <link rel="icon" type="image/png" href="icon-white.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -90,27 +90,30 @@
             display: block; color: var(--cream); font-size: 0.85rem; font-weight: 600;
             text-transform: uppercase; letter-spacing: 1px; margin-bottom: 0.5rem;
         }
-        .form-group input, .form-group select {
+        .form-group input, .form-group select, .form-group textarea {
             width: 100%; padding: 0.85rem 1rem; background: var(--dark);
             border: 1px solid var(--border); border-radius: 4px; color: var(--text-light);
             font-family: 'Inter', sans-serif; font-size: 0.95rem; transition: border-color 0.3s;
         }
-        .form-group input:focus, .form-group select:focus { outline: none; border-color: var(--accent); }
-        .form-group input::placeholder { color: var(--text-muted); }
+        .form-group textarea {
+            resize: vertical; min-height: 120px; line-height: 1.5;
+        }
+        .form-group input:focus, .form-group select:focus, .form-group textarea:focus { outline: none; border-color: var(--accent); }
+        .form-group input::placeholder, .form-group textarea::placeholder { color: var(--text-muted); }
         .form-group select option { background: var(--dark); color: var(--text-light); }
 
-        .plan-statement {
+        .estimate-statement {
             background: rgba(200,169,110,0.08); border: 1px solid var(--border);
             border-radius: 8px; padding: 1.5rem; text-align: center; margin-bottom: 1.5rem;
         }
-        .plan-statement .plan-price {
-            font-family: 'Bebas Neue', sans-serif; font-size: 2.25rem; color: var(--cream);
-            line-height: 1; margin-bottom: 0.5rem;
+        .estimate-statement .estimate-headline {
+            font-family: 'Bebas Neue', sans-serif; font-size: 1.6rem; color: var(--cream);
+            line-height: 1.1; margin-bottom: 0.5rem; letter-spacing: 2px;
         }
-        .plan-statement .plan-tagline {
+        .estimate-statement .estimate-tagline {
             font-size: 0.95rem; color: var(--text-light); font-weight: 500; margin-bottom: 1rem;
         }
-        .plan-statement .plan-details {
+        .estimate-statement .estimate-details {
             font-size: 0.85rem; color: var(--text-muted); line-height: 1.6;
         }
 
@@ -139,7 +142,6 @@
 
         @media (max-width: 768px) {
             .form-row { grid-template-columns: 1fr; }
-            .plan-cards { grid-template-columns: 1fr; }
             .signup-form { padding: 1.5rem; }
         }
 
@@ -163,18 +165,14 @@
     <div class="signup-page">
         <div class="signup-container">
             <div class="signup-header">
-                <h1>Join The Handy Neighbor Co.</h1>
-                <p>Schedule your first seasonal visit and we'll take it from there.</p>
+                <h1>Request a Free Estimate</h1>
+                <p>Tell me a little about your project and I'll be in touch within 24 hours to schedule a free on-site walk-through. No obligation, no pressure.</p>
             </div>
 
-            <!-- IMPORTANT: Replace YOUR_FORM_ID below with your real Formspree endpoint.
-                 Steps: 1) Go to formspree.io and create a free account
-                        2) Create a new form, set notification email to josh@thehandyneighbor.co
-                        3) Copy the form ID (e.g. "xyzabcde") and replace YOUR_FORM_ID below -->
             <form class="signup-form" id="signupForm" action="https://formspree.io/f/mnjlqrlr" method="POST">
 
                 <!-- Formspree settings -->
-                <input type="hidden" name="_subject" value="New Handy Neighbor Signup!">
+                <input type="hidden" name="_subject" value="New Free Estimate Request!">
                 <input type="hidden" name="_next" value="https://thehandyneighbor.co/signup-thanks.html">
                 <input type="hidden" name="_template" value="table">
 
@@ -207,26 +205,46 @@
 
                 <hr class="form-divider">
 
-                <!-- PRICING STATEMENT -->
-                <div class="plan-statement">
-                    <div class="plan-price">$99/month</div>
-                    <div class="plan-tagline">Everything Your Home Needs</div>
-                    <div class="plan-details">
-                        Four seasonal visits per year. All labor included. Materials billed separately. Cancel anytime.
+                <!-- ESTIMATE STATEMENT -->
+                <div class="estimate-statement">
+                    <div class="estimate-headline">FREE ON-SITE ESTIMATE</div>
+                    <div class="estimate-tagline">No obligation. Written quote before any work starts.</div>
+                    <div class="estimate-details">
+                        20+ years experience &middot; Insured &middot; Right here in The Ridges
                     </div>
                 </div>
 
                 <hr class="form-divider">
 
-                <!-- FIRST VISIT DATE -->
-                <span class="section-label-sm">Schedule Your First Visit</span>
+                <!-- PROJECT DETAILS -->
+                <span class="section-label-sm">Tell me about your project</span>
                 <div class="form-group">
-                    <label for="firstVisitDate">Preferred Date</label>
-                    <input type="date" id="firstVisitDate" name="Preferred First Visit" required>
+                    <label for="projectType">Project Type</label>
+                    <select id="projectType" name="Project Type" required>
+                        <option value="">Choose one&hellip;</option>
+                        <option>Wood rot &amp; siding repair</option>
+                        <option>Front porch enhancement</option>
+                        <option>Entry door replacement</option>
+                        <option>Exterior lighting &amp; hardware</option>
+                        <option>Roofing</option>
+                        <option>Gutter guards</option>
+                        <option>Mudroom &amp; entryway built-ins</option>
+                        <option>Closet &amp; pantry build-outs</option>
+                        <option>Garage storage systems</option>
+                        <option>Deck staining &amp; repairs</option>
+                        <option>Outdoor patio with natural gas fire feature</option>
+                        <option>Concrete crack sealing</option>
+                        <option>Full home maintenance package</option>
+                        <option>Something else (tell me below)</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="projectDetails">Project Details</label>
+                    <textarea id="projectDetails" name="Project Details" placeholder="A few sentences about what you're thinking — what room, what you've noticed, what you'd like done. Photos can come later." required></textarea>
                 </div>
 
-                <button type="submit" class="form-submit">Get Started</button>
-                <p class="form-note">By signing up you agree to our <a href="#">Privacy Policy</a> and <a href="#">Terms of Service</a>.</p>
+                <button type="submit" class="form-submit">Request Free Estimate</button>
+                <p class="form-note">I'll reach out within 24 hours to schedule a free on-site walk-through.</p>
             </form>
         </div>
     </div>
@@ -234,12 +252,6 @@
     <footer>
         <p>&copy; 2026 The Handy Neighbor Co. &bull; <a href="index.html">Home</a> &bull; <a href="contact.html">Contact</a> &bull; <a href="tel:+14023502583">(402) 350-2583</a></p>
     </footer>
-
-    <script>
-        // Set min date to today for the date picker
-        const today = new Date().toISOString().split('T')[0];
-        document.getElementById('firstVisitDate').setAttribute('min', today);
-    </script>
 
 </body>
 </html>
