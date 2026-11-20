@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--
+      AD LANDING PAGE — not linked from the site nav, and noindex so it stays out of search.
+      PHONE NUMBER: (402) 350-2583 everywhere (tel:+14023502583 / sms:+14023502583).
+      To change it, find-and-replace "4023502583" and "350-2583" in this file.
+    -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overhead Garage Storage Winter Sale | From $550 Installed | The Handy Neighbor Co.</title>
+    <meta name="description" content="Custom storage lofts built from solid lumber above your garage door. Omaha winter pricing from $550 installed. Most lofts go up in a day. Text Josh to book.">
+    <meta name="robots" content="noindex">
+    <link rel="icon" type="image/png" href="icon-white.png">
+    <link rel="apple-touch-icon" href="icon-white.png">
+    <meta property="og:title" content="Storage Above Your Garage Door | Winter Sale from $550 Installed">
+    <meta property="og:description" content="Custom lofts from solid lumber, sized to your garage. Most go up in a day. Omaha.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://thehandyneighbor.co/garage-storage-winter-sale.html">
+    <meta property="og:image" content="https://thehandyneighbor.co/garage-storage-1.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://thehandyneighbor.co/garage-storage-1.jpg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="preload" as="image" href="garage-storage-1.jpg">
+
+    <style>
+        :root {
+            --cream: #FFFFFF;
+            --dark: #3B5068;
+            --dark-mid: #344859;
+            --accent: #C8A96E;
+            --accent-dark: #A8894E;
+            --text-light: #FFFFFF;
+            --text-muted: rgba(255,255,255,0.6);
+            --border: rgba(255,255,255,0.12);
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Inter', sans-serif; background-color: var(--dark);
+            color: var(--text-light); line-height: 1.6;
+        }
+        a { color: var(--accent); }
+        a[href^="tel:"], a[href^="sms:"] { white-space: nowrap; }
+        p { color: var(--text-muted); }
+
+        /* Logo-only header */
+        .lp-header {
+            background-color: var(--dark-mid); border-bottom: 1px solid var(--border);
+            padding: 0.9rem 1.25rem;
+            display: flex; justify-content: space-between; align-items: center;
+        }
+        .nav-logo {
+            display: flex; align-items: center; gap: 0.6rem;
+            text-decoration: none; color: var(--text-light);
+            font-family: 'Bebas Neue', sans-serif; font-size: 1.1rem;
+            letter-spacing: 0.05em; word-spacing: 4px;
+        }
+        .nav-logo span { color: var(--accent); }
+        .nav-icon { height: 30px; width: auto; }
+        .header-phone {
+            display: none; font-family: 'Bebas Neue', sans-serif; font-size: 1.2rem;
+            letter-spacing: 0.05em; text-decoration: none; color: var(--accent);
+        }
+
+        /* Hero */
+        .hero {
+            background: linear-gradient(135deg, var(--dark-mid) 0%, var(--dark) 100%);
+            border-bottom: 1px solid var(--border);
+            padding: 2rem 1.25rem 2.5rem;
+        }
+        .hero-inner { max-width: 1100px; margin: 0 auto; display: grid; gap: 1.75rem; }
+        .hero-label {
+            display: inline-block; background-color: rgba(200, 169, 110, 0.15);
+            color: var(--accent); padding: 0.4rem 0.9rem; border-radius: 20px;
+            font-size: 0.78rem; font-weight: 600; letter-spacing: 0.06em;
+            border: 1px solid var(--accent); margin-bottom: 1rem;
+        }
+        .hero h1 {
+            font-family: 'Playfair Display', serif; font-weight: 700;
+            font-size: 2.3rem; line-height: 1.12; margin-bottom: 1rem;
+        }
+        .hero-sub { font-size: 1.05rem; margin-bottom: 1.5rem; max-width: 520px; }
+        .offer {
+            display: inline-flex; align-items: center; gap: 1rem;
+            background: rgba(200,169,110,0.12); border: 2px solid var(--accent);
+            border-radius: 8px; padding: 0.75rem 1.25rem; margin-bottom: 1.5rem;
+        }
+        .offer-price { font-family: 'Bebas Neue', sans-serif; font-size: 3.4rem; line-height: 1; color: var(--accent); }
+        .offer-text { font-size: 0.9rem; line-height: 1.35; color: var(--cream); }
+        .offer-text strong { display: block; font-family: 'Bebas Neue', sans-serif; font-weight: 400; font-size: 1.15rem; letter-spacing: 0.06em; color: var(--accent); }
+        .btns { display: flex; flex-direction: column; gap: 0.75rem; max-width: 420px; }
+        .btn {
+            display: flex; align-items: center; justify-content: center; gap: 0.6rem;
+            padding: 1rem 1.5rem; border-radius: 6px; text-decoration: none;
+            font-family: 'Bebas Neue', sans-serif; font-size: 1.3rem; letter-spacing: 0.06em;
+            border: 2px solid var(--accent); transition: background-color 0.3s, color 0.3s;
+            white-space: nowrap;
+        }
+        .btn svg { width: 20px; height: 20px; flex-shrink: 0; }
+        .btn-primary { background: var(--accent); color: var(--dark); }
+        .btn-primary:hover { background: var(--accent-dark); border-color: var(--accent-dark); }
+        .btn-outline { background: transparent; color: var(--accent); }
+        .btn-outline:hover { background: rgba(200,169,110,0.12); color: var(--cream); }
+        .hero-photo img {
+            width: 100%; height: auto; display: block; border-radius: 12px;
+            box-shadow: 0 12px 32px rgba(0,0,0,0.3); aspect-ratio: 406 / 352; object-fit: cover;
+        }
+
+        /* Sections */
+        .wrap { max-width: 1100px; margin: 0 auto; padding: 2.75rem 1.25rem; }
+        .wrap-narrow { max-width: 760px; }
+        h2 {
+            font-family: 'Playfair Display', serif; font-size: 1.85rem; line-height: 1.2;
+            margin-bottom: 1.25rem; color: var(--cream);
+        }
+        .eyebrow {
+            font-family: 'Bebas Neue', sans-serif; color: var(--accent);
+            letter-spacing: 0.1em; font-size: 1rem; margin-bottom: 0.35rem;
+        }
+
+        /* Trust points */
+        .trust { display: grid; grid-template-columns: 1fr 1fr; gap: 0.9rem; }
+        .trust-item {
+            background: rgba(255,255,255,0.03); border: 1px solid var(--border);
+            border-radius: 8px; padding: 1.1rem;
+        }
+        .trust-item svg { width: 26px; height: 26px; margin-bottom: 0.5rem; }
+        .trust-item h3 { font-family: 'Bebas Neue', sans-serif; font-weight: 400; font-size: 1.25rem; letter-spacing: 0.04em; color: var(--cream); line-height: 1.15; margin-bottom: 0.3rem; }
+        .trust-item p { font-size: 0.88rem; line-height: 1.5; }
+
+        /* Gallery */
+        .gallery { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; }
+        .gallery img { width: 100%; display: block; border-radius: 10px; aspect-ratio: 337 / 164; object-fit: cover; }
+        .gallery-note { font-size: 0.85rem; font-style: italic; margin-top: 0.75rem; text-align: center; }
+
+        /* Pricing */
+        .band { background: var(--dark-mid); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+        .price-grid { display: grid; gap: 1.25rem; }
+        .price-card { background: var(--dark); border: 1px solid var(--border); border-radius: 8px; padding: 1.4rem; }
+        .price-card.featured { border: 2px solid var(--accent); }
+        .price-card h3 { font-family: 'Bebas Neue', sans-serif; font-weight: 400; color: var(--accent); font-size: 1.4rem; letter-spacing: 0.05em; margin-bottom: 0.5rem; }
+        .price-table { width: 100%; border-collapse: collapse; }
+        .price-table th, .price-table td { padding: 0.8rem 0; border-bottom: 1px solid var(--border); text-align: left; font-weight: 400; vertical-align: baseline; }
+        .price-table tr:last-child th, .price-table tr:last-child td { border-bottom: none; }
+        .price-table th { color: var(--cream); padding-right: 0.75rem; }
+        .price-table td { text-align: right; white-space: nowrap; }
+        .was { color: var(--text-muted); text-decoration: line-through; font-size: 0.88rem; margin-right: 0.45rem; }
+        .now { color: var(--accent); font-weight: 700; font-size: 1.1rem; }
+        .price-fine { font-size: 0.85rem; margin-top: 1rem; text-align: center; }
+
+        /* Steps */
+        .steps { list-style: none; display: grid; gap: 0.9rem; counter-reset: s; }
+        .steps li { display: flex; gap: 1rem; align-items: flex-start; }
+        .steps .n {
+            flex-shrink: 0; width: 38px; height: 38px; border-radius: 50%;
+            border: 1px solid var(--accent); color: var(--accent);
+            display: flex; align-items: center; justify-content: center;
+            font-family: 'Bebas Neue', sans-serif; font-size: 1.25rem;
+        }
+        .steps strong { color: var(--cream); display: block; }
+        .steps p { font-size: 0.95rem; }
+
+        .text-box {
+            margin-top: 1.75rem; padding: 1.25rem; border-radius: 8px;
+            background: rgba(200,169,110,0.08); border: 1px solid var(--border);
+        }
+        .text-box p { margin-bottom: 0.9rem; font-size: 0.95rem; }
+        .text-box strong { color: var(--cream); }
+        .text-box .btn { display: inline-flex; }
+
+        /* Form (same fields + styling as contact.html) */
+        .quote-wrap {
+            background: var(--dark-mid); border: 1px solid var(--border); border-radius: 8px;
+            padding: 1.5rem; scroll-margin-top: 16px;
+        }
+        .quote-wrap > p { margin-bottom: 1.25rem; }
+        .form-row { display: grid; grid-template-columns: 1fr; gap: 0 1.25rem; }
+        .form-group { margin-bottom: 1.1rem; }
+        .form-group label {
+            display: block; color: var(--text-muted); font-size: 0.8rem; font-weight: 500;
+            margin-bottom: 0.45rem; text-transform: uppercase; letter-spacing: 0.5px;
+        }
+        .form-group input, .form-group textarea, .form-group select {
+            width: 100%; padding: 0.9rem 1rem; background: rgba(44,72,89,0.5);
+            border: 1px solid var(--border); border-radius: 6px; color: var(--cream);
+            font-family: 'Inter', sans-serif; font-size: 1rem; transition: border-color 0.3s;
+        }
+        .form-group select option { color: #222; }
+        .form-group input:focus, .form-group textarea:focus, .form-group select:focus { outline: none; border-color: var(--accent); }
+        .photo-note { font-size: 0.9rem; margin: -0.25rem 0 1.25rem; }
+        .photo-note a { color: var(--accent); white-space: nowrap; }
+        .form-group textarea { min-height: 100px; resize: vertical; }
+        .form-submit {
+            width: 100%; padding: 1rem; background: var(--accent); color: var(--dark);
+            border: none; border-radius: 6px; font-size: 1rem; font-weight: 700;
+            text-transform: uppercase; letter-spacing: 1px; cursor: pointer; transition: all 0.3s;
+        }
+        .form-submit:hover { background: var(--accent-dark); }
+        .form-submit:disabled { opacity: 0.6; cursor: default; }
+
+        footer {
+            background: var(--dark-mid); border-top: 1px solid var(--border);
+            padding: 1.75rem 1.25rem calc(1.75rem + 84px); /* extra room for the sticky mobile bar */
+            text-align: center; color: var(--text-muted); font-size: 0.85rem;
+        }
+        footer a { color: var(--accent); text-decoration: none; }
+
+        /* Sticky mobile bar */
+        .sticky-bar {
+            position: fixed; left: 0; right: 0; bottom: 0; z-index: 1000;
+            display: flex; gap: 0.6rem; padding: 0.7rem 0.9rem calc(0.7rem + env(safe-area-inset-bottom));
+            background: rgba(52,72,89,0.97); border-top: 1px solid var(--border);
+            box-shadow: 0 -6px 20px rgba(0,0,0,0.25);
+        }
+        .sticky-bar .btn { flex: 1; padding: 0.85rem 0.5rem; font-size: 1.2rem; }
+        .sticky-bar .btn-primary { flex: 1.4; }
+
+        /* Desktop */
+        @media (min-width: 820px) {
+            footer { padding-bottom: 1.75rem; }
+            .sticky-bar { display: none; }
+            .lp-header { padding: 1rem 2rem; }
+            .header-phone { display: inline-block; }
+            .hero { padding: 4rem 2rem; }
+            .hero-inner { grid-template-columns: 1.05fr 1fr; align-items: center; gap: 3rem; }
+            .hero h1 { font-size: 3.4rem; }
+            .btns { flex-direction: row; max-width: none; }
+            .btns .btn { padding: 1rem 1.75rem; }
+            .wrap { padding: 4rem 2rem; }
+            h2 { font-size: 2.2rem; }
+            .trust { grid-template-columns: repeat(4, 1fr); gap: 1.25rem; }
+            .gallery { gap: 1.25rem; }
+            .price-grid { grid-template-columns: 1fr 1fr; }
+            .two-col { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 3rem; align-items: start; }
+            .quote-wrap { padding: 2.25rem; }
+            .form-row { grid-template-columns: 1fr 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="lp-header">
+        <a href="index.html" class="nav-logo"><img src="icon-white.png" alt="The Handy Neighbor Co." class="nav-icon" width="30" height="30"><span>THE</span> HANDY <span>NEIGHBOR CO.</span></a>
+        <a href="sms:+14023502583?&amp;body=Hi%20Josh%2C%20I%27m%20interested%20in%20the%20garage%20storage%20winter%20sale." class="header-phone">Text 402-350-2583</a>
+    </header>
+
+    <section class="hero">
+        <div class="hero-inner">
+            <div>
+                <div class="hero-label">OMAHA &bull; WINTER SALE</div>
+                <h1>Storage Above Your Garage Door</h1>
+                <p class="hero-sub">Use that wasted space. Custom lofts built from solid lumber, sized to your garage and out of sight when the door is open. Most go up in a day.</p>
+                <!-- WINTER SALE END DATE: when Josh sets one, add it here, e.g. "Winter pricing ends Jan 31". Do not publish a made-up date. -->
+                <div class="offer">
+                    <div class="offer-price">$550</div>
+                    <div class="offer-text"><strong>Winter pricing</strong>8 ft single door, installed</div>
+                </div>
+                <div class="btns">
+                    <a href="sms:+14023502583?&amp;body=Hi%20Josh%2C%20I%27m%20interested%20in%20the%20garage%20storage%20winter%20sale." class="btn btn-primary">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+                        Text Josh to Book
+                    </a>
+                    <a href="#quote" class="btn btn-outline">Request a Quote</a>
+                </div>
+            </div>
+            <div class="hero-photo">
+                <img src="garage-storage-1.jpg" alt="Solid lumber storage loft hung above a garage door" width="406" height="352">
+            </div>
+        </div>
+    </section>
+
+    <section class="wrap">
+        <div class="eyebrow">Why homeowners like it</div>
+        <h2>Built Right, Built Local</h2>
+        <div class="trust">
+            <div class="trust-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="#C8A96E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5L12 3l9 7.5V21H3z"/><path d="M9 21v-6h6v6"/></svg>
+                <h3>Your Omaha Neighbor</h3>
+                <p>Owner-operated. You deal with Josh directly.</p>
+            </div>
+            <div class="trust-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="#C8A96E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="5" rx="1"/><path d="M6 13v8M18 13v8M6 8V3M18 8V3"/></svg>
+                <h3>Solid Lumber</h3>
+                <p>Not a thin metal kit.</p>
+            </div>
+            <div class="trust-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="#C8A96E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7h18M3 7v4M21 7v4M7 7v2M11 7v2M15 7v2M19 7v2"/><path d="M4 17h16"/></svg>
+                <h3>Custom Fit</h3>
+                <p>Sized to your garage, with racks for fishing rods, skis and more.</p>
+            </div>
+            <div class="trust-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="#C8A96E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+                <h3>Installed in a Day</h3>
+                <p>Most lofts go up in a day.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="band">
+        <div class="wrap">
+            <div class="eyebrow">Limited-time winter pricing</div>
+            <h2>Winter Sale, Installed</h2>
+            <div class="price-grid">
+                <div class="price-card featured">
+                    <h3>Storage Loft</h3>
+                    <table class="price-table">
+                        <tr><th scope="row">Single door, 8 ft</th><td><span class="now">$550</span></td></tr>
+                        <tr><th scope="row">Double door</th><td><span class="was">$950</span><span class="now">$750</span></td></tr>
+                        <tr><th scope="row">Single and double together</th><td><span class="was">$1,350</span><span class="now">$950</span></td></tr>
+                    </table>
+                </div>
+                <div class="price-card">
+                    <h3>Add Paint</h3>
+                    <table class="price-table">
+                        <tr><th scope="row">White or black</th><td><span class="now">$250</span></td></tr>
+                        <tr><th scope="row">Custom color, your paint</th><td><span class="now">$350</span></td></tr>
+                        <tr><th scope="row">Custom color, we supply paint</th><td><span class="now">$450</span></td></tr>
+                    </table>
+                </div>
+            </div>
+            <p class="price-fine">Not sure which fits? Text a photo of your garage door wall.</p>
+        </div>
+    </section>
+
+    <section class="wrap">
+        <div class="eyebrow">Recent work</div>
+        <h2>Out of the Way, Off the Floor</h2>
+        <div class="gallery">
+            <img src="garage-storage-2.jpg" alt="Custom wood storage loft built above an open garage door track" width="337" height="164" loading="lazy">
+            <img src="garage-storage-3.jpg" alt="Storage totes on a solid lumber overhead garage shelf" width="337" height="164" loading="lazy">
+        </div>
+    </section>
+
+    <section class="wrap" style="padding-top: 0;">
+        <div class="two-col">
+            <div>
+                <div class="eyebrow">How it works</div>
+                <h2>Three Easy Steps</h2>
+                <ol class="steps">
+                    <li><span class="n">1</span><div><strong>Text or request a quote</strong><p>Send a photo of the wall above your garage door.</p></div></li>
+                    <li><span class="n">2</span><div><strong>I measure</strong><p>Your loft is custom sized to your garage.</p></div></li>
+                    <li><span class="n">3</span><div><strong>Built in a day</strong><p>Most lofts go up in a day.</p></div></li>
+                </ol>
+                <div class="text-box">
+                    <p><strong>Fastest way to book:</strong> text Josh a photo of your garage door wall.</p>
+                    <a href="sms:+14023502583?&amp;body=Hi%20Josh%2C%20I%27m%20interested%20in%20the%20garage%20storage%20winter%20sale." class="btn btn-primary">Text 402-350-2583</a>
+                </div>
+            </div>
+
+            <!-- Quote form: same Formspree endpoint and pattern as the live contact.html (plain POST, redirects to contact-thanks.html). -->
+            <div id="quote" class="quote-wrap">
+                <h2>Request a Quote</h2>
+                <p>Or text <a href="sms:+14023502583?&amp;body=Hi%20Josh%2C%20I%27m%20interested%20in%20the%20garage%20storage%20winter%20sale.">402-350-2583</a> &mdash; that&rsquo;s the fastest way to book.</p>
+                <form id="contactForm" action="https://formspree.io/f/xlgaevze" method="POST">
+                    <input type="hidden" name="_subject" value="New Garage Storage Inquiry — Handy Neighbor (ad landing page)">
+                    <input type="hidden" name="_next" value="https://thehandyneighbor.co/contact-thanks.html">
+                    <input type="hidden" name="_template" value="table">
+                    <input type="hidden" name="Service" value="Overhead garage storage">
+                    <input type="hidden" name="Source" value="Ad landing page (garage-storage-winter-sale.html)">
+                    <input type="hidden" name="utm_source" value="">
+                    <input type="hidden" name="utm_medium" value="">
+                    <input type="hidden" name="utm_campaign" value="">
+                    <input type="hidden" name="utm_term" value="">
+                    <input type="hidden" name="utm_content" value="">
+                    <input type="hidden" name="gclid" value="">
+                    <input type="hidden" name="fbclid" value="">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="Name" placeholder="Your name" autocomplete="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="Email" placeholder="you@email.com" autocomplete="email" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="phone">Phone</label>
+                            <input type="tel" id="phone" name="Phone" placeholder="(402) 555-1234" autocomplete="tel">
+                        </div>
+                        <div class="form-group">
+                            <label for="address">Address</label>
+                            <input type="text" id="address" name="Address" placeholder="123 Oak St, Omaha NE" autocomplete="street-address">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="doorSize">Which garage door?</label>
+                            <select id="doorSize" name="Door size">
+                                <option value="Single door, 8 ft ($550)">Single door, 8 ft ($550)</option>
+                                <option value="Double door ($750)">Double door ($750)</option>
+                                <option value="Single and double together ($950)">Single and double together ($950)</option>
+                                <option value="Not sure yet" selected>Not sure yet</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="paint">Paint</label>
+                            <select id="paint" name="Paint">
+                                <option value="No paint" selected>No paint</option>
+                                <option value="White or black (+$250)">White or black (+$250)</option>
+                                <option value="Custom color, my paint (+$350)">Custom color, my paint (+$350)</option>
+                                <option value="Custom color, you supply paint (+$450)">Custom color, you supply paint (+$450)</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Anything else?</label>
+                        <textarea id="message" name="Message" placeholder="Ceiling height, what you want to store, best time to measure..."></textarea>
+                    </div>
+                    <p class="photo-note">Have photos of your garage? <a href="sms:+14023502583?&amp;body=Hi%20Josh%2C%20I%27m%20interested%20in%20the%20garage%20storage%20winter%20sale.">Text photos to Josh</a> at 402-350-2583.</p>
+                    <button type="submit" class="form-submit">Request My Quote</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 The Handy Neighbor Co. &bull; Omaha, NE &bull; <a href="tel:+14023502583">(402) 350-2583</a> &bull; <a href="overhead-garage-storage-omaha.html">More about garage storage</a></p>
+    </footer>
+
+    <div class="sticky-bar">
+        <a href="sms:+14023502583?&amp;body=Hi%20Josh%2C%20I%27m%20interested%20in%20the%20garage%20storage%20winter%20sale." class="btn btn-primary">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+            Text Josh
+        </a>
+        <a href="#quote" class="btn btn-outline">Get a Quote</a>
+    </div>
+    <script>
+        // Copy ad tracking params (utm_*, gclid, fbclid) from the URL into the form's hidden fields
+        // so they show up in the Formspree email.
+        (function () {
+            var q = new URLSearchParams(window.location.search);
+            ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content', 'gclid', 'fbclid'].forEach(function (k) {
+                var v = q.get(k), el = document.querySelector('#contactForm input[name="' + k + '"]');
+                if (v && el) el.value = v.slice(0, 200);
+            });
+        })();
+    </script>
+</body>
+</html>

@@ -131,6 +131,33 @@
             text-transform: uppercase; letter-spacing: 1px; cursor: pointer; transition: all 0.3s;
         }
         .form-submit:hover { background: var(--accent-dark); }
+        .form-submit:disabled { opacity: 0.6; cursor: default; }
+
+        /* ---- photo upload ---- */
+        .photo-drop {
+            position: relative; display: block; width: 100%;
+            padding: 1.5rem 1rem; text-align: center; cursor: pointer;
+            background: rgba(44,72,89,0.5); border: 1px dashed var(--border);
+            border-radius: 6px; transition: border-color 0.3s, background 0.3s;
+        }
+        .photo-drop:hover { border-color: var(--accent); background: rgba(200,169,110,0.06); }
+        .photo-drop input[type="file"] {
+            position: absolute; inset: 0; width: 100%; height: 100%;
+            opacity: 0; cursor: pointer;
+        }
+        .photo-drop svg { width: 26px; height: 26px; margin-bottom: 0.5rem; }
+        .photo-drop .photo-label { display: block; color: var(--cream); font-size: 0.9rem; font-weight: 600; }
+        .photo-drop .photo-hint { display: block; color: var(--text-muted); font-size: 0.8rem; margin-top: 0.25rem; }
+
+        /* ---- status message ---- */
+        #formStatus {
+            display: none; margin-top: 1rem; padding: 0.9rem 1rem;
+            border-radius: 6px; font-size: 0.9rem; line-height: 1.5;
+            background: rgba(200,169,110,0.1); border: 1px solid var(--accent); color: var(--cream);
+        }
+        #formStatus[data-kind="error"] {
+            background: rgba(139,69,19,0.18); border-color: #8B4513;
+        }
 
         footer {
             padding: 3rem 2rem; border-top: 1px solid var(--border); text-align: center;
@@ -202,29 +229,43 @@
 
             <div class="contact-form-wrap">
                 <h3>Describe the Project</h3>
-                <!-- IMPORTANT: Replace YOUR_FORM_ID below with your real Formspree endpoint.
-                     Use the SAME Formspree account, but create a SECOND form for contact inquiries. -->
-                <form id="contactForm" action="https://formspree.io/f/xlgaevze" method="POST">
-                    <input type="hidden" name="_subject" value="New Project Inquiry — Handy Neighbor">
-                    <input type="hidden" name="_next" value="https://thehandyneighbor.co/contact-thanks.html">
-                    <input type="hidden" name="_template" value="table">
+                <form id="contactForm" novalidate>
                     <div class="form-group">
                         <label for="name">Name</label>
-                        <input type="text" id="name" name="Name" placeholder="Your name" required>
+                        <input type="text" id="name" name="name" placeholder="Your name" required>
                     </div>
                     <div class="form-group">
                         <label for="email">Email</label>
-                        <input type="email" id="email" name="Email" placeholder="you@email.com" required>
+                        <input type="email" id="email" name="email" placeholder="you@email.com" required>
                     </div>
                     <div class="form-group">
                         <label for="phone">Phone</label>
-                        <input type="tel" id="phone" name="Phone" placeholder="(402) 555-1234">
+                        <input type="tel" id="phone" name="phone" placeholder="(402) 555-1234">
+                    </div>
+                    <div class="form-group">
+                        <label for="address">Project Address</label>
+                        <input type="text" id="address" name="address" placeholder="123 Oak St, Omaha NE">
                     </div>
                     <div class="form-group">
                         <label for="message">What do you need done?</label>
-                        <textarea id="message" name="Message" placeholder="Deck repair, fence work, bathroom refresh, drywall &mdash; or anything else on the list..." required></textarea>
+                        <textarea id="message" name="message" placeholder="Deck repair, wood rot, sliding door replacement, garage storage &mdash; or anything else you&rsquo;ve been putting off..." required></textarea>
                     </div>
-                    <button type="submit" class="form-submit">Send Message</button>
+
+                    <div class="form-group">
+                        <label>Photos</label>
+                        <label class="photo-drop" for="photos">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="#C8A96E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z"/>
+                                <circle cx="12" cy="13" r="4"/>
+                            </svg>
+                            <span class="photo-label" id="photoLabel">Add photos (optional)</span>
+                            <span class="photo-hint">A few photos usually means I can give you a number without a trip out.</span>
+                            <input type="file" id="photos" name="photos" accept="image/*" multiple>
+                        </label>
+                    </div>
+
+                    <button type="submit" class="form-submit">Send Request</button>
+                    <div id="formStatus" role="status" aria-live="polite"></div>
                 </form>
             </div>
         </div>
@@ -241,6 +282,11 @@
         document.querySelectorAll('.nav-links a').forEach(link => {
             link.addEventListener('click', () => document.querySelector('.nav-links').classList.remove('active'));
         });
+    </script>
+
+    <script type="module">
+        import { initLeadForm } from './js/lead-form.js';
+        initLeadForm();
     </script>
 </body>
 </html>
