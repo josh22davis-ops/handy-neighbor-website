@@ -357,6 +357,12 @@
         .hero p.hero-intro { font-size: 1.05rem; margin: 1.25rem auto 0; }
         .price-grid + .price-grid { margin-top: 1.5rem; }
         .price-card .price-note:last-child { margin: 1rem 0 0; }
+        .rack-block { border-top: 2px solid var(--accent); padding-top: 3rem; scroll-margin-top: 90px; }
+        .rack-photo { margin: 0 0 1.5rem; }
+        .rack-photo img {
+            width: 100%; height: auto; display: block;
+            border-radius: 12px; box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+        }
         .sticky-bar { display: none; }
         @media (max-width: 768px) {
             .hero { padding: 24px 1.25rem 40px; }
@@ -411,7 +417,7 @@
         <ul class="hero-prices">
             <li><span>Loft, single door (8 ft)</span><strong>$550</strong></li>
             <li><span>Loft, double door</span><strong>$750</strong></li>
-            <li><span>Tote racks</span><strong>from $295</strong></li>
+            <li><span>Tote racks <a href="#racks" style="color: var(--accent); font-size: 0.85rem;">see racks</a></span><strong>from $295</strong></li>
         </ul>
         <!-- WINTER SALE END DATE: December 15 (matches the flyer). Also in the Pricing section and the CTA. -->
         <p class="hero-fine">Flat-rate installed prices. Winter loft pricing ends December 15.</p>
@@ -442,8 +448,8 @@
         </section>
 
         <section id="pricing">
-            <h2>Pricing</h2>
-            <p>Flat rates. Every price below is installed. Winter loft pricing ends December 15.</p>
+            <h2>Overhead Loft Pricing</h2>
+            <p>Flat rates. Every price below is installed. Winter pricing ends December 15.</p>
             <div class="price-grid">
                 <div class="price-card featured">
                     <h3>Overhead Lofts, Winter Sale</h3>
@@ -464,7 +470,44 @@
                     </table>
                 </div>
             </div>
-            <div class="price-grid" id="racks">
+            <p class="price-fine">Not sure which fits? Text a photo of your garage and I&rsquo;ll tell you.</p>
+        </section>
+
+        <section>
+            <h2>Why a Custom Loft Beats a Metal Kit</h2>
+            <p>The space over your garage door is usually empty. A loft built there holds the totes, coolers, and seasonal gear that otherwise eat up floor space &mdash; and because it sits above the door, it stays out of sight when the door is open.</p>
+            <div class="included-list">
+                <ul>
+                    <li><strong>Solid lumber</strong>, not a thin metal kit</li>
+                    <li><strong>Custom sized</strong> to your garage</li>
+                    <li><strong>Racks</strong> for fishing rods, skis and more</li>
+                    <li><strong>Out of sight</strong> when the door is open</li>
+                    <li><strong>Installed</strong> at a flat rate</li>
+                    <li><strong>Optional paint</strong>, white, black or custom</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- ===== Tote racks: a separate product from the overhead lofts ===== -->
+        <!-- Photo is the example rack image from the flyer. Replace with a real install photo when available. -->
+        <section id="racks" class="rack-block">
+            <div class="hero-label">ALSO AVAILABLE &middot; TOTE RACKS</div>
+            <h2>Get Your Totes Off the Floor</h2>
+            <figure class="rack-photo">
+                <img src="tote-rack-1.jpg" alt="Example 16-tote rack: solid lumber frame holding sixteen black and yellow storage totes, one sliding out like a drawer" width="1000" height="646" loading="lazy">
+            </figure>
+            <p>A tote rack for your garage or basement, built with a solid lumber frame and installed. Flat rates.</p>
+            <div class="included-list">
+                <ul>
+                    <li>Every tote <strong>slides out like a drawer</strong></li>
+                    <li>Reach any tote <strong>without unstacking</strong></li>
+                    <li>Built for <strong>standard 27-gallon totes</strong></li>
+                    <li><strong>Solid lumber frame</strong>, installed</li>
+                    <li><strong>Locking casters</strong> if you want it to roll</li>
+                    <li>Totes <strong>not included</strong></li>
+                </ul>
+            </div>
+            <div class="price-grid">
                 <div class="price-card featured">
                     <h3>Tote Racks, Installed</h3>
                     <p class="price-note">For your garage or basement. Totes not included.</p>
@@ -487,7 +530,7 @@
                     <p class="price-note">Standard racks are four totes high: about 5 ft 8 in tall and 28 in deep. Built for standard 27-gallon totes, about 30 x 20 x 14 in.</p>
                 </div>
             </div>
-            <p class="price-fine">Not sure which fits? Text a photo of your garage and I&rsquo;ll tell you.</p>
+            <p class="price-fine">Tell me how many totes you need to store.</p>
         </section>
 
         <!-- Quote form: same Formspree endpoint as contact.html (plain POST, redirects to contact-thanks.html).
@@ -530,36 +573,6 @@
                     <p class="photo-note">Have photos of your garage? <a href="sms:+14023502583?&amp;body=Hi%20Josh%2C%20I%27m%20interested%20in%20overhead%20garage%20storage.">Text photos to Josh</a> at 402-350-2583.</p>
                     <button type="submit" class="form-submit">Request My Quote</button>
                 </form>
-        </section>
-
-        <section>
-            <h2>Why a Custom Loft Beats a Metal Kit</h2>
-            <p>The space over your garage door is usually empty. A loft built there holds the totes, coolers, and seasonal gear that otherwise eat up floor space &mdash; and because it sits above the door, it stays out of sight when the door is open.</p>
-            <div class="included-list">
-                <ul>
-                    <li><strong>Solid lumber</strong>, not a thin metal kit</li>
-                    <li><strong>Custom sized</strong> to your garage</li>
-                    <li><strong>Racks</strong> for fishing rods, skis and more</li>
-                    <li><strong>Out of sight</strong> when the door is open</li>
-                    <li><strong>Installed</strong> at a flat rate</li>
-                    <li><strong>Optional paint</strong>, white, black or custom</li>
-                </ul>
-            </div>
-        </section>
-
-        <section>
-            <h2>Get Your Totes Off the Floor</h2>
-            <p>A tote rack for your garage or basement, built with a solid lumber frame and installed.</p>
-            <div class="included-list">
-                <ul>
-                    <li>Every tote <strong>slides out like a drawer</strong></li>
-                    <li>Reach any tote <strong>without unstacking</strong></li>
-                    <li>Built for <strong>standard 27-gallon totes</strong></li>
-                    <li><strong>Solid lumber frame</strong>, installed</li>
-                    <li><strong>Locking casters</strong> if you want it to roll</li>
-                    <li>Totes <strong>not included</strong></li>
-                </ul>
-            </div>
         </section>
 
         <section>
