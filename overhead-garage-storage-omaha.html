@@ -7,24 +7,27 @@
     -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Overhead Garage Storage in Omaha | Custom Lofts Above the Garage Door | The Handy Neighbor Co.</title>
-    <meta name="description" content="Custom overhead garage storage in Omaha, built from solid lumber above your garage door. Sized to your garage, out of sight when the door is open, and most lofts go up in a day. Winter pricing from $550 installed.">
-    <meta name="keywords" content="overhead garage storage Omaha, garage storage above garage door, garage loft Omaha, overhead garage racks Omaha, garage ceiling storage West Omaha">
+    <title>Overhead Garage Storage &amp; Tote Racks in Omaha | The Handy Neighbor Co.</title>
+    <meta name="description" content="Custom overhead garage storage and slide-out tote racks in The Ridges and Omaha, built from solid lumber. Flat-rate installed prices: lofts from $550 through December 15, tote racks from $295.">
+    <meta name="keywords" content="overhead garage storage Omaha, garage storage above garage door, garage loft Omaha, overhead garage racks Omaha, garage ceiling storage The Ridges, garage tote rack Omaha, storage bin rack Omaha">
     <link rel="canonical" href="https://thehandyneighbor.co/overhead-garage-storage-omaha.html">
     <meta name="robots" content="index, follow">
     <link rel="icon" type="image/png" href="icon-white.png">
     <link rel="apple-touch-icon" href="icon-white.png">
     <meta property="og:title" content="Overhead Garage Storage in Omaha | The Handy Neighbor Co.">
-    <meta property="og:description" content="Custom storage lofts built from solid lumber above your garage door. Winter pricing from $550 installed. Most lofts go up in a day.">
+    <meta property="og:description" content="Custom storage lofts built from solid lumber above your garage door, plus slide-out tote racks. Lofts from $550 installed through December 15. Tote racks from $295.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://thehandyneighbor.co/overhead-garage-storage-omaha.html">
     <meta property="og:image" content="https://thehandyneighbor.co/garage-storage-1.jpg">
     <meta property="og:site_name" content="The Handy Neighbor Co.">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Overhead Garage Storage in Omaha | The Handy Neighbor Co.">
-    <meta name="twitter:description" content="Custom storage lofts built from solid lumber above your garage door. Winter pricing from $550 installed. Most lofts go up in a day.">
+    <meta name="twitter:description" content="Custom storage lofts built from solid lumber above your garage door, plus slide-out tote racks. Lofts from $550 installed through December 15. Tote racks from $295.">
     <meta name="twitter:image" content="https://thehandyneighbor.co/garage-storage-1.jpg">
 
+    <link rel="preload" as="image" href="garage-storage-2.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 
     <style>
@@ -166,24 +169,16 @@
         .container > section:last-child { margin-bottom: 0; }
 
         /* Photo gallery */
-        .gallery {
-            display: grid; grid-template-columns: 1.2fr 1fr; gap: 1rem;
-        }
+        .gallery { display: grid; grid-template-columns: 406fr 724fr; gap: 1rem; align-items: start; }
+        @media (max-width: 600px) { .gallery { grid-template-columns: 1fr; } }
         .gallery figure { margin: 0; }
         .gallery img {
-            width: 100%; height: 100%; object-fit: cover; display: block;
+            width: 100%; height: auto; display: block;
             border-radius: 12px; box-shadow: 0 8px 24px rgba(0,0,0,0.25);
         }
-        .gallery .g-main { grid-row: span 2; }
-        .gallery .g-side img { aspect-ratio: 337 / 164; }
         .gallery-caption {
             color: var(--text-muted); font-size: 0.88rem;
             margin-top: 1rem; font-style: italic; text-align: center;
-        }
-        @media (max-width: 600px) {
-            .gallery { grid-template-columns: 1fr 1fr; }
-            .gallery .g-main { grid-column: span 2; grid-row: auto; }
-            .gallery .g-main img { aspect-ratio: 406 / 300; }
         }
 
         /* Benefits */
@@ -339,6 +334,50 @@
             .included-list { padding: 1.5rem; }
             footer a { margin: 0 0.4rem; }
         }
+        /* Landing layout: photo, prices and call/text on the first phone screen */
+        .hero-photo {
+            display: block; width: 100%; max-width: 520px; height: auto;
+            margin: 0 auto 1.25rem; border-radius: 12px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+        }
+        .hero-prices {
+            list-style: none; max-width: 420px; margin: 0 auto 0.5rem; text-align: left;
+        }
+        .hero-prices li {
+            display: flex; justify-content: space-between; align-items: baseline; gap: 1rem;
+            padding: 0.45rem 0; border-bottom: 1px solid var(--border);
+            color: var(--text-light); font-size: 1rem;
+        }
+        .hero-prices strong { color: var(--accent); font-size: 1.15rem; white-space: nowrap; }
+        .hero p.hero-fine { font-size: 0.85rem; margin: 0.5rem auto 1.25rem; }
+        .hero p.hero-trust {
+            font-size: 0.78rem; letter-spacing: 2px; text-transform: uppercase;
+            margin: 1.25rem auto 0;
+        }
+        .hero p.hero-intro { font-size: 1.05rem; margin: 1.25rem auto 0; }
+        .price-grid + .price-grid { margin-top: 1.5rem; }
+        .price-card .price-note:last-child { margin: 1rem 0 0; }
+        .sticky-bar { display: none; }
+        @media (max-width: 768px) {
+            .hero { padding: 24px 1.25rem 40px; }
+            .hero h1 { font-size: 2rem; margin-bottom: 0.75rem; }
+            .hero-label { margin-bottom: 0.6rem; }
+            .hero-buttons { flex-wrap: nowrap; gap: 0.75rem; }
+            .hero-buttons .hero-cta { flex: 1 1 0; width: auto; max-width: none; padding: 0.9rem 0.5rem; }
+            body { padding-bottom: 64px; }
+            .sticky-bar {
+                display: flex; position: fixed; left: 0; right: 0; bottom: 0; z-index: 999;
+                background-color: var(--dark-mid); border-top: 1px solid var(--border);
+                padding: 0.5rem 0.75rem calc(0.5rem + env(safe-area-inset-bottom)); gap: 0.75rem;
+            }
+            .sticky-bar a {
+                flex: 1 1 0; text-align: center; padding: 0.75rem 0.5rem; border-radius: 4px;
+                font-family: 'Bebas Neue', sans-serif; font-size: 1.1rem; letter-spacing: 0.05em;
+                text-decoration: none; background-color: var(--accent); color: var(--dark);
+                border: 2px solid var(--accent);
+            }
+            .sticky-bar a.outline { background: transparent; color: var(--accent); }
+        }
     </style>
 </head>
 <body>
@@ -366,16 +405,23 @@
 
     <!-- Hero -->
     <section class="hero">
-        <div class="hero-label">GARAGE STORAGE</div>
+        <div class="hero-label">GARAGE STORAGE &middot; THE RIDGES</div>
         <h1>Overhead Garage Storage in Omaha</h1>
-        <p>Use that wasted space above your garage door. I build custom storage lofts from solid lumber, sized to your garage and out of sight when the door is open. Most lofts go up in a day.</p>
-        <!-- WINTER SALE END DATE: when Josh sets one, change "Winter pricing" below to e.g. "Winter pricing through Jan 31" (also in the Pricing section and the CTA). -->
-        <div class="hero-price">Winter pricing from <strong>$550</strong> installed</div>
+        <img class="hero-photo" src="garage-storage-2.jpg" alt="Custom wood storage loft built above an open garage door track" width="337" height="164" fetchpriority="high">
+        <ul class="hero-prices">
+            <li><span>Loft, single door (8 ft)</span><strong>$550</strong></li>
+            <li><span>Loft, double door</span><strong>$750</strong></li>
+            <li><span>Tote racks</span><strong>from $295</strong></li>
+        </ul>
+        <!-- WINTER SALE END DATE: December 15 (matches the flyer). Also in the Pricing section and the CTA. -->
+        <p class="hero-fine">Flat-rate installed prices. Winter loft pricing ends December 15.</p>
         <div class="hero-buttons">
-            <a href="sms:+14023502583?&amp;body=Hi%20Josh%2C%20I%27m%20interested%20in%20overhead%20garage%20storage." class="hero-cta">Text Josh to Book</a>
-            <a href="#quote" class="hero-cta outline">Request a Quote</a>
+            <a href="sms:+14023502583?&amp;body=Hi%20Josh%2C%20I%27m%20interested%20in%20overhead%20garage%20storage." class="hero-cta">Text Josh</a>
+            <a href="tel:+14023502583" class="hero-cta outline">Call Josh</a>
         </div>
-        <span class="hero-phone">Or call <a href="tel:+14023502583">402-350-2583</a></span>
+        <span class="hero-phone"><a href="tel:+14023502583">402-350-2583</a> &middot; or <a href="#quote">request a quote online</a></span>
+        <p class="hero-trust">Insured &middot; Flat Rates &middot; The Ridges</p>
+        <p class="hero-intro">Use that wasted space above your garage door. I build custom storage lofts from solid lumber, sized to your garage and out of sight when the door is open.</p>
     </section>
 
     <!-- Main Content -->
@@ -385,44 +431,25 @@
         <section>
             <h2>Built Above the Door, Not in Your Way</h2>
             <div class="gallery">
-                <figure class="g-main">
+                <figure>
                     <img src="garage-storage-1.jpg" alt="Solid lumber overhead storage loft hung from the garage ceiling above the garage door" width="406" height="352" loading="lazy">
                 </figure>
-                <figure class="g-side">
-                    <img src="garage-storage-2.jpg" alt="Custom wood storage loft built above an open garage door track" width="337" height="164" loading="lazy">
-                </figure>
-                <figure class="g-side">
+                <figure>
                     <img src="garage-storage-3.jpg" alt="Storage totes sitting on a solid lumber overhead garage shelf" width="337" height="164" loading="lazy">
                 </figure>
             </div>
             <p class="gallery-caption">Overhead storage lofts I&rsquo;ve built.</p>
         </section>
 
-        <section>
-            <h2>Why a Custom Loft Beats a Metal Kit</h2>
-            <p>The space over your garage door is usually empty. A loft built there holds the totes, coolers, and seasonal gear that otherwise eat up floor space &mdash; and because it sits above the door, it stays out of sight when the door is open.</p>
-            <div class="included-list">
-                <ul>
-                    <li><strong>Solid lumber</strong>, not a thin metal kit</li>
-                    <li><strong>Custom sized</strong> to your garage</li>
-                    <li><strong>Racks</strong> for fishing rods, skis and more</li>
-                    <li><strong>Out of sight</strong> when the door is open</li>
-                    <li><strong>Installed</strong> &mdash; most lofts go up in a day</li>
-                    <li><strong>Optional paint</strong>, white, black or custom</li>
-                </ul>
-            </div>
-        </section>
-
         <section id="pricing">
-            <h2>Winter Sale Pricing</h2>
-            <!-- WINTER SALE END DATE: add the end date here once Josh sets one, e.g. "Winter pricing ends Jan 31." Do not publish a made-up date. -->
-            <p>Limited-time winter pricing. Every price below is installed.</p>
+            <h2>Pricing</h2>
+            <p>Flat rates. Every price below is installed. Winter loft pricing ends December 15.</p>
             <div class="price-grid">
                 <div class="price-card featured">
-                    <h3>Winter Sale, Installed</h3>
-                    <p class="price-note">Overhead storage above the garage door</p>
+                    <h3>Overhead Lofts, Winter Sale</h3>
+                    <p class="price-note">Storage above the garage door, installed</p>
                     <table class="price-table">
-                        <tr><th scope="row">Single door, 8 ft</th><td><span class="now">$550</span></td></tr>
+                        <tr><th scope="row">Single door, 8 ft</th><td><span class="was">$650</span><span class="now">$550</span></td></tr>
                         <tr><th scope="row">Double door</th><td><span class="was">$950</span><span class="now">$750</span></td></tr>
                         <tr><th scope="row">Single and double together</th><td><span class="was">$1,350</span><span class="now">$950</span></td></tr>
                     </table>
@@ -437,7 +464,102 @@
                     </table>
                 </div>
             </div>
+            <div class="price-grid" id="racks">
+                <div class="price-card featured">
+                    <h3>Tote Racks, Installed</h3>
+                    <p class="price-note">For your garage or basement. Totes not included.</p>
+                    <table class="price-table">
+                        <tr><th scope="row">8 totes, about 3 ft 9 in wide</th><td><span class="now">$295</span></td></tr>
+                        <tr><th scope="row">12 totes, about 5 ft 7 in wide</th><td><span class="now">$395</span></td></tr>
+                        <tr><th scope="row">16 totes, about 7 ft 5 in wide</th><td><span class="now">$495</span></td></tr>
+                        <tr><th scope="row">20 totes, about 9 ft 3 in wide</th><td><span class="now">$595</span></td></tr>
+                        <tr><th scope="row">Custom size</th><td>On request</td></tr>
+                    </table>
+                </div>
+                <div class="price-card">
+                    <h3>Rack Add-Ons</h3>
+                    <p class="price-note">Optional, added to any rack</p>
+                    <table class="price-table">
+                        <tr><th scope="row">Paint, white or black</th><td><span class="now">$200</span></td></tr>
+                        <tr><th scope="row">Locking casters</th><td><span class="now">$120</span></td></tr>
+                        <tr><th scope="row">Side tool panel, each</th><td><span class="now">$75</span></td></tr>
+                    </table>
+                    <p class="price-note">Standard racks are four totes high: about 5 ft 8 in tall and 28 in deep. Built for standard 27-gallon totes, about 30 x 20 x 14 in.</p>
+                </div>
+            </div>
             <p class="price-fine">Not sure which fits? Text a photo of your garage and I&rsquo;ll tell you.</p>
+        </section>
+
+        <!-- Quote form: same Formspree endpoint as contact.html (plain POST, redirects to contact-thanks.html).
+             The "Campaign" field is filled in by the script at the bottom of the page when a visitor arrives from a tagged link (e.g. the flyer QR code). -->
+        <section id="quote" class="quote-wrap">
+            <h2>Request a Garage Storage Quote</h2>
+            <p>Tell me what you need and I&rsquo;ll get back to you. Prefer to text? <a href="sms:+14023502583?&amp;body=Hi%20Josh%2C%20I%27m%20interested%20in%20overhead%20garage%20storage." style="color: var(--accent); text-decoration: none;">402-350-2583</a></p>
+            <form id="contactForm" action="https://formspree.io/f/xlgaevze" method="POST">
+                    <input type="hidden" name="_subject" value="New Garage Storage Inquiry — Handy Neighbor (service page)">
+                    <input type="hidden" name="_next" value="https://thehandyneighbor.co/contact-thanks.html">
+                    <input type="hidden" name="_template" value="table">
+                    <input type="hidden" name="Service" value="Garage storage">
+                    <input type="hidden" name="Source" value="Service page (overhead-garage-storage-omaha.html)">
+                    <input type="hidden" name="Campaign" id="leadCampaign" value="None (direct or search)">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="Name" placeholder="Your name" autocomplete="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone</label>
+                            <input type="tel" id="phone" name="Phone" placeholder="(402) 555-1234" autocomplete="tel" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="interest">What do you need?</label>
+                        <select id="interest" name="Interested in">
+                            <option value="Loft, single door 8 ft ($550)">Loft, single door 8 ft ($550)</option>
+                            <option value="Loft, double door ($750)">Loft, double door ($750)</option>
+                            <option value="Loft, single and double together ($950)">Loft, single and double together ($950)</option>
+                            <option value="Tote rack (from $295)">Tote rack (from $295)</option>
+                            <option value="Loft and tote rack">Loft and tote rack</option>
+                            <option value="Not sure yet" selected>Not sure yet</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Anything else? (optional)</label>
+                        <textarea id="message" name="Message" placeholder="How many totes, paint, best time to measure..."></textarea>
+                    </div>
+                    <p class="photo-note">Have photos of your garage? <a href="sms:+14023502583?&amp;body=Hi%20Josh%2C%20I%27m%20interested%20in%20overhead%20garage%20storage.">Text photos to Josh</a> at 402-350-2583.</p>
+                    <button type="submit" class="form-submit">Request My Quote</button>
+                </form>
+        </section>
+
+        <section>
+            <h2>Why a Custom Loft Beats a Metal Kit</h2>
+            <p>The space over your garage door is usually empty. A loft built there holds the totes, coolers, and seasonal gear that otherwise eat up floor space &mdash; and because it sits above the door, it stays out of sight when the door is open.</p>
+            <div class="included-list">
+                <ul>
+                    <li><strong>Solid lumber</strong>, not a thin metal kit</li>
+                    <li><strong>Custom sized</strong> to your garage</li>
+                    <li><strong>Racks</strong> for fishing rods, skis and more</li>
+                    <li><strong>Out of sight</strong> when the door is open</li>
+                    <li><strong>Installed</strong> at a flat rate</li>
+                    <li><strong>Optional paint</strong>, white, black or custom</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2>Get Your Totes Off the Floor</h2>
+            <p>A tote rack for your garage or basement, built with a solid lumber frame and installed.</p>
+            <div class="included-list">
+                <ul>
+                    <li>Every tote <strong>slides out like a drawer</strong></li>
+                    <li>Reach any tote <strong>without unstacking</strong></li>
+                    <li>Built for <strong>standard 27-gallon totes</strong></li>
+                    <li><strong>Solid lumber frame</strong>, installed</li>
+                    <li><strong>Locking casters</strong> if you want it to roll</li>
+                    <li>Totes <strong>not included</strong></li>
+                </ul>
+            </div>
         </section>
 
         <section>
@@ -446,17 +568,17 @@
                 <div class="step">
                     <div class="step-num">STEP 1</div>
                     <h3>Text or Request a Quote</h3>
-                    <p>Text <a href="sms:+14023502583" style="color: var(--accent); text-decoration: none;">402-350-2583</a> or fill out the form below. Texting a photo of your garage door wall helps.</p>
+                    <p>Text <a href="sms:+14023502583" style="color: var(--accent); text-decoration: none;">402-350-2583</a> or fill out the form above. Texting a photo of your garage door wall helps.</p>
                 </div>
                 <div class="step">
                     <div class="step-num">STEP 2</div>
                     <h3>I Measure</h3>
-                    <p>I measure your garage so the loft is custom sized to the space and clears your door.</p>
+                    <p>I measure your garage so the loft or rack is custom sized to the space and clears your door.</p>
                 </div>
                 <div class="step">
                     <div class="step-num">STEP 3</div>
-                    <h3>Built in a Day</h3>
-                    <p>I build and install it from solid lumber. Most lofts go up in a day.</p>
+                    <h3>Built &amp; Installed</h3>
+                    <p>I build and install it from solid lumber. Quick install, and I clean up when I&rsquo;m done.</p>
                 </div>
             </div>
         </section>
@@ -466,22 +588,27 @@
 
             <details class="faq-item">
                 <summary>What&rsquo;s included in the price? <span>+</span></summary>
-                <p>The winter sale prices are installed prices: a storage loft built from solid lumber above your garage door, custom sized to your garage, and the installation. Paint is an optional add-on.</p>
+                <p>Every price is a flat-rate installed price: built from solid lumber, custom sized to your space, and installed. Paint and rack add-ons are optional. Totes are not included.</p>
             </details>
 
             <details class="faq-item">
-                <summary>How long does installation take? <span>+</span></summary>
-                <p>Most lofts go up in a day.</p>
+                <summary>Are totes included with a rack? <span>+</span></summary>
+                <p>No. Racks are built for standard 27-gallon totes, about 30 x 20 x 14 in. Totes are not included.</p>
             </details>
 
             <details class="faq-item">
                 <summary>Is paint extra? <span>+</span></summary>
-                <p>Yes, paint is optional. White or black is $250. A custom color is $350 if you provide the paint, or $450 if I supply it.</p>
+                <p>Yes, paint is optional. On a loft, white or black is $250. A custom color is $350 if you provide the paint, or $450 if I supply it. On a tote rack, white or black is $200.</p>
             </details>
 
             <details class="faq-item">
                 <summary>What sizes do you build? <span>+</span></summary>
-                <p>Lofts are built for a single 8 ft door ($550 installed), a double door ($750), or both a single and a double together ($950), each custom sized to your garage.</p>
+                <p>Lofts are built for a single 8 ft door ($550 installed), a double door ($750), or both a single and a double together ($950), each custom sized to your garage. Tote racks come in 8, 12, 16 and 20 tote sizes ($295 to $595 installed), or a custom size on request.</p>
+            </details>
+
+            <details class="faq-item">
+                <summary>Can a tote rack go in the basement? <span>+</span></summary>
+                <p>Yes. Racks work in a garage or a basement. Add locking casters ($120) if you want it to roll.</p>
             </details>
 
             <details class="faq-item">
@@ -490,70 +617,11 @@
             </details>
         </section>
 
-        <!-- Quote form: same Formspree endpoint and pattern as the live contact.html (plain POST, redirects to contact-thanks.html). -->
-        <section id="quote" class="quote-wrap">
-            <h2>Request a Garage Storage Quote</h2>
-            <p>Tell me about your garage and I&rsquo;ll get back to you. Prefer to text? <a href="sms:+14023502583?&amp;body=Hi%20Josh%2C%20I%27m%20interested%20in%20overhead%20garage%20storage." style="color: var(--accent); text-decoration: none;">402-350-2583</a></p>
-            <form id="contactForm" action="https://formspree.io/f/xlgaevze" method="POST">
-                    <input type="hidden" name="_subject" value="New Garage Storage Inquiry — Handy Neighbor (service page)">
-                    <input type="hidden" name="_next" value="https://thehandyneighbor.co/contact-thanks.html">
-                    <input type="hidden" name="_template" value="table">
-                    <input type="hidden" name="Service" value="Overhead garage storage">
-                    <input type="hidden" name="Source" value="Service page (overhead-garage-storage-omaha.html)">
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="name">Name</label>
-                            <input type="text" id="name" name="Name" placeholder="Your name" autocomplete="name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" name="Email" placeholder="you@email.com" autocomplete="email" required>
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="phone">Phone</label>
-                            <input type="tel" id="phone" name="Phone" placeholder="(402) 555-1234" autocomplete="tel">
-                        </div>
-                        <div class="form-group">
-                            <label for="address">Address</label>
-                            <input type="text" id="address" name="Address" placeholder="123 Oak St, Omaha NE" autocomplete="street-address">
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="doorSize">Which garage door?</label>
-                            <select id="doorSize" name="Door size">
-                                <option value="Single door, 8 ft ($550)">Single door, 8 ft ($550)</option>
-                                <option value="Double door ($750)">Double door ($750)</option>
-                                <option value="Single and double together ($950)">Single and double together ($950)</option>
-                                <option value="Not sure yet" selected>Not sure yet</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="paint">Paint</label>
-                            <select id="paint" name="Paint">
-                                <option value="No paint" selected>No paint</option>
-                                <option value="White or black (+$250)">White or black (+$250)</option>
-                                <option value="Custom color, my paint (+$350)">Custom color, my paint (+$350)</option>
-                                <option value="Custom color, you supply paint (+$450)">Custom color, you supply paint (+$450)</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Anything else?</label>
-                        <textarea id="message" name="Message" placeholder="Ceiling height, what you want to store, best time to measure..."></textarea>
-                    </div>
-                    <p class="photo-note">Have photos of your garage? <a href="sms:+14023502583?&amp;body=Hi%20Josh%2C%20I%27m%20interested%20in%20overhead%20garage%20storage.">Text photos to Josh</a> at 402-350-2583.</p>
-                    <button type="submit" class="form-submit">Request My Quote</button>
-                </form>
-        </section>
-
         <section class="cta-section">
             <h3>Ready to Clear the Garage Floor?</h3>
-            <p>Text me a photo of your garage and I&rsquo;ll get you on the schedule while winter pricing lasts.</p>
+            <p>Text me a photo of your garage and I&rsquo;ll get you on the schedule before winter pricing ends December 15.</p>
             <a href="sms:+14023502583?&amp;body=Hi%20Josh%2C%20I%27m%20interested%20in%20overhead%20garage%20storage." class="cta-button">Text 402-350-2583</a>
-            <p class="cta-phone">Or <a href="#quote">request a quote online</a></p>
+            <p class="cta-phone">Or <a href="tel:+14023502583">call</a> &middot; <a href="#quote">request a quote online</a></p>
         </section>
 
         <section class="related-services">
@@ -572,6 +640,12 @@
     <footer>
         <p>&copy; 2026 The Handy Neighbor Co. &bull; <a href="index.html">Home</a> &bull; <a href="services.html">Services</a> &bull; <a href="contact.html">Contact</a> &bull; <a href="tel:+14023502583">(402) 350-2583</a></p>
     </footer>
+
+    <!-- Sticky call/text bar (phones only) -->
+    <div class="sticky-bar">
+        <a href="sms:+14023502583?&amp;body=Hi%20Josh%2C%20I%27m%20interested%20in%20overhead%20garage%20storage.">Text Josh</a>
+        <a href="tel:+14023502583" class="outline">Call 402-350-2583</a>
+    </div>
 
     <!-- Schema Markup -->
     <script type="application/ld+json">
@@ -592,7 +666,7 @@
         "@type": "Service",
         "name": "Overhead Garage Storage",
         "serviceType": "Overhead garage storage installation",
-        "description": "Custom overhead garage storage lofts built from solid lumber above the garage door in Omaha, Nebraska. Custom sized to the garage, with racks for fishing rods, skis and more. Most lofts go up in a day.",
+        "description": "Custom overhead garage storage lofts built from solid lumber above the garage door in The Ridges and Omaha, Nebraska. Custom sized to the garage, with racks for fishing rods, skis and more. Slide-out tote racks for the garage or basement. Flat-rate installed prices.",
         "image": "https://thehandyneighbor.co/garage-storage-1.jpg",
         "provider": {
             "@type": "LocalBusiness",
@@ -615,7 +689,11 @@
         "offers": [
             { "@type": "Offer", "name": "Single door, 8 ft, installed", "price": "550", "priceCurrency": "USD" },
             { "@type": "Offer", "name": "Double door, installed", "price": "750", "priceCurrency": "USD" },
-            { "@type": "Offer", "name": "Single and double door together, installed", "price": "950", "priceCurrency": "USD" }
+            { "@type": "Offer", "name": "Single and double door together, installed", "price": "950", "priceCurrency": "USD" },
+            { "@type": "Offer", "name": "Tote rack, 8 totes, installed", "price": "295", "priceCurrency": "USD" },
+            { "@type": "Offer", "name": "Tote rack, 12 totes, installed", "price": "395", "priceCurrency": "USD" },
+            { "@type": "Offer", "name": "Tote rack, 16 totes, installed", "price": "495", "priceCurrency": "USD" },
+            { "@type": "Offer", "name": "Tote rack, 20 totes, installed", "price": "595", "priceCurrency": "USD" }
         ],
         "url": "https://thehandyneighbor.co/overhead-garage-storage-omaha.html"
     }
@@ -628,23 +706,28 @@
         "mainEntity": [
             {
                 "@type": "Question",
-                "name": "What's included in the overhead garage storage price?",
-                "acceptedAnswer": { "@type": "Answer", "text": "The winter sale prices are installed prices: a storage loft built from solid lumber above your garage door, custom sized to your garage, and the installation. Paint is an optional add-on." }
+                "name": "What's included in the garage storage price?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Every price is a flat-rate installed price: built from solid lumber, custom sized to your space, and installed. Paint and rack add-ons are optional. Totes are not included." }
             },
             {
                 "@type": "Question",
-                "name": "How long does overhead garage storage installation take?",
-                "acceptedAnswer": { "@type": "Answer", "text": "Most lofts go up in a day." }
+                "name": "Are totes included with a tote rack?",
+                "acceptedAnswer": { "@type": "Answer", "text": "No. Racks are built for standard 27-gallon totes, about 30 x 20 x 14 in. Totes are not included." }
             },
             {
                 "@type": "Question",
                 "name": "Is paint extra?",
-                "acceptedAnswer": { "@type": "Answer", "text": "Yes, paint is optional. White or black is $250. A custom color is $350 if you provide the paint, or $450 if The Handy Neighbor Co. supplies it." }
+                "acceptedAnswer": { "@type": "Answer", "text": "Yes, paint is optional. On a loft, white or black is $250. A custom color is $350 if you provide the paint, or $450 if The Handy Neighbor Co. supplies it. On a tote rack, white or black is $200." }
             },
             {
                 "@type": "Question",
-                "name": "What sizes of overhead garage storage do you build?",
-                "acceptedAnswer": { "@type": "Answer", "text": "Lofts are built for a single 8 ft door ($550 installed), a double door ($750), or both a single and a double together ($950), each custom sized to your garage." }
+                "name": "What sizes of garage storage do you build?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Lofts are built for a single 8 ft door ($550 installed), a double door ($750), or both a single and a double together ($950), each custom sized to your garage. Tote racks come in 8, 12, 16 and 20 tote sizes ($295 to $595 installed), or a custom size on request." }
+            },
+            {
+                "@type": "Question",
+                "name": "Can a tote rack go in the basement?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Yes. Racks work in a garage or a basement. Add locking casters ($120) if you want it to roll." }
             },
             {
                 "@type": "Question",
@@ -662,6 +745,20 @@
         document.querySelectorAll('.nav-menu a').forEach(link => {
             link.addEventListener('click', () => { navMenu.classList.remove('active'); });
         });
+
+        // Campaign tagging: when a visitor arrives from a tagged link (e.g. the flyer QR code,
+        // ?utm_source=flyer...), record it on the quote form and in the pre-filled text message.
+        const utm = new URLSearchParams(window.location.search);
+        const utmSource = (utm.get('utm_source') || '').replace(/[^\w-]/g, '').slice(0, 40);
+        if (utmSource) {
+            const utmCampaign = (utm.get('utm_campaign') || '').replace(/[^\w-]/g, '').slice(0, 60);
+            document.getElementById('leadCampaign').value = utmSource + (utmCampaign ? ' / ' + utmCampaign : '');
+            if (utmSource === 'flyer') {
+                document.querySelectorAll('a[href^="sms:"][href*="body="]').forEach(a => {
+                    a.setAttribute('href', a.getAttribute('href') + '%20I%20saw%20your%20flyer.');
+                });
+            }
+        }
     </script>
 </body>
 </html>
