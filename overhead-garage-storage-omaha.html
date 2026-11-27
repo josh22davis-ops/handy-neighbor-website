@@ -403,7 +403,8 @@
         .oneday h2 { font-size: 1.7rem; margin-bottom: 0.5rem; }
         .oneday p { margin-bottom: 0; color: var(--text-light); }
         /* Pricing: one card per product, same layout */
-        .pricing-block { scroll-margin-top: 90px; }
+        .price-card[id] { scroll-margin-top: 90px; }
+        section > .price-card { margin-top: 2rem; }
         .price-sub {
             font-family: 'Inter', sans-serif; font-size: 0.78rem; font-weight: 600;
             text-transform: uppercase; letter-spacing: 0.12em; color: var(--text-muted);
@@ -448,9 +449,9 @@
         <h1>Overhead Garage Storage in Omaha</h1>
         <p class="hero-oneday">Built in one day. Your only prep: back the cars out.</p>
         <img class="hero-photo" src="garage-storage-2.jpg" alt="Example design: storage totes on a black-painted lumber loft above a garage door" width="337" height="164" fetchpriority="high">
-        <!-- Prices are listed once, in the Pricing section. The hero only points to it. -->
-        <!-- WINTER SALE END DATE: December 15 (matches the flyer). Also in the Pricing section and the CTA. -->
-        <p class="hero-from"><a href="#pricing">Lofts from $550 &middot; Tote racks from $295 &middot; see pricing</a></p>
+        <!-- Each product's prices are listed once, in the card under that product. The hero only links to them. -->
+        <!-- WINTER SALE END DATE: December 15 (matches the flyer). Also in the loft pricing card and the CTA. -->
+        <p class="hero-from"><a href="#pricing">Lofts from $550</a> &middot; <a href="#rack-pricing">Tote racks from $295</a></p>
         <p class="hero-fine">Flat-rate installed prices. Winter loft pricing ends December 15.</p>
         <div class="hero-buttons">
             <a href="sms:+14023502583?&amp;body=Hi%20Josh%2C%20I%27m%20interested%20in%20overhead%20garage%20storage." class="hero-cta">Text Josh</a>
@@ -470,49 +471,6 @@
                 <h2>Back the Cars Out. That&rsquo;s Your Whole To-Do List.</h2>
                 <p>No clearing out the garage and no prep work. Pull your vehicles out in the morning, and I build and install your loft or rack that same day and clean up before I leave.</p>
             </div>
-        </section>
-
-        <!-- ===== Pricing: the ONLY place prices are listed. One card per product, same layout in both. ===== -->
-        <section id="pricing" class="pricing-block">
-            <h2>Pricing</h2>
-            <p>Two products, each at a flat installed price. Add-ons are optional.</p>
-            <div class="price-grid">
-                <div class="price-card featured">
-                    <h3>Overhead Lofts</h3>
-                    <p class="price-note">Storage above your garage door, installed</p>
-                    <table class="price-table">
-                        <tr><th scope="row">Single door, 8 ft</th><td><span class="was">$650</span><span class="now">$550</span></td></tr>
-                        <tr><th scope="row">Double door</th><td><span class="was">$950</span><span class="now">$750</span></td></tr>
-                        <tr><th scope="row">Single and double together</th><td><span class="was">$1,350</span><span class="now">$950</span></td></tr>
-                    </table>
-                    <h4 class="price-sub">Add-ons</h4>
-                    <table class="price-table">
-                        <tr><th scope="row">Paint, white or black</th><td><span class="now">$250</span></td></tr>
-                        <tr><th scope="row">Paint, custom color (your paint)</th><td><span class="now">$350</span></td></tr>
-                        <tr><th scope="row">Paint, custom color (I supply it)</th><td><span class="now">$450</span></td></tr>
-                    </table>
-                    <p class="price-note">Winter pricing ends December 15.</p>
-                </div>
-                <div class="price-card featured">
-                    <h3>Tote Racks</h3>
-                    <p class="price-note">For your garage or basement, installed</p>
-                    <table class="price-table">
-                        <tr><th scope="row">8 totes, about 3 ft 9 in wide</th><td><span class="now">$295</span></td></tr>
-                        <tr><th scope="row">12 totes, about 5 ft 7 in wide</th><td><span class="now">$395</span></td></tr>
-                        <tr><th scope="row">16 totes, about 7 ft 5 in wide</th><td><span class="now">$495</span></td></tr>
-                        <tr><th scope="row">20 totes, about 9 ft 3 in wide</th><td><span class="now">$595</span></td></tr>
-                        <tr><th scope="row">Custom size</th><td>On request</td></tr>
-                    </table>
-                    <h4 class="price-sub">Add-ons</h4>
-                    <table class="price-table">
-                        <tr><th scope="row">Paint, white or black</th><td><span class="now">$200</span></td></tr>
-                        <tr><th scope="row">Locking casters</th><td><span class="now">$120</span></td></tr>
-                        <tr><th scope="row">Side tool panel, each</th><td><span class="now">$75</span></td></tr>
-                    </table>
-                    <p class="price-note">Four totes high: about 5 ft 8 in tall and 28 in deep. Fits standard 27-gallon totes, about 30 x 20 x 14 in. Totes not included.</p>
-                </div>
-            </div>
-            <p class="price-fine">Not sure which fits? Text a photo of your garage and I&rsquo;ll tell you.</p>
         </section>
 
         <!-- ===== Overhead lofts ===== -->
@@ -539,7 +497,25 @@
                     <li><strong>Optional paint</strong>, white, black or custom</li>
                 </ul>
             </div>
-            <p><a href="#pricing" class="see-pricing">See loft pricing &rarr;</a></p>
+            <!-- Loft prices: listed here and nowhere else. Same card layout as the tote rack prices below. -->
+            <!-- WINTER SALE END DATE: December 15 (matches the flyer). Also in the hero and the CTA. -->
+            <div class="price-card featured" id="pricing">
+                <h3>Overhead Loft Pricing</h3>
+                <p class="price-note">Storage above your garage door, installed</p>
+                <table class="price-table">
+                    <tr><th scope="row">Single door, 8 ft</th><td><span class="was">$650</span><span class="now">$550</span></td></tr>
+                    <tr><th scope="row">Double door</th><td><span class="was">$950</span><span class="now">$750</span></td></tr>
+                    <tr><th scope="row">Single and double together</th><td><span class="was">$1,350</span><span class="now">$950</span></td></tr>
+                </table>
+                <h4 class="price-sub">Add-ons</h4>
+                <table class="price-table">
+                    <tr><th scope="row">Paint, white or black</th><td><span class="now">$250</span></td></tr>
+                    <tr><th scope="row">Paint, custom color (your paint)</th><td><span class="now">$350</span></td></tr>
+                    <tr><th scope="row">Paint, custom color (I supply it)</th><td><span class="now">$450</span></td></tr>
+                </table>
+                <p class="price-note">Winter pricing ends December 15.</p>
+            </div>
+            <p class="price-fine">Not sure which fits? Text a photo of your garage and I&rsquo;ll tell you.</p>
         </section>
 
         <!-- ===== Tote racks: a separate product from the overhead lofts ===== -->
@@ -560,7 +536,26 @@
                     <li><strong>Locking casters</strong> if you want it to roll</li>
                 </ul>
             </div>
-            <p><a href="#pricing" class="see-pricing">See tote rack pricing &rarr;</a></p>
+            <!-- Tote rack prices: listed here and nowhere else. Same card layout as the loft prices above. -->
+            <div class="price-card featured" id="rack-pricing">
+                <h3>Tote Rack Pricing</h3>
+                <p class="price-note">For your garage or basement, installed</p>
+                <table class="price-table">
+                    <tr><th scope="row">8 totes, about 3 ft 9 in wide</th><td><span class="now">$295</span></td></tr>
+                    <tr><th scope="row">12 totes, about 5 ft 7 in wide</th><td><span class="now">$395</span></td></tr>
+                    <tr><th scope="row">16 totes, about 7 ft 5 in wide</th><td><span class="now">$495</span></td></tr>
+                    <tr><th scope="row">20 totes, about 9 ft 3 in wide</th><td><span class="now">$595</span></td></tr>
+                    <tr><th scope="row">Custom size</th><td>On request</td></tr>
+                </table>
+                <h4 class="price-sub">Add-ons</h4>
+                <table class="price-table">
+                    <tr><th scope="row">Paint, white or black</th><td><span class="now">$200</span></td></tr>
+                    <tr><th scope="row">Locking casters</th><td><span class="now">$120</span></td></tr>
+                    <tr><th scope="row">Side tool panel, each</th><td><span class="now">$75</span></td></tr>
+                </table>
+                <p class="price-note">Four totes high: about 5 ft 8 in tall and 28 in deep. Fits standard 27-gallon totes, about 30 x 20 x 14 in. Totes not included.</p>
+            </div>
+            <p class="price-fine">Tell me how many totes you need to store.</p>
         </section>
 
         <!-- Quote form: same Formspree endpoint as contact.html (plain POST, redirects to contact-thanks.html).
@@ -646,7 +641,7 @@
 
             <details class="faq-item">
                 <summary>Is paint extra? <span>+</span></summary>
-                <p>Yes, paint is optional on lofts and tote racks. Paint prices are listed with each product in the <a href="#pricing" style="color: var(--accent);">pricing section</a>.</p>
+                <p>Yes, paint is optional on lofts and tote racks. Paint prices are listed under each product.</p>
             </details>
 
             <details class="faq-item">
@@ -770,7 +765,7 @@
             {
                 "@type": "Question",
                 "name": "Is paint extra?",
-                "acceptedAnswer": { "@type": "Answer", "text": "Yes, paint is optional on lofts and tote racks. Paint prices are listed with each product in the pricing section." }
+                "acceptedAnswer": { "@type": "Answer", "text": "Yes, paint is optional on lofts and tote racks. Paint prices are listed under each product." }
             },
             {
                 "@type": "Question",
