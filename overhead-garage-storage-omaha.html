@@ -384,6 +384,39 @@
             }
             .sticky-bar a.outline { background: transparent; color: var(--accent); }
         }
+        /* One-day promise */
+        .hero p.hero-oneday {
+            font-family: 'Bebas Neue', sans-serif; letter-spacing: 0.05em;
+            color: var(--accent); font-size: 1.6rem; line-height: 1.2; margin: 0 auto 1.25rem;
+        }
+        .hero p.hero-from { color: var(--text-light); font-size: 1.05rem; font-weight: 600; margin: 0 auto; }
+        .hero p.hero-from a { color: var(--accent); }
+        .oneday {
+            display: flex; align-items: center; gap: 1.75rem;
+            background-color: rgba(200, 169, 110, 0.12);
+            border: 2px solid var(--accent); border-radius: 8px; padding: 1.75rem 2rem;
+        }
+        .oneday-num {
+            font-family: 'Bebas Neue', sans-serif; color: var(--accent);
+            font-size: 4rem; line-height: 1; white-space: nowrap; letter-spacing: 0.03em;
+        }
+        .oneday h2 { font-size: 1.7rem; margin-bottom: 0.5rem; }
+        .oneday p { margin-bottom: 0; color: var(--text-light); }
+        /* Pricing: one card per product, same layout */
+        .pricing-block { scroll-margin-top: 90px; }
+        .price-sub {
+            font-family: 'Inter', sans-serif; font-size: 0.78rem; font-weight: 600;
+            text-transform: uppercase; letter-spacing: 0.12em; color: var(--text-muted);
+            margin: 1rem 0 0; padding-top: 1rem; border-top: 1px solid var(--border);
+        }
+        .price-card h3 { font-size: 1.6rem; }
+        .see-pricing { color: var(--accent); font-weight: 600; }
+        @media (max-width: 768px) {
+            .hero p.hero-oneday { font-size: 1.35rem; margin-bottom: 1rem; }
+            .oneday { flex-direction: column; align-items: flex-start; gap: 0.5rem; padding: 1.5rem; }
+            .oneday-num { font-size: 3rem; }
+            .oneday h2 { font-size: 1.45rem; }
+        }
     </style>
 </head>
 <body>
@@ -413,29 +446,79 @@
     <section class="hero">
         <div class="hero-label">GARAGE STORAGE &middot; THE RIDGES</div>
         <h1>Overhead Garage Storage in Omaha</h1>
+        <p class="hero-oneday">Built in one day. Your only prep: back the cars out.</p>
         <img class="hero-photo" src="garage-storage-2.jpg" alt="Example design: storage totes on a black-painted lumber loft above a garage door" width="337" height="164" fetchpriority="high">
-        <ul class="hero-prices">
-            <li><span>Loft, single door (8 ft)</span><strong>$550</strong></li>
-            <li><span>Loft, double door</span><strong>$750</strong></li>
-            <li><span>Tote racks <a href="#racks" style="color: var(--accent); font-size: 0.85rem;">see racks</a></span><strong>from $295</strong></li>
-        </ul>
+        <!-- Prices are listed once, in the Pricing section. The hero only points to it. -->
         <!-- WINTER SALE END DATE: December 15 (matches the flyer). Also in the Pricing section and the CTA. -->
+        <p class="hero-from"><a href="#pricing">Lofts from $550 &middot; Tote racks from $295 &middot; see pricing</a></p>
         <p class="hero-fine">Flat-rate installed prices. Winter loft pricing ends December 15.</p>
         <div class="hero-buttons">
             <a href="sms:+14023502583?&amp;body=Hi%20Josh%2C%20I%27m%20interested%20in%20overhead%20garage%20storage." class="hero-cta">Text Josh</a>
             <a href="tel:+14023502583" class="hero-cta outline">Call Josh</a>
         </div>
         <span class="hero-phone"><a href="tel:+14023502583">402-350-2583</a> &middot; or <a href="#quote">request a quote online</a></span>
-        <p class="hero-trust">Insured &middot; Flat Rates &middot; The Ridges</p>
+        <p class="hero-trust">Insured &middot; Flat Rates &middot; Built in a Day</p>
         <p class="hero-intro">Use that wasted space above your garage door. I build custom storage lofts from solid lumber, sized to your garage and out of sight when the door is open.</p>
     </section>
 
     <!-- Main Content -->
     <div class="container">
 
+        <section class="oneday">
+            <div class="oneday-num">1 Day</div>
+            <div>
+                <h2>Back the Cars Out. That&rsquo;s Your Whole To-Do List.</h2>
+                <p>No clearing out the garage and no prep work. Pull your vehicles out in the morning, and I build and install your loft or rack that same day and clean up before I leave.</p>
+            </div>
+        </section>
+
+        <!-- ===== Pricing: the ONLY place prices are listed. One card per product, same layout in both. ===== -->
+        <section id="pricing" class="pricing-block">
+            <h2>Pricing</h2>
+            <p>Two products, each at a flat installed price. Add-ons are optional.</p>
+            <div class="price-grid">
+                <div class="price-card featured">
+                    <h3>Overhead Lofts</h3>
+                    <p class="price-note">Storage above your garage door, installed</p>
+                    <table class="price-table">
+                        <tr><th scope="row">Single door, 8 ft</th><td><span class="was">$650</span><span class="now">$550</span></td></tr>
+                        <tr><th scope="row">Double door</th><td><span class="was">$950</span><span class="now">$750</span></td></tr>
+                        <tr><th scope="row">Single and double together</th><td><span class="was">$1,350</span><span class="now">$950</span></td></tr>
+                    </table>
+                    <h4 class="price-sub">Add-ons</h4>
+                    <table class="price-table">
+                        <tr><th scope="row">Paint, white or black</th><td><span class="now">$250</span></td></tr>
+                        <tr><th scope="row">Paint, custom color (your paint)</th><td><span class="now">$350</span></td></tr>
+                        <tr><th scope="row">Paint, custom color (I supply it)</th><td><span class="now">$450</span></td></tr>
+                    </table>
+                    <p class="price-note">Winter pricing ends December 15.</p>
+                </div>
+                <div class="price-card featured">
+                    <h3>Tote Racks</h3>
+                    <p class="price-note">For your garage or basement, installed</p>
+                    <table class="price-table">
+                        <tr><th scope="row">8 totes, about 3 ft 9 in wide</th><td><span class="now">$295</span></td></tr>
+                        <tr><th scope="row">12 totes, about 5 ft 7 in wide</th><td><span class="now">$395</span></td></tr>
+                        <tr><th scope="row">16 totes, about 7 ft 5 in wide</th><td><span class="now">$495</span></td></tr>
+                        <tr><th scope="row">20 totes, about 9 ft 3 in wide</th><td><span class="now">$595</span></td></tr>
+                        <tr><th scope="row">Custom size</th><td>On request</td></tr>
+                    </table>
+                    <h4 class="price-sub">Add-ons</h4>
+                    <table class="price-table">
+                        <tr><th scope="row">Paint, white or black</th><td><span class="now">$200</span></td></tr>
+                        <tr><th scope="row">Locking casters</th><td><span class="now">$120</span></td></tr>
+                        <tr><th scope="row">Side tool panel, each</th><td><span class="now">$75</span></td></tr>
+                    </table>
+                    <p class="price-note">Four totes high: about 5 ft 8 in tall and 28 in deep. Fits standard 27-gallon totes, about 30 x 20 x 14 in. Totes not included.</p>
+                </div>
+            </div>
+            <p class="price-fine">Not sure which fits? Text a photo of your garage and I&rsquo;ll tell you.</p>
+        </section>
+
+        <!-- ===== Overhead lofts ===== -->
         <!-- Images are AI-generated design examples supplied by Josh (Nov 27, 2026), cropped to the gallery shapes. Replace with real install photos when available. -->
-        <section>
-            <h2>Built Above the Door, Not in Your Way</h2>
+        <section id="lofts">
+            <h2>Overhead Lofts: Above the Door, Not in Your Way</h2>
             <div class="gallery">
                 <figure>
                     <img src="garage-storage-1.jpg" alt="Example design: solid lumber storage loft above a double garage door, holding storage totes" width="406" height="352" loading="lazy">
@@ -445,92 +528,39 @@
                 </figure>
             </div>
             <p class="gallery-caption">Example loft designs, in natural lumber or painted.</p>
-        </section>
-
-        <section id="pricing">
-            <h2>Overhead Loft Pricing</h2>
-            <p>Flat rates. Every price below is installed. Winter pricing ends December 15.</p>
-            <div class="price-grid">
-                <div class="price-card featured">
-                    <h3>Overhead Lofts, Winter Sale</h3>
-                    <p class="price-note">Storage above the garage door, installed</p>
-                    <table class="price-table">
-                        <tr><th scope="row">Single door, 8 ft</th><td><span class="was">$650</span><span class="now">$550</span></td></tr>
-                        <tr><th scope="row">Double door</th><td><span class="was">$950</span><span class="now">$750</span></td></tr>
-                        <tr><th scope="row">Single and double together</th><td><span class="was">$1,350</span><span class="now">$950</span></td></tr>
-                    </table>
-                </div>
-                <div class="price-card">
-                    <h3>Add Paint</h3>
-                    <p class="price-note">Optional, added to any loft</p>
-                    <table class="price-table">
-                        <tr><th scope="row">White or black</th><td><span class="now">$250</span></td></tr>
-                        <tr><th scope="row">Custom color, your paint</th><td><span class="now">$350</span></td></tr>
-                        <tr><th scope="row">Custom color, we supply paint</th><td><span class="now">$450</span></td></tr>
-                    </table>
-                </div>
-            </div>
-            <p class="price-fine">Not sure which fits? Text a photo of your garage and I&rsquo;ll tell you.</p>
-        </section>
-
-        <section>
-            <h2>Why a Custom Loft Beats a Metal Kit</h2>
             <p>The space over your garage door is usually empty. A loft built there holds the totes, coolers, and seasonal gear that otherwise eat up floor space &mdash; and because it sits above the door, it stays out of sight when the door is open.</p>
             <div class="included-list">
                 <ul>
+                    <li><strong>Built in one day</strong>, no prep</li>
                     <li><strong>Solid lumber</strong>, not a thin metal kit</li>
                     <li><strong>Custom sized</strong> to your garage</li>
-                    <li><strong>Racks</strong> for fishing rods, skis and more</li>
                     <li><strong>Out of sight</strong> when the door is open</li>
-                    <li><strong>Installed</strong> at a flat rate</li>
+                    <li><strong>Undermount options</strong>, like fishing rods and skis</li>
                     <li><strong>Optional paint</strong>, white, black or custom</li>
                 </ul>
             </div>
+            <p><a href="#pricing" class="see-pricing">See loft pricing &rarr;</a></p>
         </section>
 
         <!-- ===== Tote racks: a separate product from the overhead lofts ===== -->
         <!-- Photo is the example rack image from the flyer. Replace with a real install photo when available. -->
         <section id="racks" class="rack-block">
-            <div class="hero-label">ALSO AVAILABLE &middot; TOTE RACKS</div>
-            <h2>Get Your Totes Off the Floor</h2>
+            <h2>Tote Racks: Get Your Totes Off the Floor</h2>
             <figure class="rack-photo">
                 <img src="tote-rack-1.jpg" alt="Example 16-tote rack: solid lumber frame holding sixteen black and yellow storage totes, one pulled partway out" width="1000" height="646" loading="lazy">
             </figure>
-            <p>A tote rack for your garage or basement, built with a solid lumber frame and installed. Flat rates.</p>
+            <p>A tote rack for your garage or basement, built with a solid lumber frame and installed.</p>
             <div class="included-list">
                 <ul>
+                    <li><strong>Built in one day</strong>, no prep</li>
                     <li>Every tote <strong>has its own slot</strong></li>
                     <li>Reach any tote <strong>without unstacking</strong></li>
                     <li>Built for <strong>standard 27-gallon totes</strong></li>
                     <li><strong>Solid lumber frame</strong>, installed</li>
                     <li><strong>Locking casters</strong> if you want it to roll</li>
-                    <li>Totes <strong>not included</strong></li>
                 </ul>
             </div>
-            <div class="price-grid">
-                <div class="price-card featured">
-                    <h3>Tote Racks, Installed</h3>
-                    <p class="price-note">For your garage or basement. Totes not included.</p>
-                    <table class="price-table">
-                        <tr><th scope="row">8 totes, about 3 ft 9 in wide</th><td><span class="now">$295</span></td></tr>
-                        <tr><th scope="row">12 totes, about 5 ft 7 in wide</th><td><span class="now">$395</span></td></tr>
-                        <tr><th scope="row">16 totes, about 7 ft 5 in wide</th><td><span class="now">$495</span></td></tr>
-                        <tr><th scope="row">20 totes, about 9 ft 3 in wide</th><td><span class="now">$595</span></td></tr>
-                        <tr><th scope="row">Custom size</th><td>On request</td></tr>
-                    </table>
-                </div>
-                <div class="price-card">
-                    <h3>Rack Add-Ons</h3>
-                    <p class="price-note">Optional, added to any rack</p>
-                    <table class="price-table">
-                        <tr><th scope="row">Paint, white or black</th><td><span class="now">$200</span></td></tr>
-                        <tr><th scope="row">Locking casters</th><td><span class="now">$120</span></td></tr>
-                        <tr><th scope="row">Side tool panel, each</th><td><span class="now">$75</span></td></tr>
-                    </table>
-                    <p class="price-note">Standard racks are four totes high: about 5 ft 8 in tall and 28 in deep. Built for standard 27-gallon totes, about 30 x 20 x 14 in.</p>
-                </div>
-            </div>
-            <p class="price-fine">Tell me how many totes you need to store.</p>
+            <p><a href="#pricing" class="see-pricing">See tote rack pricing &rarr;</a></p>
         </section>
 
         <!-- Quote form: same Formspree endpoint as contact.html (plain POST, redirects to contact-thanks.html).
@@ -558,10 +588,10 @@
                     <div class="form-group">
                         <label for="interest">What do you need?</label>
                         <select id="interest" name="Interested in">
-                            <option value="Loft, single door 8 ft ($550)">Loft, single door 8 ft ($550)</option>
-                            <option value="Loft, double door ($750)">Loft, double door ($750)</option>
-                            <option value="Loft, single and double together ($950)">Loft, single and double together ($950)</option>
-                            <option value="Tote rack (from $295)">Tote rack (from $295)</option>
+                            <option value="Loft, single door 8 ft">Loft, single door 8 ft</option>
+                            <option value="Loft, double door">Loft, double door</option>
+                            <option value="Loft, single and double together">Loft, single and double together</option>
+                            <option value="Tote rack">Tote rack</option>
                             <option value="Loft and tote rack">Loft and tote rack</option>
                             <option value="Not sure yet" selected>Not sure yet</option>
                         </select>
@@ -590,14 +620,19 @@
                 </div>
                 <div class="step">
                     <div class="step-num">STEP 3</div>
-                    <h3>Built &amp; Installed</h3>
-                    <p>I build and install it from solid lumber. Quick install, and I clean up when I&rsquo;m done.</p>
+                    <h3>Built in One Day</h3>
+                    <p>Back your vehicles out that morning. That&rsquo;s all the prep there is. I build and install it the same day and clean up when I&rsquo;m done.</p>
                 </div>
             </div>
         </section>
 
         <section>
             <h2>Common Questions</h2>
+
+            <details class="faq-item">
+                <summary>How long does it take, and what do I need to do first? <span>+</span></summary>
+                <p>Lofts and tote racks are built and installed in one day. The only prep is backing your vehicles out of the garage.</p>
+            </details>
 
             <details class="faq-item">
                 <summary>What&rsquo;s included in the price? <span>+</span></summary>
@@ -611,17 +646,17 @@
 
             <details class="faq-item">
                 <summary>Is paint extra? <span>+</span></summary>
-                <p>Yes, paint is optional. On a loft, white or black is $250. A custom color is $350 if you provide the paint, or $450 if I supply it. On a tote rack, white or black is $200.</p>
+                <p>Yes, paint is optional on lofts and tote racks. Paint prices are listed with each product in the <a href="#pricing" style="color: var(--accent);">pricing section</a>.</p>
             </details>
 
             <details class="faq-item">
                 <summary>What sizes do you build? <span>+</span></summary>
-                <p>Lofts are built for a single 8 ft door ($550 installed), a double door ($750), or both a single and a double together ($950), each custom sized to your garage. Tote racks come in 8, 12, 16 and 20 tote sizes ($295 to $595 installed), or a custom size on request.</p>
+                <p>Lofts are built for a single 8 ft door, a double door, or a single and a double together, each custom sized to your garage. Tote racks come in 8, 12, 16 and 20 tote sizes, or a custom size on request.</p>
             </details>
 
             <details class="faq-item">
                 <summary>Can a tote rack go in the basement? <span>+</span></summary>
-                <p>Yes. Racks work in a garage or a basement. Add locking casters ($120) if you want it to roll.</p>
+                <p>Yes. Racks work in a garage or a basement. Add locking casters if you want it to roll.</p>
             </details>
 
             <details class="faq-item">
@@ -719,6 +754,11 @@
         "mainEntity": [
             {
                 "@type": "Question",
+                "name": "How long does garage storage take to install, and what prep is needed?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Lofts and tote racks are built and installed in one day. The only prep is backing your vehicles out of the garage." }
+            },
+            {
+                "@type": "Question",
                 "name": "What's included in the garage storage price?",
                 "acceptedAnswer": { "@type": "Answer", "text": "Every price is a flat-rate installed price: built from solid lumber, custom sized to your space, and installed. Paint and rack add-ons are optional. Totes are not included." }
             },
@@ -730,17 +770,17 @@
             {
                 "@type": "Question",
                 "name": "Is paint extra?",
-                "acceptedAnswer": { "@type": "Answer", "text": "Yes, paint is optional. On a loft, white or black is $250. A custom color is $350 if you provide the paint, or $450 if The Handy Neighbor Co. supplies it. On a tote rack, white or black is $200." }
+                "acceptedAnswer": { "@type": "Answer", "text": "Yes, paint is optional on lofts and tote racks. Paint prices are listed with each product in the pricing section." }
             },
             {
                 "@type": "Question",
                 "name": "What sizes of garage storage do you build?",
-                "acceptedAnswer": { "@type": "Answer", "text": "Lofts are built for a single 8 ft door ($550 installed), a double door ($750), or both a single and a double together ($950), each custom sized to your garage. Tote racks come in 8, 12, 16 and 20 tote sizes ($295 to $595 installed), or a custom size on request." }
+                "acceptedAnswer": { "@type": "Answer", "text": "Lofts are built for a single 8 ft door, a double door, or a single and a double together, each custom sized to your garage. Tote racks come in 8, 12, 16 and 20 tote sizes, or a custom size on request." }
             },
             {
                 "@type": "Question",
                 "name": "Can a tote rack go in the basement?",
-                "acceptedAnswer": { "@type": "Answer", "text": "Yes. Racks work in a garage or a basement. Add locking casters ($120) if you want it to roll." }
+                "acceptedAnswer": { "@type": "Answer", "text": "Yes. Racks work in a garage or a basement. Add locking casters if you want it to roll." }
             },
             {
                 "@type": "Question",
